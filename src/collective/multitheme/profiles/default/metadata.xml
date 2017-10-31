@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <version>1000</version>
+  <dependencies>
+    <dependency>profile-plone.app.theming:default</dependency>
+    <dependency>profile-medialog.controlpanel:default</dependency>
+    <dependency>profile-medialog.iconpicker:default</dependency>
+    <dependency>profile-collective.themefragments:default</dependency>
+    <dependency>profile-plone.app.mosaic:default</dependency>
+  </dependencies>
+</metadata>

@@ -1,0 +1,16 @@
+<div id="socialtop" class="social"
+		tal:define="email view/data/email;
+					twitter view/data/twitter;
+					facebook view/data/facebook;
+					instagram view/data/instagram;
+					phone view/data/phone">
+
+		<a tal:condition="facebook"   target="_blank" href="${facebook}"><i class="fa fa-facebook"></i></a>
+		<a tal:condition="twitter"    target="_blank" href="${twitter}"><i class="fa fa-twitter"></i></a>
+		<a tal:condition="instagram"  target="_blank" href="${instagram}"><i class="fa fa-instagram"></i></a>
+		<a tal:define="post python:'mailto:' + email" href="${post}"><i class="fa fa-envelope"></i></a>
+		<a href="#portal-searchbox"  class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px">
+			<i class="fa fa-search"></i>
+		</a>
+		<a href="${context/portal_url}/login"><i class="fa fa-lock"></i></a>
+</div>

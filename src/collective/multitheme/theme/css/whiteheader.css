@@ -1,0 +1,166 @@
+/* @override http://k2.medialog.no/++theme++bergensiana/css/blackheader.css */
+
+/* @override http://localhost:8080/++theme++bergensiana/css/blackheader.css */
+
+a.logo {
+	float: left;
+	margin-right: 1em;
+}
+.navbar-toggle {
+    display: none;
+    }
+
+.navbar > .container .navbar-brand {
+    margin-left: 0;
+}
+.top-bar {
+    background: #191919 none repeat scroll 0 0;
+    border-bottom: 1px solid #222;
+    line-height: 28px;
+    padding: 10px 0 0;
+}
+.top-number {
+    color: #fff;
+}
+.top-number p {
+    margin: 0;
+}
+#header .social {
+    text-align: right;
+    margin: 0 0 8px;
+}
+.social-share {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+ul.social-share li {
+    display: inline-block;
+}
+ul.social-share li a {
+    background: #404040 none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 25px;
+}
+ul.social-share li a:hover {
+     color: #000;
+}
+.search i {
+    color: #fff;
+}
+input.search-form {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    padding: 0 10px;
+    transition: all 400ms ease 0s;
+    width: 60px;
+}
+input.search-form:hover {
+    width: 180px;
+}
+
+div.black div.navbar-header {
+	float: left;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+div.black.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 15px 0 0;
+    display: none;
+}
+
+div.black nav.plone-navbar {
+	line-height: 100px;
+ z-index: 99999;
+}
+
+div.black.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 0;
+}
+
+ 
+div.black .navbar-right {
+	margin-top: 30px;
+    float: right !important;
+}
+
+div.black .plone-navbar-nav   {
+	list-style-type: none;
+	list-style-image: none;
+	vertical-align: center;
+	padding-top: 24px;
+}
+div.black.plone-navbar-nav   > li {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+ 
+ 
+div.black {
+    border: medium none;
+    height: 130px;
+    display: block;
+}
+
+ 
+
+div.black  .plone-navbar-nav   .dropdown-menu {
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+    left: 0;
+    margin-top: 0;
+    padding: 0;
+    z-index:  9;
+}
+div.black  .plone-navbar-nav   .dropdown-menu::before {
+    position: absolute;
+    top: 0;
+}
+div.black  .plone-navbar-nav   .dropdown-menu > li > a {
+    padding: 8px 15px;
+}
+div.black  .plone-navbar-nav    > li:hover > a, div.black  .plone-navbar-nav    > li:focus > a, div.black  .plone-navbar-nav    > li.active > a {
+    color: #000;
+}
+div.black  .plone-navbar-nav    > li:last-child > a {
+    border-radius: 0 0 3px 3px;
+}
+div.black  .plone-navbar-nav    > li.divider {
+    background-color: transparent;
+}
+div.black .navbar-collapse, div.black .navbar-form {
+    border-top: 0 none;
+    padding-bottom: 0;
+}
+
+#header:after {
+	content: "";
+	clear: both;
+}
+
+#header {
+	
+}
+
+
+div.black div.plone-navbar-header {
+		float: right;
+}
+

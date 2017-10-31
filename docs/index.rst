@@ -1,0 +1,5 @@
+====================
+collective.multitheme
+====================
+
+User documentation

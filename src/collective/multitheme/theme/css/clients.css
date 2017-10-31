@@ -1,0 +1,76 @@
+/* @override http://localhost:8080/++theme++bergensiana/css/clients.css */
+
+#testimonials {
+	background-color: #dabd56;
+	text-align: center;
+	padding: 1em;
+}
+
+.white-text {
+	color: white;
+	font-size: 145%
+}
+
+h2.white-text {
+	font-size: 240%;
+}
+
+
+.feedback-carousel{
+	display: flex;
+	flex-wrap: wrap;	
+	justify-content:  space-around;
+	
+}
+
+
+div.feedback-box {
+	background: white;
+	width: 100%;
+	color:  #666;
+	padding: 2em ;
+	margin:  1em 0;
+	border-radius: 6px;
+	text-align: left;
+}
+
+ 
+i.fa.fa-quote-left {
+	color: #cf3b29;
+	font-size: 3.3em;
+	float: left;
+	margin-top: 10px;
+	margin-right: 0.3em;
+}
+
+div.client-image img {
+	float: right;
+	border-radius: 50%;
+	padding: 1px;
+	border:  1px solid #DDD;
+}
+
+div.client-info {
+	margin-top: 1.4em;
+}
+
+a.client-name {
+	margin-top: 12px;
+	float: left;;
+	color: black;
+}
+ 
+
+@media (min-width: 800px){
+div.feedback-box {
+	width: 30%;
+	
+}
+
+.feedback-carousel{
+	flex-wrap: no-wrap;	
+}
+
+
+}
+ 

@@ -1,0 +1,80 @@
+/* @override http://localhost:8080/++theme++bergensiana/css/fullmenu.css */
+
+div.plone-modal {
+		background: red;
+		padding: 15%;
+}
+#sitemap-container {
+	z-index: 98;
+	display: block;
+	background: red;
+	top:  0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 13vh;
+	padding-left: 0;
+	padding-right: 0;
+	position: absolute;
+	color:  white;
+	text-align: center; 
+
+}
+
+#menu-sitemap a {
+	color:  white;
+}
+
+#menu-sitemap a span {
+	margin-left: 14px;
+	margin-right: 14px;
+}
+
+#menu-sitemap li {
+	list-style-image: none;
+	list-style-type: none;
+	font-size: 3vh; 
+	line-height:5vh;
+ 
+}
+
+#menu-sitemap #searchform {
+	display: none;
+	max-width: 400px;
+	margin: auto;
+}
+
+#menu-sitemap #searchform input{
+	 text-align: center;
+}
+
+button.iconButton {
+	border: 0 none;
+	background: none;
+	color: white;
+	font-size: 3vh;
+ 
+}
+button.iconButton:hover {
+	background: none;
+	box-shadow:  none !important;
+	color:  whitesmoke;
+	font-weight: 600;
+}
+ 
+
+#menu-sitemap  .navChild   {
+	display: none;
+}
+
+a.close-icon {
+	position: absolute;
+	left:  30px;
+	top:  10px;;
+	font-size: 5vh;
+	color:  white;
+}
+
+a.close-icon:hover {
+	color:  black;
+}

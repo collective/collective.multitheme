@@ -1,0 +1,138 @@
+/* @override http://localhost:8080/++theme++bergensiana/css/visual-sitemap.css */
+
+/* @override http://localhost:8080/NAV2/++theme++bergensiana/css/visual-sitemap.css */
+
+.hidden {
+	display: none !important;
+}
+div#visual-sitemap {
+	max-width: 100%;
+	display: block;
+	padding: 0;
+	margin: 0;
+ 
+}
+div#visual-portal-sitemap {
+	background: #1d445b;
+	position: absolute;
+	top:  0;
+	left: 0;
+	padding: 100px 10% 200px 5%;
+	width: auto;
+
+	z-index:99;
+ 	height: 4000px;
+	overflow: visible;
+	box-sizing: content-box;
+}
+
+div.LSBox {
+display: flex;	
+}
+
+#searchGadget {
+	height: 100%;
+	margin-right: 20px;
+}
+
+form#searchGadget_form.pat-livesearch {
+	width: 90%;
+}
+
+body a.plone-modal-close {
+	z-index:300 !important;
+	margin: 0;
+	padding: 0 !important;
+	top:  -10px;
+}
+
+
+
+#visual-portal-sitemap ul {
+	list-style-image: none;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	min-width:300px;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: content-box;
+
+}
+#visual-portal-sitemap ul li {
+	min-width: 230px;
+	max-width:300px;
+ 
+	height: 300px;
+	min-height: 175px;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+}
+
+#visual-portal-sitemap ul li span {
+ 	text-align: center;
+	display: block;
+	color:  white;
+	font-size: 18px;
+}
+
+#visual-portal-sitemap i  {
+	background: white;
+	border-radius: 50%;
+	height: 4em;
+	width:  4em;
+	line-height: 4em;
+	font-size: 1em;
+	margin-bottom: 17px;
+	color: #1d445b;
+	font-size: 1.7em;
+}
+
+ 
+
+#visual-portal-sitemap li:nth-child(7n+2) .fa  {
+	background: #da5d3f;
+}
+
+#visual-portal-sitemap li:nth-child(7n+3) .fa  {
+	background: #f0982f;
+}
+#visual-portal-sitemap li:nth-child(7n+4) .fa  {
+	background: #55ba8a;
+}
+#visual-portal-sitemap li:nth-child(7n+5) .fa  {
+	background: #4ca6d8;
+}
+#visual-portal-sitemap li:nth-child(7n+6) .fa  {
+	background: #717f88;
+}
+
+#visual-portal-sitemap li:nth-child(7n+7) .fa  {
+	background: #9680a7;
+}
+
+body .withChildren > ul {
+		display: flex;
+		position: absolute;
+		font-size: 75%;
+ 		left: 0;
+		right: 0;
+		top: 50wh;
+		width: 100%; 
+		overflow: visible;
+		background: #0d2c3b;
+		z-index: 999;
+		opacity: 1;
+ 	justify-content: space-around;
+		padding: 50px 0;
+ 
+}
+
+body .withChildren  li {
+		height: 120px !important;
+		min-height: 50px !important;
+		max-height: 150px !important;
+}
+

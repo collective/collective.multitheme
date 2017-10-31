@@ -1,0 +1,62 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns:users="http://namespaces.plone.org/supermodel/users"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="folder_url" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <title>Relative path to folder with images to use for slider</title>
+    <default>slider</default>
+  </field>
+  <field name="maxwidth" type="zope.schema.Int">
+    <description/>
+    <required>True</required>
+    <title>Max Width</title>
+    <default>3000</default>
+  </field>
+  <field name="speed" type="zope.schema.Int">
+    <description/>
+    <required>True</required>
+    <title>Speed</title>
+    <default>1000</default>
+  </field>
+  <field name="height" type="zope.schema.Int">
+    <description/>
+    <required>True</required>
+    <title>height</title>
+    <default>50</default>
+  </field>
+  <field name="pager" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Show pager</title>
+        <values>
+          <element>true</element>
+          <element>false</element>
+        </values>
+  </field>
+  <field name="nav" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Show Navigation</title>
+        <values>
+          <element>true</element>
+          <element>false</element>
+        </values>
+  </field>
+  <field name="css_file" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Style</title>
+      <values>
+        <element>responsiveslides</element>
+        <element>responsiveslides2</element>
+      </values>
+    </field>
+</schema>
+</model>

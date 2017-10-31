@@ -1,0 +1,3 @@
+<a href="${context/portal_url}" id="sitetitle">
+  <h1>${python:portal.getProperty('title')}</h1>
+</a>

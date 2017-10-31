@@ -1,0 +1,32 @@
+<section id="services"
+		 		 tal:define="folder_is nocall:context/services|nothing">
+    <div class="container"  tal:condition="folder_is">
+  		<div class="center wow fadeInDown animated"
+           style="visibility: visible; animation-name: fadeInDown;">
+          <h2 tal:content="context/services/Title" />
+          <p class="lead"
+                	tal:content="context/services/Description"  />
+      </div>
+      <div class="service-items">
+				<div tal:repeat="item context/services/@@contentlisting"
+              class="wow fadeInDown animated service-item"
+              data-wow-delay="600ms" data-wow-duration="1000ms"
+              style="visibility: visible; animation-duration: 1000ms;
+                        animation-delay: 600ms; animation-name: fadeInDown;">
+				    <div tal:define="item_url item/getURL|item/absolute_url">
+							<a href="#" tal:attributes="href item_url">
+	 							<img src="${item_url}'/@@images/image" alt="${item/Title}"
+							    	 tal:condition="python: item.image"
+                     class="img-responsive" />
+              </a>
+  						<div class="media-body">
+	                <a href="${item_url}">
+                    <h1 class="media-heading">${item/Title"}</h1>
+                  </a>
+                  <p>${item/Description"}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+</section>

@@ -1,0 +1,151 @@
+/* @override 
+	http://www.medialog.no/front-page/++theme++tvedtbergensiana/css/responsiveslides.css
+	http://localhost:8080/++theme++bergensiana/css/responsiveslides.css
+	http://localhost:8080/theming/++theme++bergensiana/css/responsiveslides.css
+*/
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+  
+  .fillme {
+	width: 100%;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+div.slidetext-container {
+	max-width: 1150px;
+	width: 100%;
+	position: relative;
+	margin: auto;
+	z-index: 9;
+	display: block;
+	top:  2.5em;;
+	left: 4em;
+}
+
+.slidetext {
+	background:black;
+	opacity: 0.8;
+	border-radius: 10px;
+	padding: 1.2em 2.5em 1.5em 2em;
+	box-sizing: border-box;
+	position: absolute;
+	font-size: 135%;
+	border:  1px solid white;
+}
+
+
+.slidetext h1,
+.slidetext h3{
+	color:  white;
+	margin: 0;
+	position: relative;
+	margin-bottom: 0.2em;
+}
+
+#main-slider ul.rslides_tabs {
+	position: relative;
+	z-index: 9;
+	bottom:  70px;
+	text-align: center;
+	list-style-image: none;
+	list-style-type: none;
+
+}
+
+#main-slider  {
+	position: relative;
+	}
+	
+#main-slider ul.rslides_tabs li {
+	margin: 0 4px;
+	padding: 0;
+	display: inline;
+	}
+#main-slider ul.rslides_tabs li a{
+	background: white;
+	border-radius: 50%;
+	padding: 0px;
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+}
+
+#main-slider  ul li.rslides_here a {
+    background-color: #cf3c2a;
+	color:  white;;
+}
+
+
+#main-slider .prev, #main-slider .next {
+    background-color:#cf3c2a;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -25px;
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    width: 40px;
+    z-index: 5;
+}
+#main-slider .prev:hover, #main-slider .next:hover {
+    background-color: #000;
+}
+#main-slider .prev {
+    left: 10px;
+}
+#main-slider .next {
+    right: 10px;
+}
+
+
+@media (max-width: 600px) {
+	.slidetext {
+	font-size: 65%;
+	padding: 8px 14px;
+	border:  0 none;;
+	}	
+	div.slidetext-container {
+	top:  5px;;
+	left: 5px;
+	}
+	#main-slider .prev, #main-slider .next {
+	display: none;
+	}
+	
+	#main-slider ul.rslides_tabs {
+	bottom:  10%;
+	}
+
+ }

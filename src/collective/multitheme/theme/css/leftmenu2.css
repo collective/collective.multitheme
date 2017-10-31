@@ -1,0 +1,147 @@
+/* @override 
+	http://localhost:8080/x/++theme++bergensiana/css/rightleft.css
+	http://localhost:8080/++theme++bergensiana/css/rightmenu.css
+	http://localhost:8080/NAV2/++theme++bergensiana/css/rightmenu.css
+	http://localhost:8080/++theme++bergensiana/css/leftmenu.css
+	http://localhost:8080/x/++theme++bergensiana/css/leftmenu.css
+	http://localhost:8080/bgens/moreservices/++theme++bergensiana/css/leftmenu2.css
+*/
+
+#left-sitemap {
+	text-align: left;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	width: 450px;
+	max-width: 100%;
+	height: 100%; 
+	max-height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 40px;
+	z-index:99;
+	background: #e3e3e3;
+	padding: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 0 none;
+
+}
+
+ 
+ 
+#left-sitemap li {
+	list-style-image: none;
+	list-style-type: none;
+ 	display: block;
+ 	padding-left: 0;
+ 	padding-right: 0;
+ 	border-bottom: 1px dotted #444;
+ 	margin: 0;
+}
+
+
+#left-sitemap ul {
+	padding-left: 0;
+ 	padding-right: 0;
+  	border-bottom: 0;
+	margin-bottom: -1px;
+} 
+
+ul#left-sitemap.wow.navTreeLevel1 >  a.prevlevel {
+	display: none;
+}
+
+
+#left-sitemap  a.prevlevel {
+	padding:0;
+	margin: 0;
+	width: 100%;
+	border-bottom: 1px dotted #444;
+	padding: 20px 0;
+	display: block;
+	font-size: 34px;
+	text-align: center;
+}
+
+#left-sitemap li.navTreeItem a {
+	padding: 8px 6px;
+	display: inline-block;
+ 
+}
+
+
+ 
+ 
+ 
+.navChild li  {
+	display: none;
+
+	
+}
+
+
+#portal-left-sitemap a:hover {
+	text-decoration: none;	
+}
+
+
+div.navtop {
+	background-color: #c9c9c9;
+	padding: 0 0 0 20px;
+	line-height: 56px;
+	border-bottom: 1px solid  #878787;
+}
+
+a.navbread {
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+ 
+#left-sitemap li  a.nextlevel  {
+	float: right;
+	font-size: 22px;
+	color: #878787;
+	display: block;
+	padding: 2px;
+}
+a.nextlevel i	{
+	padding: 7px 5px 3px 15px;
+ 	border-left: 1px dotted #444;
+}
+
+
+a.close-icon {
+	float: right;
+	color: #878787;
+}
+
+a.close-icon i {
+	font-size: 40px;
+	margin-right: 25px;
+	margin-top: 10px;
+	padding: 0;
+}
+a.close-icon:hover {
+	color: black
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

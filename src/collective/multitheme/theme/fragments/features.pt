@@ -1,0 +1,35 @@
+<section id="feature"
+		 tal:define="keyword view/data/keyword">
+    <div class="container"  tal:condition="keyword">
+      <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>${view/data/title}</h2>
+                <tal:condition tal:condition="view/data/description">
+                	<p class="lead">${view/data/description}</p>
+                </tal:condition>
+            </div>
+
+						<div tal:define="items python:context.portal_catalog(Subject='%s' % keyword)">
+
+						<tal:check tal:condition="items">
+						<div tal:repeat="item items"
+							class="feature  wow fadeInDown animated"
+							data-wow-delay="600ms" data-wow-duration="1000ms"
+							style="visibility: visible; animation-duration: 1000ms;
+							animation-delay: 600ms; animation-name: fadeInDown;">
+							<div class="feature-wrap fa">
+								<i  tal:condition="exists:item/iconfield">
+								<span  tal:replace="structure item/iconfield/@@iconload" />
+								</i>
+								 <i class="fa fa-info"
+									tal:condition="not:exists:item/iconfield" />
+
+								<h2 tal:content="item/Title" />
+								<h3 tal:content="item/Description" />
+							</div>
+            </div>
+					</tal:check>
+        </div>
+    </div>
+    <tal:css tal:replace="structure context/@@fontload"/>
+</section>

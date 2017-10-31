@@ -1,0 +1,46 @@
+<section id="main-slider" class="no-margin"
+	tal:define="folder_url request/form/folder_url|None;
+				maxwidth view/data/maxwidth;
+				speed view/data/speed;
+				pager view/data/pager;
+				nav view/data/nav;
+				css_file view/data/css_file;
+				height view/data/height"
+				tal:condition="folder_url">
+		<div id="slider" tal:condition="folder_url">
+			        <tal:repeat tal:repeat="item  context/?folder_url/@@contentlisting">
+			          <div  class="fillme" tal:define="item_url item/getURL|item/absolute_url;
+							        image_url python:item_url + '/@@images/image'">
+			 						  <img class="slider-img img-responsive" src="" alt="" tal:attributes="src image_url"/>
+				            <div class="slidetext-container">
+				              <div class="slidetext  wow bounceInUp animated">
+								    		<h1 tal:content="item/title|None" />
+												<tal:condition
+														tal:condition="exists: item/description">
+														<h3 tal:content="item/description"/>
+													</tal:condition>
+											 </div>
+			              </div>
+			          </div>
+			        </tal:repeat>
+		</div>
+
+  <link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css">
+  <script src="++theme++multitheme/javascript/responsiveslides.min.js"></script>
+  <script>
+	 $(function () {
+    $("#slider").responsiveSlides({
+    	maxwidth: ${maxwidth},
+    	nav: ${nav},
+    	speed: ${speed},
+    	pager: ${pager},
+    	prevText: "<",
+    	nextText: ">",
+    });
+   });
+   $(window).resize(function(){
+     // Setting the heigth of the slides
+     $('#slider').height($('#slider').width()*${height}/100);
+   }).resize();
+	</script>
+</section>
