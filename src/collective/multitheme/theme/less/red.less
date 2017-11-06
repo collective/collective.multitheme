@@ -4,6 +4,8 @@
 
 @barceloneta_path: "barceloneta/less";
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
+
 //*// Core variables and mixins
 @import "plone.toolbar.vars.less";
 @import "red/less/variables.red.less";
@@ -75,3 +77,10 @@
 @import "@{barceloneta_path}/behaviors.plone.less";
 @import "@{barceloneta_path}/discussion.plone.less";
 @import "@{barceloneta_path}/search.plone.less";
+
+
+//*// Override
+#portal-footer-wrapper a,
+#portal-footer-wrapper a:hover{
+  color: whitesmoke;
+}

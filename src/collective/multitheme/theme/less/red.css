@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
-
 /* theme.less file that will be compiled */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -325,8 +324,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Source Sans Pro", "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #4d4d4d;
   background-color: #ffffff;
@@ -362,8 +361,8 @@ img {
   vertical-align: middle;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   border: 0;
   border-top: 1px solid #cccccc;
 }
@@ -405,8 +404,8 @@ h6 {
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 22px;
+  margin-bottom: 11px;
 }
 h1 a:hover,
 h2 a:hover,
@@ -420,32 +419,32 @@ h3 a:focus {
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h1 {
-  font-size: 36px;
+  font-size: 41px;
 }
 h2 {
-  font-size: 30px;
+  font-size: 34px;
 }
 h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 11px;
 }
 .documentDescription {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: #777777;
   margin-bottom: 10px;
@@ -467,17 +466,17 @@ mark {
 .documentByLine {
   color: #777777;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 .documentFirstHeading {
-  padding-bottom: 9px;
-  margin: 0 0 10px;
+  padding-bottom: 10px;
+  margin: 0 0 11px;
   border-bottom: 1px solid #cccccc;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 ul ul,
 ol ul,
@@ -487,7 +486,7 @@ ol ol {
 }
 dl {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 dt,
 dd {
@@ -505,7 +504,7 @@ abbr[data-original-title] {
   border-bottom: 1px dotted #777777;
 }
 address {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-style: normal;
   line-height: 1.42857143;
 }
@@ -538,9 +537,9 @@ kbd {
 }
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 10.5px;
+  margin: 0 0 11px;
+  font-size: 15px;
   line-height: 1.42857143;
   word-break: break-all;
   word-wrap: break-word;
@@ -1271,7 +1270,7 @@ th {
 }
 .listing {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .listing > thead > tr > th,
 .listing > tbody > tr > th,
@@ -1310,7 +1309,7 @@ th {
 @media screen and (max-width: 767px) {
   .plone-has-table {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 16.5px;
     overflow-y: hidden;
     overflow-x: scroll;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -1399,8 +1398,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
+  margin-bottom: 22px;
+  font-size: 24px;
   line-height: inherit;
   color: #4d4d4d;
   border: 0;
@@ -1437,7 +1436,7 @@ select[size] {
   min-width: 10em;
 }
 select[size="1"] {
-  height: 34px;
+  height: 36px;
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -1449,7 +1448,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #696969;
 }
@@ -1460,9 +1459,9 @@ textarea,
 select {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 36px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #696969;
   background-color: #fff;
@@ -1535,7 +1534,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 34px;
+  line-height: 36px;
   line-height: 1.42857143 \0;
 }
 input[type="radio"][disabled],
@@ -1592,7 +1591,7 @@ fieldset[disabled] input[type="checkbox"] {
 .field.error div.error:before {
   background-color: #ac493f;
   content: "×";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   margin-left: -30px;
   margin-right: 5px;
@@ -1657,7 +1656,7 @@ label .required:after {
 #select-rules + input {
   position: relative;
   float: right;
-  margin-top: -34px;
+  margin-top: -36px;
 }
 #search-results li {
   margin: 12px 0;
@@ -1708,7 +1707,7 @@ button {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   border-radius: 2px;
   -webkit-user-select: none;
@@ -1972,7 +1971,7 @@ fieldset[disabled] .destructive.active {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   border-radius: 2px;
   -webkit-user-select: none;
@@ -2182,8 +2181,8 @@ fieldset[disabled] .link-parent.active {
 .plone-breadcrumb {
   clear: left;
   background-color: #f1edf6;
-  margin-bottom: 20px;
-  margin-top: -20px;
+  margin-bottom: 22px;
+  margin-top: -22px;
   /* uncomment to hide breadcrumbs on home
   body.section-front-page & {display: none;} //not breadcrumbs on homepage
   */
@@ -2243,7 +2242,7 @@ fieldset[disabled] .link-parent.active {
   display: inline-block;
   padding: 0;
   list-style: none;
-  margin: 20px 0;
+  margin: 22px 0;
 }
 .listingBar > li {
   font-weight: 300;
@@ -2397,7 +2396,7 @@ fieldset[disabled] .link-parent.active {
 .folder-listing > li:before {
   content: "•";
   position: absolute;
-  font-size: 19px;
+  font-size: 21px;
   margin-top: -9px;
   left: 0;
   color: #ffecec;
@@ -2444,11 +2443,11 @@ fieldset[disabled] .link-parent.active {
 .portalMessage {
   padding: 15px;
   padding-left: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border: 0;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   text-shadow: 0 1px rgba(255, 255, 255, 0.1);
 }
@@ -2464,7 +2463,7 @@ fieldset[disabled] .link-parent.active {
 }
 .portalMessage > strong:before,
 .portalMessage > dt:before {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   margin-left: -30px;
   margin-right: 10px;
@@ -2563,7 +2562,7 @@ fieldset[disabled] .link-parent.active {
 .portlet .portletHeader {
   background: #f2f1f1;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   padding: 13px 15px;
   color: #d20000;
 }
@@ -2580,7 +2579,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   display: inline-block;
   left: 5px;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: -3px;
   line-height: 28px;
   font-weight: 100;
@@ -2595,7 +2594,7 @@ fieldset[disabled] .link-parent.active {
   left: inherit;
 }
 .portlet .portletContent {
-  font-size: 14px;
+  font-size: 16px;
   border-top: 1px solid #e5e5e5;
   background: #fff;
   font-weight: 300;
@@ -2627,7 +2626,7 @@ fieldset[disabled] .link-parent.active {
 .portlet .portletContent > ul > li a:before {
   content: "•";
   position: absolute;
-  font-size: 25px;
+  font-size: 29px;
   margin-top: -9px;
   left: 15px;
   color: #ffecec;
@@ -2643,7 +2642,7 @@ fieldset[disabled] .link-parent.active {
   font-weight: 100;
   position: relative;
   margin-top: -26px;
-  font-size: 12px;
+  font-size: 14px;
   color: #777777;
 }
 .portlet .portletContent > ul li:hover {
@@ -2692,7 +2691,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   margin-left: 50%;
   left: -3px;
-  font-size: 20px;
+  font-size: 22px;
   color: #ffecec;
   margin-top: 9px;
 }
@@ -2740,7 +2739,7 @@ fieldset[disabled] .link-parent.active {
   border-top: 1px solid #e5e5e5;
   background: #fcfcfd;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -2773,7 +2772,7 @@ fieldset[disabled] .link-parent.active {
   content: "⟩";
   position: absolute;
   right: 10px;
-  font-size: 18px;
+  font-size: 20px;
   margin-top: -3px;
   color: #777777;
 }
@@ -2791,7 +2790,7 @@ fieldset[disabled] .link-parent.active {
   content: "⟩";
   position: absolute;
   right: 10px;
-  font-size: 18px;
+  font-size: 20px;
   margin-top: -3px;
   color: #777777;
 }
@@ -2852,7 +2851,7 @@ fieldset[disabled] .link-parent.active {
 .managedPortlet .portletHeader {
   background: #f2f1f1;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   padding: 13px 15px;
   color: #d20000;
 }
@@ -2869,7 +2868,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   display: inline-block;
   left: 5px;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: -3px;
   line-height: 28px;
   font-weight: 100;
@@ -2884,7 +2883,7 @@ fieldset[disabled] .link-parent.active {
   left: inherit;
 }
 .managedPortlet .portletContent {
-  font-size: 14px;
+  font-size: 16px;
   border-top: 1px solid #e5e5e5;
   background: #fff;
   font-weight: 300;
@@ -2916,7 +2915,7 @@ fieldset[disabled] .link-parent.active {
 .managedPortlet .portletContent > ul > li a:before {
   content: "•";
   position: absolute;
-  font-size: 25px;
+  font-size: 29px;
   margin-top: -9px;
   left: 15px;
   color: #ffecec;
@@ -2932,7 +2931,7 @@ fieldset[disabled] .link-parent.active {
   font-weight: 100;
   position: relative;
   margin-top: -26px;
-  font-size: 12px;
+  font-size: 14px;
   color: #777777;
 }
 .managedPortlet .portletContent > ul li:hover {
@@ -2981,7 +2980,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   margin-left: 50%;
   left: -3px;
-  font-size: 20px;
+  font-size: 22px;
   color: #ffecec;
   margin-top: 9px;
 }
@@ -3029,7 +3028,7 @@ fieldset[disabled] .link-parent.active {
   border-top: 1px solid #e5e5e5;
   background: #fcfcfd;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -3104,7 +3103,7 @@ fieldset[disabled] .link-parent.active {
 #portlet-prefs ul ul li a:before {
   content: "•";
   position: absolute;
-  font-size: 25px;
+  font-size: 29px;
   margin-top: -9px;
   left: 15px;
   color: #ffecec;
@@ -3149,7 +3148,7 @@ fieldset[disabled] .link-parent.active {
 .link-category {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1;
   color: #4d4d4d;
@@ -3264,13 +3263,13 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-news-item:after {
   content: '\e80f';
 }
 #textAdjust .decrease-text {
-  font-size: 12px;
-}
-#textAdjust .normal-text {
   font-size: 14px;
 }
+#textAdjust .normal-text {
+  font-size: 16px;
+}
 #textAdjust .increase-text {
-  font-size: 18px;
+  font-size: 20px;
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav {
   float: right;
@@ -3291,15 +3290,15 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-news-item:after {
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav .autotoc-level-1 {
   margin-left: 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav .autotoc-level-2 {
   margin-left: 12px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav .autotoc-level-3 {
   margin-left: 24px;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   .pat-autotoc .autotoc-nav {
@@ -3342,13 +3341,13 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-news-item:after {
   padding: 12px;
 }
 .plone-modal .plone-modal-dialog .plone-modal-header h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
 }
 .plone-modal .plone-modal-dialog .plone-modal-header .plone-modal-close {
   margin-top: -12px;
   float: right;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 100;
   line-height: 1;
   color: #000;
@@ -3595,7 +3594,7 @@ ul.picker__list {
   background: #333333;
   background: rgba(0, 0, 0, 0.9);
   color: #ffffff;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.17);
   max-width: 200px;
@@ -3681,7 +3680,7 @@ ul.picker__list {
   font-size: 0;
 }
 #portal-header #portal-searchbox form > div > * {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   #portal-header #portal-languageselector {
@@ -3726,7 +3725,7 @@ ul.picker__list {
     font-size: 0;
   }
   #portal-header #portal-searchbox form > div > * {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 #portal-header:before,
@@ -3751,7 +3750,7 @@ ul.picker__list {
   display: block;
   padding: 10px 15px;
   color: white;
-  font-size: 17px;
+  font-size: 19px;
 }
 .plone-nav > li > a:hover,
 .plone-nav > li > a:focus {
@@ -3762,7 +3761,7 @@ ul.picker__list {
   background-color: #d20000;
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border: 1px solid transparent;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
 }
@@ -3877,7 +3876,7 @@ ul.picker__list {
 .plone-navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .plone-navbar-nav > .selected > a,
 .plone-navbar-nav > .selected > a:hover,
@@ -3893,8 +3892,8 @@ ul.picker__list {
     float: left;
   }
   .plone-navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
   .plone-navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -4049,14 +4048,14 @@ ul.picker__list {
 }
 #portal-footer-wrapper .portlet .portletActions {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   margin-right: 15px;
 }
 #portal-siteactions {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
 }
 #portal-siteactions li {
   font-weight: bold;
@@ -4089,7 +4088,7 @@ body.template-login_form #content-core .portletHeader,
 body.template-logged_out #content-core .portletHeader {
   background: #f2f1f1;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   padding: 13px 15px;
   color: #d20000;
 }
@@ -4109,7 +4108,7 @@ body.template-logged_out #content-core.portletCalendar .portletHeader .calendarN
   position: absolute;
   display: inline-block;
   left: 5px;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: -3px;
   line-height: 28px;
   font-weight: 100;
@@ -4128,7 +4127,7 @@ body.template-logged_out #content-core.portletCalendar .portletHeader .calendarN
 }
 body.template-login_form #content-core .portletContent,
 body.template-logged_out #content-core .portletContent {
-  font-size: 14px;
+  font-size: 16px;
   border-top: 1px solid #e5e5e5;
   background: #fff;
   font-weight: 300;
@@ -4167,7 +4166,7 @@ body.template-login_form #content-core .portletContent > ul > li a:before,
 body.template-logged_out #content-core .portletContent > ul > li a:before {
   content: "•";
   position: absolute;
-  font-size: 25px;
+  font-size: 29px;
   margin-top: -9px;
   left: 15px;
   color: #ffecec;
@@ -4185,7 +4184,7 @@ body.template-logged_out #content-core .portletContent > ul .portletItemDetails 
   font-weight: 100;
   position: relative;
   margin-top: -26px;
-  font-size: 12px;
+  font-size: 14px;
   color: #777777;
 }
 body.template-login_form #content-core .portletContent > ul li:hover,
@@ -4244,7 +4243,7 @@ body.template-logged_out #content-core .portletContent table .cal_has_events a:a
   position: absolute;
   margin-left: 50%;
   left: -3px;
-  font-size: 20px;
+  font-size: 22px;
   color: #ffecec;
   margin-top: 9px;
 }
@@ -4308,7 +4307,7 @@ body.template-logged_out #content-core .portletFooter {
   border-top: 1px solid #e5e5e5;
   background: #fcfcfd;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -4324,13 +4323,13 @@ body.template-logged_out #content-core .portletFooter {
   padding-left: 0;
 }
 #portal-sitemap > li {
-  font-size: 18px;
+  font-size: 20px;
   border-top: 1px solid #e5e5e5;
   padding: 6px 0;
 }
 #portal-sitemap ul {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   padding-left: 20px;
   -moz-column-count: 3;
   -moz-column-gap: 20px;
@@ -4345,7 +4344,7 @@ body.template-logged_out #content-core .portletFooter {
 #portal-sitemap ul li:before {
   content: "•";
   display: inline;
-  font-size: 25px;
+  font-size: 29px;
   color: #ffecec;
   top: 5px;
   position: relative;
@@ -4395,12 +4394,12 @@ body.template-logged_out #content-core .portletFooter {
   padding: 6px 12px;
 }
 .cal_day {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 500;
   display: block;
 }
 .cal_wkday {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 100;
   display: block;
   padding: 0 12px 6px;
@@ -4499,7 +4498,7 @@ body.template-logged_out #content-core .portletFooter {
   display: inline-block;
 }
 .image-product figcaption {
-  font-size: 12px;
+  font-size: 14px;
   background: #fcfcfd;
   margin: 6px 12px;
 }
@@ -4513,7 +4512,7 @@ body.template-logged_out #content-core .portletFooter {
   border-radius: 50px;
 }
 .portraitPhoto figcaption {
-  font-size: 12px;
+  font-size: 14px;
   background: #fcfcfd;
   margin: 6px 12px;
 }
@@ -4533,7 +4532,7 @@ body.template-logged_out #content-core .portletFooter {
 .newsImageContainer figcaption {
   display: table-caption;
   caption-side: bottom;
-  font-size: 12px;
+  font-size: 14px;
   background: #fcfcfd;
 }
 #commenting:before,
@@ -4575,7 +4574,7 @@ body.template-logged_out #content-core .portletFooter {
 .discussion .commentDate {
   float: right !important;
   display: inline;
-  font-size: 12px;
+  font-size: 14px;
   color: #76797C;
 }
 .discussion .commentBody {
@@ -4692,4 +4691,8 @@ body.template-logged_out #content-core .portletFooter {
 }
 #search-filter input {
   margin-right: 0.5rem;
+}
+#portal-footer-wrapper a,
+#portal-footer-wrapper a:hover {
+  color: whitesmoke;
 }
