@@ -5,8 +5,13 @@
 @barceloneta_path: "barceloneta/less";
 
 //*// Core variables and mixins
+@import "plone.toolbar.vars.less";
+@import "red/less/variables.red.less";
+
+//*// Font families
 @import "@{barceloneta_path}/fonts.plone.less";
-@import "red/less/variables.plone.less";
+
+//*// Core variables and mixins
 @import "@{barceloneta_path}/mixin.prefixes.plone.less";
 @import "@{barceloneta_path}/mixin.tabfocus.plone.less";
 @import "@{barceloneta_path}/mixin.images.plone.less";
@@ -14,17 +19,20 @@
 @import "@{barceloneta_path}/mixin.borderradius.plone.less";
 @import "@{barceloneta_path}/mixin.buttons.plone.less";
 @import "@{barceloneta_path}/mixin.clearfix.plone.less";
-@import "@{barceloneta_path}/mixin.gridframework.plone.less"; 
-@import "@{barceloneta_path}/mixin.grid.plone.less";
+@import "@{barceloneta_path}/mixin.gridframework.plone.less"; //grid Bootstrap
+@import "@{barceloneta_path}/mixin.grid.plone.less"; //grid Bootstrap
 
+
+//*// Reset and dependencies
 @import "@{barceloneta_path}/normalize.plone.less";
 @import "@{barceloneta_path}/print.plone.less";
-@import "@{barceloneta_path}/code.plone.less";
 
 //*// Core CSS
-@import "@{barceloneta_path}/grid.plone.less";
 @import "@{barceloneta_path}/scaffolding.plone.less";
 @import "@{barceloneta_path}/type.plone.less";
+@import "@{barceloneta_path}/code.plone.less";
+//@import "@{barceloneta_path}/deco.plone.less"; //uncomment for deco variant
+@import "@{barceloneta_path}/grid.plone.less"; //grid Bootstrap
 @import "@{barceloneta_path}/tables.plone.less";
 @import "@{barceloneta_path}/forms.plone.less";
 @import "@{barceloneta_path}/buttons.plone.less";
@@ -67,10 +75,3 @@
 @import "@{barceloneta_path}/behaviors.plone.less";
 @import "@{barceloneta_path}/discussion.plone.less";
 @import "@{barceloneta_path}/search.plone.less";
-
-// ### END OF PLONE IMPORTS ###
-
-
-
-// include our custom css/less
-// @import "custom.less";

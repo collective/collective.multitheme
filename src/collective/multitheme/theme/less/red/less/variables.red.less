@@ -9,10 +9,10 @@
 @plone-gray-lighter:						lighten(#000, 80%);   // #ccc //disableds like
 
 //colors
-@plone-link-color:							#d20000; //red
+@plone-link-color:							#d20000; //redish
 @plone-link-color-on-dark:					#e85762; //ugly red
 											//if you need different contrast
-@plone-default-published-color:				@plone-link-color; //published and external same color
+@plone-default-published-color:				#00ca00; //published and external same color
 @plone-default-draft-color:					darken(@plone-toolbar-draft-color, 15%); // lime-yellow //draft is visible
 @plone-default-pending-color:				darken(@plone-toolbar-pending-color, 15%); // orange
 @plone-default-private-color:				@plone-toolbar-private-color; // red
@@ -22,16 +22,16 @@
 
 
 //*// SCAFFOLDING
-@plone-body-bg:            				     #fff; //white
-@plone-footer-bg:            				 #2e3133; #333
+@plone-body-bg:            				     #ffffff; 
+@plone-footer-bg:            				 #2e3133; 
 @plone-text-color:           				 @plone-gray-dark;
 @plone-link-hover-color:     				 darken(@plone-link-color, 15%);
 
 
 
 //*// TYPOGRAPHY
-@plone-font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; // Roboto seems Plone's DIN
-@plone-font-family-condensed:   "Roboto Condensed", "Arial Narrow", sans-serif; //just on toolbar
+@plone-font-family-sans-serif:  "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@plone-font-family-condensed:   "Arial Narrow", sans-serif; //just on toolbar
 @plone-font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @plone-font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @plone-font-family-base:        @plone-font-family-sans-serif;
@@ -156,7 +156,7 @@
 	@plone-btn-standalone-bg:             	   	#e5e5e5;
 	@plone-btn-standalone-border:          	   	darken(@plone-btn-standalone-bg, 20%);
 @plone-btn-context-color:              		#fff;
-	@plone-btn-context-bg:                 		##060;
+	@plone-btn-context-bg:                 		#060;
 	@plone-btn-context-border:             		darken(@plone-btn-context-bg, 10%);
 @plone-btn-destructive-color:              #fff;
 	@plone-btn-destructive-bg:                 #d20000;
@@ -220,8 +220,8 @@
 @plone-portlet-footer-bg:					#fcfcfd;
 @plone-portlet-border:						1px solid #e5e5e5;
 @plone-portlet-contrast-bg:					#e5e5e5;
-@plone-portlet-event-bullet:				#dbecfe;
-@plone-portlet-list-bullet:					#64bee8;
+@plone-portlet-event-bullet:				lighten(@plone-link-color, 60%);
+@plone-portlet-list-bullet:					lighten(@plone-link-color, 40%);
 @plone-portlet-list-hover-bg:				#fcfcfd;
 @plone-portlet-list-small-text:				@plone-gray-light;
 
@@ -251,45 +251,45 @@
 //** Breadcrumb text color
 @plone-breadcrumb-color:              @plone-gray-lighter;
 //** Text color of current page in the breadcrumb
-@plone-breadcrumb-active-color:       #d20000;
+@plone-breadcrumb-active-color:       @plone-link-color;
 
 //*// SITE NAV
-@plone-sitenav-height:                        50px;
-	@plone-sitenav-margin-bottom:             @plone-line-height-computed;
-	@plone-sitenav-border-radius:             @plone-border-radius-base;
-	@plone-sitenav-padding-horizontal:        floor((@plone-grid-gutter-width / 2));
-	@plone-sitenav-padding-vertical:          ((@plone-sitenav-height - @plone-line-height-computed) / 2);
-	@plone-sitenav-collapse-max-height:       340px;
-	@plone-sitenav-link-padding:              10px 15px;
-	@plone-sitenav-link-hover-bg:             #9abdd6;
-	@plone-sitenav-bg:      			      @plone-link-color;
-	@plone-sitenav-hover-bg:      			  @plone-link-color;
+@plone-sitenav-height:                    50px;
+@plone-sitenav-margin-bottom:             @plone-line-height-computed;
+@plone-sitenav-border-radius:             @plone-border-radius-base;
+@plone-sitenav-padding-horizontal:        floor((@plone-grid-gutter-width / 2));
+@plone-sitenav-padding-vertical:          ((@plone-sitenav-height - @plone-line-height-computed) / 2);
+@plone-sitenav-collapse-max-height:       340px;
+@plone-sitenav-link-padding:              10px 15px;
+@plone-sitenav-link-hover-bg:             #9f0000;
+@plone-sitenav-bg:      			      #d20000;
+@plone-sitenav-hover-bg:      			  #d20000;
 
 //*// PAGINATION
 @plone-pagination-color:                     @plone-link-color;
-	@plone-pagination-bg:                        @plone-portlet-content-bg;
-	@plone-pagination-border:                    @plone-portlet-border;
+@plone-pagination-bg:                        @plone-portlet-content-bg;
+@plone-pagination-border:                    @plone-portlet-border;
 @plone-pagination-hover-color:               @plone-link-hover-color;
-	@plone-pagination-hover-bg:                  @plone-portlet-header-bg;
-	@plone-pagination-hover-border:              @plone-portlet-border;
+@plone-pagination-hover-bg:                  @plone-portlet-header-bg;
+@plone-pagination-hover-border:              @plone-portlet-border;
 @plone-pagination-active-color:              @plone-portlet-content-bg;
-	@plone-pagination-active-bg:                 @plone-link-color;
-	@plone-pagination-active-border:             @plone-link-color;
+@plone-pagination-active-bg:                 @plone-link-color;
+@plone-pagination-active-border:             @plone-link-color;
 @plone-pagination-disabled-color:            @plone-gray-lighter;
-	@plone-pagination-disabled-bg:               @plone-portlet-footer-bg;
-	@plone-pagination-disabled-border:           @plone-portlet-border;
+@plone-pagination-disabled-bg:               @plone-portlet-footer-bg;
+@plone-pagination-disabled-border:           @plone-portlet-border;
 
 
 
 //*// CODE
 @plone-code-color:                  #c7254e;
-	@plone-code-bg:                     #f9f2f4;
+@plone-code-bg:                     #f9f2f4;
 @plone-kbd-color:                   #fff;
-	@plone-kbd-bg:                      #333;
+@plone-kbd-bg:                      #333;
 @plone-pre-bg:                      #f5f5f5;
-	@plone-pre-color:                   @plone-gray-dark;
-	@plone-pre-border-color:            #ccc;
-	@plone-pre-scrollable-max-height:   340px;
+@plone-pre-color:                   @plone-gray-dark;
+@plone-pre-border-color:            #ccc;
+@plone-pre-scrollable-max-height:   340px;
 
 
 

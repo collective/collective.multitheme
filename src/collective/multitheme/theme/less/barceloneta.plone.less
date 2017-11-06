@@ -1,70 +1,72 @@
 //*// PLONE 5 BARCELONETA LESS //*//
 
+@barceloneta_path: "barceloneta/less";
+
 //*// Font families
-@import "fonts.plone.less";
+@import "@{barceloneta_path}/fonts.plone.less";
 
 //*// Core variables and mixins
-@import "variables.plone.less";
-	@import "mixin.prefixes.plone.less";
-	@import "mixin.tabfocus.plone.less";
-	@import "mixin.images.plone.less";
-	@import "mixin.forms.plone.less";
-	@import "mixin.borderradius.plone.less";
-	@import "mixin.buttons.plone.less";
-	@import "mixin.clearfix.plone.less";
-	@import "mixin.gridframework.plone.less"; //grid Bootstrap
-	@import "mixin.grid.plone.less"; //grid Bootstrap
+@import "@{barceloneta_path}/variables.plone.less";
+	@import "@{barceloneta_path}/mixin.prefixes.plone.less";
+	@import "@{barceloneta_path}/mixin.tabfocus.plone.less";
+	@import "@{barceloneta_path}/mixin.images.plone.less";
+	@import "@{barceloneta_path}/mixin.forms.plone.less";
+	@import "@{barceloneta_path}/mixin.borderradius.plone.less";
+	@import "@{barceloneta_path}/mixin.buttons.plone.less";
+	@import "@{barceloneta_path}/mixin.clearfix.plone.less";
+	@import "@{barceloneta_path}/mixin.gridframework.plone.less"; //grid Bootstrap
+	@import "@{barceloneta_path}/mixin.grid.plone.less"; //grid Bootstrap
 
 
 //*// Reset and dependencies
-@import "normalize.plone.less";
-@import "print.plone.less";
+@import "@{barceloneta_path}/normalize.plone.less";
+@import "@{barceloneta_path}/print.plone.less";
 
 //*// Core CSS
-@import "scaffolding.plone.less";
-@import "type.plone.less";
-@import "code.plone.less";
-//@import "deco.plone.less"; //uncomment for deco variant
-@import "grid.plone.less"; //grid Bootstrap
-@import "tables.plone.less";
-@import "forms.plone.less";
-@import "buttons.plone.less";
-@import "states.plone.less";
+@import "@{barceloneta_path}/scaffolding.plone.less";
+@import "@{barceloneta_path}/type.plone.less";
+@import "@{barceloneta_path}/code.plone.less";
+//@import "@{barceloneta_path}/deco.plone.less"; //uncomment for deco variant
+@import "@{barceloneta_path}/grid.plone.less"; //grid Bootstrap
+@import "@{barceloneta_path}/tables.plone.less";
+@import "@{barceloneta_path}/forms.plone.less";
+@import "@{barceloneta_path}/buttons.plone.less";
+@import "@{barceloneta_path}/states.plone.less";
 
 //*// Components
-@import "breadcrumbs.plone.less";
-@import "pagination.plone.less";
-@import "formtabbing.plone.less"; //pattern
-@import "views.plone.less";
-@import "thumbs.plone.less";
-@import "alerts.plone.less";
-@import "portlets.plone.less";
-@import "controlpanels.plone.less";
-@import "tags.plone.less";
-@import "contents.plone.less";
+@import "@{barceloneta_path}/breadcrumbs.plone.less";
+@import "@{barceloneta_path}/pagination.plone.less";
+@import "@{barceloneta_path}/formtabbing.plone.less"; //pattern
+@import "@{barceloneta_path}/views.plone.less";
+@import "@{barceloneta_path}/thumbs.plone.less";
+@import "@{barceloneta_path}/alerts.plone.less";
+@import "@{barceloneta_path}/portlets.plone.less";
+@import "@{barceloneta_path}/controlpanels.plone.less";
+@import "@{barceloneta_path}/tags.plone.less";
+@import "@{barceloneta_path}/contents.plone.less";
 
 //*// Patterns
-@import "accessibility.plone.less";
-@import "toc.plone.less";
-@import "dropzone.plone.less";
-@import "modal.plone.less";
-@import "pickadate.plone.less";
-@import "sortable.plone.less";
-@import "tablesorter.plone.less";
-@import "tooltip.plone.less";
-@import "tree.plone.less";
+@import "@{barceloneta_path}/accessibility.plone.less";
+@import "@{barceloneta_path}/toc.plone.less";
+@import "@{barceloneta_path}/dropzone.plone.less";
+@import "@{barceloneta_path}/modal.plone.less";
+@import "@{barceloneta_path}/pickadate.plone.less";
+@import "@{barceloneta_path}/sortable.plone.less";
+@import "@{barceloneta_path}/tablesorter.plone.less";
+@import "@{barceloneta_path}/tooltip.plone.less";
+@import "@{barceloneta_path}/tree.plone.less";
 
 //*// Structure
-@import "header.plone.less";
-@import "sitenav.plone.less";
-@import "main.plone.less";
-@import "footer.plone.less";
-@import "loginform.plone.less";
-@import "sitemap.plone.less";
+@import "@{barceloneta_path}/header.plone.less";
+@import "@{barceloneta_path}/sitenav.plone.less";
+@import "@{barceloneta_path}/main.plone.less";
+@import "@{barceloneta_path}/footer.plone.less";
+@import "@{barceloneta_path}/loginform.plone.less";
+@import "@{barceloneta_path}/sitemap.plone.less";
 
 //*// Products
-@import "event.plone.less";
-@import "image.plone.less";
-@import "behaviors.plone.less";
-@import "discussion.plone.less";
-@import "search.plone.less";
+@import "@{barceloneta_path}/event.plone.less";
+@import "@{barceloneta_path}/image.plone.less";
+@import "@{barceloneta_path}/behaviors.plone.less";
+@import "@{barceloneta_path}/discussion.plone.less";
+@import "@{barceloneta_path}/search.plone.less";
