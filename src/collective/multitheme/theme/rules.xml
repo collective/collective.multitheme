@@ -8,6 +8,10 @@
   <theme href="index.html" />
   <notheme css:if-not-content="#visual-portal-wrapper" />
 
+  <after theme-children="/html/head" >
+       <link href="++theme++multitheme/less/{$cssfile}-compiled.css" rel="stylesheet"/>
+  </after>
+
   <rules css:if-content="#portal-top">
     <!-- Attributes -->
     <copy attributes="*" css:theme="html" css:content="html" />

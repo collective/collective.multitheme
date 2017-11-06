@@ -11,13 +11,13 @@
 			        <tal:repeat tal:repeat="item  context/?folder_url/@@contentlisting">
 			          <div  class="fillme" tal:define="item_url item/getURL|item/absolute_url;
 							        image_url python:item_url + '/@@images/image'">
-			 						  <img class="slider-img img-responsive" src="" alt="" tal:attributes="src image_url"/>
+			 						  <img class="slider-img img-responsive"  alt="" src="${image_url}"/>
 				            <div class="slidetext-container">
 				              <div class="slidetext  wow bounceInUp animated">
 								    		<h1 tal:content="item/title|None" />
 												<tal:condition
 														tal:condition="exists: item/description">
-														<h3 tal:content="item/description"/>
+														<h3>${item/description}<h3>
 													</tal:condition>
 											 </div>
 			              </div>

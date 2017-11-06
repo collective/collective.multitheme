@@ -1,11 +1,12 @@
 <section id="moreservices"
-		 	   tal:define="folder_is nocall:context/moreservices|nothing">
-    <div class="container"  tal:condition="folder_is">
-		    <div class="center wow fadeInDown animated"
-             style="visibility: visible; animation-name: fadeInDown;">
-          <h2>${context/moreservices/Title}</h2>
-          <p class="lead">${context/moreservices/Description}</p>
-        </div>
+		 	   tal:define="folder_is nocall:context/moreservice|nothing">
+  	    <div class="container center wow fadeInDown animated"
+             style="visibility: visible; animation-name: fadeInDown;"
+						 tal:condition="folder_is">
+					<div class="servicetext">
+          	<h2>${context/moreservices/Title}</h2>
+          	<p class="lead">${context/moreservices/Description}</p>
+        	</div>
         <div class="service-items">
 					<div tal:repeat="item context/moreservices/@@contentlisting"
                class="wow fadeInDown animated service-item"
@@ -25,6 +26,7 @@
               </div>
             </div>
           </div>
-        </div>
+				</div>
     	</div>
+			  <link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
 </section>

@@ -1,0 +1,40 @@
+<section  tal:define="items context/@@contentlisting;
+         image_size view/data/image_size|None">
+    <div class="wall-of-images container-fluid" tal:condition="image_size">
+      <tal:image tal:repeat="item items">
+        <tal:define tal:define="obj item/getObject;
+                         scale_func obj/@@images;
+                         scaled_image python:scale_func.scale('image', scale=image_size)">
+        <img tal:replace="structure python:scaled_image.tag()"
+             tal:on-error=""
+             tal:condition="python: obj.portal_type == 'Image'"/>
+        </tal:define>
+      </tal:image>
+    </div>
+    <link rel="stylesheet" href="++theme++multitheme/css/masonary.css">
+    <script>require([
+      'jquery',
+      'pat-base',
+      '++theme++multitheme/javascript/masonry.pkgd.min',
+      '++theme++multitheme/javascript/imagesloaded.pkgd.min'
+			], function(Base) {
+				'use strict';
+
+				var Masonry = Base.extend({
+					name: 'masonry',
+					trigger: '.wall-of-images',
+
+					init: function() {
+						var self = this;
+						self.$el.imagesLoaded(function() {
+							self.$el.masonry({
+								itemSelector: 'img',
+								percentPosition: true
+							});
+						});
+					}
+				});
+				return Masonry;
+			});
+		</script>
+</section>

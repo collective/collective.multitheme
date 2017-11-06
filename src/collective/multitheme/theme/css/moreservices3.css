@@ -1,0 +1,43 @@
+/* @override http://localhost:8080/multilayout/++theme++multitheme/css/moreservices2.css */
+
+div.servicetext {
+	max-width: 90vw;
+	margin: auto;
+	text-align: center;
+}
+
+#moreservices {
+	position: relative;
+	width:  300%;
+	left:  -100%;
+	right:  -100%;
+	background: #d20000;
+	padding: 1em;
+	margin-top:  2em;
+	margin-bottom: 2em;
+	color:  white;
+	text-align: center;
+	
+}
+div.service-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 3em;
+	margin-bottom: 1.4em;
+}
+
+.service-item {
+  min-width: 300px;
+  width: 30%;
+
+}
+
+.service-item img {
+  border-radius: 50%;
+  border:  1.5px solid white;;
+
+}
+.service-item a {
+  color: white;
+}
