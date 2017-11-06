@@ -65,12 +65,16 @@ def _create_content(portal):
             text = RichTextValue(
             """<p> </p>
 			<p>This is a theming product for Plone 5</p>
-			<p>It is in beta, but since there are no other Plone 5 themes I have decided to release it</p>
 			<p> </p>
-			<p>1) <a href="../../prefs_install_products_form">Install the theme</a></p>
-			<p>2) <a href="../../@@mail-controlpanel">Configure E-mail</a></p>
-			<p>3) <a href="../../@@medialog_controlpanel">Configure Settings in Site Control Panel</a></p>
-			<p> </p>
+			<p>1) <a href="../prefs_install_products_form">Install the theme</a></p>
+			<p>2) <a href="../@@mail-controlpanel">Configure E-mail</a></p>
+			<p>3) <a href="../@@medialog_controlpanel">Configure Settings in Site Control Panel</a></p>
+            <p>4) <a href="../test_rendering">See a test rendering</a></p>
+            <p>5) Repeat from 3)
+            <p>6) Set the view on a folder to 'Mosaic Layout', <a href="../../services/select_default_view">for example here</a></p>
+            <p>7) Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</p>
+
+            <p> </p>
 			<p> </p>""",
 			'text/html',
             'text/x-html-safe'
