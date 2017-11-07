@@ -14,7 +14,7 @@
               data-wow-delay="600ms" data-wow-duration="1000ms"
               style="visibility: visible; animation-duration: 1000ms;
                         animation-delay: 600ms; animation-name: fadeInDown;">
-				    <div class="service-item" tal:define="item_url item/getURL|item/absolute_url;
+				    <tal:define tal:define="item_url item/getURL|item/absolute_url;
 							               item_title item/Title">
 							<a href="#" tal:attributes="href item_url">
 	 							<img src="${item_url}/@@images/image/preview" alt="${item_title}"
@@ -27,7 +27,7 @@
                   </a>
                   <p>${item/Description}</p>
               </div>
-          	</div>
+          	</tal:define>
 				  </div>
     	</div>
 			<link rel="stylesheet" href="++theme++multitheme/less/${stil}/${view/data/css_file}.css">

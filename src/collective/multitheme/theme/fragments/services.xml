@@ -21,6 +21,7 @@
         <element>services</element>
         <element>services2</element>
         <element>services3</element>
+        <element>services4</element>
       </values>
     </field>
 </schema>

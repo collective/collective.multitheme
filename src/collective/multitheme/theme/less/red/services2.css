@@ -30,3 +30,13 @@ div.service-items {
 
 }
 
+@media (max-width: 768px){
+    div.service-items {
+        flex-direction:  column;
+        justify-content: center;
+    }
+    .service-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
