@@ -29,4 +29,5 @@
           	</tal:define>
 				  </div>
     	</div>
+			<link rel="stylesheet" href="++theme++multitheme/less/${view/data/css_file}/theme.css">
 </section>

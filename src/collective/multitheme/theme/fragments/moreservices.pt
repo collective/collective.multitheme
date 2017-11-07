@@ -28,5 +28,5 @@
           </div>
 				</div>
     	</div>
-			  <link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
+		<link rel="stylesheet" href="++theme++multitheme/less/${view/data/css_file}/theme.css">
 </section>

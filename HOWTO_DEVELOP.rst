@@ -1,3 +1,8 @@
+Commands to run (from your theme folder) to make a new color scheme:
+
+lessc theme.less theme.css; lessc ../services3.less services3.css;
+
+
 In order to develop the theme you need to install grunt-cli global::
 
     $ sudo npm install -g grunt-cli

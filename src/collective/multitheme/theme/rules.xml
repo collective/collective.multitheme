@@ -9,7 +9,7 @@
   <notheme css:if-not-content="#visual-portal-wrapper" />
 
   <after theme-children="/html/head" >
-       <link href="++theme++multitheme/less/{$cssfile}.css" rel="stylesheet"/>
+       <link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
   </after>
 
   <rules css:if-content="#portal-top">
