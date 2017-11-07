@@ -1,19 +1,20 @@
 <section id="services"
-		 		 tal:define="folder_is nocall:context/services|nothing">
-    <div tal:condition="folder_is">
-  		<div class="center wow fadeInDown animated"
+		 		 tal:define="folder_url nocall:request/form/folder_url|None;
+				 stil python: context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.style']">
+    <div tal:condition="folder_url">
+  		<div class="center wow fadeInDown animated container servicetext"
            style="visibility: visible; animation-name: fadeInDown;">
-          <h2 tal:content="context/services/Title" />
+          <h2 tal:content="context/?folder_url/Title|None" />
           <p class="lead"
-                	tal:content="context/services/Description"  />
+                	tal:content="context/?folder_url/Description|None"  />
       </div>
-      <div class="service-items"
-						tal:repeat="item context/services/@@contentlisting"
+      <div class="service-items container">
+				<div tal:repeat="item context/?folder_url/@@contentlisting|None"
               class="wow fadeInDown animated service-item"
               data-wow-delay="600ms" data-wow-duration="1000ms"
               style="visibility: visible; animation-duration: 1000ms;
                         animation-delay: 600ms; animation-name: fadeInDown;">
-				    <tal:define tal:define="item_url item/getURL|item/absolute_url;
+				    <div class="service-item" tal:define="item_url item/getURL|item/absolute_url;
 							               item_title item/Title">
 							<a href="#" tal:attributes="href item_url">
 	 							<img src="${item_url}/@@images/image/preview" alt="${item_title}"
@@ -26,8 +27,8 @@
                   </a>
                   <p>${item/Description}</p>
               </div>
-          	</tal:define>
+          	</div>
 				  </div>
     	</div>
-			<link rel="stylesheet" href="++theme++multitheme/less/${view/data/css_file}/theme.css">
+			<link rel="stylesheet" href="++theme++multitheme/less/${stil}/${view/data/css_file}.css">
 </section>

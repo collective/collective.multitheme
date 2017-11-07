@@ -3,6 +3,7 @@ div.servicetext {
   margin: auto;
   text-align: center;
 }
+#services,
 #moreservices {
   position: relative;
   width: 300%;
@@ -30,6 +31,8 @@ div.service-items {
   border-radius: 50%;
   border: 1.5px solid white;
 }
+h1.media-heading,
+.servicetext h2,
 .service-item a {
   color: white;
 }

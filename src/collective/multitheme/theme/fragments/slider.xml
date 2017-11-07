@@ -10,7 +10,7 @@
   <field name="folder_url" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
-    <title>Relative path to folder with images to use for slider</title>
+    <title>Path to folder with images to use for slider</title>
     <default>slider</default>
   </field>
   <field name="maxwidth" type="zope.schema.Int">

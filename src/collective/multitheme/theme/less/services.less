@@ -1,23 +1,24 @@
+@import "variables.less";
 
 div.servicetext {
 	max-width: 90vw;
 	margin: auto;
 	text-align: center;
-
 }
 
-#moreservices {
+#services, #moreservices {
 	position: relative;
 	width:  300%;
 	left:  -100%;
 	right:  -100%;
-	background: #007bb2;
+	background: @plone-link-color;
 	padding: 1em;
 	margin-top:  2em;
 	margin-bottom: 2em;
 	color:  white;
 	text-align: center;
 }
+
 div.service-items {
 	display: flex;
 	flex-wrap: wrap;
