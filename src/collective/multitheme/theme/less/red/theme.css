@@ -327,7 +327,7 @@ body {
   font-family: "Source Sans Pro", "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #4d4d4d;
+  color: #333333;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -399,7 +399,7 @@ h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.3;
-  color: #d20000;
+  color: inherit;
 }
 h1,
 h2,
@@ -1620,7 +1620,7 @@ fieldset[disabled] input[type="checkbox"] {
 .formHelp {
   margin-top: 0;
   margin-bottom: 0;
-  color: #666666;
+  color: #4d4d4d;
   font-weight: 300;
   font-style: italic;
 }

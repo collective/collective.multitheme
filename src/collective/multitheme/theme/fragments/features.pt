@@ -1,11 +1,10 @@
 <section id="features"
 		 tal:define="keyword view/data/keyword">
     <div  tal:condition="keyword">
-
            <div class="center wow fadeInDown">
-                <h2>${view/data/title}</h2>
+                <h1>${view/data/title}</h1>
                 <tal:condition tal:condition="view/data/description">
-                	<p class="lead">${view/data/description}</p>
+                	<p class="documentDescription">${view/data/description}</p>
                 </tal:condition>
             </div>
 
@@ -18,21 +17,22 @@
 							data-wow-delay="600ms" data-wow-duration="1000ms"
 							style="visibility: visible; animation-duration: 1000ms;
 							animation-delay: 600ms; animation-name: fadeInDown;">
-							<div class="feature-wrap fa">
-								<i  tal:condition="exists:item/iconfield">
-								<span  tal:replace="structure item/iconfield/@@iconload" />
-								</i>
-								 <i class="fa fa-info"
-									tal:condition="not:exists:item/iconfield" />
+							<div class="feature-wrap fa"  tal:define="item_url item/getURL|item/absolute_url">
+								<a href="${item_url}">
+									<i  tal:condition="exists:item/iconfield">
+										<span  tal:replace="structure item/iconfield/@@iconload" />
+									</i>
+								 	<i class="fa fa-info"
+										tal:condition="not:exists:item/iconfield" />
 
-								<h2 tal:content="item/Title" />
-								<h3 tal:content="item/Description" />
+										<h2 tal:content="item/Title" />
+								 </a>
+								<h4>${item/Description}</h4>
 							</div>
             </div>
 					 </div>
 					</tal:check>
-
     </div>
     <tal:css tal:replace="structure context/@@fontload"/>
-	  <link rel="stylesheet" href="++theme++multitheme/less/features.css">
+	  <link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
 </section>

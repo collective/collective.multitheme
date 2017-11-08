@@ -23,5 +23,15 @@
       <title>Keyword</title>
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
     </field>
+    <field name="css_file" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Style</title>
+        <values>
+          <element>features</element>
+          <element>features2</element>
+          <element>features3</element>
+        </values>
+      </field>
 </schema>
 </model>

@@ -1,3 +1,5 @@
+/* @override http://localhost:8080/Plone/++theme++multitheme/less/features.css */
+
 #features{
   background: #f2f2f2;
   padding: 20px;
@@ -16,10 +18,12 @@
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom:  1em;
 }
 
 
 .feature {
+	margin-top:  20px;
 	min-width: 300px;
 	max-width: 100%;
 	width: 30%;
@@ -27,7 +31,8 @@
 
 
 .feature-wrap {
-  margin-bottom: 35px;
+	
+  margin-bottom: 15px;
   overflow: hidden;
   width: 100%
  
@@ -38,11 +43,10 @@
 	text-transform: uppercase;
 }
 
-.feature-wrap h3{
+.feature-wrap h4{
   margin-top: 1px;
   padding-top: 0;
   padding-left: 88px;
-  font-size: 140%;
 }
 
 .feature-wrap .pull-left {
