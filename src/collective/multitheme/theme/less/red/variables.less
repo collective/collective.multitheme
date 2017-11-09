@@ -12,7 +12,9 @@
 //colors
 @plone-link-color:							#d20000; //redish
 @plone-link-color-on-dark:					#e85762; //ugly red
-											//if you need different contrast
+@plone-link-secondary: spin(@plone-link-color, -(360 / 3));
+@plone-link-tertiary: spin(@plone-link-color, (360 / 3));
+											//if you need different contrast or color
 @plone-default-published-color:				#00ca00; //published and external same color
 @plone-default-draft-color:					darken(@plone-toolbar-draft-color, 15%); // lime-yellow //draft is visible
 @plone-default-pending-color:				darken(@plone-toolbar-pending-color, 15%); // orange
@@ -23,8 +25,8 @@
 
 
 //*// SCAFFOLDING
-@plone-body-bg:            				     #ffffff; 
-@plone-footer-bg:            				 #2e3133; 
+@plone-body-bg:            				     #ffffff;
+@plone-footer-bg:            				 #2e3133;
 @plone-text-color:           				 @plone-gray-darker;
 @plone-link-hover-color:     				 darken(@plone-link-color, 15%);
 

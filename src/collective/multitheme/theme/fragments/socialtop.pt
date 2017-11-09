@@ -1,9 +1,9 @@
 <div id="socialtop" class="social"
-		tal:define="email view/data/email;
-					twitter view/data/twitter;
-					facebook view/data/facebook;
-					instagram view/data/instagram;
-					phone view/data/phone">
+		tal:define="email view/data/email|None;
+					twitter view/data/twitter|None;
+					facebook view/data/facebook|None;
+					instagram view/data/instagram|None;
+					phone view/data/phone|None">
 
 		<a tal:condition="facebook"   target="_blank" href="${facebook}"><i class="fa fa-facebook"></i></a>
 		<a tal:condition="twitter"    target="_blank" href="${twitter}"><i class="fa fa-twitter"></i></a>

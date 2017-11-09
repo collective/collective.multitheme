@@ -9,27 +9,27 @@
 <schema>
   <field name="facebook" type="zope.schema.URI">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>facebook</title>
   </field>
   <field name="instagram" type="zope.schema.URI">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>instagram</title>
   </field>
   <field name="twitter" type="zope.schema.URI">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>twitter</title>
   </field>
   <field name="email" type="plone.schema.email.Email">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Email</title>
   </field>
   <field name="phone" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Phone</title>
   </field>
 </schema>

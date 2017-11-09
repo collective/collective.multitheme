@@ -1,0 +1,37 @@
+<section id="testimonials" class="testimonial plone-background-3"
+         tal:define="folder_url nocall:request/form/folder_url|None;">
+ 	<div class="container" tal:condition="folder_url">
+		<div class="section-header">
+			<h2 class="white-text" tal:content="context/?folder_url/Title|None" />
+			<h6 class="white-text" tal:content="context/?folder_url/Description|None" />
+		</div>
+		<div id="client-feedbacks" class="row" data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+			<div tal:repeat="item
+				 context/?folder_url/@@contentlisting"
+				 class="feedback-box">
+				<div class="message" tal:content="item/Description">
+				</div>
+				<div class="client" tal:define="item_url item/getURL|item/absolute_url">
+					<div class="quote plone-link-2">
+						<i class="fa fa-quote-left"></i>
+					</div>
+					<div class="client-info" >
+						<a class="client-name" href="#" target="_blank" tal:attributes="href item_url">
+							<div tal:replace="structure item/Title"></div>
+						</a>
+						<!--div class="client-company" tal:content="item/Description">
+						</div-->
+					</div>
+					<div class="client-image hidden-xs">
+						<img alt="customer-image" src=""
+							tal:condition="python: item.image"
+                			class="img-responsive"
+                			tal:attributes="alt item/Title;
+                      	    src python:item_url + '/@@images/image/thumb'" />
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+<link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
+</section>

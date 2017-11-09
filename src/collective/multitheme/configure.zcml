@@ -27,6 +27,15 @@
       />
 
   <genericsetup:registerProfile
+      name="democontent"
+      title="Multitheme Demo Content"
+      directory="profiles/democontent"
+      description="Installs demo content for Multi Theme."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
       name="uninstall"
       title="Uninstall: Multitheme"
       directory="profiles/uninstall"

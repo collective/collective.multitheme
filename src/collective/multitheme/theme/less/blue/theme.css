@@ -4696,3 +4696,15 @@ body.template-logged_out #content-core .portletFooter {
 #portal-footer-wrapper a:hover {
   color: whitesmoke;
 }
+.plone-link-2 {
+  color: #7bb100;
+}
+.plone-link-3 {
+  color: #b1007b;
+}
+.plone-background-2 {
+  background: #7bb100;
+}
+.plone-background-3 {
+  background: #b1007b;
+}

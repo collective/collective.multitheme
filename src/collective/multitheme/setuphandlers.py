@@ -21,7 +21,9 @@ from plone.app.textfield.value import RichTextValue
 
 def post_install(context):
     """enable script"""
-    # Do something during the enableling of this package
+    # Add content
+    if context.readDataFile('multitheme_content.txt') is None:
+        return
     portal = api.portal.get()
     _create_frontpage(portal)
 
@@ -66,12 +68,12 @@ def _create_content(portal):
             """<p> </p>
 			<p>This is a theming product for Plone 5</p>
 			<p> </p>
-			<p>1) <a href="../prefs_install_products_form">Install the theme</a></p>
-			<p>2) <a href="../@@mail-controlpanel">Configure E-mail</a></p>
+			<p>1) <a href="${api.portal.get().absolute_url()}/prefs_install_products_form">Install the theme</a></p>
+			<p>2) <a href="${api.portal.get().absolute_url()}/@@mail-controlpanel">Configure E-mail</a></p>
 			<p>3) <a href="../@@medialog_controlpanel">Configure Settings in Site Control Panel</a></p>
-            <p>4) <a href="../test_rendering">See a test rendering</a></p>
+            <p>4) <a href="${api.portal.get().absolute_url()}/test_rendering">See a test rendering</a></p>
             <p>5) Repeat from 3)
-            <p>6) Set the view on a folder to 'Mosaic Layout', <a href="../../services/select_default_view">for example here</a></p>
+            <p>6) Set the view on a folder to 'Mosaic Layout', <a href="${api.portal.get().absolute_url()}/services/select_default_view">for example here</a></p>
             <p>7) Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</p>
 
             <p> </p>
