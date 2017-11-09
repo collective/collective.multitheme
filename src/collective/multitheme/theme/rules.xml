@@ -10,6 +10,8 @@
 
   <after theme-children="/html/head" >
        <link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
+       <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+       <script src="++resource++medialog.iconpicker/bootstrap-iconpicker/js/iconset/iconset-fontawesome-4.2.0.js"></script>
   </after>
 
   <rules css:if-content="#portal-top">
