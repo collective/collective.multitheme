@@ -1,3 +1,13 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+/* Font family */
+/* Colors */
+/* text */
+/* Background colors */
+/* Font colors */
+/* alert */
+/* buttons */
 div.servicetext {
   max-width: 90vw;
   margin: auto;
@@ -9,7 +19,7 @@ div.servicetext {
   width: 300%;
   left: -100%;
   right: -100%;
-  background: #007bb3;
+  background: #007bb1;
   padding: 1em;
   margin-top: 2em;
   margin-bottom: 2em;

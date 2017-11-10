@@ -36,6 +36,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
 	       values=['blue',
                    'red',
                    'ploneconf',
+                   'booster',
                    'scheme1'],
         	required=True,
         )

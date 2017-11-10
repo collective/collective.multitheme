@@ -1,0 +1,55 @@
+/* ==========================================================================
+   BREADCRUMBS
+   ========================================================================== */
+
+
+
+
+
+body.section-front-page{
+
+    .plone-breadcrumb{
+        display: none;
+    }
+}
+
+.plone-breadcrumb{
+
+    margin-top: 10px;
+    // margin-bottom: 20px;
+    background-color: @white;
+    color: @brand-primary;
+    box-shadow: 0px 2px 4px rgba(204, 204, 204, 0.31);
+    font-family: @font-montserrat ;
+
+    ol {
+
+        font-size: 14px;
+
+        a{
+            color: @brand-primary;
+
+            &:hover,
+            &:focus,
+            &:active{
+                color: @color-link-hover;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.plone-breadcrumb ol>li+li{
+
+    &:before,
+    &:after{
+        content: "\232A";
+        position: absolute;
+        padding: 0 5px;
+        border: 0 !important;
+        left: -21px;
+        top: 0px;
+        padding: 0 !important;
+    }
+}
+
