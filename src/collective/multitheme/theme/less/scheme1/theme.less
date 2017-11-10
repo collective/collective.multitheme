@@ -6,14 +6,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
 
-@barceloneta_path: "https://raw.githubusercontent.com/mingtak/plonetheme.barceloneta_sinopac/master/plonetheme/barceloneta/theme/less";
+@barceloneta_path: "https://raw.githubusercontent.com/plone/plonetheme.barceloneta/master/plonetheme/barceloneta/theme/less";
 
 
 //*// Core variables and mixins
 @import "variables.less";
 
 //*// Font families
-@import "@{barceloneta_path}/fonts.plone.less";
+@import "https://raw.githubusercontent.com/mingtak/plonetheme.barceloneta_sinopac/master/plonetheme/barceloneta/theme/less/fonts.plone.less";
 
 //*// Core variables and mixins
 @import "@{barceloneta_path}/mixin.prefixes.plone.less";
@@ -33,7 +33,7 @@
 
 //*// Core CSS
 @import "@{barceloneta_path}/scaffolding.plone.less";
-@import "@{barceloneta_path}/type.plone.less";
+@import "type.less";
 @import "@{barceloneta_path}/code.plone.less";
 //@import "@{barceloneta_path}/deco.plone.less"; //uncomment for deco variant
 @import "@{barceloneta_path}/grid.plone.less"; //grid Bootstrap

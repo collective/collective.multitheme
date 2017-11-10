@@ -12,6 +12,7 @@
 //colors
 @plone-link-color:							#024959; //greenish
 @plone-link-color-on-dark:					lighten(@plone-link-color, 40%);
+@plone-link-color-on-grey:		  			#086ca3; //valid wcag 2.0
 @plone-link-secondary: #F24738;
 @plone-link-tertiary: #F2C777;
 @plone-link-opposite: #BF2A2A;
@@ -24,6 +25,8 @@
 @plone-default-internally-published-color:	darken(@plone-toolbar-internally-published-color, 5%); // is intranet
 
 
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                           not-allowed;
 
 //*// SCAFFOLDING
 @plone-body-bg:            				     #ffffff;
@@ -40,14 +43,14 @@
 @plone-font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @plone-font-family-base:        "Source Sans Pro", "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@plone-font-size-base:          16px;
+@plone-font-size-base:          14px;
 @plone-font-size-large:         ceil((@plone-font-size-base * 1.25)); // ~20px
 @plone-font-size-small:         ceil((@plone-font-size-base * 0.85)); // ~12px
 
-@plone-font-size-h1:            24px; // ~36px
-@plone-font-size-h2:            20px; // ~30px
-@plone-font-size-h3:            1.125rem; // ~24px
-@plone-font-size-h4:            1rem; // ~18px
+@plone-font-size-h1:            26px; // ~36px
+@plone-font-size-h2:            22px; // ~30px
+@plone-font-size-h3:            18px; // ~24px
+@plone-font-size-h4:            17px; // ~18px
 @plone-font-size-h5:            0.8125rem;
 @plone-font-size-h6:            0.9375rem;; // ~12px
 
@@ -63,6 +66,7 @@
 
 @plone-font-weight-light:		100; //default theme uses 100, 300, 500, change it on your site. Standard regular is 400
 	@plone-font-weight-regular:		300;
+	@plone-font-weight-medium:		500;
 	@plone-font-weight-bold:		500;
 
 

@@ -12,6 +12,7 @@
 //colors
 @plone-link-color:							#d20000; //redish
 @plone-link-color-on-dark:					#e85762; //ugly red
+@plone-link-color-on-grey:		  			#086ca3; //valid wcag 2.0
 @plone-link-secondary: spin(@plone-link-color, -(360 / 3));
 @plone-link-tertiary: spin(@plone-link-color, (360 / 3));
 @plone-link-opposite: spin(@plone-link-color, 180);
@@ -24,6 +25,8 @@
 @plone-default-internally-published-color:	darken(@plone-toolbar-internally-published-color, 5%); // is intranet
 
 
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                           not-allowed;
 
 //*// SCAFFOLDING
 @plone-body-bg:            				     #ffffff;
@@ -63,8 +66,8 @@
 
 @plone-font-weight-light:		100; //default theme uses 100, 300, 500, change it on your site. Standard regular is 400
 	@plone-font-weight-regular:		300;
+	@plone-font-weight-medium:		300;
 	@plone-font-weight-bold:		500;
-
 
 
 //*// COMPONENTS
