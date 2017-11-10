@@ -35,6 +35,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
         title=_(u"Style"),
 	       values=['blue',
                    'red',
+                   'ploneconf',
                    'scheme1'],
         	required=True,
         )

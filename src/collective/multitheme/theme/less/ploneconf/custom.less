@@ -1,0 +1,14 @@
+@plone-link-color-on-grey:		  			#086ca3; //valid wcag 2.0
+@plone-link-secondary: spin(@plone-link-color, (360 / 3));
+@plone-link-tertiary: spin(@plone-link-color, -(360 / 3));
+@plone-link-opposite: spin(@plone-link-color, 180);
+
+.plone-link { color: @plone-link-color }
+.plone-link-2 { color: @plone-link-secondary }
+.plone-link-3 { color: @plone-link-tertiary }
+.plone-link-opposite { color: @plone-link-opposite }
+
+.plone-background { background: @plone-link-color }
+.plone-background-2 { background: @plone-link-secondary }
+.plone-background-3 { background: @plone-link-tertiary }
+.plone-background-opposite { background: @plone-link-opposite }
