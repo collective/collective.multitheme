@@ -58,6 +58,19 @@ def post_install(context):
 def _create_content(portal):
 
     if not portal.get('forside', False):
+        portal_url = api.portal.get().absolute_url()
+        body = """<p> </p>
+        <p>This is a theming product for Plone 5</p>
+        <p> </p>
+        <p>1) <a href="%s/prefs_install_products_form">Install the theme</a></p>
+        <p>2) <a href="%s/@@mail-controlpanel">Configure E-mail</a></p>
+        <p>3) <a href="%s/@@medialog_controlpanel">Configure Settings in Site Control Panel</a></p>
+        <p>4) <a href="%s/test_rendering">See a test rendering</a></p>
+        <p>5) Repeat from 3)
+        <p>6) Set the view on a folder to 'Mosaic Layout', <a href="${api.portal.get().absolute_url()}/services/select_default_view">for example here</a></p>
+        <p>7) Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</p>
+        <p> </p>
+        <p> </p>""" % (portal_url, portal_url, portal_url, portal_url)
         forside = api.content.create(
             type='Document',
             container=portal,
@@ -65,19 +78,7 @@ def _create_content(portal):
             description=u'A Plone 5 theme ',
             id='forside',
             text = RichTextValue(
-            """<p> </p>
-			<p>This is a theming product for Plone 5</p>
-			<p> </p>
-			<p>1) <a href="${api.portal.get().absolute_url()}/prefs_install_products_form">Install the theme</a></p>
-			<p>2) <a href="${api.portal.get().absolute_url()}/@@mail-controlpanel">Configure E-mail</a></p>
-			<p>3) <a href="../@@medialog_controlpanel">Configure Settings in Site Control Panel</a></p>
-            <p>4) <a href="${api.portal.get().absolute_url()}/test_rendering">See a test rendering</a></p>
-            <p>5) Repeat from 3)
-            <p>6) Set the view on a folder to 'Mosaic Layout', <a href="${api.portal.get().absolute_url()}/services/select_default_view">for example here</a></p>
-            <p>7) Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</p>
-
-            <p> </p>
-			<p> </p>""",
+            body,
 			'text/html',
             'text/x-html-safe'
             )

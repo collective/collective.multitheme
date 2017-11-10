@@ -1,4 +1,4 @@
-<section id="testimonials" class="testimonial plone-background-3"
+<section id="testimonials" class="testimonial ${view/data/color1}"
          tal:define="folder_url nocall:request/form/folder_url|None;">
  	<div class="container" tal:condition="folder_url">
 		<div class="section-header">
@@ -12,7 +12,7 @@
 				<div class="message" tal:content="item/Description">
 				</div>
 				<div class="client" tal:define="item_url item/getURL|item/absolute_url">
-					<div class="quote plone-link-2">
+					<div class="quote ${view/data/color2}">
 						<i class="fa fa-quote-left"></i>
 					</div>
 					<div class="client-info" >

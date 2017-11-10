@@ -34,7 +34,8 @@ class ICollectiveMultiThemeSettings(form.Schema):
 	style = schema.Choice(
         title=_(u"Style"),
 	       values=['blue',
-                   'red'],
+                   'red',
+                   'scheme1'],
         	required=True,
         )
 

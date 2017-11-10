@@ -21,6 +21,28 @@
         <element>clients</element>
         <element>clients2</element>
       </values>
+  </field>
+  <field name="color1" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Background color</title>
+      <values>
+        <element>plone-background</element>
+        <element>plone-background-2</element>
+        <element>plone-background-3</element>
+        <element>plone-background-opposite</element>
+      </values>
     </field>
+    <field name="color2" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Color 2</title>
+        <values>
+          <element>plone-link</element>
+          <element>plone-link-2</element>
+          <element>plone-link-3</element>
+          <element>plone-link-opposite</element>
+        </values>
+      </field>
 </schema>
 </model>

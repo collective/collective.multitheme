@@ -51,9 +51,7 @@ i.fa.fa-quote-left {
 
 div.client-image img {
 	float: right;
-	border-radius: 50%;
-	padding: 1px;
-	border:  1px solid #DDD;
+	border-radius: 6px;
 }
 
 div.client-info {
