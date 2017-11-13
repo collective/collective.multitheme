@@ -71,6 +71,7 @@ def _create_content(portal):
         <p>7) Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</p>
         <p> </p>
         <p> </p>""" % (portal_url, portal_url, portal_url, portal_url, portal_url)
+        
         forside = api.content.create(
             type='Document',
             container=portal,
