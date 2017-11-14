@@ -153,7 +153,6 @@ def _create_content(portal):
                 type='Document',
                 container=features,
                 id=page_name,
-                Subject='feature',
                 title=titles[page_number],
                 iconfield=icons[page_number],
                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit',
