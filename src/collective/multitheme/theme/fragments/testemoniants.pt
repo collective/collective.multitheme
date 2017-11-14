@@ -16,18 +16,17 @@
 						<i class="fa fa-quote-left"></i>
 					</div>
 					<div class="client-info" >
-						<a class="client-name" href="#" target="_blank" tal:attributes="href item_url">
-							<div tal:replace="structure item/Title"></div>
+						<a class="client-name" href="${item_url}" target="_blank">
+							<div>${item/Title}</div>
 						</a>
 						<!--div class="client-company" tal:content="item/Description">
 						</div-->
 					</div>
-					<div class="client-image hidden-xs">
-						<img alt="customer-image" src=""
-							tal:condition="python: item.image"
-                			class="img-responsive"
-                			tal:attributes="alt item/Title;
-                      	    src python:item_url + '/@@images/image/thumb'" />
+					<div class="client-image hidden-xs" tal:condition="python: item.image">
+						<img alt="customer-image"
+							       class="img-responsive"
+                		 alt="${item/Title}"
+                     src="${item_url}/@@images/image/thumb" />
 					</div>
 				</div>
 			</div>
