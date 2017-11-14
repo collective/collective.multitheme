@@ -3495,6 +3495,7 @@ a.link-category:focus {
   border-top: 1px solid #cccccc;
   background: #20a7de;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
+  background: #d2edf8;
   padding: 12px;
   text-align: right;
 }
@@ -4840,6 +4841,19 @@ article.entry {
   color: #20a7de;
   padding-bottom: 0.5em;
   margin-bottom: 1em;
+}
+.formControls {
+  background: #d2edf8;
+}
+.pat-autotoc.autotabs .autotoc-nav,
+.autotabs .autotoc-nav,
+nav.autotoc-nav {
+  background: #FCFCFC !important;
+}
+nav.autotoc-nav a {
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
 }
 .plone-link {
   color: #20a7de;
