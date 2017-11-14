@@ -22,7 +22,7 @@
 						<!--div class="client-company" tal:content="item/Description">
 						</div-->
 					</div>
-					<div class="client-image hidden-xs" tal:condition="python: item.image">
+					<div class="client-image hidden-xs" tal:condition="exists: python: item.image">
 						<img alt="customer-image"
 							       class="img-responsive"
                 		 alt="${item/Title}"
