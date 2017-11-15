@@ -192,6 +192,15 @@ th {
   padding: 0;
 }
 @media print {
+  .sidebar-offcanvas,
+  #portal-footer-wrapper,
+  #mainnavigation-wrapper,
+  #content-header,
+  .link-https,
+  #edit-zone {
+    display: none;
+    visibility: hidden;
+  }
   * {
     text-shadow: none !important;
     color: #000 !important;
@@ -202,14 +211,14 @@ th {
   a:visited {
     text-decoration: underline;
   }
-  a[href]:after {
+  a[href]::after {
     content: " (" attr(href) ")";
   }
-  abbr[title]:after {
+  abbr[title]::after {
     content: " (" attr(title) ")";
   }
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  a[href^="javascript:"]::after,
+  a[href^="#"]::after {
     content: "";
   }
   pre,
@@ -276,8 +285,8 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-*:before,
-*:after {
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -558,12 +567,12 @@ pre code {
   margin-left: -15px;
   margin-right: -15px;
 }
-.row:before,
-.row:after {
+.row::before,
+.row::after {
   content: " ";
   display: table;
 }
-.row:after {
+.row::after {
   clear: both;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
@@ -1304,7 +1313,7 @@ th {
     -webkit-overflow-scrolling: touch;
     position: relative;
   }
-  .plone-has-table:after {
+  .plone-has-table::after {
     content: "⟷";
     position: fixed;
     color: #cccccc;
@@ -1394,7 +1403,8 @@ legend {
 }
 label {
   display: inline-block;
-  max-width: 100%;
+  max-width: 95%;
+  vertical-align: top;
   margin-bottom: 6px;
   font-weight: bold;
 }
@@ -1439,13 +1449,24 @@ output {
   color: #696969;
 }
 /*.form-control,*/
-input[type="text"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
 input[type="email"],
+input[type="month"],
+input[type="number"],
 input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
 textarea,
 select {
-  display: block;
   width: 100%;
+  display: block;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -1461,9 +1482,20 @@ select {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-input[type="text"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
 input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
 input[type="password"]:focus,
+input[type="range"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
 textarea:focus,
 select:focus {
   border-color: #64bee8;
@@ -1471,46 +1503,77 @@ select:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(100, 190, 232, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(100, 190, 232, 0.6);
 }
-input[type="text"]::-moz-placeholder,
+input[type="color"]::-moz-placeholder,
+input[type="date"]::-moz-placeholder,
+input[type="datetime-local"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
+input[type="month"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
 input[type="password"]::-moz-placeholder,
+input[type="range"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="time"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder,
+input[type="week"]::-moz-placeholder,
 textarea::-moz-placeholder,
 select::-moz-placeholder {
   color: #777777;
   opacity: 1;
 }
-input[type="text"]:-ms-input-placeholder,
+input[type="color"]:-ms-input-placeholder,
+input[type="date"]:-ms-input-placeholder,
+input[type="datetime-local"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
+input[type="month"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
+input[type="range"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="time"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+input[type="week"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #777777;
 }
-input[type="text"]::-webkit-input-placeholder,
+input[type="color"]::-webkit-input-placeholder,
+input[type="date"]::-webkit-input-placeholder,
+input[type="datetime-local"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
+input[type="month"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
+input[type="range"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="time"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+input[type="week"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #777777;
 }
-input[type="text"][disabled],
-input[type="email"][disabled],
-input[type="password"][disabled],
+input[disabled],
+input[readonly],
 textarea[disabled],
-select[disabled],
-input[type="text"][readonly],
-input[type="email"][readonly],
-input[type="password"][readonly],
 textarea[readonly],
+select[disabled],
 select[readonly],
-fieldset[disabled] input[type="text"],
-fieldset[disabled] input[type="email"],
-fieldset[disabled] input[type="password"],
-fieldset[disabled] textarea,
-fieldset[disabled] select {
+fieldset[disabled]  {
   cursor: not-allowed;
   background-color: #e5e5e5;
   opacity: 1;
+}
+input[disabled],
+textarea[disabled],
+select[disabled],
+fieldset[disabled]  {
+  cursor: not-allowed;
 }
 textarea {
   min-height: 9em;
@@ -1520,6 +1583,10 @@ textarea {
 textarea[name='form.widgets.IRichText.text'] {
   min-height: 12em;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+select {
+  width: unset;
+  display: inline-block;
 }
 input[type="search"] {
   -webkit-appearance: none;
@@ -1574,11 +1641,15 @@ fieldset[disabled] input[type="checkbox"] {
 .field.error .form-control-feedback {
   color: rgba(0, 0, 0, 0.5);
 }
+.field.error > label,
+.field.error div.error {
+  color: #c4183c;
+}
 .field.error div.error {
   padding-left: 30px;
   font-weight: 400;
 }
-.field.error div.error:before {
+.field.error div.error::before {
   background-color: #ac493f;
   content: "×";
   font-size: 14px;
@@ -1595,6 +1666,17 @@ fieldset[disabled] input[type="checkbox"] {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
   top: -1px;
   position: relative;
+}
+.field.error input,
+.field.error textarea,
+.field.error select {
+  border-color: #c4183c;
+}
+.field.error input:focus,
+.field.error textarea:focus,
+.field.error select:focus {
+  -webkit-box-shadow: 0 0 8px #f6b2c0;
+  box-shadow: 0 0 8px #f6b2c0;
 }
 .formHelp {
   margin-top: 0;
@@ -1615,7 +1697,8 @@ fieldset[disabled] input[type="checkbox"] {
   padding: 0;
   box-shadow: none;
 }
-label .required:after {
+label .required::after {
+  color: #c4183c;
   content: "•";
   font-size: 200%;
   line-height: 0;
@@ -1660,8 +1743,8 @@ label .required:after {
   text-align: center;
 }
 .ordered-selection-field td button {
-  float: left;
-  margin-left: 2rem;
+  display: block;
+  margin: auto;
 }
 .folder-factories {
   list-style: none;
@@ -2043,7 +2126,7 @@ fieldset[disabled] .link-parent.active {
   outline: 0;
   color: #f2f2f2;
 }
-.link-parent:before {
+.link-parent::before {
   content: "↩ ";
   top: 3px;
   position: relative;
@@ -2279,12 +2362,12 @@ fieldset[disabled] .link-parent.active {
     box-shadow: inset 0 -1px #e5e5e5;
   }
 }
-.autotabs ul {
+.autotabs ul.autotoc-nav {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
 }
-.autotabs ul li {
+.autotabs ul.autotoc-nav li {
   list-style: none;
   display: inline-block;
 }
@@ -2297,7 +2380,7 @@ fieldset[disabled] .link-parent.active {
 .folder-listing li {
   margin: 10px 0;
 }
-.folder-listing > li:before {
+.folder-listing > li::before {
   content: "•";
   position: absolute;
   font-size: 19px;
@@ -2382,10 +2465,10 @@ fieldset[disabled] .link-parent.active {
   font-weight: 400;
   color: #ea3308;
 }
-.alert.status > strong:before,
-.portalMessage > strong:before,
-.alert.status > dt:before,
-.portalMessage > dt:before {
+.alert.status > strong::before,
+.portalMessage > strong::before,
+.alert.status > dt::before,
+.portalMessage > dt::before {
   font-size: 14px;
   font-weight: 400;
   margin-left: -30px;
@@ -2433,14 +2516,14 @@ fieldset[disabled] .link-parent.active {
 .portalMessage.info > dt {
   color: rgba(0, 0, 0, 0.67);
 }
-.alert.status.alert-success > strong:before,
-.portalMessage.alert-success > strong:before,
-.alert.status.info > strong:before,
-.portalMessage.info > strong:before,
-.alert.status.alert-success > dt:before,
-.portalMessage.alert-success > dt:before,
-.alert.status.info > dt:before,
-.portalMessage.info > dt:before {
+.alert.status.alert-success > strong::before,
+.portalMessage.alert-success > strong::before,
+.alert.status.info > strong::before,
+.portalMessage.info > strong::before,
+.alert.status.alert-success > dt::before,
+.portalMessage.alert-success > dt::before,
+.alert.status.info > dt::before,
+.portalMessage.info > dt::before {
   background-color: #3e7b91;
   content: "i";
 }
@@ -2462,14 +2545,14 @@ fieldset[disabled] .link-parent.active {
 .portalMessage.warning > dt {
   color: rgba(0, 0, 0, 0.67);
 }
-.alert.status.alert-warning > strong:before,
-.portalMessage.alert-warning > strong:before,
-.alert.status.warning > strong:before,
-.portalMessage.warning > strong:before,
-.alert.status.alert-warning > dt:before,
-.portalMessage.alert-warning > dt:before,
-.alert.status.warning > dt:before,
-.portalMessage.warning > dt:before {
+.alert.status.alert-warning > strong::before,
+.portalMessage.alert-warning > strong::before,
+.alert.status.warning > strong::before,
+.portalMessage.warning > strong::before,
+.alert.status.alert-warning > dt::before,
+.portalMessage.alert-warning > dt::before,
+.alert.status.warning > dt::before,
+.portalMessage.warning > dt::before {
   background-color: #bc8d0d;
   content: "!";
 }
@@ -2491,14 +2574,14 @@ fieldset[disabled] .link-parent.active {
 .portalMessage.error > dt {
   color: rgba(0, 0, 0, 0.67);
 }
-.alert.status.alert-error > strong:before,
-.portalMessage.alert-error > strong:before,
-.alert.status.error > strong:before,
-.portalMessage.error > strong:before,
-.alert.status.alert-error > dt:before,
-.portalMessage.alert-error > dt:before,
-.alert.status.error > dt:before,
-.portalMessage.error > dt:before {
+.alert.status.alert-error > strong::before,
+.portalMessage.alert-error > strong::before,
+.alert.status.error > strong::before,
+.portalMessage.error > strong::before,
+.alert.status.alert-error > dt::before,
+.portalMessage.alert-error > dt::before,
+.alert.status.error > dt::before,
+.portalMessage.error > dt::before {
   background-color: #ac493f;
   content: "×";
 }
@@ -2510,7 +2593,7 @@ fieldset[disabled] .link-parent.active {
 /* special octogonal shape for error
 .alert.status.alert-error,
 .portalMessage.error {
-	& > strong:before, & > dt:before {
+	& > strong::before, & > dt::before {
 		border-radius: 8px; //soften border
 		background: @plone-alert-error-bullet;
 		background:
@@ -2556,7 +2639,7 @@ fieldset[disabled] .link-parent.active {
   position: relative;
   padding: 0 30px 0 0;
 }
-.plone-breadcrumb ol > li + li:after {
+.plone-breadcrumb ol > li + li::after {
   content: "";
   position: absolute;
   padding: 0 5px;
@@ -2568,7 +2651,7 @@ fieldset[disabled] .link-parent.active {
   top: -15px;
   padding: 0 !important;
 }
-.plone-breadcrumb ol > li + li:before {
+.plone-breadcrumb ol > li + li::before {
   content: "";
   position: absolute;
   padding: 0 5px;
@@ -2665,14 +2748,6 @@ fieldset[disabled] .link-parent.active {
 .portlet .portletContent > ul > li:first-child > a {
   border-top: 0;
 }
-.portlet .portletContent > ul > li a:before {
-  content: "•";
-  position: absolute;
-  font-size: 25px;
-  margin-top: -9px;
-  left: 15px;
-  color: #a7daf2;
-}
 .portlet .portletContent > ul ul {
   padding-left: 15px;
   list-style: none;
@@ -2690,7 +2765,7 @@ fieldset[disabled] .link-parent.active {
 .portlet .portletContent > ul li:hover {
   background: #fcfcfd;
 }
-.portlet .portletContent > ul li:hover a:before {
+.portlet .portletContent > ul li:hover a::before {
   color: #64bee8;
 }
 .portlet.portletCalendar table {
@@ -2728,7 +2803,7 @@ fieldset[disabled] .link-parent.active {
   text-decoration: none;
   box-shadow: 0 0 0 5px #dbecfe;
 }
-.portlet.portletCalendar table .cal_has_events a:after {
+.portlet.portletCalendar table .cal_has_events a::after {
   content: "•";
   position: absolute;
   margin-left: 50%;
@@ -2737,7 +2812,7 @@ fieldset[disabled] .link-parent.active {
   color: #a7daf2;
   margin-top: 9px;
 }
-.portlet.portletCalendar table .cal_has_events a:hover:after {
+.portlet.portletCalendar table .cal_has_events a:hover::after {
   color: #64bee8;
 }
 .portlet.portletCalendar table .cal_next_month,
@@ -2748,16 +2823,16 @@ fieldset[disabled] .link-parent.active {
 .portlet.portletCalendar table .cal_prev_month.cal_has_events > a {
   color: #a7daf2;
 }
-.portlet.portletCalendar table .cal_next_month.cal_has_events > a:after,
-.portlet.portletCalendar table .cal_prev_month.cal_has_events > a:after {
+.portlet.portletCalendar table .cal_next_month.cal_has_events > a::after,
+.portlet.portletCalendar table .cal_prev_month.cal_has_events > a::after {
   color: #d3edf8;
 }
 .portlet.portletCalendar table .cal_next_month.cal_has_events > a:hover,
 .portlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover {
   color: #db3008;
 }
-.portlet.portletCalendar table .cal_next_month.cal_has_events > a:hover:after,
-.portlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover:after {
+.portlet.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
+.portlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover::after {
   color: #64bee8;
 }
 .portlet.portletCalendar table .today > * {
@@ -2805,13 +2880,13 @@ fieldset[disabled] .link-parent.active {
   display: block;
   background: #edecec;
 }
-.portletNavigationTree .portletContent > ul > li > a:before {
+.portletNavigationTree .portletContent > ul > li > a::before {
   content: "";
 }
 .portletNavigationTree .portletContent > ul > li > a:hover {
   background: #fcfcfd;
 }
-.portletNavigationTree .portletContent > ul > li > a:hover:after {
+.portletNavigationTree .portletContent > ul > li > a:hover::after {
   content: "⟩";
   position: absolute;
   right: 10px;
@@ -2822,6 +2897,9 @@ fieldset[disabled] .link-parent.active {
 .portletNavigationTree .portletContent > ul > li > ul a {
   padding-left: 40px;
 }
+.portletNavigationTree .portletContent > ul > li > a > img.image-icon {
+  max-height: 20px;
+}
 .portletNavigationTree .portletContent > ul ul {
   padding-left: 0;
 }
@@ -2829,7 +2907,7 @@ fieldset[disabled] .link-parent.active {
   background: #fcfcfd;
   color: #696969;
 }
-.portletNavigationTree .portletContent .navTreeCurrentNode > a:after {
+.portletNavigationTree .portletContent .navTreeCurrentNode > a::after {
   content: "⟩";
   position: absolute;
   right: 10px;
@@ -2871,6 +2949,13 @@ fieldset[disabled] .link-parent.active {
 #activated-products .configlets .pull-right,
 #broken-products .configlets .pull-right {
   margin: 0 0 12px 12px;
+}
+.portletCollection ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.portletCollection > ul > li > a {
+  padding: 10px 15px 26px 10px;
 }
 .switch-portlet-manager {
   margin-top: 0.5em;
@@ -2955,14 +3040,6 @@ fieldset[disabled] .link-parent.active {
 .managedPortlet .portletContent > ul > li:first-child > a {
   border-top: 0;
 }
-.managedPortlet .portletContent > ul > li a:before {
-  content: "•";
-  position: absolute;
-  font-size: 25px;
-  margin-top: -9px;
-  left: 15px;
-  color: #a7daf2;
-}
 .managedPortlet .portletContent > ul ul {
   padding-left: 15px;
   list-style: none;
@@ -2980,7 +3057,7 @@ fieldset[disabled] .link-parent.active {
 .managedPortlet .portletContent > ul li:hover {
   background: #fcfcfd;
 }
-.managedPortlet .portletContent > ul li:hover a:before {
+.managedPortlet .portletContent > ul li:hover a::before {
   color: #64bee8;
 }
 .managedPortlet.portletCalendar table {
@@ -3018,7 +3095,7 @@ fieldset[disabled] .link-parent.active {
   text-decoration: none;
   box-shadow: 0 0 0 5px #dbecfe;
 }
-.managedPortlet.portletCalendar table .cal_has_events a:after {
+.managedPortlet.portletCalendar table .cal_has_events a::after {
   content: "•";
   position: absolute;
   margin-left: 50%;
@@ -3027,7 +3104,7 @@ fieldset[disabled] .link-parent.active {
   color: #a7daf2;
   margin-top: 9px;
 }
-.managedPortlet.portletCalendar table .cal_has_events a:hover:after {
+.managedPortlet.portletCalendar table .cal_has_events a:hover::after {
   color: #64bee8;
 }
 .managedPortlet.portletCalendar table .cal_next_month,
@@ -3038,16 +3115,16 @@ fieldset[disabled] .link-parent.active {
 .managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a {
   color: #a7daf2;
 }
-.managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a:after,
-.managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a:after {
+.managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a::after,
+.managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a::after {
   color: #d3edf8;
 }
 .managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a:hover,
 .managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover {
   color: #db3008;
 }
-.managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a:hover:after,
-.managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover:after {
+.managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
+.managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover::after {
   color: #64bee8;
 }
 .managedPortlet.portletCalendar table .today > * {
@@ -3095,7 +3172,7 @@ fieldset[disabled] .link-parent.active {
 .managedPortletActions form {
   display: inline-block;
 }
-.portlet.portletSiteSetup .portletContent > ul > li a:before {
+.portlet.portletSiteSetup .portletContent > ul > li a::before {
   content: "";
 }
 .portlet.portletSiteSetup .portletContent > ul li:hover {
@@ -3128,7 +3205,7 @@ fieldset[disabled] .link-parent.active {
 .portletNavigationTree.portletSiteSetup li {
   vertical-align: top;
 }
-.portletNavigationTree.portletSiteSetup ul > li > a:hover:after {
+.portletNavigationTree.portletSiteSetup ul > li > a:hover::after {
   content: "";
 }
 .portletNavigationTree.portletSiteSetup .inner-configlet {
@@ -3156,7 +3233,7 @@ fieldset[disabled] .link-parent.active {
   text-align: inherit;
   padding-left: 40px;
 }
-#portlet-prefs ul ul li a:before {
+#portlet-prefs ul ul li a::before {
   content: "•";
   position: absolute;
   font-size: 25px;
@@ -3247,7 +3324,8 @@ a.link-category:focus {
 #category li {
   display: inline-block;
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper [class*="contenttype-"]:before {
+[class*="contenttype-"]::before,
+.contenttype-file #crud-edit-File-widgets-view_title::before {
   font-family: "Fontello";
   font-size: 100%;
   padding: 0;
@@ -3260,79 +3338,40 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper [class*="contenttype-"]:befo
   height: 20px;
   text-align: center;
   margin-right: 6px;
+  content: '\e834';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-folder:before {
+.contenttype-folder::before {
   content: '\e801';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-document:before {
+.contenttype-document::before {
   content: '\e80e';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-file:before {
+.contenttype-file::before {
   content: '\e811';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-link:before {
+.contenttype-link::before {
   content: '\e806';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-image:before {
+.contenttype-image::before {
   content: '\e810';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-collection:before {
+.contenttype-collection::before {
   content: '\e808';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-event:before {
+.contenttype-event::before {
   content: '\e809';
 }
-body#visual-portal-wrapper.pat-plone .outer-wrapper .contenttype-news-item:before {
+.contenttype-news-item::before {
   content: '\e80f';
 }
-body#visual-portal-wrapper.pat-plone #edit-zone [class*="contenttype-"] {
-  padding: 5px 15px 5px 50px;
+.outer-wrapper .contenttype-file::before {
+  content: none;
 }
-body#visual-portal-wrapper.pat-plone #edit-zone a {
-  color: #fff;
-}
-body#visual-portal-wrapper.pat-plone #edit-zone [class*="contenttype-"]:after {
-  font-family: "Fontello";
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  left: 25px;
-  display: inline-block;
-  color: inherit;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  margin-right: 6px;
-  position: absolute;
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-folder:after {
-  content: '\e801';
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-document:after {
-  content: '\e80e';
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-file:after {
+.contenttype-file #crud-edit-File-widgets-view_title::before {
   content: '\e811';
 }
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-link:after {
-  content: '\e806';
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-image:after {
-  content: '\e810';
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-collection:after {
-  content: '\e808';
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-event:after {
-  content: '\e809';
-}
-body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-news-item:after {
-  content: '\e80f';
-}
-.image-icon,
-.image-tile {
-  float: right;
+.mime-icon {
+  margin-right: 8px;
 }
 #textAdjust .decrease-text {
   font-size: 12px;
@@ -3537,15 +3576,6 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-news-item:after {
   -ms-filter: blur(1px);
   filter: blur(1px);
 }
-.pattern-pickadate-wrapper .pattern-pickadate-time-wrapper {
-  float: left;
-}
-.pattern-pickadate-wrapper .pattern-pickadate-time-wrapper .picker__input {
-  width: 180px;
-}
-.pattern-pickadate-wrapper .pattern-pickadate-date-wrapper .picker__holder {
-  width: 300px;
-}
 .picker--time {
   min-width: 256px;
   max-width: 320px;
@@ -3586,13 +3616,6 @@ ul.picker__list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.picker--time .picker__button--clear {
-  width: 100%;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
-  border-radius: 0;
 }
 .picker__table {
   width: 100%;
@@ -3706,12 +3729,12 @@ ul.picker__list {
 #portal-header {
   margin: 15px auto 20px;
 }
-#portal-header:before,
-#portal-header:after {
+#portal-header::before,
+#portal-header::after {
   content: " ";
   display: table;
 }
-#portal-header:after {
+#portal-header::after {
   clear: both;
 }
 #portal-logo {
@@ -3734,6 +3757,14 @@ ul.picker__list {
 #portal-anontools ul {
   padding-right: 0;
 }
+#portal-membertools-wrapper {
+  float: right;
+  padding: 12px 0;
+}
+#portal-membertools-wrapper ul {
+  margin: 0 0 12px 12px;
+  padding-right: 0;
+}
 #portal-searchbox {
   clear: left;
   margin-left: 3px;
@@ -3751,9 +3782,6 @@ ul.picker__list {
 }
 #portal-searchbox label {
   font-size: 86.667%;
-}
-#searchbox_currentfolder_only {
-  vertical-align: middle;
 }
 @media (min-width: 768px) {
   #portal-header {
@@ -3815,23 +3843,22 @@ ul.picker__list {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
 }
-.plone-navbar:before,
-.plone-navbar:after {
+.plone-navbar::before,
+.plone-navbar::after {
   content: " ";
   display: table;
 }
-.plone-navbar:after {
+.plone-navbar::after {
   clear: both;
 }
-.plone-navbar-header:before,
-.plone-navbar-header:after {
+.plone-navbar-header::before,
+.plone-navbar-header::after {
   content: " ";
   display: table;
 }
-.plone-navbar-header:after {
+.plone-navbar-header::after {
   clear: both;
 }
 @media (min-width: 768px) {
@@ -3910,12 +3937,12 @@ ul.picker__list {
   background-color: #46739c;
   border-color: #365979;
 }
-.plone-navbar-toggle .icon-bar:after {
+.plone-navbar-toggle .icon-bar::after {
   content: "Menu";
   position: relative;
   color: white;
 }
-.plone-navbar-toggle .icon-bar + .icon-bar:after {
+.plone-navbar-toggle .icon-bar + .icon-bar::after {
   content: "";
 }
 @media (min-width: 768px) {
@@ -3924,7 +3951,7 @@ ul.picker__list {
   }
 }
 .plone-navbar-nav {
-  margin: -1px -15px -1px;
+  margin: 0 -15px 0;
 }
 .plone-navbar-nav > li > a {
   padding-top: 10px;
@@ -4119,8 +4146,8 @@ a.plone-toolbar-logo {
 #portal-footer-wrapper .portlet#portal-colophon .portletContent a {
   padding: 10px 30px;
 }
-#portal-footer-wrapper .portlet .portletItem:before,
-#portal-footer-wrapper .portlet .portletItem a:before {
+#portal-footer-wrapper .portlet .portletItem::before,
+#portal-footer-wrapper .portlet .portletItem a::before {
   content: "";
 }
 #portal-footer-wrapper .portlet .portletItem a {
@@ -4247,15 +4274,6 @@ body.template-login_form #content-core .portletContent > ul > li:first-child > a
 body.template-logged_out #content-core .portletContent > ul > li:first-child > a {
   border-top: 0;
 }
-body.template-login_form #content-core .portletContent > ul > li a:before,
-body.template-logged_out #content-core .portletContent > ul > li a:before {
-  content: "•";
-  position: absolute;
-  font-size: 25px;
-  margin-top: -9px;
-  left: 15px;
-  color: #a7daf2;
-}
 body.template-login_form #content-core .portletContent > ul ul,
 body.template-logged_out #content-core .portletContent > ul ul {
   padding-left: 15px;
@@ -4276,8 +4294,8 @@ body.template-login_form #content-core .portletContent > ul li:hover,
 body.template-logged_out #content-core .portletContent > ul li:hover {
   background: #fcfcfd;
 }
-body.template-login_form #content-core .portletContent > ul li:hover a:before,
-body.template-logged_out #content-core .portletContent > ul li:hover a:before {
+body.template-login_form #content-core .portletContent > ul li:hover a::before,
+body.template-logged_out #content-core .portletContent > ul li:hover a::before {
   color: #64bee8;
 }
 body.template-login_form #content-core.portletCalendar table,
@@ -4322,8 +4340,8 @@ body.template-logged_out #content-core.portletCalendar table .cal_has_events a:h
   text-decoration: none;
   box-shadow: 0 0 0 5px #dbecfe;
 }
-body.template-login_form #content-core.portletCalendar table .cal_has_events a:after,
-body.template-logged_out #content-core.portletCalendar table .cal_has_events a:after {
+body.template-login_form #content-core.portletCalendar table .cal_has_events a::after,
+body.template-logged_out #content-core.portletCalendar table .cal_has_events a::after {
   content: "•";
   position: absolute;
   margin-left: 50%;
@@ -4332,8 +4350,8 @@ body.template-logged_out #content-core.portletCalendar table .cal_has_events a:a
   color: #a7daf2;
   margin-top: 9px;
 }
-body.template-login_form #content-core.portletCalendar table .cal_has_events a:hover:after,
-body.template-logged_out #content-core.portletCalendar table .cal_has_events a:hover:after {
+body.template-login_form #content-core.portletCalendar table .cal_has_events a:hover::after,
+body.template-logged_out #content-core.portletCalendar table .cal_has_events a:hover::after {
   color: #64bee8;
 }
 body.template-login_form #content-core.portletCalendar table .cal_next_month,
@@ -4348,10 +4366,10 @@ body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal
 body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a {
   color: #a7daf2;
 }
-body.template-login_form #content-core.portletCalendar table .cal_next_month.cal_has_events > a:after,
-body.template-logged_out #content-core.portletCalendar table .cal_next_month.cal_has_events > a:after,
-body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:after,
-body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:after {
+body.template-login_form #content-core.portletCalendar table .cal_next_month.cal_has_events > a::after,
+body.template-logged_out #content-core.portletCalendar table .cal_next_month.cal_has_events > a::after,
+body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal_has_events > a::after,
+body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a::after {
   color: #d3edf8;
 }
 body.template-login_form #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover,
@@ -4360,10 +4378,10 @@ body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal
 body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover {
   color: #db3008;
 }
-body.template-login_form #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover:after,
-body.template-logged_out #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover:after,
-body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover:after,
-body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover:after {
+body.template-login_form #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
+body.template-logged_out #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
+body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover::after,
+body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover::after {
   color: #64bee8;
 }
 body.template-login_form #content-core.portletCalendar table .today > *,
@@ -4422,7 +4440,7 @@ body.template-logged_out #content-core .portletFooter {
 #portal-sitemap ul li {
   position: relative;
 }
-#portal-sitemap ul li:before {
+#portal-sitemap ul li::before {
   content: "•";
   display: inline;
   font-size: 25px;
@@ -4498,9 +4516,9 @@ body.template-logged_out #content-core .portletFooter {
   border-top-left-radius: 0;
   padding-left: 6px;
 }
-.autotabs .autotoc-nav .events-month-prev:before,
-.autotabs .autotoc-nav .events-week-prev:before,
-.autotabs .autotoc-nav .events-day-prev:before {
+.autotabs .autotoc-nav .events-month-prev::before,
+.autotabs .autotoc-nav .events-week-prev::before,
+.autotabs .autotoc-nav .events-day-prev::before {
   content: "";
   position: absolute;
   padding: 0 5px;
@@ -4512,9 +4530,9 @@ body.template-logged_out #content-core .portletFooter {
   top: -1px;
   padding: 0 !important;
 }
-.autotabs .autotoc-nav .events-month-prev:after,
-.autotabs .autotoc-nav .events-week-prev:after,
-.autotabs .autotoc-nav .events-day-prev:after {
+.autotabs .autotoc-nav .events-month-prev::after,
+.autotabs .autotoc-nav .events-week-prev::after,
+.autotabs .autotoc-nav .events-day-prev::after {
   content: "";
   position: absolute;
   padding: 0 5px;
@@ -4526,9 +4544,9 @@ body.template-logged_out #content-core .portletFooter {
   top: -1px;
   padding: 0 !important;
 }
-.autotabs .autotoc-nav .events-month-prev:hover:after,
-.autotabs .autotoc-nav .events-week-prev:hover:after,
-.autotabs .autotoc-nav .events-day-prev:hover:after {
+.autotabs .autotoc-nav .events-month-prev:hover::after,
+.autotabs .autotoc-nav .events-week-prev:hover::after,
+.autotabs .autotoc-nav .events-day-prev:hover::after {
   color: #fff;
 }
 .autotabs .autotoc-nav .events-month-next,
@@ -4538,9 +4556,9 @@ body.template-logged_out #content-core .portletFooter {
   border-top-right-radius: 0;
   padding-right: 6px;
 }
-.autotabs .autotoc-nav .events-month-next:before,
-.autotabs .autotoc-nav .events-week-next:before,
-.autotabs .autotoc-nav .events-day-next:before {
+.autotabs .autotoc-nav .events-month-next::before,
+.autotabs .autotoc-nav .events-week-next::before,
+.autotabs .autotoc-nav .events-day-next::before {
   content: "";
   position: absolute;
   padding: 0 5px;
@@ -4552,9 +4570,9 @@ body.template-logged_out #content-core .portletFooter {
   top: -1px;
   padding: 0 !important;
 }
-.autotabs .autotoc-nav .events-month-next:after,
-.autotabs .autotoc-nav .events-week-next:after,
-.autotabs .autotoc-nav .events-day-next:after {
+.autotabs .autotoc-nav .events-month-next::after,
+.autotabs .autotoc-nav .events-week-next::after,
+.autotabs .autotoc-nav .events-day-next::after {
   content: "";
   position: absolute;
   padding: 0 5px;
@@ -4566,9 +4584,9 @@ body.template-logged_out #content-core .portletFooter {
   top: -1px;
   padding: 0 !important;
 }
-.autotabs .autotoc-nav .events-month-next:hover:after,
-.autotabs .autotoc-nav .events-week-next:hover:after,
-.autotabs .autotoc-nav .events-day-next:hover:after {
+.autotabs .autotoc-nav .events-month-next:hover::after,
+.autotabs .autotoc-nav .events-week-next:hover::after,
+.autotabs .autotoc-nav .events-day-next:hover::after {
   color: #fff;
 }
 .searchPage {

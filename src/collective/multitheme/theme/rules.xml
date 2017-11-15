@@ -12,6 +12,7 @@
   <rules if="$spot">
 	 <xi:include href="++theme++multitheme/spot.xml"/>
 	</rules>
+ 
 
 	<after theme-children="/html/head" >
 		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
