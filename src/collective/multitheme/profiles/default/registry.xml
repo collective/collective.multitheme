@@ -26,6 +26,6 @@
 	</record>
   <records interface="collective.multitheme.interfaces.ICollectiveMultiThemeSettings">
 		<value key="style">dutchblue</value>
-		<value key="rules">rules</value>
+		<value key="rules">default</value>
 	</records>
 </registry>

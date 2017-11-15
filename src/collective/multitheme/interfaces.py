@@ -34,17 +34,18 @@ class ICollectiveMultiThemeSettings(form.Schema):
 	style = schema.Choice(
         title=_(u"Style"),
 	       values=['blue',
+                    'booster',
                    'dutchblue',
-                   'red',
                    'ploneconf',
-                   'booster',
-                   'scheme1'],
+                   'red',
+                   'scheme1',
+                   'spot'],
         	required=True,
         )
 
 	rules = schema.Choice(
             title=_(u"Layout Rules"),
-            values=['rules', ],
+            values=['default', 'spot'],
             required=True,
     )
 

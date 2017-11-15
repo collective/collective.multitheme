@@ -1,0 +1,98 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+
+
+
+/* Type: Submit
+   ========================================================================== */
+
+
+
+button.submit-widget,
+input[type="submit"],
+input[type="button"]{
+
+    background-color: @button-default;
+    font-size: 18px;
+    padding: 12px;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 4px @gray;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: none;
+    color: @gray-darker;
+
+    &:hover,
+    &:focus{
+
+        background-color: darken(@button-default, 10%);
+        border: 0;
+        outline: 0;
+        box-shadow: 0 1px 4px @gray;
+        color: @gray-darker;
+    }
+}
+
+
+.context{
+
+    background-color: @button-context !important;
+    font-size: 18px;
+    padding: 12px;
+    border: 0 !important;
+    border-radius: 0;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: @white !important;
+
+    &:hover,
+    &:focus{
+        background-color: darken(@button-context, 10%) !important;
+        border: 0;
+        outline: 0;
+    }
+}
+
+.plone-btn-primary,
+.standalone{
+
+    background-color: @button-standalone !important;
+    color: @white-faded;
+    font-size: 18px;
+    padding: 12px;
+    border: 0 !important;
+    border-radius: 0;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: @white !important;
+
+    &:hover,
+    &:focus{
+        background-color: darken(@button-standalone, 10%) !important;
+        border: 0;
+        outline: 0;
+        color: @white-faded;
+    }
+}
+
+.destructive{
+
+    background-color: @button-destructive !important;
+    font-size: 18px;
+    padding: 12px;
+    border: 0;
+    border-radius: 0 !important;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: @white !important;
+
+    &:hover,
+    &:focus{
+        background-color: darken(@button-destructive, 5%) !important;
+        border: 0;
+        outline: 0;
+    }
+}
