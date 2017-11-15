@@ -4850,9 +4850,14 @@ article.entry {
 nav.autotoc-nav {
   background: #FCFCFC !important;
 }
+.pat-autotoc.autotabs .autotoc-nav a:hover,
+.autotabs .autotoc-nav a:hover,
+nav.autotoc-nav a:hover {
+  background: #a7de20 !important;
+}
 nav.autotoc-nav a {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 2px !important;
   color: white;
 }
 .plone-link {
