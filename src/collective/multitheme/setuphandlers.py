@@ -155,7 +155,7 @@ def _create_content(portal):
                 id=page_name,
                 title=titles[page_number],
                 iconfield=icons[page_number],
-                count = page_number * 100,
+                countto = page_number * 100,
                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit',
             )
             api.content.transition(obj=new_page, transition='publish')
