@@ -20,7 +20,7 @@
 							<div class="feature-wrap fa"  tal:define="item_url item/getURL|item/absolute_url">
 								<a href="${item_url}">
 									<i  tal:condition="item/iconfield">
-										<span  class="${item/iconfield}" />
+										<span  tal:replace="structure item/iconfield/@@iconload" />
 									</i>
 								 	<i class="fa-info" tal:condition="not:item/iconfield" />
 
