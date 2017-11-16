@@ -1,0 +1,58 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns:users="http://namespaces.plone.org/supermodel/users"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="promotion_text" type="zope.schema.TextLine">
+  <description>Promotion text</description>
+  <required>False</required>
+  <title>Promotion text</title>
+  <default>Only short time left</default>
+  </field>
+  <field name="countdown_date" type="zope.schema.TextLine">
+  <description>Due date</description>
+  <required>False</required>
+  <title>Countdown date</title>
+  <default>2028/01/01</default>
+</field>
+<field name="css_file" type="zope.schema.Choice">
+    <description/>
+    <required>True</required>
+    <title>Style</title>
+    <values>
+      <element>countdown</element>
+      <element>countdown2</element>
+    </values>
+</field>
+<field name="color1" type="zope.schema.Choice">
+    <description/>
+    <required>True</required>
+    <title>Background color</title>
+    <values>
+      <element>black-background</element>
+      <element>white-background</element>
+      <element>plone-background</element>
+      <element>plone-background-2</element>
+      <element>plone-background-3</element>
+      <element>plone-background-opposite</element>
+    </values>
+  </field>
+  <field name="color2" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Color 2</title>
+      <values>
+        <element>black</element>
+        <element>white</element>
+        <element>plone-link</element>
+        <element>plone-link-2</element>
+        <element>plone-link-3</element>
+        <element>plone-link-opposite</element>
+      </values>
+    </field>
+</schema>
+</model>

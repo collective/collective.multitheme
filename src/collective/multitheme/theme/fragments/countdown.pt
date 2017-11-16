@@ -1,0 +1,23 @@
+<section tal:define="color1 view/data/color1; color2 view/data/color2; date view/data/countdown_date; css_file view/data/css_file"
+    class="countdown ${color1}">
+    <h3 class="${color2}">${view/data/promotion_text}</h3>
+    <h1 id="clock" class="${color2}"></h1>
+    <div class="legend">
+      <span class="${color2}">Days</span>
+      <span class="${color2}">Hours</span>
+      <span class="${color2}">Minutes</span>
+      <span class="${color2}">Seconds</span>
+    </div>
+    <h4  class="${color2}">${date}</h4>
+    <script>require([
+      'jquery',
+      '++theme++multitheme/javascript/jquery.countdown.min'
+      ], function(Base) {
+        'use strict';
+        $('#clock').countdown('${date}', function(event) {
+            $(this).html(event.strftime('<span>%D</span><span class="colon">:</span><span>%H</span><span class="colon">:</span><span>%M</span><span class="colon">:</span><span>%S</span>'));
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css">
+</section>

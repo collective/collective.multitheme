@@ -1,0 +1,43 @@
+/* @override http://localhost:8080/asdfasdfasfaasdf/++theme++multitheme/css/countdown.css */
+
+section.countdown {
+	text-align: center;
+	min-height: 120px;
+	padding: 30px;
+}
+
+#clock span {
+	width: 55px;
+	display: inline-block;
+}
+#clock span.colon {
+	width: 45px;
+	display: inline-block;
+}
+ 
+
+.legend span {
+	width: 102px;
+	display: inline-block;
+	border-top:  1px solid;
+	padding-top: 6px;
+	margin: -2px;
+	opacity: 0.60;
+}
+
+.black {
+	color: black;
+}
+ 
+ .white {
+	color: white;
+}
+
+.black-background {
+	background: black;
+}
+
+
+.white-background {
+	background: white;
+}
