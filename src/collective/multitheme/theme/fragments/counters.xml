@@ -12,7 +12,7 @@
     <required>True</required>
     <title>Style</title>
     <values>
-      <element>counters</element>
+      <element>counters1</element>
       <element>counters2</element>
       <element>counters3</element>
     </values>
