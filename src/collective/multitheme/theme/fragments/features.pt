@@ -19,10 +19,10 @@
 							animation-delay: 600ms; animation-name: fadeInDown;">
 							<div class="feature-wrap fa"  tal:define="item_url item/getURL|item/absolute_url">
 								<a href="${item_url}">
-									<i  tal:condition="exists:item/iconfield">
+									<i  tal:condition="item/iconfield">
 										<span  tal:replace="structure item/iconfield/@@iconload" />
 									</i>
-								 	<i class="fa-info" tal:condition="not:exists:item/iconfield" />
+								 	<i class="fa-info" tal:condition="not:item/iconfield" />
 
 										<h2 tal:content="item/Title|" />
 								 </a>
