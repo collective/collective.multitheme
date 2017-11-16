@@ -1,0 +1,29 @@
+/* @override http://localhost:8080/asdfasdfasfaasdf/++theme++multitheme/css/counters.css */
+
+.counters {
+	padding-top: 3em;
+}
+
+.panel-item {
+	border-top:  1px solid #999;
+	padding-top:  2em;
+}
+
+
+.counters h1 {
+	 font-size:350%;
+	 margin-top: 0;
+}
+
+.counters h2 {
+	 margin-top: 0;
+	 font-size: 170%;
+}
+
+.counters .fa {
+	font-size: 350%;
+	padding-top: 0.15em;
+	float:  left;
+	margin-right: 0.4em;
+}
+ 

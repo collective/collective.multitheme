@@ -1,0 +1,16 @@
+/* @override http://localhost:8080/asdfasdfasfaasdf/++theme++multitheme/css/counters.css */
+
+.counters {
+	text-align: center;
+	padding-top: 3em;
+}
+
+
+.counters h1 {
+	 font-size:350%;
+}
+
+.counters .fa {
+	font-size: 400%;
+}
+ 

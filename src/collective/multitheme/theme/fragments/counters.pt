@@ -1,0 +1,80 @@
+<section class="counters" tal:define="color1 view/data/color1; color2 view/data/color2; css_file view/data/css_file">
+<div class="container pt-4 mt-2">
+            <div class="media-container-row">
+                <div class="card p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="pb-3">
+                            <span class="mbri-mobirise mbr-iconfont fa fa-print ${color1}" media-simple="true"></span>
+                        </div>
+
+                        <div class="card-text">
+                            <h1 class="count pt-3 pb-3 ${color2}">100</h1>
+                            <h2 class="${color2}">
+                                Unlimited websites
+                            </h2>
+                            <p class="mbr-content-text mbr-fonts-style display-7">
+                                Mobirise give you the freedom to develop as many websites as you like given the fact that it is desktop app. Mobirise is the perfect gide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="card-img pb-3">
+                            <span class="mbri-touch-swipe mbr-iconfont" media-simple="true"></span>
+                        </div>
+                        <div class="card-text">
+                            <h2 class="count pt-3 pb-3 mbr-fonts-style display-2">200</h2>
+                            <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
+                                Trendy websites blocks
+                            </h4>
+                            <p class="mbr-content-text mbr-fonts-style display-7">
+                                    Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-3 align-center col-12 col-md-6 col-lg-4">
+                    <div class="panel-item p-3">
+                        <div class="card-img pb-3">
+                            <span class="mbri-responsive mbr-iconfont" media-simple="true"></span>
+                        </div>
+                        <div class="card-text">
+                            <h2 class="count pt-3 pb-3 mbr-fonts-style display-2">300</h2>
+                            <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
+                                Bootstrap
+                            </h4>
+                            <p class="mbr-content-text mbr-fonts-style display-7">
+                                    One of Bootstrap's big point is responsiveness and obirise male effective use of this by genereating highly responsive website for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    <script>require([
+      'jquery',
+      '++theme++multitheme/javascript/jquery.countdown.min'
+      ], function(Base) {
+        'use strict';
+        $('.count').each(function () {
+          $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+          }, {
+            duration: 4000,
+              easing: 'swing',
+                step: function (now) {
+                  $(this).text(Math.ceil(now));
+            }
+            });
+}          );
+      });
+    </script>
+    <link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css">
+</section>
