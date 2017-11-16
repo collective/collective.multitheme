@@ -14,13 +14,14 @@
     <values>
       <element>counters</element>
       <element>counters2</element>
+      <element>counters3</element>
     </values>
 </field>
-<field name="icon" type="zope.schema.TextLine"
-    form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget">
-    <description/>
-    <required>True</required>
-    <title>Icon</title>
+<field name="folder_url" type="zope.schema.TextLine">
+  <description/>
+  <required>True</required>
+  <title>Path to folder</title>
+  <default>Folder</default>
 </field>
 <field name="color1" type="zope.schema.Choice">
     <description/>
