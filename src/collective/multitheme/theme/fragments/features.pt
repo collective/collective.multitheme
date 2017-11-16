@@ -22,8 +22,7 @@
 									<i  tal:condition="exists:item/iconfield">
 										<span  tal:replace="structure item/iconfield/@@iconload" />
 									</i>
-								 	<i class="fa fa-info"
-										tal:condition="not:exists:item/iconfield" />
+								 	<i class="fa-info" tal:condition="not:exists:item/iconfield" />
 
 										<h2 tal:content="item/Title|" />
 								 </a>
