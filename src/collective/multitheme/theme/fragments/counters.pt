@@ -11,7 +11,9 @@
              </div>
 
               <div class="card-text">
-                    <h1 class="count pt-3 pb-3 ${color2}" tal:condition="exists:item/countto" >${item/countto}</h1>
+                <tal:check tal:condition="exists:item/countto">
+                    <h1 class="count pt-3 pb-3 ${color2}">${item/countto}</h1>
+                </tal:check>
                     <h1 class="count pt-3 pb-3 ${color2}" tal:condition="not:exists:item/countto">100</h1>
                     <h2 class="${color2}">${item/Title}</h2>
                     <p>${item/Description}</p>
