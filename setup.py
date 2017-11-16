@@ -46,7 +46,8 @@ setup(
         'plone.app.themingplugins',
         'collective.themefragments',
         'medialog.controlpanel',
-        'plone.app.mosaic'
+        'plone.app.mosaic',
+        'medialog.iconpicker'
     ],
     extras_require={
         'test': [

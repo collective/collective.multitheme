@@ -1,8 +1,7 @@
-<section class="counters" tal:define="color1 view/data/color1; color2 view/data/color2; css_file view/data/css_file;
-  	folder_url request/form/folder_url|None">
+<section class="counters" tal:define="color1 view/data/color1; color2 view/data/color2; css_file view/data/css_file; folder_url request/form/folder_url|None;">
 
 <div class="container pt-4 mt-2" tal:condition="folder_url">
-  <tal:repeat tal:repeat="item context/?folder_url/@@contentlisting">
+  <tal:repeat tal:repeat="item  context/?folder_url/@@contentlisting">
     <div class="media-container-row">
         <div class="card p-3 align-center col-12 col-md-6 col-lg-4">
             <div class="panel-item p-3">

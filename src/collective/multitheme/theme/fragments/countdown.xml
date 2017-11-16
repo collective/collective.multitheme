@@ -24,9 +24,9 @@
     <required>True</required>
     <title>Style</title>
     <values>
-      <element>counters</element>
-      <element>counters2</element>
-      <element>counters3</element>
+      <element>countdown</element>
+      <element>countdown2</element>
+      <element>countdown3</element>
     </values>
 </field>
 <field name="color1" type="zope.schema.Choice">
