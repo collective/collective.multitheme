@@ -1,36 +1,33 @@
 <section id="features"
 		 tal:define="keyword view/data/keyword">
     <div  tal:condition="keyword">
-           <div class="center wow fadeInDown">
-                <h1>${view/data/title}</h1>
-                <tal:condition tal:condition="view/data/description">
-                	<p class="documentDescription">${view/data/description}</p>
-                </tal:condition>
-            </div>
+    	<div class="center wow fadeInDown">
+      	<h1>${view/data/title}</h1>
+        <tal:condition tal:condition="view/data/description">
+        	<p class="documentDescription">${view/data/description}</p>
+      	</tal:condition>
+      </div>
 
-						<div tal:define="items python:context.portal_catalog(Subject='%s' % keyword)">
+			<div tal:define="items python:context.portal_catalog(Subject='%s' % keyword)">
 
-						<tal:check tal:condition="items">
-						<div class="feature-items">
-						<div tal:repeat="item items"
+			<tal:check tal:condition="items">
+				<div class="feature-items">
+					<div tal:repeat="item items"
 							class="feature  wow fadeInDown animated"
 							data-wow-delay="600ms" data-wow-duration="1000ms"
 							style="visibility: visible; animation-duration: 1000ms;
 							animation-delay: 600ms; animation-name: fadeInDown;">
 							<div class="feature-wrap fa"  tal:define="item_url item/getURL|item/absolute_url">
 								<a href="${item_url}">
-									<i  tal:condition="item/iconfield">
-										<span  tal:replace="structure item/iconfield/@@iconload" />
-									</i>
-								 	<i class="fa-info" tal:condition="not:item/iconfield" />
-
-										<h2 tal:content="item/Title|" />
-								 </a>
+									<i  tal:condition="exists:item/iconfield" class="${item/iconfield}" />
+								 	<i class="fa-info" tal:condition="not:exists:item/iconfield" />
+									<h2>${item/Title}</h2>
+								</a>
 								<h4>${item/Description}</h4>
 							</div>
-            </div>
-					 </div>
-					</tal:check>
+        	</div>
+				</div>
+		</tal:check>
     </div>
     <tal:css tal:replace="structure context/@@fontload"/>
 	  <link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">

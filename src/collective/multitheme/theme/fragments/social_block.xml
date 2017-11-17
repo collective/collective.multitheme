@@ -1,0 +1,31 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns:users="http://namespaces.plone.org/supermodel/users"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="title" type="zope.schema.TextLine">
+    <description/>
+    <required>False</required>
+    <title>Title</title>
+  </field>
+  <field name="facebook" type="zope.schema.URI">
+    <description/>
+    <required>False</required>
+    <title>facebook</title>
+  </field>
+  <field name="twitter" type="zope.schema.URI">
+    <description/>
+    <required>False</required>
+    <title>twitter</title>
+  </field>
+  <field name="email" type="plone.schema.email.Email">
+      <description/>
+      <required>False</required>
+      <title>Email</title>
+  </field>
+</schema>
+</model>

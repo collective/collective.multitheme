@@ -1,0 +1,25 @@
+<section class="sosial-block"
+	tal:define="email view/data/email|None;
+				twitter view/data/twitter|None;
+				facebook view/data/facebook|None;">
+    <div class="container">
+           <div class="col-md-8">
+               <h2 class="pb-3">
+                   ${view/data/title}
+               </h2>
+               <div>
+                   <div class="fa">
+                       <span class="btn btn-social" title="Share link on Facebook">
+                           <a tal:condition="facebook" target="_blank" href="${facebook}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                       </span>
+                       <span class="btn btn-social" title="Share link on Twitter">
+                           <a tal:condition="twitter" target="_blank" href="${twitter}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                       </span>
+                       <span class="btn btn-social" title="Share link on Mail">
+                          <a href="mailto: ${email}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                       </span>
+                 </div>
+               </div>
+           </div>
+   </div>
+</section>
