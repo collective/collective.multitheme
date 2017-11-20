@@ -1,0 +1,14 @@
+/* @override http://xweb14d.plana.dk:8081/Plone/++theme++multitheme/css/count.css */
+
+div.count-item {
+	text-align:center;
+}
+
+div.count-item span.fa {
+	font-size: 300%;
+	background: #EEE;
+	height: 1.4em;
+	width: 1.4em;
+	line-height: 1.4em;
+	border-radius: 50%;
+}

@@ -1,0 +1,47 @@
+.feature-item {
+	margin-top:  20px;
+	min-width: 300px;
+	max-width: 100%;
+	width: 30%;
+}
+
+
+.feature-item {
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%
+ 
+}
+.feature-item h2 {
+  margin-top: 10px;
+   font-size: 24px;
+	text-transform: uppercase;
+}
+
+.feature-item h4{
+  margin-top: 1px;
+  padding-top: 0;
+  padding-left: 88px;
+}
+ 
+.feature-item i {
+  font-size: 38px;
+  height: 60px;
+  width: 60px;
+  margin: 6px 3px;
+  border-radius: 100%;
+  line-height: 60px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0 0 0 2px #f2f2f2;
+  -webkit-box-shadow: inset 0 0 0 2px #f2f2f2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  float: left;
+  margin-right: 25px;
+  font-weight: normal;
+  font-style: normal !important;
+}
