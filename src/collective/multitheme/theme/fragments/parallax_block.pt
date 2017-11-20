@@ -1,8 +1,10 @@
-<section  id="jarallax" data-jarallax="" style="background-image: none; z-index: 0; background-attachment:
-    scroll; background-size: auto;  height: 50px" data-jarallax-original-styles="background-image: url(${view/data/image_url});">
-<div class="full-bg-img">
+
+
+<section class="parallax-background"
+ data-jarallax-original-styles="null" style="z-index: 0; position: relative; background-image: none;
+background-attachment: scroll; background-size: auto;">
     <div class="container">
-        <div class="col-md-10 offset-md-1">
+       <div class="col-md-10 offset-md-1">
             <h1>
                 ${view/data/title}
             </h1>
@@ -24,13 +26,11 @@
             </div>
         </div>
     </div>
-</div>
 <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;
-        overflow: hidden; pointer-events: none; visibility: hidden; z-index: -100;">
-        <div style="background-size: 100%;
-        background-image: url(${view/data/image_url}); position: fixed; top: 0px; left: 0px; width: 2629.03967611336px;
-        height: 1591.6px; overflow: hidden; pointer-events: none; margin-left: -297.0198380566801px; margin-top: -609.3px;
-        visibility: visible; transform: translateY(67.7px) translateZ(0px); background-position: 50% 50%; background-repeat: no-repeat no-repeat;">
-    </div>
-</div>
+overflow: hidden; pointer-events: none; visibility: hidden; z-index: -100;"><div style="background-size: 100%;
+background-image: url(${view/data/image_url});
+position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden;
+pointer-events: none; margin-left: 0px; margin-top: -492.36328125px; visibility: visible; transform: translate3d(0px, 174.60000000000002px, 0px);
+background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></div></div>
+
 </section>
