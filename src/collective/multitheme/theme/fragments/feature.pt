@@ -1,0 +1,6 @@
+<div class="feature-item">
+	<i class="${view/data/color1} fa ${view/data/iconfield}"></i>
+	<h2 class="${view/data/color1}">${view/data/title}</h2>
+	<p class="${view/data/color2}">${view/data/description}</p>
+</div>
+ <link rel="stylesheet" href="++theme++multitheme/css/feature.css">
