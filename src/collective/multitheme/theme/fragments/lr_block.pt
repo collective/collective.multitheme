@@ -1,19 +1,18 @@
-<section tal:define="scale view/data/scale;
-                title view/data/title | nothing">
-  <div class="outer-${view/data/css_class}">
-    <div class="flex ${view/data/css_class}">
-        <div class="half bodytext">
-           <div tal:content="structure view/data/body/raw" />
-        </div>
-        <div class="half image" tal:define="scale view/data/scale">
-             <img tal:define="scales view/@@images;
-                     thumbnail python: scales.scale('image', scale=scale)"
-                     tal:condition="thumbnail"
-                     tal:attributes="alt title;
-                     title title;
-                     src thumbnail/url;
-                     width thumbnail/width;" />
-        </div>
+<section tal:define="scale view/data/image_size;
+                title view/data/title | nothing;
+                image view/one_image;
+                image_url image/getURL;
+                css_class view/data/css_class">
+ <div class="flex ${css_class}">
+    <div class="half bodytext">
+        <h3>${title}</h3>
+        <p>${view/data/text}</p>
     </div>
-  </div>
+    <div class="half image">
+        <img    alt="${title}"
+                     title="${title}"
+                     src="${image_url}/@@images/image/${scale}" />
+    </div>
+ </div>
+ <link rel="stylesheet" href="++theme++multitheme/css/lr_block.css">
 </section>

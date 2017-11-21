@@ -1,5 +1,3 @@
-/* @override http://xweb14d.plana.dk:8081/++theme++multitheme/css/parallax1.css */
-
 section.parallax-background {
 	text-align: center;
 	padding-top: 2em;
@@ -8,7 +6,6 @@ section.parallax-background {
 section.parallax-background div.button_group {
 	margin-top: 6em;
 }
-
 
 section.parallax-background a.btn {
  padding: 1em 2em;

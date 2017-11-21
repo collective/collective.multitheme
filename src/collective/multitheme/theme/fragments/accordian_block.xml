@@ -17,7 +17,6 @@
         <description/>
         <required>True</required>
         <title>Body Text</title>
-
   </field>
   <field name="color1" type="zope.schema.Choice">
       <description/>

@@ -1,0 +1,157 @@
+.flex {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+@media (max-width: 768px) {
+div.half{
+	width: 100%;
+	position: static;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+ 
+}
+}
+
+
+.left .half {
+	padding-right: 0;
+}
+.right div.half {
+	padding-left: 0;
+}
+
+
+div.left .half.bodytext {
+	padding-right: 30px;
+	padding-left: 0;
+}
+
+
+div.right .half.bodytext {
+	padding-left: 30px;
+	padding-right: 0px;
+}
+
+.flex.right {
+	 flex-direction: row-reverse;
+}
+
+
+.text-on-image  {
+ 	color:  black;
+}
+
+.center div.half,
+.text-on-image div.half {
+	width: 100% ;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+ 
+div.flex.text-on-image {
+	position: relative;
+		margin-bottom: 2em;
+}
+
+
+
+div.flex.text-on-image.center img {
+	width: 100%;
+	height:  auto;
+}
+
+ 
+
+.text-on-image div.half.bodytext {
+	z-index: 3;
+	top:  2em;
+	left: 4em;
+	position: absolute;
+}
+
+.text-on-image.center .half.bodytext {
+	left: 0;
+	text-align: center;
+}
+
+.text-on-image.black div h3,
+.text-on-image.black .bodytext{
+	color:  white;
+}
+
+
+.half {
+  width: 50%;
+  box-sizing: border-box;
+  padding:  30px 30px 30px 30px;
+  text-align: left;
+}
+
+
+
+
+.black-full {
+	background: black;
+	color: white;
+}
+
+
+body div.dark hr, 
+div.outer-black-medium hr{
+	border-color:  white;
+	color: white;
+}
+
+
+.left .half {
+	padding-right: 0;
+}
+.right div.half {
+	padding-left: 0;
+}
+
+
+div.left .half.bodytext {
+	padding-right: 30px;
+	padding-left: 0;
+}
+
+
+div.right .half.bodytext {
+	padding-left: 30px;
+	padding-right: 0px;
+}
+
+
+
+.flex.right  {
+	 flex-direction: row-reverse;
+}
+
+
+.dark {
+   background: black;
+   color: white !important;	
+}
+
+.grey {
+	background: #EDEDED;
+}
