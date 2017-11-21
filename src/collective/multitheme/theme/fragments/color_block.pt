@@ -1,0 +1,19 @@
+
+<section class="color-block">
+  <div class="colorbox ${view/data/color1}"
+        tal:condition="not:view/data/linkbox" >
+	<div class="innerbox" >
+		<i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
+		<tal:image tal:define="scale view/data/image_scale">
+      <img  tal:condition="view/data/image" tal:define="scales view/@@images;
+            thumbnail python: scales.scale('image', scale=scale)"
+            tal:condition="thumbnail"
+            tal:attributes="alt view/data/title;
+                         title view/data/title;
+                         src thumbnail/url;
+                         width thumbnail/width;" />
+    </tal:image>
+		<h3>${view/data/title}</h3>
+		<div  tal:replace="structure view/data/body/raw" />
+	</div>
+</section>

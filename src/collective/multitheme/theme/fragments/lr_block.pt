@@ -1,0 +1,19 @@
+<section tal:define="scale view/data/scale;
+                title view/data/title | nothing">
+  <div class="outer-${view/data/css_class}">
+    <div class="flex ${view/data/css_class}">
+        <div class="half bodytext">
+           <div tal:content="structure view/data/body/raw" />
+        </div>
+        <div class="half image" tal:define="scale view/data/scale">
+             <img tal:define="scales view/@@images;
+                     thumbnail python: scales.scale('image', scale=scale)"
+                     tal:condition="thumbnail"
+                     tal:attributes="alt title;
+                     title title;
+                     src thumbnail/url;
+                     width thumbnail/width;" />
+        </div>
+    </div>
+  </div>
+</section>

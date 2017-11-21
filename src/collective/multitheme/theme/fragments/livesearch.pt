@@ -1,0 +1,5 @@
+<section class="livesearch-block" >
+  <form action="search" class="pat-livesearch" data-pat-livesearch="ajaxUrl:livesearch.json">
+    <input type="text" />
+  </form>
+</section>

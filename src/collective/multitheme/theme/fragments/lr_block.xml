@@ -1,0 +1,40 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns:users="http://namespaces.plone.org/supermodel/users"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="title" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <title>Title</title>
+    <default></default>
+  </field>
+  <field name="text" type="zope.schema.Text">
+        <description/>
+        <required>True</required>
+        <title>Body Text</title>
+
+  </field>
+  <field name="color1" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Color</title>
+      <values>
+        <element>left</element>
+        <element>right</element>
+        <element>left dark</element>
+        <element>right dark</element>
+        <element>left grey</element>
+        <element>right grey</element>
+        <element>center</element>
+        <element>text-on-image</element>
+        <element>text-on-image black</element>
+        <element>text-on-image center</element>
+      </values>
+  </field>
+</schema>
+</model>
