@@ -42,26 +42,26 @@ class ICollectiveMultiThemeSettings(form.Schema):
                    'red',
                    'scheme1',
                    'spot'],
-            required=true,
+            required=True,
     )
 
     color1 = schema.TextLine(
         title = _("color1", default=u"Custom Color 1"),
-        required = true,
+        required = True,
         description = _("help_color",
                       default="Choose Color"),
     )
 
     color2 = schema.TextLine(
         title = _("color2", default=u"Custom Color 2"),
-        required = true,
+        required = True,
         description = _("help_color",
                       default="Choose Color"),
     )
 
     color3 = schema.TextLine(
         title = _("color3", default=u"Custom Color 3"),
-        required = true,
+        required = True,
         description = _("help_color",
                       default="Choose Color"),
     )
