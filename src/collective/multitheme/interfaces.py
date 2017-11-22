@@ -20,31 +20,29 @@ class ICollectiveMultithemeLayer(IDefaultBrowserLayer):
 
 
 class ICollectiveMultiThemeSettings(form.Schema):
-	"""Adds settings to medialog.controlpanel
-	"""
+    """Adds settings to medialog.controlpanel"""
 
-	form.fieldset(
-		'Multitheme',
-		label=_(u'Multitheme'),
-		fields=[
-			'style',
-			'rules',
+    form.fieldset(
+        'Multitheme',
+        label=_(u'Multitheme'),
+        fields=[
+            'style',
+            'rules',
             'color',
             'color2',
-            'color3'
-		],
-	)
+            'color3']
+    )
 
-	style = schema.Choice(
+    style = schema.Choice(
         title=_(u"Style"),
-	       values=['blue',
+           values=['blue',
                     'booster',
                    'dutchblue',
                    'ploneconf',
                    'red',
                    'scheme1',
                    'spot'],
-        	required=true,
+            required=true,
     )
 
     color1 = schema.TextLine(
