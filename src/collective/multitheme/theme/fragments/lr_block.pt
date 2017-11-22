@@ -8,7 +8,8 @@
                 class="lrblock ${color1}">
  <div class="container flex ${css_class}">
     <div class="half bodytext">
-        <h3 class="${color2}">${title}</h3>
+        <h2 class="${color2}">${title}</h2>
+        <h3  class="${color2}">${view/data/description}</h3>
         <p  class="${color2}">${view/data/text}</p>
     </div>
     <div class="half image">
