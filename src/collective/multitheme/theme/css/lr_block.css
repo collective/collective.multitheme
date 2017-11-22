@@ -105,8 +105,7 @@ div.flex.text-on-image.center img {
   text-align: left;
 }
 
-body div.dark hr, 
-div.outer-black-medium hr{
+body div.black hr {
 	border-color:  white;
 	color: white;
 }

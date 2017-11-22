@@ -8017,6 +8017,24 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .plone-background-opposite {
   background: #b33800;
 }
+.black-background {
+  background-color: #000;
+}
+.white-background {
+  background-color: #FFF;
+}
+.grey-background {
+  background-color: #DDD;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #FFF;
+}
+.grey {
+  color: #DDD;
+}
 html,
 body {
   font-family: 'Roboto', sans-serif;

@@ -6,6 +6,7 @@ from z3c.form import interfaces
 from zope import schema
 from zope.interface import alsoProvides
 from plone.directives import form
+from medialog.iconpicker.widgets.widget import ColorPickerFieldWidget
 from medialog.controlpanel.interfaces import IMedialogControlpanelSettingsProvider
 
 #import here or from __init.py ?
@@ -41,7 +42,28 @@ class ICollectiveMultiThemeSettings(form.Schema):
                    'scheme1',
                    'spot'],
         	required=True,
-        )
+    )
+
+	color1 = schema.TextLine(
+            title=_(u"Custom Color 1"),
+            required=True,
+    )
+
+	color2 = schema.TextLine(
+            title=_(u"Custom Color 2"),
+            required=True,
+    )
+
+	color3 = schema.TextLine(
+            title=_(u"Custom Color 3"),
+            required=True,
+    )
+
+    form.widget(
+            color1=IconPickerFieldWidget,
+            color2=IconPickerFieldWidget,
+            color3=IconPickerFieldWidget,
+    )
 
 	rules = schema.Choice(
             title=_(u"Layout Rules"),

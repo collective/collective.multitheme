@@ -32,23 +32,6 @@ section.countdown {
 	
 }
 
-.black {
-	color: black;
-}
- 
- .white {
-	color: white;
-}
-
-.black-background {
-	background: black;
-}
-
-
-.white-background {
-	background: white;
-}
-
 section.countdown h4 {
    display: none;
 }

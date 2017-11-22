@@ -4884,3 +4884,21 @@ nav.autotoc-nav a {
 .plone-background-opposite {
   background: #de5720;
 }
+.black-background {
+  background-color: #000;
+}
+.white-background {
+  background-color: #FFF;
+}
+.grey-background {
+  background-color: #DDD;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #FFF;
+}
+.grey {
+  color: #DDD;
+}

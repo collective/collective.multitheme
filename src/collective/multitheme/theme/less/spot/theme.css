@@ -5295,6 +5295,24 @@ body.section-front-page .plone-breadcrumb {
 .plone-background-opposite {
   background: #3498db;
 }
+.black-background {
+  background-color: #000;
+}
+.white-background {
+  background-color: #FFF;
+}
+.grey-background {
+  background-color: #DDD;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #FFF;
+}
+.grey {
+  color: #DDD;
+}
 /*
  * Author: Carlos Alvarez
  * URL: http://alvarez.is

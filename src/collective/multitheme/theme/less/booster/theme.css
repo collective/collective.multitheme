@@ -16117,3 +16117,21 @@ body.section-front-page .plone-breadcrumb {
 .plone-background-opposite {
   background: #b13600;
 }
+.black-background {
+  background-color: #000;
+}
+.white-background {
+  background-color: #FFF;
+}
+.grey-background {
+  background-color: #DDD;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #FFF;
+}
+.grey {
+  color: #DDD;
+}

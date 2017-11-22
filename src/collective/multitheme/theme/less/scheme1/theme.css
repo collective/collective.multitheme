@@ -4880,6 +4880,24 @@ body.template-logged_out #content-core .portletFooter {
 .plone-background-opposite {
   background: #BF2A2A;
 }
+.black-background {
+  background-color: #000;
+}
+.white-background {
+  background-color: #FFF;
+}
+.grey-background {
+  background-color: #DDD;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #FFF;
+}
+.grey {
+  color: #DDD;
+}
 .plone-navbar-nav > li > a,
 .plone-navbar-nav > .selected a:hover {
   color: #333;
