@@ -45,6 +45,13 @@ class ICollectiveMultiThemeSettings(form.Schema):
             required=True,
     )
 
+
+    rules = schema.Choice(
+            title=_(u"Layout Rules"),
+            values=['default', 'spot'],
+            required=True,
+    )
+    
     color1 = schema.TextLine(
         title = _("color1", default=u"Custom Color 1"),
         required = True,

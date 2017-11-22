@@ -27,5 +27,8 @@
   <records interface="collective.multitheme.interfaces.ICollectiveMultiThemeSettings">
 		<value key="style">dutchblue</value>
 		<value key="rules">default</value>
+		<value key="color1">#123456</value>
+		<value key="color2">#234561</value>
+		<value key="color3">#345612</value>
 	</records>
 </registry>
