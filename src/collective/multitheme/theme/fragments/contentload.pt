@@ -1,0 +1,12 @@
+<section class="contentloader" id="target-${view/id}" tal:define="item view/load_item">
+<h1>${view/data/title}</h1>
+<p class="description">${view/data/description}</p>
+<button type="button" class="btn btn-primary btn-xs">
+   <span href="#" class="pat-contentloader" data-pat-contentloader="url:${view/item_url}?ajax_load=1;target:#target-${view/id};?ajax_load=1;content:#content">Read more</span>
+</button>
+</section>
+<style>
+#content #portal-footer-wrapper {
+    display: none;
+}
+</style>

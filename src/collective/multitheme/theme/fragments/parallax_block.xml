@@ -7,32 +7,46 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-  <field name="image_url" type="zope.schema.URI">
-    <description/>
-    <required>True</required>
-    <title>URL to background image</title>
-  </field>
+    <field name="background_image" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Choose image</title>
+        <source>collective.themefragments.tiles.CatalogSource</source>           
+    </field>
+   <field name="image_size" type="zope.schema.Choice">
+     <description>Choose Image Size (scale) for you image wall</description>
+     <required>True</required>
+     <title>Image Size</title>
+     <default>preview</default>
+   <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+</field>
   <field name="title" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Title</title>
   </field>
-  <field name="description" type="zope.schema.Text">
+  <field name="description" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Description</title>
   </field>
-  <field name="text" type="zope.schema.Text">
+  <field name="text" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Text</title>
   </field>
-  <field name="icon1" type="zope.schema.Text">
+  <field name="height" type="zope.schema.Int">
+    <description/>
+    <required>True</required>
+    <title>Height in pixels</title>
+    <default>100</default>
+  </field>
+  <field name="icon1" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Icon 1</title>
   </field>
-  <field name="button1" type="zope.schema.Text">
+  <field name="button1" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Button 1</title>
@@ -42,12 +56,12 @@
     <required>True</required>
     <title>Link URL 1</title>
   </field>
-  <field name="icon2" type="zope.schema.Text">
+  <field name="icon2" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Icon 2</title>
   </field>
-  <field name="button2" type="zope.schema.Text">
+  <field name="button2" type="zope.schema.TextLine">
     <description/>
     <required>True</required>
     <title>Button 2</title>

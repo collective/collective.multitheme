@@ -1,1 +1,1 @@
-<div class="clear clearfloat clear-floats"> </div>
+<div class="clearfloats add-spacer" style="clear: both; height: ${view/data/height}"> </div>

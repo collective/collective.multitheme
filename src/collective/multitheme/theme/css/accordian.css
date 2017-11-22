@@ -1,3 +1,5 @@
+/* @override http://xweb14d.plana.dk:8081/Plone/++theme++multitheme/css/accordian.css */
+
 .accordian_title {
 	border:  1px solid;
 	display: flex;
@@ -19,4 +21,3 @@ a.accordian_title.accordion.toggle:hover  {
 	color: #777;
 }
 .accordiondiv {display: none;}
-

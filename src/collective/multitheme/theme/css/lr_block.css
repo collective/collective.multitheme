@@ -17,6 +17,17 @@
    align-content: flex-end;
 }
 
+.lrblock {
+    width: 300%; 
+    margin-left: -100%;
+    margin-righ: -100%;
+}
+
+.lrblock .container{
+    margin-left: auto;   
+    margin-right: auto;
+}
+
 @media (max-width: 768px) {
 div.half{
 	width: 100%;
@@ -50,11 +61,6 @@ div.right .half.bodytext {
 
 .flex.right {
 	 flex-direction: row-reverse;
-}
-
-
-.text-on-image  {
- 	color:  black;
 }
 
 .center div.half,
@@ -92,27 +98,12 @@ div.flex.text-on-image.center img {
 	text-align: center;
 }
 
-.text-on-image.black div h3,
-.text-on-image.black .bodytext{
-	color:  white;
-}
-
-
 .half {
   width: 50%;
   box-sizing: border-box;
   padding:  30px 30px 30px 30px;
   text-align: left;
 }
-
-
-
-
-.black-full {
-	background: black;
-	color: white;
-}
-
 
 body div.dark hr, 
 div.outer-black-medium hr{
@@ -128,30 +119,16 @@ div.outer-black-medium hr{
 	padding-left: 0;
 }
 
-
 div.left .half.bodytext {
 	padding-right: 30px;
 	padding-left: 0;
 }
-
 
 div.right .half.bodytext {
 	padding-left: 30px;
 	padding-right: 0px;
 }
 
-
-
 .flex.right  {
 	 flex-direction: row-reverse;
-}
-
-
-.dark {
-   background: black;
-   color: white !important;	
-}
-
-.grey {
-	background: #EDEDED;
 }

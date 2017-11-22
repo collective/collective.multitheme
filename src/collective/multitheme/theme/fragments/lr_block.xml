@@ -38,20 +38,41 @@
   <field name="css_class" type="zope.schema.Choice">
       <description/>
       <required>True</required>
-      <title>Color</title>
+      <title>Style</title>
       <values>
         <element>left</element>
         <element>right</element>
-        <element>left dark</element>
-        <element>right dark</element>
-        <element>left grey</element>
-        <element>right grey</element>
         <element>center</element>
         <element>text-on-image</element>
-        <element>text-on-image black</element>
         <element>text-on-image center</element>
-        <element>text-on-image black center</element>
       </values>
   </field>
+  <field name="color1" type="zope.schema.Choice">
+    <description/>
+    <required>True</required>
+    <title>Background color</title>
+    <values>
+      <element>grey-background</element>
+      <element>black-background</element>
+      <element>white-background</element>
+      <element>plone-background</element>
+      <element>plone-background-2</element>
+      <element>plone-background-3</element>
+      <element>plone-background-opposite</element>
+    </values>
+  </field>
+      <field name="color2" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Text coior</title>
+        <values>
+          <element>black</element>
+          <element>white</element>
+          <element>plone-link</element>
+          <element>plone-link-2</element>
+          <element>plone-link-3</element>
+          <element>plone-link-opposite</element>
+        </values>
+      </field>
 </schema>
 </model>
