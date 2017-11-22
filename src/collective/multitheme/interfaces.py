@@ -44,7 +44,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
                    'red',
                    'scheme1',
                    'spot'],
-        	required=True,
+        	required=true,
     )
 
     color1 = schema.TextLine(
@@ -59,7 +59,8 @@ class ICollectiveMultiThemeSettings(form.Schema):
         required = true,
         description = _("help_color",
                       default="Choose Color"),
-    )    
+    )
+
     color3 = schema.TextLine(
         title = _("color3", default=u"Custom Color 3"),
         required = true,
@@ -71,12 +72,6 @@ class ICollectiveMultiThemeSettings(form.Schema):
             color1=ColorPickerFieldWidget,
             color2=ColorPickerFieldWidget,
             color3=ColorPickerFieldWidget,
-    )
-
-	rules = schema.Choice(
-            title=_(u"Layout Rules"),
-            values=['default', 'spot'],
-            required=True,
     )
 
 alsoProvides(ICollectiveMultiThemeSettings, IMedialogControlpanelSettingsProvider)
