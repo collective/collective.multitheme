@@ -29,6 +29,9 @@ class ICollectiveMultiThemeSettings(form.Schema):
 		fields=[
 			'style',
 			'rules',
+            'color',
+            'color2',
+            'color3'
 		],
 	)
 
@@ -44,23 +47,30 @@ class ICollectiveMultiThemeSettings(form.Schema):
         	required=True,
     )
 
-	color1 = schema.TextLine(
-            title=_(u"Custom Color 1"),
-            required=True,
+    color1 = schema.TextLine(
+        title = _("color1", default=u"Custom Color 1"),
+        required = true,
+        description = _("help_color",
+                      default="Choose Color"),
     )
 
-	color2 = schema.TextLine(
-            title=_(u"Custom Color 2"),
-            required=True,
-    )
-
-	color3 = schema.TextLine(
-            title=_(u"Custom Color 3"),
-            required=True,
+    color2 = schema.TextLine(
+        title = _("color2", default=u"Custom Color 2"),
+        required = true,
+        description = _("help_color",
+                      default="Choose Color"),
+    )    
+    color3 = schema.TextLine(
+        title = _("color3", default=u"Custom Color 3"),
+        required = true,
+        description = _("help_color",
+                      default="Choose Color"),
     )
 
     form.widget(
-        color1=ColorPickerWidget
+            color1=ColorPickerFieldWidget,
+            color2=ColorPickerFieldWidget,
+            color3=ColorPickerFieldWidget,
     )
 
 	rules = schema.Choice(
