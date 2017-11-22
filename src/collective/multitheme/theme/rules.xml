@@ -16,12 +16,12 @@
 	<after theme-children="/html/head" >
 		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
     <style>
-      .custom_color1 {color: $color1}
-      .custom_color2 {color: $color2}
-      .custom_color3 {color: $color3}
-      .custtom_background1 {background-color: $color1}
-      .custtom_background2 {background-color: $color2}
-      .custtom_background3 {background-color: $color3}
+      .custom-color1 {color: $color1}
+      .custom-color2 {color: $color2}
+      .custom-color3 {color: $color3}
+      .custtom-background1 {background-color: $color1}
+      .custtom-background2 {background-color: $color2}
+      .custtom-background3 {background-color: $color3}
     </style>
 	</after>
 </rules>

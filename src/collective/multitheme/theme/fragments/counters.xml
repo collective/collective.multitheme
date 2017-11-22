@@ -34,6 +34,9 @@
       <element>plone-link-2</element>
       <element>plone-link-3</element>
       <element>plone-link-opposite</element>
+      <element>custom-color1</element>
+      <element>custom-color2</element>
+      <element>custom-color3</element>
     </values>
   </field>
   <field name="color2" type="zope.schema.Choice">
@@ -47,6 +50,9 @@
         <element>plone-link-2</element>
         <element>plone-link-3</element>
         <element>plone-link-opposite</element>
+        <element>custom-color1</element>
+        <element>custom-color2</element>
+        <element>custom-color3</element>
       </values>
     </field>
 </schema>
