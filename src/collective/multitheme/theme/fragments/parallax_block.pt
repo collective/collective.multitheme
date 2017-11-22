@@ -1,5 +1,5 @@
-<section class="parallax-background" 
- data-jarallax-original-styles="null" style="z-index: 0; position: relative; height:${view/data/height}px; background-image: none; 
+<section class="parallax-background"
+ data-jarallax-original-styles="null" style="z-index: 0; position: relative; height:${view/data/height}px; background-image: none;
 background-attachment: scroll; background-size: auto;" tal:define="p_image view/one_image; image_size view/data/image_size">
     <div class="container">
             <h1>
@@ -11,7 +11,7 @@ background-attachment: scroll; background-size: auto;" tal:define="p_image view/
             <p>
                 ${view/data/text}
             </p>
-   
+
             <div class="button_group">
                 <a class="btn btn-primary plone-background" href="${view/data/url1}">
                     <span class="fa ${view/data/icon1}"></span>
@@ -23,14 +23,14 @@ background-attachment: scroll; background-size: auto;" tal:define="p_image view/
                 </a>
             </div>
     </div>
-    
 
-<div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; 
+
+<div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: ${view/data/opacity}
     overflow: hidden; pointer-events: none; visibility: hidden; z-index: -100;">
-    
-    <div style="background-size: 100%; background-image: url( ${p_image/getURL}/@@images/image/${image_size} ); 
-        position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; 
-        pointer-events: none; margin-left: 0px; margin-top: -492.36328125px; visibility: visible; transform: translate3d(0px, 174.60000000000002px, 0px); 
+
+    <div style="background-size: 100%; background-image: url( ${p_image/getURL}/@@images/image/${image_size} );
+        position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden;
+        pointer-events: none; margin-left: 0px; margin-top: -492.36328125px; visibility: visible; transform: translate3d(0px, 174.60000000000002px, 0px);
         background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></div>
 </div>
  <link rel="stylesheet" href="++theme++multitheme/css/parallax1.css">

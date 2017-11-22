@@ -11,7 +11,14 @@
         <description/>
         <required>True</required>
         <title>Choose image</title>
-        <source>collective.themefragments.tiles.CatalogSource</source>           
+        <source>collective.themefragments.tiles.CatalogSource</source>
+    </field>
+    <field name="opacity" type="zope.schema.Float">
+        <description/>
+        <max>1.0</max>
+        <min>0.0</min>
+        <required>True</required>
+        <title>Image opacity (0.01 to 1)</title>
     </field>
    <field name="image_size" type="zope.schema.Choice">
      <description>Choose Image Size (scale) for you image wall</description>
