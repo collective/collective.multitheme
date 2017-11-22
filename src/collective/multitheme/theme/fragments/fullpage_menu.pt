@@ -1,0 +1,13 @@
+<section id="fullpage-menu">
+
+  xxx
+  <script>require([
+      'jquery',
+      'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
+      ], function(Base) {
+      $(document).ready(function() {
+        $('#content').fullpage({sectionSelector: 'section'});
+        });
+      });
+  </script>
+</section>
