@@ -28,7 +28,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
         fields=[
             'style',
             'rules',
-            'color',
+            'color1',
             'color2',
             'color3']
     )
@@ -51,7 +51,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
             values=['default', 'spot'],
             required=True,
     )
-    
+
     color1 = schema.TextLine(
         title = _("color1", default=u"Custom Color 1"),
         required = True,
