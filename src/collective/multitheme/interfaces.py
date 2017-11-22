@@ -60,7 +60,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
     )
 
     form.widget(
-        color1=IconPickerFieldWidget,
+        color1=ColorPickerWidget
     )
 
 	rules = schema.Choice(
