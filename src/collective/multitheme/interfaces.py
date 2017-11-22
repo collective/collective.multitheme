@@ -49,26 +49,20 @@ class ICollectiveMultiThemeSettings(form.Schema):
             required=True,
     )
 
-    form.widget(
-            color1=IconPickerFieldWidget,
-    )
-
 	color2 = schema.TextLine(
             title=_(u"Custom Color 2"),
             required=True,
     )
 
-    form.widget(
-            color2=IconPickerFieldWidget,
-    )
-
-    color3 = schema.TextLine(
+	color3 = schema.TextLine(
             title=_(u"Custom Color 3"),
             required=True,
     )
 
     form.widget(
-            color3=IconPickerFieldWidget,
+        color1=IconPickerFieldWidget,
+        color2=IconPickerFieldWidget,
+        color3=IconPickerFieldWidget,
     )
 
 	rules = schema.Choice(
