@@ -1,0 +1,9 @@
+section.sosial-block {
+ text-align: center;	
+}
+
+section.sosial-block .btn-social{
+ font-size: 200%;
+ margin-left: 0.3em;
+ margin-right: 0.3em;
+}
