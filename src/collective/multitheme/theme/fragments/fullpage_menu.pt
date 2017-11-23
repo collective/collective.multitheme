@@ -5,7 +5,12 @@
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
       ], function(Base) {
       $(document).ready(function() {
-        $('#content').fullpage({sectionSelector: '.mosaic-grid-row', menu: '#menu', });
+        $('.viewpermission-none #content').fullpage({
+          sectionsColor : ['#fff'],
+          paddingTop: '100px',
+          navigation: true,
+		      paddingBottom: '100px',
+		      sectionSelector: '.mosaic-grid-row', menu: '#menu', });
         });
       });
   </script>

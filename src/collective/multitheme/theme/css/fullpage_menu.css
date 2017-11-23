@@ -26,6 +26,19 @@ div.mosaic-tile-content > section {
 	xheight: 100vh;
 }
  
+ 
+#xmain-container {
+	position: fixed;
+	left:  0;
+	right: 0;
+}
+
+ #portal-footer-wrapper {
+	bottom:  0;
+	position: absolute;
+	left:  0;
+	right:  0;
+}
 
 /* this is copied from fullPage 2.9.5
  
@@ -250,3 +263,4 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
     height: auto !important;
 }
+
