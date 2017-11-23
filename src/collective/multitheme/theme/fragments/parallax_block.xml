@@ -37,10 +37,14 @@
     <required>True</required>
     <title>Description</title>
   </field>
-  <field name="text" type="zope.schema.TextLine">
-    <description/>
+  <field name="text" type="zope.schema.Text">
+    <description>Richtext field is not working, so this is the only workaround so far
+    </description>
     <required>True</required>
     <title>Text</title>
+    <form:widget>
+      <klass>pat-tinymce</klass>
+    </form:widget>
   </field>
   <field name="height" type="zope.schema.Int">
     <description/>

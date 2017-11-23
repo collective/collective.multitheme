@@ -8,9 +8,7 @@ background-attachment: scroll; background-size: auto;" tal:define="p_image view/
             <h3>
                 ${view/data/description}
             </h3>
-            <p>
-                ${view/data/text}
-            </p>
+            <p tal:replace="structure view/data/text" />
 
             <div class="button_group">
                 <a class="btn btn-primary plone-background" href="${view/data/url1}">
