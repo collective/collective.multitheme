@@ -1,13 +1,13 @@
 <section id="fullpage-menu">
-
-  xxx
+  <!-- maybe add menu here maybe I can get all the mosaic tiles and find each #section-->
   <script>require([
       'jquery',
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
       ], function(Base) {
       $(document).ready(function() {
-        $('#content').fullpage({sectionSelector: 'section'});
+        $('#content').fullpage({sectionSelector: '.mosaic-grid-row', menu: '#menu', });
         });
       });
   </script>
+  <link rel="stylesheet" href="++theme++multitheme/css/fullpage_menu.css">
 </section>
