@@ -1,19 +1,20 @@
 /* @override http://localhost:8080/Plone5asdfasdf/++theme++multitheme/css/fullpage_menu.css */
 
-section#fullpage-menu,
 #portal-breadcrumbs,
 header#content-header {
 	display: none;
 }
 
-section#fullpage-menu {
+#fullpage-menu,
+#fullpagemenu {
 	position: static;
 	left: 0;
 	right: 0;
+	top:  0;
 	background: white;
-	z-index: 99;
+	z-index: 101;
 	line-height: 3em;
-	height: 3em;
+	height: 3em !important;
 }
 
 #portal-globalnav-wrapper {

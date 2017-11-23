@@ -1,5 +1,10 @@
-<section id="fullpage-menu">
+<div id="fullpage-menu">
   <!-- maybe add menu here maybe I can get all the mosaic tiles and find each #section-->
+  <ul id="fullpagemenu">
+	<li data-menuanchor="#fragment-bd169b765e7647529a23106167af4028" class="active"><a href="#fragment-bd169b765e7647529a23106167af4028">First section</a></li>
+	<li data-menuanchor="#fragment-dd95b4f02f0a4db79e8f6108893b7471"><a href="#fragment-dd95b4f02f0a4db79e8f6108893b7471">Second section</a></li>
+</ul>
+
   <script>require([
       'jquery',
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
@@ -10,9 +15,9 @@
           paddingTop: '100px',
           navigation: true,
 		      paddingBottom: '100px',
-		      sectionSelector: '.mosaic-grid-row', menu: '#menu', });
+		      sectionSelector: '.mosaic-grid-row'});
         });
       });
   </script>
   <link rel="stylesheet" href="++theme++multitheme/css/fullpage_menu.css">
-</section>
+</div>

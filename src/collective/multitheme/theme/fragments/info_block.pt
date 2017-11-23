@@ -1,4 +1,4 @@
-<section class="infoblock">
+<section class="infoblock" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
    <div class="container">
        <div class="xxxyyy">
            <h3 class="pb-3">
