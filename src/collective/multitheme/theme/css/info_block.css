@@ -132,7 +132,7 @@
 }
 
 
-.infoblock.textzoom.info_pre h1:hover{
+.textzoom h1:hover {
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.1);
