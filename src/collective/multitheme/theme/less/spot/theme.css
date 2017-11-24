@@ -5313,6 +5313,21 @@ body.section-front-page .plone-breadcrumb {
 .grey {
   color: #DDD !important;
 }
+:root {
+  --plone-link-color: #f85c37;
+}
+:root {
+  --plone-link-secondary: #1abc9c;
+}
+:root {
+  --plone-link-color: #f85c37;
+}
+:root {
+  --plone-link-tertiary: #FB3640;
+}
+:root {
+  --plone-link-opposite: #3498db;
+}
 /*
  * Author: Carlos Alvarez
  * URL: http://alvarez.is

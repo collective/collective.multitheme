@@ -4902,3 +4902,15 @@ nav.autotoc-nav a {
 .grey {
   color: #DDD !important;
 }
+:root {
+  --plone-link-color: #20a7de;
+}
+:root {
+  --plone-link-secondary: #a7de20;
+}
+:root {
+  --plone-link-tertiary: #de20a7;
+}
+:root {
+  --plone-link-opposite: #de5720;
+}

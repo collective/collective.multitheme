@@ -16135,3 +16135,18 @@ body.section-front-page .plone-breadcrumb {
 .grey {
   color: #DDD !important;
 }
+:root {
+  --plone-link-color: #007bb1;
+}
+:root {
+  --plone-link-secondary: #7bb100;
+}
+:root {
+  --plone-link-color: #007bb1;
+}
+:root {
+  --plone-link-tertiary: #b1007b;
+}
+:root {
+  --plone-link-opposite: #b13600;
+}

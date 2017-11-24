@@ -4899,3 +4899,18 @@ body.template-logged_out #content-core .portletFooter {
 .grey {
   color: #DDD !important;
 }
+:root {
+  --plone-link-color: #007bb1;
+}
+:root {
+  --plone-link-secondary: #7bb100;
+}
+:root {
+  --plone-link-color: #007bb1;
+}
+:root {
+  --plone-link-tertiary: #b1007b;
+}
+:root {
+  --plone-link-opposite: #b13600;
+}

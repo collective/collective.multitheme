@@ -54,10 +54,17 @@ Contribute
 - Use  'lessc mylessfile.less mycssfile.css'
 
 
-Support
+Lessc
 -------
 
-If you are having issues, please let us know.
+cd blue; lessc theme.less  theme.css;
+cd ../blue; lessc theme.less  theme.css;
+cd ../ploneconf; lessc theme.less  theme.css;
+cd ../booster; lessc theme.less  theme.css;
+cd ../red; lessc theme.less  theme.css;
+cd ../spot; lessc theme.less  theme.css;
+cd ../dutchblue; lessc theme.less  theme.css;
+cd ../scheme1; lessc theme.less  theme.css;
 
 
 License

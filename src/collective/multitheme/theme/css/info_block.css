@@ -16,12 +16,14 @@
  letter-spacing: -1px;
 }
 
-.shadow h1{
+.shadow.white-background h1{
   letter-spacing: 5px;
   text-shadow: -1px -1px 0px white,
     3px 3px 0px white,
     6px 6px 0px #ccc;
 }
+
+
 
 .infoblock.black-background.shadow h1 {
 	text-shadow: -1px -1px 0px black,
@@ -29,3 +31,40 @@
     6px 6px 0px #333;
 }
 
+.infoblock.plone-background.shadow h1 {
+    text-shadow: -1px -1px 0px var(--plone-link-color),
+    3px 3px 0px var(--plone-link-color),
+    6px 6px 0px rgba(255,255,255,0.3);
+}
+
+.infoblock.plone-background.shadow h1 {
+    text-shadow: -1px -1px 0px var(--plone-link-color),
+    3px 3px 0px var(--plone-link-color),
+    6px 6px 0px rgba(255,255,255,0.3);
+}
+
+.infoblock.plone-background.shadow h1 {
+    text-shadow: -1px -1px 0px var(--plone-link-color),
+    3px 3px 0px var(--plone-link-color),
+    6px 6px 0px rgba(255,255,255,0.3);
+}
+
+.infoblock.plone-background-2.shadow h1 {
+    text-shadow: -1px -1px 0px var(--plone-link-secondary),
+    3px 3px 0px var(--plone-link-secondary),
+    6px 6px 0px rgba(255,255,255,0.3);
+}
+
+
+.infoblock.plone-background-3.shadow h1 {
+    text-shadow: -1px -1px 0px var(--plone-link-tertiary),
+    3px 3px 0px var(--plone-link-tertiary),
+    6px 6px 0px rgba(255,255,255,0.3);
+}
+
+
+.infoblock.plone-background-opposite.shadow h1 {
+    text-shadow: -1px -1px 0px var(--plone-link-opposite),
+    3px 3px 0px var(--plone-link-opposite),
+    6px 6px 0px rgba(255,255,255,0.3);
+}
