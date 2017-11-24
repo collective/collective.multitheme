@@ -138,6 +138,10 @@
               <element>emboss</element>
               <element>zoom</element>
               <element>textzoom</element>
+              <element>shadow zoom</element>
+              <element>shadow textzoom</element>
+              <element>emboss zoom</element>
+              <element>emboss textzoom</element>
             </values>
           </field>
   </schema>
