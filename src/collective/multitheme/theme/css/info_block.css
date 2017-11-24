@@ -117,7 +117,7 @@
     6px 6px 0px rgba(255,255,255,0.3);
 }
 
-.infoblock.plonxe-background.zzright-style:hover
+.infoblock.zoom:hover
 {
     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
     z-index: 2;
@@ -130,8 +130,6 @@
     transition: all 200ms ease-in;
     transform: scale(1.1);
 }
-
-
 
 
 .infoblock.textzoom.info_pre h1:hover{
