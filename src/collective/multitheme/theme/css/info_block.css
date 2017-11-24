@@ -1,3 +1,5 @@
+/* @override http://xweb14d.plana.dk:8081/Plone/fragments/++theme++multitheme/css/info_block.css */
+
 .fullwidth {
 	width: 300%;
 	margin-left: -100%;
@@ -18,7 +20,7 @@
 	margin-bottom:1.3em;
 }
 
-.infoblock .center-style {
+.infoblock.center-style {
 	text-align: center;
 }
 
@@ -35,19 +37,19 @@
   }
  
 
-.infoblock, .right-style div.container,
-.infoblock, .left-style div.container{
+.infoblock .right-style div.container,
+.infoblock .left-style div.container{
    display: flex;	
    align-items:  center;
    justify-content: space-between;
 }
 
-.infoblock, .right-style div.container {
+.infoblock .right-style div.container {
   flex-direction: row-reverse;
 }
 
 
-.infoblock, .right-style .info-pre{
+.infoblock .right-style .info-pre{
 	text-align: right;
 }
 
@@ -115,8 +117,7 @@
     6px 6px 0px rgba(255,255,255,0.3);
 }
 
-
-.infoblock.plone-background-opposite.zoom:hover
+.infoblock.plonxe-background.zzright-style:hover
 {
     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
     z-index: 2;
@@ -131,7 +132,9 @@
 }
 
 
-.textzoom h1:hover{
+
+
+.infoblock.textzoom.info_pre h1:hover{
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.1);
@@ -142,3 +145,8 @@
     transition: all 200ms ease-in;
     transform: scale(1.1);
 }
+
+
+
+
+
