@@ -6,18 +6,18 @@
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
       ], function(Base) {
       $(document).ready(function() {
-        $('.viewpermission-none #content').fullpage({
-          sectionsColor : ['#fff'],
+          $('.viewpermission-none #content').fullpage({
           paddingTop: '100px',
           navigation: true,
 		      paddingBottom: '100px',
-		      sectionSelector: '.mosaic-grid-row'});
+		      sectionSelector: 'section'});
         });
-        $('[id^=fragment]').each(function() {
-            var myid = $(this).attr('id') ;
-            $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + myid + "'><a href='#" + myid + "'>" + myid +"</a></li>" );
-        });
+
       });
   </script>
   <link rel="stylesheet" href="++theme++multitheme/css/fullpage_menu.css">
 </div>
+$('[id^=fragment]').each(function() {
+  var myid = $(this).attr('id') ;
+  $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + myid + "'><a href='#" + myid + "'>" + myid + "</a></li>" );
+});
