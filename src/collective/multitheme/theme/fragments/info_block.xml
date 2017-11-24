@@ -7,10 +7,45 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
+  <field name="title1" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <title>Subttile</title>
+  </field>
+  <field name="title2" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <title>Title</title>
+  </field>
+  <field name="buttontext" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <default>MORE INFO</default>
+    <title>Buttontext</title>
+  </field>
+  <field name="url" type="zope.schema.URI">
+    <description/>
+    <required>True</required>
+    <title>Button link</title>
+  </field>
+  <field name="style" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Style</title>
+      <values>
+        <element>center-style</element>
+        <element>right-style</element>
+        <element>left-style</element>
+        <element>gradient-style</element>
+        <element>fullwidth right-style</element>
+        <element>fullwidth left-style</element>
+        <element>fullwidth gradient-style</element>
+      </values>
+    </field>
   <field name="color1" type="zope.schema.Choice">
       <description/>
       <required>True</required>
-      <default>white-background</default>
+      <default>plone-background</default>
       <title>Background color</title>
       <values>
         <element>grey-background</element>
@@ -30,8 +65,8 @@
         <required>True</required>
         <title>Color 2</title>
         <values>
-          <element>black</element>
           <element>white</element>
+          <element>black</element>
           <element>plone-link</element>
           <element>plone-link-2</element>
           <element>plone-link-3</element>
@@ -44,7 +79,7 @@
       <field name="color3" type="zope.schema.Choice">
           <description/>
           <required>True</required>
-          <default>custom-color1</default>
+          <default>white</default>
           <title>Title color</title>
           <values>
             <element>black</element>
@@ -62,7 +97,7 @@
             <description/>
             <required>True</required>
             <title>Button Color</title>
-            <default>black-background</default>
+            <default>plone-background-3</default>
             <values>
                 <element>grey-background</element>
                 <element>black-background</element>

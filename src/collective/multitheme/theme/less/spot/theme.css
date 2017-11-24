@@ -5271,6 +5271,9 @@ body.section-front-page .plone-breadcrumb {
 }
 /* Import Default theme stying
    ========================================================================== */
+div.outer-wrapper {
+  overflow-x: hidden;
+}
 .plone-link {
   color: #f85c37 !important;
 }

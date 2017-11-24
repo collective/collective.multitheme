@@ -1,13 +1,67 @@
-/* @override http://localhost:8080/Plone5asdfasdf/++theme++multitheme/css/info_block.css */
+/* @override 
+	http://localhost:8080/Plone5asdfasdf/forside/++theme++multitheme/css/info_block.css
+	http://localhost:8080/++theme++multitheme/css/info_block.css
+*/
+
+
+.fullwidth {
+	width: 300%;
+	margin-left: -100%;
+}
+
+
+.fullwidth .container {
+	max-width: 100vw;
+}
 
 .infoblock {
 	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 }
 
 .infoblock h1{
-	font-size: 300%;
+	font-size: 400%;
+	margin-bottom:1.3em;
 }
+
+.infoblock .center-style {
+	text-align: center;
+}
+
+.infoblock.gradient-style {
+	padding-bottom: 0;
+}
+
+.infoblock.gradient-style .container {
+	width: 202vw;
+	margin: auto;
+	text-align: center;
+    background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax */
+    padding-bottom: 0;
+  }
+ 
+
+.infoblock, .right-style div.container,
+.infoblock, .left-style div.container{
+   display: flex;	
+   align-items:  center;
+   justify-content: space-between;
+}
+
+.infoblock, .right-style div.container {
+  flex-direction: row-reverse;
+}
+
+
+.infoblock, .right-style .info-pre{
+	text-align: right;
+}
+
+.infoblock button  {
+  padding: 1em 2em;
+  border-radius: 2em;
+}
+
 
 
 .emboss h1 {
@@ -22,8 +76,6 @@
     3px 3px 0px white,
     6px 6px 0px #ccc;
 }
-
-
 
 .infoblock.black-background.shadow h1 {
 	text-shadow: -1px -1px 0px black,

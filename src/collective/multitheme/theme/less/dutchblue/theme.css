@@ -4807,6 +4807,9 @@ body.template-logged_out #content-core .portletFooter {
 #search-filter input {
   margin-right: 0.5rem;
 }
+div.outer-wrapper {
+  overflow-x: hidden;
+}
 li.navTreeItem a {
   background: red;
   display: none;

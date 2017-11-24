@@ -16093,6 +16093,9 @@ body.section-front-page .plone-breadcrumb {
 #portal-footer-wrapper .portlet .portletContent > ul > li a:before {
   content: "";
 }
+div.outer-wrapper {
+  overflow-x: hidden;
+}
 .plone-link {
   color: #007bb1 !important;
 }

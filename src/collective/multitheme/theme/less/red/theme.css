@@ -4857,6 +4857,9 @@ body.template-logged_out #content-core .portletFooter {
 #portal-footer-wrapper a:hover {
   color: whitesmoke;
 }
+div.outer-wrapper {
+  overflow-x: hidden;
+}
 .plone-link {
   color: #d20000 !important;
 }
