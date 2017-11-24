@@ -136,6 +136,8 @@
               <element>no-effects</element>
               <element>shadow</element>
               <element>emboss</element>
+              <element>zoom</element>
+              <element>textzoom</element>
             </values>
           </field>
   </schema>

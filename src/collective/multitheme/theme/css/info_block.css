@@ -114,3 +114,31 @@
     3px 3px 0px var(--plone-link-opposite),
     6px 6px 0px rgba(255,255,255,0.3);
 }
+
+
+.infoblock.plone-background-opposite.zoom:hover
+{
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+
+.textzoom h1:hover{
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
