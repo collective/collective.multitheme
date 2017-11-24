@@ -5,7 +5,7 @@ header#content-header {
 	display: none;
 }
 
-#fullpage-menu,
+#fullpage,
 #fullpagemenu {
 	position: static;
 	left: 0;

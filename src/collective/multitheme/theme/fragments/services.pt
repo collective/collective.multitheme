@@ -1,4 +1,4 @@
-<section id="services"
+<section id="fragment-services"
 		 		 tal:define="folder_url nocall:request/form/folder_url|None;
 				 stil python: context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.style']">
     <div tal:condition="folder_url">

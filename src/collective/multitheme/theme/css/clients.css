@@ -1,6 +1,6 @@
 /* @override http://localhost:8080/mt/++theme++multitheme/css/clients.css */
 
-#testimonials {
+#fragment-testimonials {
 	text-align: center;
 	padding: 1em;
 	width: 300%;
@@ -66,7 +66,7 @@ a.client-name {
 
 @media (min-width: 768px){
 	
-#testimonials {
+#fragment-testimonials {
 	width: 300%;
 	margin-left: -100%;
 	margin-right: -100%;

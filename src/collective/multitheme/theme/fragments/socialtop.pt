@@ -1,4 +1,5 @@
-<div id="socialtop" class="social"
+<div id="fragent-${view/id}"
+	  class="social"
 		tal:define="email view/data/email|None;
 					twitter view/data/twitter|None;
 					facebook view/data/facebook|None;

@@ -1,7 +1,8 @@
-<section class="sosial-block"
-	tal:define="email view/data/email|None;
-				twitter view/data/twitter|None;
-				facebook view/data/facebook|None;">
+<section id="fragment-${view/id}"
+				 class="sosial-block"
+				 tal:define="email view/data/email|None;
+					  twitter view/data/twitter|None;
+					  facebook view/data/facebook|None;">
     <div class="container">
            <div>
                <h2>

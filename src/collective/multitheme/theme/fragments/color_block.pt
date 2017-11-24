@@ -1,5 +1,5 @@
 
-<section class="color-block">
+<section class="color-block" id="fragment-${view/id}>
   <div class="colorbox ${view/data/color1}"
         tal:condition="not:view/data/linkbox" >
 	<div class="innerbox" >

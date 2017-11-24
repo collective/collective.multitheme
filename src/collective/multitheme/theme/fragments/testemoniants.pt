@@ -1,4 +1,5 @@
-<section id="testimonials" class="testimonial ${view/data/color1}"
+<section id="fragment-testimonials"
+         class="testimonial ${view/data/color1}"
          tal:define="folder_url nocall:request/form/folder_url|None;">
  	<div class="container" tal:condition="folder_url">
 		<div class="section-header">

@@ -1,5 +1,6 @@
-<section  tal:define="items context/@@contentlisting;
-         image_size view/data/image_size|None">
+<section tal:define="items context/@@contentlisting;
+         image_size view/data/image_size|None"
+         id="fragment-${view/id}"> 
     <div class="wall-of-images container-fluid" tal:condition="image_size">
       <tal:image tal:repeat="item items">
         <tal:define tal:define="obj item/getObject;

@@ -1,4 +1,4 @@
-<section id="main-slider" class="no-margin"
+<section id="fragment-main-slider" class="no-margin"
 	tal:define="folder_url request/form/folder_url|None;
 				maxwidth view/data/maxwidth;
 				speed view/data/speed;

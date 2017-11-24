@@ -1,4 +1,4 @@
-<section class="parallax-background"
+<section id="fragment-${view/id}" class="parallax-background"
  data-jarallax-original-styles="null" style="z-index: 0; position: relative; height:${view/data/height}px; background-image: none;
 background-attachment: scroll; background-size: auto;" tal:define="p_image view/one_image; image_size view/data/image_size">
     <div class="container">

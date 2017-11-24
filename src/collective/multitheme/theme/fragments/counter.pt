@@ -1,4 +1,4 @@
-<div class="count-item" id="count-${view/id}">
+<div class="count-item" id="fragment-${view/id}">
     <span class="fa ${view/data/icon} black"></span>
     <h1><span class="countme count-{${view/id}">${view/data/number}</span> ${view/data/title}</h1>
     <p>${view/data/description}</p>
@@ -6,7 +6,7 @@
 <script>require([
   'jquery',
   ], function(Base) {
-    $('#count-${view/id} .countme').each(function () {
+    $('#fragment-${view/id} .countme').each(function () {
       $(this).prop('Counter',1).animate({
       Counter: $(this).text()
       }, {

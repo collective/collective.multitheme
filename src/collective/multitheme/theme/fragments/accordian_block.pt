@@ -1,4 +1,4 @@
-<section id="accordion-block-${view/id}" class="accordion-block ${view/data/color1}" >
+<section id="fragment-${view/id}" class="accordion-block ${view/data/color1}" >
   <a href="#" class="accordian_title accordion toggle">
         <i class="fa fa-bars" aria-hidden="true"></i><h3>${view/data/title}</h3>
   </a>
@@ -6,7 +6,7 @@
   <script>require([
       'jquery'
       ], function(Base) {
-        $("#accordion-block-${view/id} .accordian_title").click(function() {
+        $("#fragment-${view/id} .accordian_title").click(function() {
             $('.accordiondiv').toggle();
         });
       });

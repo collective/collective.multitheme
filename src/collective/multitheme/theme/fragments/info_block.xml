@@ -130,9 +130,10 @@
         </field>
         <field name="effect" type="zope.schema.Choice">
             <description/>
-            <required>False</required>
+            <required>True</required>
             <title>Effect</title>
             <values>
+              <element>no-effects</element>
               <element>shadow</element>
               <element>emboss</element>
             </values>

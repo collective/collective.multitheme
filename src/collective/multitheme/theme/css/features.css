@@ -1,6 +1,6 @@
 /* @override http://localhost:8080/Plone/++theme++multitheme/less/features.css */
 
-#features{
+#fragment-features{
   background: #f2f2f2;
   padding: 20px;
 }

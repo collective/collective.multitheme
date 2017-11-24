@@ -1,4 +1,5 @@
-<section tal:define="scale view/data/image_size;
+<section id="fragment-${view/id}"
+                tal:define="scale view/data/image_size;
                 title view/data/title | nothing;
                 image view/one_image;
                 image_url image/getURL;
