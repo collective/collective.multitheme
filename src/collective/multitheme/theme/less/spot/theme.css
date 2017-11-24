@@ -5272,46 +5272,46 @@ body.section-front-page .plone-breadcrumb {
 /* Import Default theme stying
    ========================================================================== */
 .plone-link {
-  color: #f85c37;
+  color: #f85c37 !important;
 }
 .plone-link-2 {
-  color: #1abc9c;
+  color: #1abc9c !important;
 }
 .plone-link-3 {
-  color: #FB3640;
+  color: #FB3640 !important;
 }
 .plone-link-opposite {
-  color: #3498db;
+  color: #3498db !important;
 }
 .plone-background {
-  background: #f85c37;
+  background: #f85c37 !important;
 }
 .plone-background-2 {
-  background: #1abc9c;
+  background: #1abc9c !important;
 }
 .plone-background-3 {
-  background: #FB3640;
+  background: #FB3640 !important;
 }
 .plone-background-opposite {
-  background: #3498db;
+  background: #3498db !important;
 }
 .black-background {
-  background-color: #000;
+  background-color: #000 !important;
 }
 .white-background {
-  background-color: #FFF;
+  background-color: #FFF !important;
 }
 .grey-background {
-  background-color: #DDD;
+  background-color: #DDD !important;
 }
 .black {
-  color: #000;
+  color: #000 !important;
 }
 .white {
-  color: #FFF;
+  color: #FFF !important;
 }
 .grey {
-  color: #DDD;
+  color: #DDD !important;
 }
 /*
  * Author: Carlos Alvarez

@@ -4857,46 +4857,46 @@ body.template-logged_out #content-core .portletFooter {
   color: whitesmoke;
 }
 .plone-link {
-  color: #024959;
+  color: #024959 !important;
 }
 .plone-link-2 {
-  color: #F24738;
+  color: #F24738 !important;
 }
 .plone-link-3 {
-  color: #F2C777;
+  color: #F2C777 !important;
 }
 .plone-link-opposite {
-  color: #BF2A2A;
+  color: #BF2A2A !important;
 }
 .plone-background {
-  background: #024959;
+  background: #024959 !important;
 }
 .plone-background-2 {
-  background: #F24738;
+  background: #F24738 !important;
 }
 .plone-background-3 {
-  background: #F2C777;
+  background: #F2C777 !important;
 }
 .plone-background-opposite {
-  background: #BF2A2A;
+  background: #BF2A2A !important;
 }
 .black-background {
-  background-color: #000;
+  background-color: #000 !important;
 }
 .white-background {
-  background-color: #FFF;
+  background-color: #FFF !important;
 }
 .grey-background {
-  background-color: #DDD;
+  background-color: #DDD !important;
 }
 .black {
-  color: #000;
+  color: #000 !important;
 }
 .white {
-  color: #FFF;
+  color: #FFF !important;
 }
 .grey {
-  color: #DDD;
+  color: #DDD !important;
 }
 .plone-navbar-nav > li > a,
 .plone-navbar-nav > .selected a:hover {

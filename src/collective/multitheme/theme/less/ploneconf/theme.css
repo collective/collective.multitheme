@@ -7994,46 +7994,46 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
 }
 .plone-link {
-  color: #007bb3;
+  color: #007bb3 !important;
 }
 .plone-link-2 {
-  color: #b3007b;
+  color: #b3007b !important;
 }
 .plone-link-3 {
-  color: #7bb300;
+  color: #7bb300 !important;
 }
 .plone-link-opposite {
-  color: #b33800;
+  color: #b33800 !important;
 }
 .plone-background {
-  background: #007bb3;
+  background: #007bb3 !important;
 }
 .plone-background-2 {
-  background: #b3007b;
+  background: #b3007b !important;
 }
 .plone-background-3 {
-  background: #7bb300;
+  background: #7bb300 !important;
 }
 .plone-background-opposite {
-  background: #b33800;
+  background: #b33800 !important;
 }
 .black-background {
-  background-color: #000;
+  background-color: #000 !important;
 }
 .white-background {
-  background-color: #FFF;
+  background-color: #FFF !important;
 }
 .grey-background {
-  background-color: #DDD;
+  background-color: #DDD !important;
 }
 .black {
-  color: #000;
+  color: #000 !important;
 }
 .white {
-  color: #FFF;
+  color: #FFF !important;
 }
 .grey {
-  color: #DDD;
+  color: #DDD !important;
 }
 html,
 body {

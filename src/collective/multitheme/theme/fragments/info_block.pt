@@ -1,17 +1,16 @@
-<section class="infoblock" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
+<section class="infoblock ${view/data/color1} ${view/data/effect}" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
    <div class="container">
-       <div class="xxxyyy">
-           <h3 class="pb-3">
+       <div class="info_pre">
+           <h3 class="pretext ${view/data/color2}">
                Create awesome mobile-friendly websites
            </h3>
-           <h2 class="xxx">
+           <h1 class="info_title ${view/data/color3}">
                PRE MADE BLOCKS
-           </h2>
+           </h1>
        </div>
-       <div class="YYYYz">
-           <div class="yyy">
-               <a class="btn btn-primary" href="https://mobirise.com">SEE LEARN MORE</a>
-           </div>
+       <div class="info_button">
+           <button class="btn btn-primary ${view/data/color4} ${view/data/color5}" href="https://mobirise.com">SEE LEARN MORE</button>
        </div>
    </div>
+  <link rel="stylesheet" href="++theme++multitheme/css/info_block.css">  
 </section>

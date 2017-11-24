@@ -8,7 +8,7 @@
       <span class="${color2}">Minutes</span>
       <span class="${color2}">Seconds</span>
     </div>
-    <h4  class="${color2}">${date}</h4>
+    <h4  class="${color2} pat-moment">${date}</h4>
     <script>require([
       'jquery',
       '++theme++multitheme/javascript/jquery.countdown.min'

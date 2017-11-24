@@ -4858,44 +4858,44 @@ body.template-logged_out #content-core .portletFooter {
   color: whitesmoke;
 }
 .plone-link {
-  color: #007bb1;
+  color: #007bb1 !important;
 }
 .plone-link-2 {
-  color: #7bb100;
+  color: #7bb100 !important;
 }
 .plone-link-3 {
-  color: #b1007b;
+  color: #b1007b !important;
 }
 .plone-link-opposite {
-  color: #b13600;
+  color: #b13600 !important;
 }
 .plone-background {
-  background: #007bb1;
+  background: #007bb1 !important;
 }
 .plone-background-2 {
-  background: #7bb100;
+  background: #7bb100 !important;
 }
 .plone-background-3 {
-  background: #b1007b;
+  background: #b1007b !important;
 }
 .plone-background-opposite {
-  background: #b13600;
+  background: #b13600 !important;
 }
 .black-background {
-  background-color: #000;
+  background-color: #000 !important;
 }
 .white-background {
-  background-color: #FFF;
+  background-color: #FFF !important;
 }
 .grey-background {
-  background-color: #DDD;
+  background-color: #DDD !important;
 }
 .black {
-  color: #000;
+  color: #000 !important;
 }
 .white {
-  color: #FFF;
+  color: #FFF !important;
 }
 .grey {
-  color: #DDD;
+  color: #DDD !important;
 }

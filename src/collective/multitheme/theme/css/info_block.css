@@ -1,0 +1,31 @@
+/* @override http://localhost:8080/Plone5asdfasdf/++theme++multitheme/css/info_block.css */
+
+.infoblock {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.infoblock h1{
+	font-size: 300%;
+}
+
+
+.emboss h1 {
+ font-family: "Helvetica";
+ text-shadow: 3px 3px 7px rgba(0,0,0,0.5), 0 -2px 7px rgba(255,233,255,0.9);
+ letter-spacing: -1px;
+}
+
+.shadow h1{
+  letter-spacing: 5px;
+  text-shadow: -1px -1px 0px white,
+    3px 3px 0px white,
+    6px 6px 0px #ccc;
+}
+
+.infoblock.black-background.shadow h1 {
+	text-shadow: -1px -1px 0px black,
+    3px 3px 0px black,
+    6px 6px 0px #333;
+}
+

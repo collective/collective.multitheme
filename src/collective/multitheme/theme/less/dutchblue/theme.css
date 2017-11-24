@@ -4861,44 +4861,44 @@ nav.autotoc-nav a {
   color: white;
 }
 .plone-link {
-  color: #20a7de;
+  color: #20a7de !important;
 }
 .plone-link-2 {
-  color: #a7de20;
+  color: #a7de20 !important;
 }
 .plone-link-3 {
-  color: #de20a7;
+  color: #de20a7 !important;
 }
 .plone-link-opposite {
-  color: #de5720;
+  color: #de5720 !important;
 }
 .plone-background {
-  background: #20a7de;
+  background: #20a7de !important;
 }
 .plone-background-2 {
-  background: #a7de20;
+  background: #a7de20 !important;
 }
 .plone-background-3 {
-  background: #de20a7;
+  background: #de20a7 !important;
 }
 .plone-background-opposite {
-  background: #de5720;
+  background: #de5720 !important;
 }
 .black-background {
-  background-color: #000;
+  background-color: #000 !important;
 }
 .white-background {
-  background-color: #FFF;
+  background-color: #FFF !important;
 }
 .grey-background {
-  background-color: #DDD;
+  background-color: #DDD !important;
 }
 .black {
-  color: #000;
+  color: #000 !important;
 }
 .white {
-  color: #FFF;
+  color: #FFF !important;
 }
 .grey {
-  color: #DDD;
+  color: #DDD !important;
 }
