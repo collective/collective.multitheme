@@ -12,12 +12,7 @@
 		      paddingBottom: '100px',
 		      sectionSelector: 'section'});
         });
-
       });
   </script>
   <link rel="stylesheet" href="++theme++multitheme/css/fullpage_menu.css">
 </div>
-$('[id^=fragment]').each(function() {
-  var myid = $(this).attr('id') ;
-  $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + myid + "'><a href='#" + myid + "'>" + myid + "</a></li>" );
-});
