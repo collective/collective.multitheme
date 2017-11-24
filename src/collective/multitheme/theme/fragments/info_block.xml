@@ -138,6 +138,7 @@
               <element>emboss</element>
               <element>zoom</element>
               <element>textzoom</element>
+              <element>buttonzoom</element>
               <element>shadow zoom</element>
               <element>shadow textzoom</element>
               <element>emboss zoom</element>
