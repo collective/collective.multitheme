@@ -11,7 +11,7 @@
     <div class="half bodytext ${color2}">
         <h2 class="${color2}">${title}</h2>
         <h4  class="${color2}">${view/data/description}</h4>
-        <div  class="${color2}" tal:replace="structure ${view/data/text}"/>
+        <div  class="${color2}" tal:replace="structure view/data/text"/>
     </div>
     <div class="half image">
         <img    alt="${title}"
