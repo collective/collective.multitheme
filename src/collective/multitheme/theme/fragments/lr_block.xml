@@ -34,6 +34,9 @@
     <description/>
     <required>True</required>
     <title>Text</title>
+    <form:widget>
+      <klass>pat-tinymce</klass>
+    </form:widget>
   </field>
   <field name="css_class" type="zope.schema.Choice">
       <description/>
