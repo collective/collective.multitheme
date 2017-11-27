@@ -31,5 +31,5 @@
           	</tal:define>
 				  </div>
     	</div>
-			<link rel="stylesheet" href="++theme++multitheme/less/${stil}/${view/data/css_file}.css">
+			<link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
 </section>
