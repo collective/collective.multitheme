@@ -1,6 +1,7 @@
 <section id="fragment-services"
 	       class="${view/data/color1}"
 		 		 tal:define="folder_url nocall:request/form/folder_url|None;
+				 css_file view/data/cssfile;
 				 stil python: context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.style']">
     <div tal:condition="folder_url">
   		<div class="center wow fadeInDown animated container servicetext"
@@ -28,8 +29,11 @@
                   </a>
                   <p>${item/Description}</p>
               </div>
+							<button tal:condition="python: css_file=='services'">
+								<a href="#" tal:attributes="href item_url">Mere info</a>
+							</button>
           	</tal:define>
 				  </div>
     	</div>
-			<link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
+			<link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css">
 </section>
