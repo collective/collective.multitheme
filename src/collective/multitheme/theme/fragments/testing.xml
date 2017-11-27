@@ -7,77 +7,38 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-    <field name="background_image" type="zope.schema.Choice">
-        <description/>
-        <required>True</required>
-        <title>Choose image</title>
-        <source>collective.themefragments.tiles.CatalogSource</source>  
-                <portal_type>
-          <element>Image</element>
-        </portal_type>
-    </field>
-   <field name="image_size" type="zope.schema.Choice">
-     <description>Choose Image Size (scale) for you image wall</description>
-     <required>True</required>
-     <title>Image Size</title>
-     <default>preview</default>
-   <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
-</field>
-  <field name="title" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Title</title>
-  </field>
-  <field name="description" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Description</title>
-  </field>
-  <field name="text" type="zope.schema.Text">
-    <description/>
-    <required>True</required>
-    <title>Text</title>
-  </field>
-  <field name="text" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Text</title>
-  </field>
-  <field name="height" type="zope.schema.Int">
-    <description/>
-    <required>True</required>
-    <title>Height in pixels</title>
-    <default>100</default>
-  </field>
-  <field name="icon1" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Icon 1</title>
-  </field>
-  <field name="button1" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Button 1</title>
-  </field>
-  <field name="url1" type="zope.schema.URI">
-    <description/>
-    <required>True</required>
-    <title>Link URL 1</title>
-  </field>
-  <field name="icon2" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Icon 2</title>
-  </field>
-  <field name="button2" type="zope.schema.TextLine">
-    <description/>
-    <required>True</required>
-    <title>Button 2</title>
-  </field>
-  <field name="url2" type="zope.schema.URI">
+    <field name="url2" type="zope.schema.URI">
     <description/>
     <required>True</required>
     <title>Link URL 2</title>
   </field>
+      <field name="urls" type="zope.schema.List">
+      <description>Each line one category</description>
+      <required>True</required>
+      <title>Categories</title>
+      <default>[u'General', ]</default>
+      <value_type type="zope.schema.URI"></value_type>
+      <missing_value>()</missing_value>
+    </field>
+   <field name="tuple" type="zope.schema.Tuple">
+      <description>Each line one category</description>
+      <required>True</required>
+      <title>Categories</title>
+      <default>[u'General', ]</default>
+      <value_type type="zope.schema.URI"></value_type>
+      <missing_value>()</missing_value>
+    </field>
+    
+   
+      <field name="urls" type="zope.schema.List">
+      <description>Each line one category</description>
+      <required>True</required>
+      <title>Categories</title>
+      <default>[u'General', ]</default>
+      <value_type type="zope.schema.Choice">
+          <source>collective.themefragments.tiles.CatalogSource</source>
+      </value_type>
+      <missing_value>()</missing_value>
+    </field>
 </schema>
 </model>

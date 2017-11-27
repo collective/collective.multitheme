@@ -9,11 +9,9 @@ div.servicetext {
   width: 300%;
   left: -100%;
   right: -100%;
-  background: #007bb1;
   padding: 1em;
   margin-top: 2em;
   margin-bottom: 2em;
-  color: white;
   text-align: center;
 }
 div.service-items {
@@ -31,11 +29,7 @@ div.service-items {
   border-radius: 50%;
   border: 1.5px solid white;
 }
-h1.media-heading,
-.servicetext h2,
-.service-item a {
-  color: white;
-}
+
 @media (max-width: 768px) {
   div.service-items {
     flex-direction: column;
