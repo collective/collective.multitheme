@@ -30,7 +30,7 @@
                   <p>${item/Description}</p>
               </div>
 							<button  class="${view/data/color1}" tal:condition="python: css_file=='services'">
-								<a href="${item_url}" class="${view/data/color1}">Mere info</a>
+								<a href="${item_url}" class="${view/data/color2}">Mere info</a>
 							</button>
           	</tal:define>
 				  </div>
