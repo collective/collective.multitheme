@@ -3,8 +3,7 @@ div.servicetext {
   margin: auto;
   text-align: center;
 }
-#services,
-#moreservices {
+#fragment-services{
   position: relative;
   width: 300%;
   left: -100%;
