@@ -4810,10 +4810,6 @@ body.template-logged_out #content-core .portletFooter {
 div.outer-wrapper {
   overflow-x: hidden;
 }
-li.navTreeItem a {
-  background: red;
-  display: none;
-}
 .portletNavigationTree ul li.navTreeItem a {
   background: white;
 }

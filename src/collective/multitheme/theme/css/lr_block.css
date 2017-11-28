@@ -1,4 +1,14 @@
-.flex {
+/* @override http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/lr_block.css */
+
+ 
+ 
+
+div.container.flex {
+	max-width: 100%;
+	padding: 0;
+}
+
+.mosaic-width-full .flex {
    display: -webkit-flex;
    display: flex;
    -webkit-justify-content: center;
@@ -17,11 +27,13 @@
    align-content: flex-end;
 }
 
-.lrblock {
+.mosaic-width-full .lrblock {
     width: 300%; 
     margin-left: -100%;
     margin-righ: -100%;
 }
+
+
 
 .lrblock .container{
     margin-left: auto;   
