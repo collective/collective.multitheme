@@ -19,7 +19,7 @@
   						<div class="pdf-gallery-body">
 	                <a href="${item_url}">
 										<i  tal:condition="exists:item/iconfield" class="fa ${item/iconfield}" />
-										<i class="fa fa-info" tal:condition="not:exists:item/iconfield" />
+										<i class="fa fa-file-pdf-o" tal:condition="not:exists:item/iconfield" />
                     <h1 class="media-heading ${view/data/color4}">${item_title}</h1>
                   </a>
                   <p>${item/Description}</p>

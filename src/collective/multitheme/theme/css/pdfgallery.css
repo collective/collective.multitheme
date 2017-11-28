@@ -37,6 +37,21 @@ h1.media-heading {
 	font-size: 150%;
 	line-height: 150%
 }
+
+div.pdf-gallery-body i {
+	font-size: 1.7em;
+	line-height: 2em;
+	z-index: 9;
+	position: relative;
+	top: -1em;
+	background: white;
+	border-radius: 50%;
+	border:  1px solid;
+	height: 2em;
+	width: 2em;
+}
+
+
  
 div.pdf-item  button {
 	margin: 1em;
