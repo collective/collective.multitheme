@@ -18,14 +18,14 @@
               </a>
   						<div class="pdf-gallery-body">
 	                <a href="${item_url}">
-										<i  tal:condition="exists:item/iconfield" class="${item/iconfield}" />
-										<i class="fa-info" tal:condition="not:exists:item/iconfield" />
+										<i  tal:condition="exists:item/iconfield" class="fa ${item/iconfield}" />
+										<i class="fa fa-info" tal:condition="not:exists:item/iconfield" />
                     <h1 class="media-heading ${view/data/color4}">${item_title}</h1>
                   </a>
                   <p>${item/Description}</p>
               </div>
 							<button  class="${view/data/color1}">
-								<a href="${item_url}" class="${view/data/color2}">Last ned</a>
+								<a href="${item_url}" class="${view/data/color2}">Last ned PDF</a>
 							</button>
           	</tal:define>
 				  </div>

@@ -1,33 +1,55 @@
-/* @override http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/services2.css */
+/* @override http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/pdfgallery.css */
 
-div.servicetext {
-	max-width: 90vw;
-	margin: auto;
-	text-align: center;
-}
-
-#fragment-services{
+#fragment-pdfgallery {
 	position: relative;
-	width:  300%;
-	left:  -100%;
-	right:  -100%;
 	padding: 1em;
 	margin-top:  2em;
 	margin-bottom: 2em;
 	text-align: center;
+	width: 300%;
+	left: -100%;
 }
-div.service-items {
+
+
+div.pdfgallery-items.container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin-top: 3em;
-	margin-bottom: 1.4em;
+	margin-bottom: 1.4em;   
 }
 
-.service-item {
-  min-width: 300px;
-  width: 32%;
-  margin-bottom: 2em;
-
+div.pdf-gallery-body {
+	max-width: 90vw;
+	margin: auto;
+	text-align: center;
+}
+ 
+div.pdf-item{
+  min-width: 210px;
+  width: 24%;
+  margin-bottom: 1em;
+  border: 3px solid #FAFAFA;
+  padding: 8px;
 }
 
+h1.media-heading {
+	font-size: 150%;
+	line-height: 150%
+}
+ 
+div.pdf-item  button {
+	margin: 1em;
+}
+
+@media (max-width: 768px) {
+  div.pdfgallery-items.container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  div.pdf-item {
+    margin-left: auto;
+    margin-right: auto;
+    width:  80%;
+  }
+}
