@@ -1,7 +1,6 @@
 <section id="fragment-pdfgallery"
 	       class="${view/data/color1}"
-		 		 tal:define="folder_url nocall:request/form/folder_url|None;
-				 css_file view/data/css_file">
+		 		 tal:define="folder_url nocall:request/form/folder_url|None">
     <div tal:condition="folder_url">
   		<div class="center wow fadeInDown animated container"
            style="visibility: visible; animation-name: fadeInDown;">
