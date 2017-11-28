@@ -1,23 +1,18 @@
-<section id="fragment-pdfgallery"
-	       class="${view/data/color1}"
+<section id="fragment-pdfgallery" class="${view/data/color1}"
 		 		 tal:define="folder_url nocall:request/form/folder_url|None">
     <div tal:condition="folder_url">
-  		<div class="center wow fadeInDown animated container"
-           style="visibility: visible; animation-name: fadeInDown;">
+  		<div class="container">
           <h2 class="${view/data/color2}" tal:content="context/?folder_url/Title|None" />
           <p class="lead ${view/data/color2}"
                 	tal:content="context/?folder_url/Description|None"  />
       </div>
       <div class="pdfgallery-items container">
 				<div tal:repeat="item context/?folder_url/@@contentlisting|None"
-              class="wow fadeInDown animated service-item ${view/data/color3}"
-              data-wow-delay="600ms" data-wow-duration="1000ms"
-              style="visibility: visible; animation-duration: 1000ms;
-                        animation-delay: 600ms; animation-name: fadeInDown;">
-				    <tal:define tal:define="item_url item/getURL|item/absolute_url;
-							               item_title item/Title">
-							<a href="#" tal:attributes="href item_url">
-	 							<img src="${item_url}/@@images/image/preview" alt="${item_title}"
+              class="pdf-item ${view/data/color3} ${view/data/color4}">
+				    <tal:define tal:define="item_url item/getURL|item/absolute_url; item_title item/Title">
+							<a href="${item_url}">
+	 							<img src="${item_url}/@@images/image/preview"
+										 alt="${item_title}"
 							    	 tal:condition="python: item.image"
                      class="img-responsive" />
               </a>
@@ -29,7 +24,7 @@
                   </a>
                   <p>${item/Description}</p>
               </div>
-							<button  class="${view/data/color1}" tal:condition="python: css_file=='pdfgallery'">
+							<button  class="${view/data/color1}">
 								<a href="${item_url}" class="${view/data/color2}">Last ned</a>
 							</button>
           	</tal:define>
