@@ -11,7 +11,7 @@
 	top:  0;
 	z-index: 99;
 	min-height: 70px;
-	overflow: hidden
+ 
 }
 
 div.outer-wrapper {
@@ -41,3 +41,16 @@ div#portal-globalnav-wrapper ul.submenu {
 	background: white; ;
 	box-shadow: 3px 3px 7px rgba(0,0,0, 0.3);
 }
+
+
+
+#portal-globalnav-wrapper div.plone-navbar-header {
+	margin: 6px 10px;
+}
+
+button.plone-navbar-toggle.navbar-toggle.collapsed {
+	background: #555;
+	font-size: 140%
+}
+
+ 
