@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:block fill-slot="top_slot"
+                 tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                             disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+</head>
+
+<body>
+<metal:main fill-slot="main">
+
+    <h1 class="documentFirstHeading"
+        i18n:translate="label_site_map">Site map</h1>
+
+    <div class="documentDescription" i18n:translate="description_site_map">
+        An overview of the available content on this site. Keep the pointer still
+        over an item for a few seconds to get its description.
+    </div>
+
+    <div id="content-core">
+      <div id="portal-left-sitemap">
+		<a href="#" class="toggler"><i class="fa fa- fa-align-justify"> </i> MENU</a>
+  			<div id="sitemap-container" style="display: none;">
+  			<ul id="left-sitemap"
+        		class="wow navTreeLevel1 slideInRight"
+        		 data-wow-delay="250ms" data-wow-duration="800ms"
+                 style="visibility: visible; animation-duration: 400ms;
+                 animation-delay: 300ms; animation-name: slideInright">
+            	<div class='navtop'>
+            	<a title="nav"
+            		class="navbread" href="/"
+            		tal:content="context/Title"
+            		tal:attributes="href context/absolute_url">
+  				<a class="close-icon toggler">
+  					<i class="fa fa-times-circle"></i>
+  				</a>
+  				</div>
+   				<tal:sitemap replace="structure view/createSiteMap" />
+        	</ul>
+        	</div>
+
+ 			<script>$(document).ready(function () {
+    			$('.toggler').click(function (event) {
+        			event.preventDefault();
+        			$('#sitemap-container').toggle();
+        			$(this).parent().find('.navChild').hide();
+        			$('#sitemap-container li a, #sitemap-container li').show();
+    			});
+
+    			$('a.nextlevel').click(function (event) {
+        			event.preventDefault();
+        			// hide all lis here
+        			$(this).parent().parent().first().children('li').hide();
+        			//show li n this path (the folder)
+        			$(this).parent().show();
+        			// hide the text of the selected folder
+        			$(this).parent().find(' > a').hide();
+        			// change icon to 'open'
+        			// $(this).find('i').removeClass('fa-arrow-circle-left');
+        			// $(this).find('i').addClass('fa-arrow-circle-down');
+        			// show subtree
+        			$(this).parent().find('> .navChild').show();
+        			// show back button only for subfolder
+        			$('.prevlevel').hide();
+        			$(this).parent().find('ul > .prevlevel').show();
+
+    			});
+    			$('a.prevlevel').click(function (event) {
+        			event.preventDefault();
+        			// hide this button
+        			// $(this).hide();
+                    // show the text of the selected folder
+        			$(this).parent().parent().find(' > a').show();
+        			// show this back button
+        			$('.prevlevel').hide();
+        			$(this).parent().parent().parent().find('.prevlevel').show();
+        			$('.prev2').hide();
+        			// hide this part of the tree (ul navChild)
+        			$(this).parent().hide();
+        			// show li from one level up
+        			$(this).parent().parent().parent().find('li').show();
+        		});
+
+
+
+			});
+			</script>
+
+			<!--link rel="stylesheet"  href="++theme++bergensiana/css/leftmenu.css" /-->
+			<link rel="stylesheet"  href="++theme++multitheme/css/leftmenu2.css" />
+	  </div>
+    </div>
+
+</metal:main>
+</body>
+</html>

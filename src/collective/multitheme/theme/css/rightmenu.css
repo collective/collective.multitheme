@@ -1,3 +1,28 @@
+/* @override http://localhost:8080/++theme++multitheme/css/rightmenu.css */
+
+header#content-header div{
+	display: flex;
+	align-items: center;
+}
+
+div#portal-header {
+	margin-right: auto;
+	margin-left: 0;
+}
+
+#portal-mobile-sitemap a.toggler {
+	color: #555;
+}
+
+#portal-mobile-sitemap a.toggler i{
+    font-size: 2.5em;
+    padding-right: 0.5em;
+}
+
+#portal-mobile-sitemap a.toggler span {
+	font-size: 2.7em;	
+} 
+
 #sitemap-container::-webkit-scrollbar {
 	display: none
 }

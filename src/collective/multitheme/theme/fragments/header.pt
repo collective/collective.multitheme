@@ -37,8 +37,4 @@
             </div><!--/.container-->
         </div><!--/.top-bar-->
 
-        <nav class="navbar container" role="banner">
-
- 			<tal:block tal:replace="structure provider:globalnav"/></nav><!--/nav-->
-
 </header><!--/header-->

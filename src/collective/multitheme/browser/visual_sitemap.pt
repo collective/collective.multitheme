@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:block fill-slot="top_slot"
+                 tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                             disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+</head>
+
+<body>
+<metal:main fill-slot="main">
+
+    <h1 class="documentFirstHeading"
+        i18n:translate="label_site_map">Site map</h1>
+
+    <div class="documentDescription" i18n:translate="description_site_map">
+        An overview of the available content on this site. Keep the pointer still
+        over an item for a few seconds to get its description.
+    </div>
+
+    <div id="content-core">
+    	<div id="visual-sitemap">
+    		<a href="#" class="toggler"><i class="fa fa- fa-align-justify"> </i> MENU</a>
+    		<div id="visual-portal-sitemap" style="display: none;">
+				<ul>
+					<li class="wow flash"
+        		 			data-wow-delay="400ms" data-wow-duration="800ms"
+                 			style="visibility: visible; animation-duration: 1000ms;
+                 			animation-delay: 400ms; animation-name: flash">
+						<a href="#"  class="toggler">
+							<i class="fa fa-close"></i><span i18n:translate="label_close">Tilbake</span>
+						</a>
+					</li>
+					<li>
+
+					  <a href="#portal-searchbox"  class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px">
+					<i class="fa fa-search"></i><span i18n:translate="title_search_title">Søk</span></a>
+					</li>
+    				<tal:sitemap replace="structure view/createSiteMap" />
+				</ul>
+			</div>
+			<script>$(document).ready(function () {
+    			$('.toggler').click(function (event) {
+        			event.preventDefault();
+        			$('#visual-portal-sitemap, #portal-searchbox').toggle();
+    			});
+
+
+    			$('#visual-portal-sitemap > ul li.withChildren > a').click(function (event) {
+        			event.preventDefault();
+        			$('ul.VisualnavTreeLevel2').addClass('hidden');
+ 					$(this).not('.selected').addClass('newselected');
+        			$( "#visual-portal-sitemap > ul > li > a" ).fadeTo( 1 , 0.25);
+        			if ( $( this ).hasClass( "selected" ) ) {
+ 						$( "#visual-portal-sitemap > ul > li > a" ).fadeTo( 1 , 1);
+					};
+        			$('a.selected').removeClass('selected');
+ 					$('a.newselected').addClass('selected');
+ 					$('a.newselected').removeClass('newselected');
+ 					$('a.selected').fadeTo( 1, 1 );
+        			$('a.selected').next('ul').removeClass('hidden');
+
+    			});
+			});
+			</script>
+			<link rel="stylesheet"  href="++theme++multitheme/css/visual-sitemap.css" />
+
+		</div>
+    </div>
+
+</metal:main>
+</body>
+</html>

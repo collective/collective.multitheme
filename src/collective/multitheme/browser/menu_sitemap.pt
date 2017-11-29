@@ -1,0 +1,84 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:block fill-slot="top_slot"
+                 tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                             disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+</head>
+
+<body>
+<metal:main fill-slot="main">
+
+    <h1 class="documentFirstHeading"
+        i18n:translate="label_site_map">Site map</h1>
+
+    <div class="documentDescription" i18n:translate="description_site_map">
+        An overview of the available content on this site. Keep the pointer still
+        over an item for a few seconds to get its description.
+    </div>
+
+    <div id="content-core">
+      <div id="portal-menu-sitemap">
+		<a href="#" class="toggler"><i class="fa fa- fa-align-justify"> </i> MENU</a>
+  			<div id="sitemap-container" style="display: none;">
+  			<a href="#"  class="close-icon wow slideInLeft">
+						<i class="fa fa-times"></i></a>
+        	<ul id="menu-sitemap"
+        		class="wow navTreeLevel1 zoomIn"
+        		 data-wow-delay="250ms" data-wow-duration="800ms"
+                 style="visibility: visible; animation-duration: 400ms;
+                 animation-delay: 300ms; animation-name: zoomIn">
+
+            	<li>
+					 <form id="search-form" class="stogglerchild" data-action="/@@search" action="@@search">
+
+ 							<input class="searchField" type="text" placeholder="Search Site" title="Search Site" size="15" name="SearchableText">
+ 							<button class="iconButton" type="submit">
+					 			<i class="fa fa-search"> </i> <span i18n:translate="title_search_title">Søk</span>
+							</button>
+					</form>
+					<a href="#" class="stoggler">
+						<i class="fa fa-search"></i><span i18n:translate="title_search_title">Søk</span></a>
+
+				</li>
+            	<tal:sitemap replace="structure view/createSiteMap" />
+        	</ul>
+        	</div>
+
+ 			<script>$(document).ready(function () {
+ 				$('#menu-sitemap #searchform').hide();
+    			$('.stoggler').click(function (event) {
+        			event.preventDefault();
+        			$(this).parent().find('.stogglerchild').toggle();
+        			$(this).toggle();
+    			});
+    			$('.toggler, a.close-icon').click(function (event) {
+        			event.preventDefault();
+        			$('#sitemap-container').toggle();
+    			});
+
+    			$('a.nextlevel').click(function (event) {
+        			event.preventDefault();
+        			$(this).parent().find('.navChild').toggle();
+        			$(this).find('i').toggleClass('fa-arrow-circle-left');
+        			$(this).find('i').toggleClass('fa-arrow-circle-down');
+    			});
+
+
+			});
+			</script>
+
+			<link rel="stylesheet"  href="++theme++multitheme/css/fullmenu.css" />
+
+	  </div>
+    </div>
+
+</metal:main>
+</body>
+</html>

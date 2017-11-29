@@ -4,6 +4,53 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.multitheme">
 
+
+    <browser:page
+    	for="*"
+    	name="visual_sitemap"
+    	class=".visual_sitemap.VisualSitemapView"
+    	template="visual_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+
+    <browser:page
+    	for="*"
+    	name="menu_sitemap"
+    	class=".menu_sitemap.SitemapView"
+    	template="menu_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+
+    <browser:page
+    	for="*"
+    	name="mobile_sitemap"
+    	class=".menu_sitemap.SitemapView"
+    	template="mobile_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+    <browser:page
+    	for="*"
+    	name="left_sitemap"
+    	class=".left_sitemap.SitemapView"
+    	template="left_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+   <!-- Webcoutier globalnav as a provider -->
+  <adapter name="globalnav"
+    for="zope.publisher.interfaces.browser.IDefaultBrowserLayer *"
+    factory=".dropdown.DropdownMenuViewlet"
+    provides="zope.contentprovider.interfaces.IContentProvider"
+    />
+
+
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
   <browser:jbot

@@ -1,0 +1,53 @@
+<tal:sections
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:metal="http://xml.zope.org/namespaces/metal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     tal:define="portal_tabs view/portal_tabs"
+     tal:condition="portal_tabs"
+     i18n:domain="plone">
+
+  <p class="hiddenStructure" i18n:translate="heading_sections">Navigation</p>
+  <nav class="plone-navbar"  role="navigation">
+ 	<div class="logocontainer" >
+     <a href="/" class="logo">
+        <img src="/images/logo-bg.png" alt="logo">
+     </a>
+      <div class="plone-navbar-header">
+        <button type="button" class="plone-navbar-toggle" data-toggle="collapse" data-target="#portal-globalnav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+     <div class="plone-collapse plone-navbar-collapse" id="portal-globalnav-collapse"> 
+        <ul class="plone-nav plone-navbar-nav"
+            tal:define="selected_tab python:view.selected_portal_tab">
+            <tal:tabs tal:repeat="tab portal_tabs">
+              <li tal:define="tid tab/id;
+                              subitems python:view.getTabObject(tabUrl = tab['url'], tabPath = tab.get('path'))"
+                  tal:attributes="id string:portaltab-${tid};
+                                  class python:selected_tab==tid and 'selected' or nothing">
+                  <a href=""
+                     tal:content="tab/name"
+                     tal:attributes="href tab/url;
+                                     title tab/description|nothing;
+                                     target tab/link_target|nothing;">
+                    Tab Name
+                  </a>
+                  <tal:block tal:condition="subitems">
+                      <ul class="submenu dropdown-menu"
+                          style="margin-top: 0px;">
+                          <tal:subitems tal:replace="structure subitems">
+                              <tal:comment replace="nothing">Submenu</tal:comment>
+                          </tal:subitems>
+                      </ul>
+                  </tal:block>
+              </li>
+            </tal:tabs>
+        </ul>
+      </div>
+	</div>
+  </nav>
+
+</tal:sections>

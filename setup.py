@@ -48,7 +48,8 @@ setup(
         'collective.themefragments',
         'medialog.controlpanel',
         'plone.app.mosaic',
-        'medialog.iconpicker'
+        'medialog.iconpicker',
+        'webcouturier.dropdownmenu'
     ],
     extras_require={
         'test': [
