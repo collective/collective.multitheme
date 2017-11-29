@@ -2,7 +2,10 @@
 	http://localhost:8080/++theme++multitheme/css/spot.css
 	http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/spot.css
 */
-
+#portal-logo {
+	max-height: 65px;
+	width: auto;
+}
 #content-header  {
 	background: white;
 	border-bottom:  1px solid #CCC;
