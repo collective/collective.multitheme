@@ -4807,6 +4807,9 @@ body.template-logged_out #content-core .portletFooter {
 #search-filter input {
   margin-right: 0.5rem;
 }
+.mosaic-grid #content {
+  margin-bottom: 0;
+}
 div.outer-wrapper {
   overflow-x: hidden;
 }
