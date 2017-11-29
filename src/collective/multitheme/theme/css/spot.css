@@ -1,9 +1,13 @@
-/* @override http://xweb14d.plana.dk:8081/++theme++multitheme/css/spot.css */
+/* @override 
+	http://xweb14d.plana.dk:8081/++theme++multitheme/css/spot.css
+	http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/spot.css
+*/
 
 a#portal-logo {
 	height: 60px;
 	overflow: hidden;
 	padding-top: 10px;
+	margin-left: 10px;
 }
 
 a#portal-logo img{
@@ -27,7 +31,13 @@ a#portal-logo img{
 }
 
 div.outer-wrapper {
-	margin-top: 71px;
+	padding-top: 116px;
+}
+
+.mosaic-grid div.outer-wrapper {
+	padding-top: 71px;
+	
+	
 }
 
 #content-header div.container.flex {
@@ -60,9 +70,11 @@ div#portal-globalnav-wrapper ul.submenu {
 	margin: 6px 10px;
 }
 
-button.plone-navbar-toggle.navbar-toggle  {
+button.plone-navbar-toggle {
 	background: #555 !important;
 	font-size: 140%
 }
+
+
 
  
