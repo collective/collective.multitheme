@@ -1,7 +1,7 @@
-/* @override http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/lr_block.css */
-
- 
- 
+/* @override 
+	http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/lr_block.css
+	http://xweb14d.plana.dk:8081/++theme++multitheme/css/lr_block.css
+*/
 
 div.container.flex {
 	max-width: 100%;
@@ -49,6 +49,10 @@ div.half{
 	padding: 0;
 	text-align: center;
  
+}
+
+.half.bodytext  li {
+	list-style-position: inside;
 }
 }
 
@@ -117,6 +121,13 @@ div.flex.text-on-image.center img {
   padding:  30px 30px 30px 30px;
   text-align: left;
 }
+
+.half.bodytext {
+	max-width: 95vw;
+	
+}
+
+
 
 body div.black hr {
 	border-color:  white;
