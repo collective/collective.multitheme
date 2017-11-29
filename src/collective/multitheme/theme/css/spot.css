@@ -1,0 +1,22 @@
+#content-header div.container.flex {
+	display: flex;
+}
+
+div#portal-globalnav-wrapper {
+	margin-left: auto;
+	padding-left: 100px;
+}
+
+div#portal-globalnav-wrapper a {
+	color:  #777;
+	background: inherit;
+}
+
+div#portal-globalnav-wrapper a:hover {
+	color:  inherit;
+}
+
+div#portal-globalnav-wrapper ul.submenu {
+	background: white; ;
+	box-shadow: 3px 3px 7px rgba(0,0,0, 0.3);
+}

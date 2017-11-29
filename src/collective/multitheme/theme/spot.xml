@@ -10,6 +10,7 @@
 
   <after theme-children="/html/head" >
        <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+       <link rel="stylesheet" href="++theme++multitheme/css/spot.css" />
   </after>
 
   <rules css:if-content="#portal-top">
@@ -35,31 +36,18 @@
   <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
   <copy attributes="*" css:content="body" css:theme="body" />
 
-  <!-- spot stuff -->
-  <replace
-      css:theme=".navbar-brand"
+  <!-- Add logo -->
+  <replace css:theme="#portal-logo"
       css:content="#portal-logo"
       />
 
   <!-- Portal Navigation -->
-  <replace
-      css:content-children="#portal-globalnav"
-      css:theme-children="#navbar"
-      />
-
-  <replace
-      css:theme-children=".navbar-nav"
-      css:content-children=".plone-navbar-nav"
-      />
-
-  <xsl:template match="//ul//@class[contains(., 'selected')]">
-    <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
-  </xsl:template>
+  <replace css:theme-children="#portal-globalnav-wrapper" css:content-children="#portal-globalnav-wrapper > .container" method="raw" />
 
 
 
   <!-- full-width breadcrumb -->
-  <replace css:content="#viewlet-above-content" css:theme="#above-content" />
+  <!--replace css:content="#viewlet-above-content" css:theme="#above-content" /-->
 
   <!-- Central column -->
   <replace css:theme="#content-container" method="raw">
