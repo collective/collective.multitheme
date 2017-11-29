@@ -1,5 +1,26 @@
+/* @override http://localhost:8080/++theme++multitheme/css/spot.css */
+
+
+#content-header  {
+	background: white;
+	border-bottom:  1px solid #CCC;
+	box-shadow: 0 0 12px rgba(0,0,0, 0.3);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top:  0;
+	z-index: 99;
+	min-height: 70px;
+	overflow: hidden
+}
+
+div.outer-wrapper {
+	margin-top: 71px;
+}
+
 #content-header div.container.flex {
 	display: flex;
+	margin: auto;
 }
 
 div#portal-globalnav-wrapper {
