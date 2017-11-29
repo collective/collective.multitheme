@@ -30,6 +30,23 @@
 		<value key="color1">123456</value>
 		<value key="color2">234561</value>
 		<value key="color3">345612</value>
-		<value key="fullwidth">0</value> 
+		<value key="fullwidth">0</value>
 	</records>
+
+	<record name="plone.app.mosaic.default_available_actions">
+    <value purge="False">
+      <element>container</element>
+    </value>
+</record>
+<records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.container">
+    <value key="name">container</value>
+    <value key="category">row</value>
+    <value key="label">Normal width</value>
+    <value key="action">row-toggle-class</value>
+    <value key="icon">true</value>
+    <value key="favorite">false</value>
+    <value key="weight">100</value>
+</records>
+
 </registry>
