@@ -5274,6 +5274,9 @@ body.section-front-page .plone-breadcrumb {
 div.outer-wrapper {
   overflow-x: hidden;
 }
+.mosaic-grid #content {
+  margin-bottom: 0;
+}
 .plone-link {
   color: #f85c37 !important;
 }

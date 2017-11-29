@@ -4860,6 +4860,12 @@ body.template-logged_out #content-core .portletFooter {
 div.outer-wrapper {
   overflow-x: hidden;
 }
+.mosaic-grid #content {
+  margin-bottom: 0;
+}
+.mosaic-grid #content {
+  margin-bottom: 0;
+}
 .plone-link {
   color: #d20000 !important;
 }
