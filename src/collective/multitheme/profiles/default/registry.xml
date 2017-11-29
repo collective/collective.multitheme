@@ -30,5 +30,6 @@
 		<value key="color1">123456</value>
 		<value key="color2">234561</value>
 		<value key="color3">345612</value>
+		<value key="fullwidth">0</value> 
 	</records>
 </registry>

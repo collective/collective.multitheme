@@ -17,10 +17,17 @@
    <xi:include href="++theme++multitheme/head_rules.xml"/>
   </rules>
 
+
+
   <after theme-children="/html/head" >
   		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
-     <link href="custom_styles.css" rel="stylesheet"/>
-  	</after>
+      <link href="custom_styles.css" rel="stylesheet"/>
+  </after>
 
+  <rules if="$fullwidth">
+    <after theme-children="/html/head" >
+       <link href="++theme++multitheme/css/fullpage.css" rel="stylesheet"/>
+    </after>
+   </rules>
 
 </rules>

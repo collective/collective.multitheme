@@ -28,6 +28,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
         fields=[
             'style',
             'rules',
+            'fullwidth',
             'color1',
             'color2',
             'color3']
@@ -50,6 +51,11 @@ class ICollectiveMultiThemeSettings(form.Schema):
             title=_(u"Layout Rules"),
             values=['default', 'spot', 'head'],
             required=True,
+    )
+
+    fullwidth = schema.Bool(
+            title=_(u"Mosaic Full width?"),
+            required = False,
     )
 
     color1 = schema.TextLine(
