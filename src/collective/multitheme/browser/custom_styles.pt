@@ -1,0 +1,10 @@
+<span id="#custom-colors">
+<style tal:define="color1 view/color1; color2 view/color2; color3 view/color3">
+.custom-color1 {color: #${color1}}
+.custom-color2 {color: #${color2}}
+.custom-color3 {color: #${color3}}
+.custtom-background1 {background-color: #${color1}}
+.custtom-background2 {background-color: #${color2}}
+.custtom-background3 {background-color: #${color3}}
+</style>
+</span>

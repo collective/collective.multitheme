@@ -17,17 +17,10 @@
    <xi:include href="++theme++multitheme/head_rules.xml"/>
   </rules>
 
-	<after theme-children="/html/head" >
-		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
-    <style>
-      .custom-color1 {
-      color: $color1
-      }
-      .custom-color2 {color: $color2}
-      .custom-color3 {color: $color3}
-      .custtom-background1 {background-color: $color1}
-      .custtom-background2 {background-color: $color2}
-      .custtom-background3 {background-color: $color3}
-    </style>
-	</after>
+  <after theme-children="/html/head" >
+  		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
+     <link href="custom_styles.css" rel="stylesheet"/>
+  	</after>
+
+
 </rules>
