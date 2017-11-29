@@ -1,5 +1,7 @@
-/* @override http://localhost:8080/++theme++multitheme/css/spot.css */
-
+/* @override 
+	http://localhost:8080/++theme++multitheme/css/spot.css
+	http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/spot.css
+*/
 
 #content-header  {
 	background: white;
@@ -48,8 +50,8 @@ div#portal-globalnav-wrapper ul.submenu {
 	margin: 6px 10px;
 }
 
-button.plone-navbar-toggle.navbar-toggle.collapsed {
-	background: #555;
+button.plone-navbar-toggle.navbar-toggle  {
+	background: #555 !important;
 	font-size: 140%
 }
 
