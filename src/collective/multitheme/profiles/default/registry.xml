@@ -34,19 +34,19 @@
 	</records>
 
 	<record name="plone.app.mosaic.default_available_actions">
-    <value purge="False">
-      <element>container</element>
-    </value>
-</record>
-<records interface="plone.app.mosaic.interfaces.IFormat"
-           prefix="plone.app.mosaic.formats.container">
-    <value key="name">container</value>
-    <value key="category">row</value>
-    <value key="label">Normal width</value>
-    <value key="action">row-toggle-class</value>
-    <value key="icon">true</value>
-    <value key="favorite">false</value>
-    <value key="weight">100</value>
-</records>
+	    <value purge="False">
+	      <element>grid-row-normwidth</element>
+	    </value>
+	</record>
+	<records interface="plone.app.mosaic.interfaces.IFormat"
+	prefix="plone.app.mosaic.formats.grid_row_normwidth">
+	    <value key="name">grid-row-normalwidth</value>
+	    <value key="category">row</value>
+	    <value key="label">Norm width</value>
+	    <value key="action">row-toggle-class</value>
+	    <value key="icon">true</value>
+	    <value key="favorite">false</value>
+	    <value key="weight">100</value>
+	</records>
 
 </registry>

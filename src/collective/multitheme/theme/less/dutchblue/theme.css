@@ -4810,6 +4810,27 @@ body.template-logged_out #content-core .portletFooter {
 .mosaic-grid #content {
   margin-bottom: 0;
 }
+.mosaic-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .mosaic-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .mosaic-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .mosaic-container {
+    width: 1170px;
+  }
+}
 div.outer-wrapper {
   overflow-x: hidden;
 }
