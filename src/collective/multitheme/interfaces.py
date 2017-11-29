@@ -48,7 +48,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
 
     rules = schema.Choice(
             title=_(u"Layout Rules"),
-            values=['default', 'spot'],
+            values=['default', 'spot', 'head'],
             required=True,
     )
 

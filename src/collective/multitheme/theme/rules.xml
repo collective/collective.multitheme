@@ -13,10 +13,17 @@
 	 <xi:include href="++theme++multitheme/spot.xml"/>
 	</rules>
 
+  <rules if="$head">
+    <xi:include href="++theme++multitheme/default.xml"/>
+   <xi:include href="++theme++multitheme/head_rules.xml"/>
+  </rules>
+
 	<after theme-children="/html/head" >
 		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
     <style>
-      .custom-color1 {color: $color1}
+      .custom-color1 {
+      color: $color1
+      }
       .custom-color2 {color: $color2}
       .custom-color3 {color: $color3}
       .custtom-background1 {background-color: $color1}

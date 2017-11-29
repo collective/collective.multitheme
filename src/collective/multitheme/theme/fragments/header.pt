@@ -1,0 +1,44 @@
+<header id="header"
+    	tal:define="email python:context.portal_registry['Products.CMFPlone.interfaces.controlpanel.IMailSchema.email_from_address'] or '';
+    			  twitter python:context.portal_registry['Products.CMFPlone.interfaces.controlpanel.ISocialMediaSchema.twitter_username'] or '';
+				    facebook python:context.portal_registry['Products.CMFPlone.interfaces.controlpanel.ISocialMediaSchema.facebook_app_id'] or '';
+				    phone python:context.portal_registry['medialog.bergensiana.interfaces.IBergensianaSettings.phone'] or '55 91 33 19 / 907 36 560'" >
+
+		<link rel="stylesheet"  href="++theme++multitheme/css/css/whiteheader.css" />
+
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4" tal:condition="phone">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  <span>${phone}<span></p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li tal:condition="facebook">
+                                	<a href="${facebook}"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li tal:condition="twitter">
+                                	<a href="${twitter}"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li tal:condition="email">
+                                	<a href="mailto:${email}"><i class="fa fa-envelope"></i></a>
+								               </li>
+								               <li>
+                                	<a href="search"><i class="fa fa-search"></i></a>
+								               </li>
+								               <li>
+                                	<a href="login_form"><i class="fa fa-lock"></i></a>
+								               </li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar container" role="banner">
+
+ 			<tal:block tal:replace="structure provider:globalnav"/></nav><!--/nav-->
+
+</header><!--/header-->
