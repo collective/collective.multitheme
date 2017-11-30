@@ -50,30 +50,29 @@ div.half{
 	text-align: center;
  
 }
-
-.half.bodytext  li {
-	list-style-position: inside;
-}
-}
-
-
-.left .half {
-	padding-right: 0;
-}
-.right div.half {
-	padding-left: 0;
+.half.bodytext {
+	text-align: left
+	
 }
 
+
+}
+
+ 
+
+.half.bodytext  ul {
+	padding-left: 1.5em;
+}
 
 div.left .half.bodytext {
 	padding-right: 30px;
-	padding-left: 0;
+	padding-left: 15px;
 }
 
 
 div.right .half.bodytext {
 	padding-left: 30px;
-	padding-right: 0px;
+	padding-right: 15px;
 }
 
 .flex.right {
@@ -118,7 +117,7 @@ div.flex.text-on-image.center img {
 .half {
   width: 50%;
   box-sizing: border-box;
-  padding:  30px 30px 30px 30px;
+  padding:  30px 15px 30px 15px;
   text-align: left;
 }
 
@@ -128,30 +127,10 @@ div.flex.text-on-image.center img {
 }
 
 
-
 body div.black hr {
 	border-color:  white;
 	color: white;
 }
 
-
-.left .half {
-	padding-right: 0;
-}
-.right div.half {
-	padding-left: 0;
-}
-
-div.left .half.bodytext {
-	padding-right: 30px;
-	padding-left: 0;
-}
-
-div.right .half.bodytext {
-	padding-left: 30px;
-	padding-right: 0px;
-}
-
-.flex.right  {
-	 flex-direction: row-reverse;
-}
+ 
+ 

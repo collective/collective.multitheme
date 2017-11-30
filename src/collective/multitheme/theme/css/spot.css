@@ -50,6 +50,19 @@ div#portal-globalnav-wrapper {
 	padding-left: 100px;
 }
 
+
+.plone-collapse.plone-navbar-collapse.collapse.in {
+	position: fixed;
+	left:  0;
+	right:  0;
+	text-align: center;
+	background: white;
+	box-shadow: 0 7px 7px rgba(0,0,0, 0.3);
+	border-top:  1px solid;
+}
+
+
+
 div#portal-globalnav-wrapper a {
 	color:  #777;
 	background: inherit;

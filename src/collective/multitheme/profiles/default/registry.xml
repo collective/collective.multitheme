@@ -33,20 +33,20 @@
 		<value key="fullwidth">0</value>
 	</records>
 
-	<record name="plone.app.mosaic.default_available_actions">
-    <value purge="False">
-      <element>container</element>
-    </value>
-</record>
-<records interface="plone.app.mosaic.interfaces.IFormat"
-           prefix="plone.app.mosaic.formats.container">
-    <value key="name">container</value>
-    <value key="category">row</value>
-    <value key="label">Normal width</value>
-    <value key="action">row-toggle-class</value>
-    <value key="icon">true</value>
-    <value key="favorite">false</value>
-    <value key="weight">100</value>
-</records>
+ <record name="plone.app.mosaic.default_available_actions">
+	    <value purge="False">
+	      <element>grid-row-fullwidth</element>
+	    </value>
+	</record>
+	<records interface="plone.app.mosaic.interfaces.IFormat"
+	           prefix="plone.app.mosaic.formats.grid_row_fullwidth">
+	    <value key="name">grid-row-fullwidth</value>
+	    <value key="category">row</value>
+	    <value key="label">Toggle Full width</value>
+	    <value key="action">row-toggle-class</value>
+	    <value key="icon">true</value>
+	    <value key="favorite">false</value>
+	    <value key="weight">100</value>
+	</records>
 
 </registry>

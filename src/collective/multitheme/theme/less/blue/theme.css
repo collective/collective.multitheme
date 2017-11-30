@@ -4863,6 +4863,27 @@ div.outer-wrapper {
 .mosaic-grid #content {
   margin-bottom: 0;
 }
+.mosaic-grid-row-fullwidth {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .mosaic-grid-row-fullwidth {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .mosaic-grid-row-fullwidth {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .mosaic-grid-row-fullwidth {
+    width: 1170px;
+  }
+}
 .plone-link {
   color: #007bb1 !important;
 }
