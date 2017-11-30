@@ -1,3 +1,18 @@
+
+#content div.mosaic-grid-row.mosaic-grid-row-fullwidth {
+	padding-left:  0;
+	padding-right: 0;
+}
+
 .mosaic-grid .outer-wrapper > div.container {
 	width: 100%
+}
+
+div.mosaic-grid-row:hover {
+	border: 1px dashed #fef292;
+	margin:  -2px;
+}
+
+div.mosaic-grid-row:hover div.mosaic-grid-cell {
+	border: 1px dashed #b1deec;
 }
