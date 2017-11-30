@@ -8,11 +8,11 @@
 	width: 100%
 }
 
-div.mosaic-grid-row:hover {
+.template-edit div.mosaic-grid-row:hover {
 	border: 1px dashed #fef292;
 	margin:  -2px;
 }
 
-div.mosaic-grid-row:hover div.mosaic-grid-cell {
+.template-edit div.mosaic-grid-row:hover div.mosaic-grid-cell {
 	border: 1px dashed #b1deec;
 }
