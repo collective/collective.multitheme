@@ -1,7 +1,3 @@
-/* @override 
-	http://xweb14d.plana.dk:8081/++theme++multitheme/css/spot.css
-	http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/spot.css
-*/
 
 a#portal-logo {
 	height: 60px;
@@ -25,7 +21,7 @@ a#portal-logo img{
 	left: 0;
 	right: 0;
 	top:  0;
-	z-index: 99;
+	z-index: 4;
 	min-height: 70px;
  
 }
