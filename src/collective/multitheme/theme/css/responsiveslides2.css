@@ -58,7 +58,7 @@ div.slidetext-container {
 
 #fragment-main-slider ul.rslides_tabs {
 	position: relative;
-	z-index: 9;
+	z-index: 3;
 	bottom:  70px;
 	text-align: center;
 	list-style-image: none;
@@ -102,7 +102,7 @@ div.slidetext-container {
     text-align: center;
     top: 55%;
     width: 40px;
-    z-index: 5;
+    z-index: 3;
 }
 #fragment-main-slider .prev:hover, #fragment-main-slider .next:hover {
     background-color: #000;
