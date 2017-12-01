@@ -1,3 +1,4 @@
+/* @override http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/info_block.css */
 
 .fullwidth {
 	width: 300%;
@@ -26,12 +27,17 @@
 }
 
 @media (max-width: 768px) {
+	.mosaic-width-full .infoblock .container{
+		width: 90vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	.infoblock h1{
-	font-size: 200%;
+		font-size: 200%;
 	}
    .infoblock h3{
-	font-size: 150%;
+		font-size: 150%;
     }	
 }
 	

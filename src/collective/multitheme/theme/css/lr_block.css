@@ -42,8 +42,15 @@ div.container.flex {
 }
 
 @media (max-width: 768px) {
-div.half{
-	width: 100vw;
+
+.mosaic-width-full .lrblock {
+    width: 100%; 
+    margin-left: 0;
+    margin-righ: 0;
+}
+
+div.half {
+	width: 100%; 
 	position: static;
 	margin: 0;
 	padding: 0;
