@@ -11,8 +11,10 @@ A theme for Plone 5
 Features
 --------
 
-- Can be customize
-
+- A theme for Plone 5 that can be customized.
+- Choose between 'themes' in the control panel
+- Choose between fragment tiles in the Mosaic Layout editor
+- Choose between (layout) styles for each Mosaic Fragment Tile
 
 
 Documentation
@@ -56,6 +58,9 @@ Contribute
 
 Lessc
 -------
+
+If you change settings / colors, run this:
+
 
 cd blue; lessc theme.less  theme.css;
 cd ../blue; lessc theme.less  theme.css;

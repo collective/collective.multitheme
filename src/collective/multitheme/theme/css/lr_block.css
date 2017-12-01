@@ -1,8 +1,3 @@
-/* @override 
-	http://xweb14d.plana.dk:8081/bea/++theme++multitheme/css/lr_block.css
-	http://xweb14d.plana.dk:8081/++theme++multitheme/css/lr_block.css
-*/
-
 div.container.flex {
 	max-width: 100%;
 	padding: 0;
@@ -33,8 +28,6 @@ div.container.flex {
     margin-righ: -100%;
 }
 
-
-
 .lrblock .container{
     margin-left: auto;   
     margin-right: auto;
@@ -58,12 +51,11 @@ div.half {
  
 	}
 	.half.bodytext {
-	text-align: left
-	
+	text-align: left	
 	}
 }
 
- .half img {
+.half img {
 	max-width: 100%;
 }
 
@@ -93,21 +85,16 @@ div.right .half.bodytext {
 	padding: 0;
 	margin: 0;
 }
-
  
 div.flex.text-on-image {
 	position: relative;
-		margin-bottom: 2em;
+	margin-bottom: 2em;
 }
-
-
 
 div.flex.text-on-image.center img {
 	width: 100%;
 	height:  auto;
 }
-
- 
 
 .text-on-image div.half.bodytext {
 	z-index: 3;
@@ -130,9 +117,7 @@ div.flex.text-on-image.center img {
 
 .half.bodytext {
 	max-width: 95vw;
-	
 }
-
 
 body div.black hr {
 	border-color:  white;

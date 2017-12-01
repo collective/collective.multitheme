@@ -51,6 +51,8 @@
       <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
     </xsl:variable>
 
+
+
     <div class="{$central}">
       <!-- <p class="pull-right visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
@@ -84,7 +86,7 @@
 
   <!-- Right column -->
   <rules css:if-content="#portal-column-two">
-    <replace css:theme="#column2-container">
+    <replace css:theme="#column2-containercs">
         <div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas" role="complementary">
           <aside id="portal-column-two">
               <xsl:copy-of css:select="#portal-column-two > *" />
