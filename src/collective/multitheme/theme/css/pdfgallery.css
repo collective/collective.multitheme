@@ -59,10 +59,14 @@ div.pdf-item  button {
   div.pdfgallery-items.container {
     flex-direction: column;
     justify-content: center;
+    max-width: 100vw;
   }
+  
+  
   div.pdf-item {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2em;
     width:  80%;
   }
 }

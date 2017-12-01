@@ -1,0 +1,7 @@
+<section class="render_portlets" id="${view/id}">
+  <tal:replace="structure view/render_below_portlets" />
+
+  <div tal:on-error="nothing" tal:replace="structure view/render_below_portlets" />
+
+        <tal:viewlet replace="structure python:viewlet.render()" />
+</section>

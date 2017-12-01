@@ -43,22 +43,22 @@ div.container.flex {
 
 @media (max-width: 768px) {
 div.half{
-	width: 100%;
+	width: 100vw;
 	position: static;
 	margin: 0;
 	padding: 0;
 	text-align: center;
  
-}
-.half.bodytext {
+	}
+	.half.bodytext {
 	text-align: left
 	
+	}
 }
 
-
+ .half img {
+	max-width: 100%;
 }
-
- 
 
 .half.bodytext  ul {
 	padding-left: 1.5em;
