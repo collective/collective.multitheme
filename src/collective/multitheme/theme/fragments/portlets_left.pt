@@ -1,0 +1,3 @@
+<section class="render_portlets" id="fragment-left-portlets">
+ <tal:block tal:on-error="nothing" replace="structure provider:plone.leftcolumn" />
+</section>
