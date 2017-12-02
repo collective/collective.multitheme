@@ -81,6 +81,7 @@
 
   <!-- Left column -->
   <rules css:if-content="#portal-column-one">
+   <rules css:if-not-content="#fragment-left-portlets">
     <replace css:theme="#column1-container">
         <div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
           <aside id="portal-column-one">
@@ -88,10 +89,12 @@
           </aside>
         </div>
     </replace>
+    </rules>
   </rules>
 
   <!-- Right column -->
   <rules css:if-content="#portal-column-two">
+   <rules css:if-not-content="#fragment-right-portlets">
     <replace css:theme="#column2-container">
         <div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas" role="complementary">
           <aside id="portal-column-two">
@@ -99,6 +102,7 @@
           </aside>
         </div>
     </replace>
+    </rules>
   </rules>
 
   <!-- Content header -->
