@@ -5,8 +5,8 @@
      data-pat-contentloader="url:${view/item_url}?ajax_load=1;target:#content-target-${view/id};?ajax_load=1;content:#content">${view/data/buttontext}
    </span>
 </button>
-<style>
 <link rel="stylesheet" href="++theme++multitheme/css/contentload.css">
+<style>
 #content #portal-footer-wrapper {
     display: none;
 }
