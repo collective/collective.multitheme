@@ -1,0 +1,13 @@
+
+.contentloader .easyformForm {
+	background: #EEE;
+	padding: 2em;
+}
+
+.contentloader .documentFirstHeading {
+	border-bottom: 0px hidden;
+}
+.contentloader #content {
+	padding-top: 2em;
+	background: #EEE;
+}

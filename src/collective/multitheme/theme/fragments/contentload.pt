@@ -6,6 +6,7 @@
    </span>
 </button>
 <style>
+<link rel="stylesheet" href="++theme++multitheme/css/contentload.css">
 #content #portal-footer-wrapper {
     display: none;
 }
