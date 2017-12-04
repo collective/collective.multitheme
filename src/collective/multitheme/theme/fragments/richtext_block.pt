@@ -1,0 +1,11 @@
+<section class="richtext_block ${view/data/color1} ${view/data/color3}" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
+   <div class="container ${view/data/color2}">
+    <tal:replace tal:replace="structure view/data/text" />
+    <button class="white-background buttonzoom" tal:condition="view/data/button">
+       <a class="btn btn-primary plone-link-color" href="${view/data/url}">
+         ${view/data/button}
+       </a>
+    </button>
+  </div>
+  <link rel="stylesheet" href="++theme++multitheme/css/richtext_block.css">
+</section>

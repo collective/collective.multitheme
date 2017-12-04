@@ -43,13 +43,6 @@
     	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
     	/>
 
-    <browser:page
-      	for="*"
-      	name="custom_styles.css"
-      	class=".custom_styles.StylesView"
-        permission="zope.Public"
-      	/>
-
    <!-- Webcoutier globalnav as a provider -->
   <adapter name="globalnav"
     for="zope.publisher.interfaces.browser.IDefaultBrowserLayer *"

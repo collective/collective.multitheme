@@ -10,7 +10,7 @@
    <field name="height" type="zope.schema.TextLine">
     <required>True</required>
     <title>height</title>
-    <default>1px</default>
+    <default>40px</default>
   </field>
 </schema>
 </model>
