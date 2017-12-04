@@ -1,3 +1,5 @@
+/* @override http://xweb14d.plana.dk:8081/Plone/uidemo/++theme++multitheme/css/fullpage.css */
+
 #content div.mosaic-grid-row.mosaic-grid-row-fullwidth {
 	padding-left:  0;
 	padding-right: 0;
@@ -8,7 +10,7 @@
 }
 
 .template-edit div.mosaic-grid-row:hover {
-	box-shadow:0 0  12px 6px #DDD;
+	box-shadow:0 0  8px 4px rgba(0,0,0,0.1);
 	z-index: 105;
 }
 
@@ -31,5 +33,4 @@
 	background: #555;
 	color:  white;
 	border-radius: 5px 0 0 5px;
-	
 }
