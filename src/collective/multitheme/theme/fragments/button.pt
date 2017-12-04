@@ -1,7 +1,9 @@
 <section class="${view/data/effect}" id="fragment-${view/id}"
          tal:define="link view/one_link; link_url link/getURL">
        <div class="roundbutton">
-           <button class="btn btn-primary ${view/data/color1}"><a class="${view/data/color2}" href="${link_url}">${view/data/buttontext}</a></button>
+           <button class="btn btn-primary ${view/data/color1}">
+             <a class="${view/data/color2}" href="${link_url}">${view/data/buttontext}</a>
+           </button>
        </div>
   <link rel="stylesheet" href="++theme++multitheme/css/button.css">
 </section>

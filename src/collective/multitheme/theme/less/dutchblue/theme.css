@@ -4831,6 +4831,21 @@ body.template-logged_out #content-core .portletFooter {
     width: 1170px;
   }
 }
+#sidebar,
+aside#portal-column-two {
+  width: 100%;
+}
+#sidebar img {
+  max-width: 100%;
+}
+.arrow_down {
+  width: 134px;
+  height: 50px;
+  border-left: 67px solid transparent;
+  border-right: 67px solid transparent;
+  border-top: 50px solid #FFF;
+  margin-bottom: 15px;
+}
 div.outer-wrapper {
   overflow-x: hidden;
 }
