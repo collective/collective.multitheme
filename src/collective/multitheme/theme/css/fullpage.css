@@ -18,11 +18,12 @@
 	box-shadow:0 0  1px #ffb600;
 }
 
-.mosaic-grid-row-fullwidth {
+.template-edit .mosaic-grid-row-fullwidth {
 	border:  1px dotted #EEE;
 	border-collapse: collapse;
 }
-.mosaic-grid-row-fullwidth:before {
+
+. template-edit.mosaic-grid-row-fullwidth:before {
 	content: ">";
 	position: relative;
 	left:  -1.8em;
