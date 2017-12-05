@@ -18,9 +18,9 @@
         <required>True</required>
         <title>Block to load</title>
         <values>
-          <element>content-core</element>
-          <element>content</element>
-          <element>main-container</element>
+          <element>#content-core</element>
+          <element>#content</element>
+          <element>#main-container</element>
           <element>body</element>
         </values>
     </field>
