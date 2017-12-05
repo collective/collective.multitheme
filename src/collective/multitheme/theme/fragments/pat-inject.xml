@@ -8,10 +8,21 @@
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
   <field name="content_item" type="zope.schema.Choice">
-        <description/>
+        <description>Needs plone patternslib installed</description>
         <required>True</required>
         <title>Choose conten item to inject (load)</title>
         <source>collective.themefragments.tiles.CatalogSource</source>
+    </field>
+    <field name="load_div" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Block to load</title>
+        <values>
+          <element>content-core</element>
+          <element>content</element>
+          <element>main-container</element>
+          <element>body</element>
+        </values>
     </field>
   </schema>
 </model>
