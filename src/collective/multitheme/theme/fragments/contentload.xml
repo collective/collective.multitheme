@@ -12,6 +12,17 @@
     <required>True</required>
     <title>Button text</title>
   </field>
+  <field name="buttonstyle" type="zope.schema.Choice">
+    <description/>
+    <required>True</required>
+    <title>buttonstyle</title>
+    <values>
+      <element>no-style</element>
+      <element>roundbutton</element>
+      <element>buttonzoom</element>
+      <element>roundbutton buttonzoom</element>
+    </values>
+  </field>
   <field name="content_item" type="zope.schema.Choice">
         <description/>
         <required>True</required>

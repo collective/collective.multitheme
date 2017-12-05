@@ -14,3 +14,11 @@
 	padding-right: 2em;;
 	background: #EEE;
 }
+
+.contentloader .roundbutton {
+  padding: 1em 2em;
+  border-radius: 2em;
+  display:  block;
+  margin:  1em auto;
+}
+
