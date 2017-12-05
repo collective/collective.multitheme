@@ -72,6 +72,14 @@
   <!-- Alert message -->
   <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" />
 
+  <!-- rules to remove portlets if we have a portlet fragment-->
+  <rules css:if-content="#fragment-left-portlets">
+         <drop css-content-children="#portal-column-one"/>
+  </rules>
+  <rules css:if-content="#fragment-right-portlets">
+          <drop css-content-children="#portal-column-two"/>
+  </rules>
+
   <!-- Left column -->
   <rules css:if-content="#portal-column-one">
    <rules css:if-not-content="#fragment-left-portlets">
@@ -98,12 +106,6 @@
     </rules>
   </rules>
 
-  <rules css:if-content="#fragment-left-portlets">
-       <drop css-content-children="#portal-column-one"/>
- </rules>
-   <rules css:if-content="#fragment-right-portlets">
-        <drop css-content-children="#portal-column-two"/>
-  </rules>
 
   <!-- Content header -->
   <replace css:theme="#portal-top" css:content-children="#portal-top" />
