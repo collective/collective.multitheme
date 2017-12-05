@@ -20,7 +20,7 @@
 
   <after theme-children="/html/head" >
   		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
-      <link href="/custom_styles.css" rel="stylesheet"/>
+      <!--link href="/custom_styles.css" rel="stylesheet"/-->
   </after>
 
   <rules if="$fullwidth">
