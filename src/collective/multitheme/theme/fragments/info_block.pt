@@ -9,7 +9,8 @@
            </h1>
        </div>
        <div class="info_button">
-           <button class="btn btn-primary ${view/data/color4} ${view/data/color5}" href="${view/data/url}">${view/data/buttontext}</button>
+           <button class="btn btn-primary ${view/data/color4} ${view/data/color5}"
+             <a href="${view/data/url}">${view/data/buttontext}</a></button>
        </div>
    </div>
   <link rel="stylesheet" href="++theme++multitheme/css/info_block.css">
