@@ -98,6 +98,9 @@
     </rules>
   </rules>
 
+  <rules css:if-content="#fragment-left-portlets">
+       <drop css-content-children="#portal-column-one"/>
+ </rules>
    <rules css:if-content="#fragment-right-portlets">
         <drop css-content-children="#portal-column-two"/>
   </rules>
