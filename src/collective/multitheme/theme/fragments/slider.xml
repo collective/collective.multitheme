@@ -31,6 +31,15 @@
     <title>height</title>
     <default>50</default>
   </field>
+  <field name="showtext" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Show Text</title>
+        <values>
+          <element>true</element>
+          <element>false</element>
+        </values>
+  </field>
   <field name="pager" type="zope.schema.Choice">
         <description/>
         <required>True</required>
