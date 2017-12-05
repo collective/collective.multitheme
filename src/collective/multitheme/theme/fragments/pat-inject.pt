@@ -3,5 +3,13 @@
   <div id="pat-target-${view/id}">
       <a class="pat-inject" href="${view/item_url}"
           data-pat-inject="target: self; trigger: autoload; source: #content-core">Loading…</a>
+      <a href="++plone++patternslib/components/patternslib/src/pat/inject/documentation.md"
+            class="pat-inject" data-pat-inject="data-type: markdown; source: ##Description; target: self::element; trigger: autoload">
+            Documentation
+        </a>
+        <a href="++plone++patternslib/components/patternslib/src/pat/inject/index.html"
+          class="pat-inject" data-pat-inject="target: #demo; trigger: autoload">Load demo</a>
+      <div id="demo">repalce</div>
+
   </div>
 </section>
