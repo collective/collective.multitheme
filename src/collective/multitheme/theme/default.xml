@@ -49,7 +49,7 @@
       <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
       <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
       <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
-      <xsl:if test="//[@class='render_portlets']">col-xs-12 col-sm-12</xsl:if>
+      <xsl:if test="//@class='render_portlets'">col-xs-12 col-sm-12</xsl:if>
     </xsl:variable>
 
     <div class="{$central}">
