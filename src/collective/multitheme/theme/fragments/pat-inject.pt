@@ -1,0 +1,8 @@
+
+<section class="pat-inject" id="fragment-${view/id}" tal:define="item view/load_item">
+  <div id="pat-target-${view/id}">
+      <a class="pat-inject" href="${view/item_url}"
+          data-pat-inject="target: self; trigger: autoload; source: #content-core">${view/data/buttontext}
+      </a>
+  </div>
+</section>
