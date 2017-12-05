@@ -98,6 +98,10 @@
     </rules>
   </rules>
 
+   <rules css:if-content="#fragment-right-portlets">
+        <drop css-theme-children="#portal-column-two"/>
+  </rules>
+
   <!-- Content header -->
   <replace css:theme="#portal-top" css:content-children="#portal-top" />
 
