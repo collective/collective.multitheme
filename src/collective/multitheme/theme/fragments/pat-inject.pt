@@ -1,4 +1,6 @@
 
 <section class="pat-inject" id="fragment-${view/id}" tal:define="item view/load_item">
+  <div id="pat-target-${view/id}">
 
+  </div>
 </section>
