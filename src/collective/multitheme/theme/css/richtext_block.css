@@ -1,9 +1,8 @@
-/* @override http://localhost:8080/mynewtheme/++theme++multitheme/css/lr_block.css */
- 
-
 .richtext_block {
 	border:  1px solid;
 	padding: 2em;
 }
 
-
+.richtext_block div.container  {
+	max-width: 100%	
+}
