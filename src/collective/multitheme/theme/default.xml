@@ -99,7 +99,7 @@
   </rules>
 
    <rules css:if-content="#fragment-right-portlets">
-        <drop css-theme-children="#portal-column-two"/>
+        <drop css-content-children="#portal-column-two"/>
   </rules>
 
   <!-- Content header -->
