@@ -30,13 +30,9 @@
     <required>True</required>
     <title>Description</title>
   </field>
-  <field name="text" type="zope.schema.Text">
-    <description/>
-    <required>True</required>
-    <title>Text</title>
-    <form:widget>
-      <klass>pat-tinymce</klass>
-    </form:widget>
+  <field type="plone.app.textfield.RichText" marshal:primary="true"
+           form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
+      <title>Text</title>
   </field>
   <field name="css_class" type="zope.schema.Choice">
       <description/>

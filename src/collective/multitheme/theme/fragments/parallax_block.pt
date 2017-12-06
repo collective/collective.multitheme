@@ -8,8 +8,10 @@ background-attachment: scroll; background-size: auto;" tal:define="p_image view/
             <h3>
                 ${view/data/description}
             </h3>
-            <p tal:replace="structure view/data/text" />
-
+            <tal:block define="value nocall:view/data/text|nothing;
+                               output_relative_to nocall:value/@@output_relative_to|nothing"
+                       condition="output_relative_to"
+                       content="structure python:output_relative_to(context)" />   
             <div class="button_group">
                 <a class="btn btn-primary plone-background" href="${view/data/url1}">
                     <span class="fa ${view/data/icon1}"></span>

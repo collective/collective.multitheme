@@ -2,7 +2,12 @@
   <a href="#" class="accordian_title accordion toggle">
         <i class="fa fa-bars" aria-hidden="true"></i><h3>${view/data/title}</h3>
   </a>
- <div class="accordiondiv">${view/data/text}</div>
+ <div class="accordiondiv">
+   <tal:block define="value nocall:view/data/text|nothing;
+                      output_relative_to nocall:value/@@output_relative_to|nothing"
+              condition="output_relative_to"
+              content="structure python:output_relative_to(context)" />
+  </div>
   <script>require([
       'jquery'
       ], function(Base) {

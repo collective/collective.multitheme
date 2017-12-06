@@ -1,0 +1,11 @@
+<section id="fragment-${view/id}"
+        tal:define="link view/one_link; link_url link/getURL">
+  <div class="pat-upload" data-pat-upload='{"url": "${link_url}",
+                                            "showTitle": false,
+                                            "ajaxUpload": false,
+                                            "relatedItems": {
+                                            "vocabularyUrl": "/relateditems-test.json"
+                                            }}'>
+<p>Upload to: ${link_url}</p>
+ 
+</section>

@@ -20,7 +20,7 @@
   <form:widget>
     <klass>pat-pickadate</klass>
   </form:widget>
-  <default>2028/01/01</default>
+  <default>2021/01/01</default>
 </field>
 <field name="css_file" type="zope.schema.Choice">
     <description/>

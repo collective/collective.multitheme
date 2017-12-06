@@ -49,7 +49,10 @@ setup(
         'medialog.controlpanel',
         'plone.app.mosaic',
         'medialog.iconpicker',
-        'webcouturier.dropdownmenu'
+        'webcouturier.dropdownmenu',
+        'plone.tiles>=2.0.0b3',
+        'plone.jsonserializer>=0.9.5',
+        'plone.app.blocks>=4.1.1'
     ],
     extras_require={
         'test': [

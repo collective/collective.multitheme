@@ -1,0 +1,8 @@
+<section class="richtextlist" id="fragment-${view/id}" tal:define="fields view/get_rt_fields">
+  <div tal:repeat="mystuff python:view.get_rt_fields()">
+      ${mystuff}
+      <div tal:content="structure mystuff"/>
+  </div>
+
+
+</section>

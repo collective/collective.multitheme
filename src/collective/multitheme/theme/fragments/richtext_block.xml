@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <model xmlns:form="http://namespaces.plone.org/supermodel/form"
   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
   xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
@@ -7,14 +8,9 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-  <field name="text" type="zope.schema.Text">
-    <description>Richtext field is not working, so this is the only workaround so far
-    </description>
-    <required>True</required>
-    <title>Text</title>
-    <form:widget>
-      <klass>pat-tinymce</klass>
-    </form:widget>
+  <field name="text" type="plone.app.textfield.RichText" marshal:primary="true"
+        form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
+      <title>Text</title>
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>

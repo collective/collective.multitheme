@@ -1,0 +1,24 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+xmlns:security="http://namespaces.plone.org/supermodel/security"
+xmlns:users="http://namespaces.plone.org/supermodel/users"
+xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="somesetting" type="zope.schema.TextLine">
+      <description/>
+      <required>False</required>
+      <title>somesetting</title>
+    </field>
+    <field name="folder" type="z3c.relationfield.schema.RelationList"
+       marshal:primary="true">
+      <description/>
+      <required>False</required>
+      <title>gfdsgs</title>
+      <value_type type="z3c.relationfield.schema.RelationChoice"  marshal:primary="true">>
+        <title i18n:translate="">Relation Choice</title>
+      </value_type>
+    </field>
+  </schema>
+</model>
