@@ -10,7 +10,7 @@
           paddingTop: '100px',
           navigation: true,
 		      paddingBottom: '100px',
-		      sectionSelector: 'section'});
+		      sectionSelector: '.mosaic-grid-row'});
         });
       });
   </script>
