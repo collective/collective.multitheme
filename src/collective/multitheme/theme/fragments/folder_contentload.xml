@@ -7,15 +7,11 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-   <field name="urls" type="zope.schema.List"  marshal:primary="true">
-      <description>Each line one category</description>
-      <required>True</required>
-      <title>Categories</title>
-      <default>[u'General', ]</default>
-      <value_type type="zope.schema.Choice">
-          <source>collective.themefragments.tiles.CatalogSource</source>
-      </value_type>
-      <missing_value>()</missing_value>
-    </field>
+  <field name="folder_url" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <title>Path to folder</title>
+    <default>services</default>
+  </field>
 </schema>
 </model>

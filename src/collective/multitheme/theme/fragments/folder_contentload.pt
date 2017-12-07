@@ -1,0 +1,17 @@
+<section id="fragment-${view/id}"
+        tal:define="folder_url nocall:request/form/folder_url|None">
+  <tal:conditon tal:condition="folder_url">
+      <tal:repeat tal:repeat="item context/?folder_url/@@contentlisting|None">
+        <div tal:define="item_url item/getURL|item/absolute_url; target_id item/id" id="target-${target_id}">
+          <a href="${item_url}">
+            <h1>${item/Title}</h1>
+          </a>
+          <p>${item/Description}</p>
+            <button type="button" class="btn btn-primary">
+              <span class="pat-contentloader" data-pat-contentloader="url:${item_url}?ajax_load=1;target:#target-${target_id};content:#content">Read more
+              </span>
+            </button>
+        </div>
+		   </tal:repeat>
+	</tal:conditon>
+</section>
