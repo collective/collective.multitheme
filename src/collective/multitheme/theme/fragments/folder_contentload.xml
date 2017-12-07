@@ -19,5 +19,22 @@
      <title>Portal Type to show</title>
      <vocabulary>plone.app.vocabularies.PortalTypes</vocabulary>
    </field>
+   <field name="load_div" type="zope.schema.Choice">
+       <description/>
+       <required>True</required>
+       <title>Block to load</title>
+       <values>
+         <element>#content-core</element>
+         <element>#content</element>
+         <element>#main-container</element>
+         <element>body</element>
+       </values>
+   </field>
+   <field name="buttontext" type="zope.schema.TextLine">
+     <description/>
+     <required>True</required>
+     <default>read more</default>
+     <title>Button text</title>
+   </field>
 </schema>
 </model>
