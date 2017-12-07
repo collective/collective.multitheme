@@ -1,0 +1,8 @@
+.folder_load_item {
+	padding-bottom: 2em;
+	border-bottom: 1px dotted #CCC;
+}
+
+.folder_load_item button {
+	margin-top: 1em;
+}

@@ -2,7 +2,7 @@
         tal:define="folder_url nocall:request/form/folder_url|None; portal_type view/data/portal_type; load_div view/data/load_div; buttontext view/data/buttontext">
   <tal:conditon tal:condition="folder_url">
       <tal:repeat tal:repeat="item context/?folder_url/@@contentlisting|None">
-        <div tal:define="item_url item/getURL|item/absolute_url; target_id item/id; type item/portal_type" id="target-${target_id}"
+        <div class="folder_load_item" tal:define="item_url item/getURL|item/absolute_url; target_id item/id; type item/portal_type" id="target-${target_id}"
           tal:condition="python: type==portal_type">
           <a href="${item_url}">
             <h1>${item/Title}</h1>
@@ -14,5 +14,6 @@
             </button>
         </div>
 		   </tal:repeat>
+      <link rel="stylesheet" href="++theme++multitheme/css/folder_contntload.css">
 	</tal:conditon>
 </section>
