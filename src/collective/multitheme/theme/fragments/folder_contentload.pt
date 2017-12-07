@@ -1,8 +1,9 @@
 <section id="fragment-${view/id}"
-        tal:define="folder_url nocall:request/form/folder_url|None">
+        tal:define="folder_url nocall:request/form/folder_url|None; portal_type view/data/portal_type">
   <tal:conditon tal:condition="folder_url">
       <tal:repeat tal:repeat="item context/?folder_url/@@contentlisting|None">
-        <div tal:define="item_url item/getURL|item/absolute_url; target_id item/id" id="target-${target_id}">
+        <div tal:define="item_url item/getURL|item/absolute_url; target_id item/id; type item/portal_type" id="target-${target_id}"
+          tal:condition="python: type==portal_type">
           <a href="${item_url}">
             <h1>${item/Title}</h1>
           </a>

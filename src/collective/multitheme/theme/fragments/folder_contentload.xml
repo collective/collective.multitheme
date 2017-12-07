@@ -13,5 +13,11 @@
     <title>Path to folder</title>
     <default>services</default>
   </field>
+  <field name="portal_type" type="zope.schema.Choice">
+     <description/>
+     <required>True</required>
+     <title>Portal Type to show</title>
+     <vocabulary>plone.app.vocabularies.PortalTypes</vocabulary>
+   </field>
 </schema>
 </model>
