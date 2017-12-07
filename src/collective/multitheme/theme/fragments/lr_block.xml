@@ -30,7 +30,7 @@
     <required>True</required>
     <title>Description</title>
   </field>
-  <field type="plone.app.textfield.RichText" marshal:primary="true"
+  <field name="text" type="plone.app.textfield.RichText" marshal:primary="true"
            form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
       <title>Text</title>
   </field>

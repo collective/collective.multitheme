@@ -8,8 +8,7 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-  <field name="text" type="plone.app.textfield.RichText" marshal:primary="true"
-        form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
+  <field name="text" type="plone.app.textfield.RichText" marshal:primary="true">
       <title>Text</title>
   </field>
   <field name="color1" type="zope.schema.Choice">
