@@ -5,16 +5,16 @@ header#content-header {
 	display: none;
 }
 
-#fullpage,
 #fullpagemenu {
-	position: static;
-	left: 0;
+	height: 100px;
+	z-index: 99999;
+	background: #333;
+	color:  white;
+	top:  100px; 
+	left:  0;
 	right: 0;
-	top:  0;
-	background: white;
-	z-index: 101;
-	line-height: 3em;
-	height: 3em !important;
+	margin: 0;
+	position: fixed;
 }
 
 #portal-globalnav-wrapper {
@@ -24,7 +24,6 @@ header#content-header {
 
 div.mosaic-tile-content > section {
 	margin: 0 !important;
-	xheight: 100vh;
 }
  
  
@@ -40,6 +39,8 @@ div.mosaic-tile-content > section {
 	left:  0;
 	right:  0;
 }
+
+
 
 /* this is copied from fullPage 2.9.5
  

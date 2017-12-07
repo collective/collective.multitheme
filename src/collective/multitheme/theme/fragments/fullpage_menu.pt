@@ -1,18 +1,22 @@
-<div id="fullpage"> <!-- maybe add menu here maybe I can get all the mosaic tiles and find each #section-->
-  <ul id="fullpagemenu"></ul>
+<ul id="fullpagemenu"></ul>sssss
 
   <script>require([
       'jquery',
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
       ], function(Base) {
       $(document).ready(function() {
-          $('.viewpermission-none #content').fullpage({
-          paddingTop: '100px',
+        $('[id^=fragment]').each(function() {
+          var myid = $(this).attr('id') ;
+            $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + myid + "'><a href='#" + myid + "'>" + myid + "</a></li>" );
+        });
+        $('.viewpermission-none #content').fullpage({
           navigation: true,
 		      paddingBottom: '100px',
-		      sectionSelector: '.mosaic-grid-row'});
+          menu: '#fullpagemenu',
+          fixedElements: '#fullpagemenu, #mainnavigation',
+          responsiveWidth: 1100,
+		      sectionSelector: '.mosaic-grid-row section'});
         });
       });
   </script>
   <link rel="stylesheet" href="++theme++multitheme/css/fullpage_menu.css">
-</div>
