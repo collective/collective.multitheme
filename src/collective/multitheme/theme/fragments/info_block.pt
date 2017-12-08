@@ -1,11 +1,13 @@
-<section class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
+<section tal:define="title2 view/data/title2"
+  title="${title2}"
+  class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
    <div class="container">
        <div class="info_pre">
            <h3 class="pretext ${view/data/color2}">
                ${view/data/title1}
            </h3>
            <h1 class="info_title ${view/data/color3}">
-               ${view/data/title2}
+               ${title2}
            </h1>
        </div>
        <div class="info_button">
