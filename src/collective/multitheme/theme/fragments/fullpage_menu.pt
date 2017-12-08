@@ -4,10 +4,10 @@
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
       ], function(Base) {
       $(document).ready(function() {
-        var $array = [];
+        var array = [];
         $('[id^=fragment]').each(function() {
           var fragment_title = $(this).attr('title') || $(this).attr('id') ;
-          $array.push(fragment_title);
+          array.push(fragment_title);
           $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + fragment_title + "'><a href='#" + fragment_title + "'>" + fragment_title + "</a></li>" );
         });
         $('.viewpermission-none #content').fullpage({
