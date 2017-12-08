@@ -1,6 +1,6 @@
 <section tal:define="title2 view/data/title2"
   title="${title2}"
-  data-anchor="${title}"
+  data-anchor="${title2}"
   class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}" id="fragment-${view/id}"> <!--maybe this can be used for fullpage menu-->
    <div class="container">
        <div class="info_pre">
