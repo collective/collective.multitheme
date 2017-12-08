@@ -1,20 +1,28 @@
-/* @override http://localhost:8080/Plone5asdfasdf/++theme++multitheme/css/fullpage_menu.css */
+/* @override 
+	http://localhost:8080/Plone5asdfasdf/++theme++multitheme/css/fullpage_menu.css
+	http://xweb14d.plana.dk:8081/Plone/fragments/++theme++multitheme/css/fullpage_menu.css
+*/
 
-#portal-breadcrumbs,
-header#content-header {
+#portal-breadcrumbs {
 	display: none;
 }
 
 #fullpagemenu {
-	height: 100px;
-	z-index: 99999;
-	background: #333;
-	color:  white;
-	top:  100px; 
-	left:  0;
-	right: 0;
-	margin: 0;
+	z-index: 999;
+	bottom:  150px; 
+	padding: 2em;
 	position: fixed;
+	list-style-type: none;
+}
+
+#fullpagemenu li {
+	display: block;
+	float:  left;
+	background: white;
+	padding: 0.8em 2em;
+	border-radius: 25px;
+	margin-right: 1em;
+	font-size: 90%;
 }
 
 #portal-globalnav-wrapper {
@@ -26,14 +34,8 @@ div.mosaic-tile-content > section {
 	margin: 0 !important;
 }
  
- 
-#xmain-container {
-	position: fixed;
-	left:  0;
-	right: 0;
-}
 
- #portal-footer-wrapper {
+#portal-footer-wrapper {
 	bottom:  0;
 	position: absolute;
 	left:  0;

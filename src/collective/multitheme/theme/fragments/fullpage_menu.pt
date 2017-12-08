@@ -6,10 +6,9 @@
       $(document).ready(function() {
         var $array = [];
         $('[id^=fragment]').each(function() {
-          var fragment_id = $(this).attr('id') ;
-          $array.push(fragment_id);
           var fragment_title = $(this).attr('title') || $(this).attr('id') ;
-            $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + fragment_id + "'><a href='#" + fragment_id + "'>" + fragment_title + "</a></li>" );
+          $array.push(fragment_title);
+          $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + fragment_title + "'><a href='#" + fragment_title + "'>" + fragment_title + "</a></li>" );
         });
         $('.viewpermission-none #content').fullpage({
           navigation: true,
