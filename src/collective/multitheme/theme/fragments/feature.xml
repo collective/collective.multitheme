@@ -7,7 +7,8 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-  <field name="iconfield" type="zope.schema.TextLine">
+  <field name="iconfield" type="zope.schema.TextLine"
+      form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget"> 
     <description/>
     <required>True</required>
     <title>Icon</title>

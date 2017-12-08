@@ -12,7 +12,8 @@
     <required>True</required>
     <title>Int</title>
   </field>
-   <field name="icon" type="zope.schema.TextLine">
+   <field name="icon" type="zope.schema.TextLine"
+    form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget"> 
     <description/>
     <required>True</required>
     <title>Icon</title>

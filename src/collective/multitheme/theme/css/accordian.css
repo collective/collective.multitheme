@@ -1,23 +1,157 @@
 /* @override http://xweb14d.plana.dk:8081/Plone/++theme++multitheme/css/accordian.css */
 
 .accordian_title {
-	border:  1px solid;
+	border: 1px solid;
 	display: flex;
 	padding: 0.5em 1em;
 	margin-bottom: 1em;
 }
 
 .accordian_title h3 {
-  	margin: 0;
-  	padding: 0;
-}
-.accordian_title i {
-  	margin-right: 0.3em;
-  	font-size: 260%;
+	margin: 0;
+	padding: 0;
 }
 
-a.accordian_title.accordion.toggle:hover  {
+.accordian_title i {
+	margin-right: 0.3em;
+	font-size: 260%;
+}
+
+a.accordian_title.accordion.toggle:hover {
 	text-decoration: none;
 	color: #777;
 }
-.accordiondiv {display: none;}
+
+.accordiondiv {
+	display: none;
+}
+
+/* @group Transformicons */
+
+.tcon {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	cursor: pointer;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 40px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 40px;
+	background: transparent;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.tcon > * {
+	display: block;
+}
+
+.tcon:hover, .tcon:focus {
+	outline: none;
+}
+
+.tcon::-moz-focus-inner {
+	border: 0;
+}
+
+.tcon-menu__lines {
+	display: inline-block;
+	height: 5.71429px;
+	width: 40px;
+	border-radius: 2.85714px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	background: black;
+	position: relative;
+}
+
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+	display: inline-block;
+	height: 5.71429px;
+	width: 40px;
+	border-radius: 2.85714px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	background: black;
+	content: '';
+	position: absolute;
+	left: 0;
+	-webkit-transform-origin: 2.85714px center;
+	transform-origin: 2.85714px center;
+	width: 100%;
+}
+
+.tcon-menu__lines::before {
+	top: 10px;
+}
+
+.tcon-menu__lines::after {
+	top: -10px;
+}
+
+.tcon-transform .tcon-menu__lines {
+	-webkit-transform: scale3d(0.8, 0.8, 0.8);
+	transform: scale3d(0.8, 0.8, 0.8);
+}
+
+.tcon-menu--xcross {
+	width: auto;
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines {
+	background: transparent;
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before, .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	top: 0;
+	width: 40px;
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.tcon-visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/* @end */
