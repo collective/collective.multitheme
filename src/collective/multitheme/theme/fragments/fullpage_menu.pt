@@ -12,11 +12,12 @@
         });
         $('.viewpermission-none #content').fullpage({
           navigation: true,
-		      paddingBottom: '100px',
+          paddingTop:0,
+		      paddingBottom: '0',
           menu: '#fullpagemenu',
           anchors: $array,
-          fixedElements: '#fullpagemenu, #mainnavigation',
-          responsiveWidth: 1100,
+          fixedElements: '#fullpagemenu, #mainnavigation, #portal-footer-wrapper',
+          responsiveWidth: 1000,
 		      sectionSelector: '.mosaic-grid-row section'});
         });
       });
