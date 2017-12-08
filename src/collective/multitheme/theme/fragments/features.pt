@@ -1,5 +1,6 @@
-<section id="fragment-features" 
-		 tal:define="keyword view/data/keyword">
+<section id="fragment-features"
+		 tal:define="keyword view/data/keyword"
+		 title="${view/data/title}">
     <div  tal:condition="keyword">
     	<div class="center wow fadeInDown">
       	<h1>${view/data/title}</h1>

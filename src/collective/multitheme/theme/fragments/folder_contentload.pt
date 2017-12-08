@@ -1,5 +1,5 @@
 <section id="fragment-${view/id}"
-        tal:define="folder_url nocall:request/form/folder_url|None; portal_type view/data/portal_type; load_div view/data/load_div; buttontext view/data/buttontext">
+        tal:define="folder_url nocall:request/form/folder_url|None; portal_type view/data/portal_type|None; load_div view/data/load_div|None; buttontext view/data/buttontext">
   <tal:conditon tal:condition="folder_url">
       <tal:repeat tal:repeat="item context/?folder_url/@@contentlisting|None">
         <div class="folder_load_item" tal:define="item_url item/getURL|item/absolute_url; target_id item/id; type item/portal_type" id="target-${target_id}"

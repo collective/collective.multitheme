@@ -1,25 +1,112 @@
-<section id="fragment-${view/id}" class="accordion-block ${view/data/color1}" >
+<section id="fragment-${view/id}"
+  tal:define="title view/data/title"
+  class="accordion-block ${view/data/color1}"
+  title="${title}">
   <a href="#" class="accordian_title accordion toggle">
-    <button type="button" class="tcon tcon-menu--xcross " aria-label="toggle menu">
+    <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
       <span class="tcon-menu__lines" aria-hidden="true"></span>
       <span class="tcon-visuallyhidden">toggle coontent</span>
     </button>
-    <h3>${view/data/title}</h3>
+    <h3>${title}</h3>
   </a>
  <div class="accordiondiv">
    <tal:block define="value nocall:view/data/text|nothing;
-                      output_relative_to nocall:value/@@output_relative_to|nothing"
+                  output_relative_to nocall:value/@@output_relative_to|nothing"
               condition="output_relative_to"
               content="structure python:output_relative_to(context)" />
   </div>
   <script>require([
-      'jquery'
+      'jquery',
       ], function(Base) {
         $("#fragment-${view/id} .accordian_title").click(function() {
-            $('.accordiondiv').toggle();
+            $('#fragment-${view/id} .accordiondiv').toggle();
+        });
+        $("a").click(function(){
+          $(this).toggleClass("open");
         });
       });
   </script>
   <link rel="stylesheet" href="++theme++multitheme/css/accordian.css">
-  <script src="++theme++multitheme/javascript/multitheme-transformicons.js"></script>
+
+
+
+  <nav>
+    <a class="navicon-button larr">
+      <div class="navicon"></div>
+    </a>
+    <a class="navicon-button rarr">
+      <div class="navicon"></div>
+    </a>
+    <a class="navicon-button uarr">
+      <div class="navicon"></div>
+    </a>
+    <a class="navicon-button x">
+      <div class="navicon"></div>
+    </a>
+    <a class="navicon-button plus">
+      <div class="navicon"></div>
+    </a>
+    <a class="navicon-button">
+      <div class="navicon"></div>
+    </a>
+  </nav>
+  <h1>Click the icons!</h1>
+
+ <style>
+   .navicon-button {
+     display: inline-block;
+     position: relative;
+     padding: 2.0625rem 1.5rem;
+     transition: 0.25s;
+     cursor: pointer;
+     user-select: none;
+     opacity: .8;
+     COLOR: BLACK;
+     backgroun: blue;
+   }
+   .navicon-button .navicon:before, .navicon-button .navicon:after {
+     transition: 0.25s;
+   }
+   .navicon-button:hover {
+     transition: 0.5s;
+     opacity: 1;
+   }
+   .navicon-button:hover .navicon:before, .navicon-button:hover .navicon:after {
+     transition: 0.25s;
+   }
+   .navicon-button:hover .navicon:before {
+     top: .825rem;
+   }
+   .navicon-button:hover .navicon:after {
+     top: -.825rem;
+   }
+
+   .navicon {
+     position: relative;
+     width: 2.5em;
+     height: .3125rem;
+     background: #CCC;
+     color: black !important;
+     transition: 0.5s;
+     border-radius: 2.5rem;
+   }
+   .navicon:before, .navicon:after {
+     display: block;
+     content: "";
+     height: .3125rem;
+     width: 2.5rem;
+     background: #CCC;
+     position: absolute;
+     z-index: -1;
+     transition: 0.5s 0.25s;
+     border-radius: 1rem;
+   }
+   .navicon:before {
+     top: .625rem;
+   }
+   .navicon:after {
+     top: -.625rem;
+   }
+  </style>
+
 </section>

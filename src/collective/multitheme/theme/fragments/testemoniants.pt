@@ -1,9 +1,11 @@
 <section id="fragment-testimonials"
          class="testimonial ${view/data/color1}"
-         tal:define="folder_url nocall:request/form/folder_url|None;">
+         tal:define="folder_url nocall:request/form/folder_url|None;
+         title context/?folder_url/Title|None"
+          title="${title}">
  	<div class="container" tal:condition="folder_url">
 		<div class="section-header">
-			<h2 class="white-text" tal:content="context/?folder_url/Title|None" />
+			<h2 class="white-text">${title</h2>
 			<h6 class="white-text" tal:content="context/?folder_url/Description|None" />
 		</div>
 		<div id="client-feedbacks" class="row" data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">

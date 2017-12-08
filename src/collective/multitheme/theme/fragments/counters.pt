@@ -1,4 +1,6 @@
-<section class="counters" tal:define="color1 view/data/color1; color2 view/data/color2; css_file view/data/css_file; folder_url request/form/folder_url|None;" id="fragent-${view/id}">
+<section class="counters" tal:define="color1 view/data/color1; color2 view/data/color2;
+          css_file view/data/css_file; folder_url request/form/folder_url|None;" id="fragent-${view/id}"
+          title="Counters">
 
 <div class="container pt-4 mt-2" tal:condition="folder_url">
   <tal:repeat tal:repeat="item  context/?folder_url/@@contentlisting">

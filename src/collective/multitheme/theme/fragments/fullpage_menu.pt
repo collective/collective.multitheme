@@ -1,13 +1,13 @@
-<ul id="fullpagemenu"></ul>sssss
-
+<ul id="fullpagemenu"></ul>
   <script>require([
       'jquery',
       'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js'
       ], function(Base) {
       $(document).ready(function() {
         $('[id^=fragment]').each(function() {
-          var myid = $(this).attr('id') ;
-            $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + myid + "'><a href='#" + myid + "'>" + myid + "</a></li>" );
+          var fragment_id = $(this).attr('id') ;
+          var fragment_title = $(this).attr('title') || $(this).attr('id') ;
+            $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + fragment_id + "'><a href='#" + fragment_id + "'>" + fragment_title + "</a></li>" );
         });
         $('.viewpermission-none #content').fullpage({
           navigation: true,

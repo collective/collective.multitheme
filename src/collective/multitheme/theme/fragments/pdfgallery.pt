@@ -1,8 +1,10 @@
 <section id="fragment-pdfgallery" class="${view/data/color1}"
-		 		 tal:define="folder_url nocall:request/form/folder_url|None">
+		 		 tal:define="folder_url nocall:request/form/folder_url|None;
+				 title context/?folder_url/Title|None"
+				 title="${title}">
     <div tal:condition="folder_url">
   		<div class="container">
-          <h2 class="${view/data/color2}" tal:content="context/?folder_url/Title|None" />
+          <h2 class="${view/data/color2}">${title}</h2>
           <p class="lead ${view/data/color2}"
                 	tal:content="context/?folder_url/Description|None"  />
       </div>

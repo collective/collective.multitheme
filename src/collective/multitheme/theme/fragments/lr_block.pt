@@ -6,7 +6,8 @@
                 css_class view/data/css_class;
                 color1 view/data/color1;
                 color2 view/data/color2"
-                class="lrblock ${color1}">
+                class="lrblock ${color1}"
+                title="${title}">
  <div class="container flex ${css_class}">
     <div class="half bodytext ${color2}">
         <h2 class="${color2}">${title}</h2>
