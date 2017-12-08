@@ -1,16 +1,13 @@
 <section id="fragment-${view/id}"
-  tal:define="title view/data/title"
+  tal:define="title view/data/title; p_image view/one_image; image_size view/data/image_size"
   title="${title}"
   class="parallax-background"
-  data-jarallax-original-styles="null" style="z-index: 0; position: relative; height:${view/data/height}px; background-image: none;
-background-attachment: scroll; background-size: auto;" tal:define="p_image view/one_image; image_size view/data/image_size">
+  data-jarallax-original-styles="null"
+  style="z-index: 0; position: relative; height:${view/data/height}px; background-image: none;
+        background-attachment: scroll; background-size: auto;">
     <div class="container">
-            <h1>
-                ${title}
-            </h1>
-            <h3>
-                ${view/data/description}
-            </h3>
+            <h1>${title}</h1>
+            <h3>${view/data/description}</h3>
             <tal:block define="value nocall:view/data/text|nothing;
                                output_relative_to nocall:value/@@output_relative_to|nothing"
                        condition="output_relative_to"

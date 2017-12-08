@@ -37,7 +37,7 @@
     <required>True</required>
     <title>Description</title>
   </field>
-  <field name="text" ttype="plone.app.textfield.RichText" marshal:primary="true">
+  <field name="text" type="plone.app.textfield.RichText" marshal:primary="true">
       <title>Text</title>
   </field>
   <field name="height" type="zope.schema.Int">

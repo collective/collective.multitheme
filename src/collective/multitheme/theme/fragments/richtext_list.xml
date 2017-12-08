@@ -7,11 +7,11 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-  <field name="list_richtext" type="zope.schema.List" marshal:primary="true">
-    <value_type type="zope.schema.Text" marshal:primary="true">
+  <field name="list_richtext" type="zope.schema.Tuple">
+    <value_type type="zope.schema.Text">
       <form:widget>
-        <klass>pat-tinymce</klass>
-      </form:widget>
+       <klass>pat-tinymce</klass>
+     </form:widget>
       <title i18n:translate="">Body text</title>
     </value_type>
     <required>true</required>
