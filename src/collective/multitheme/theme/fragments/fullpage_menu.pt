@@ -6,9 +6,11 @@
       $(document).ready(function() {
         var array = [];
         $('[id^=fragment]').each(function() {
+          var fragment_id = $(this).attr('id') ;
           var fragment_title = $(this).attr('title') || $(this).attr('id') ;
-          array.push(fragment_title);
-          $( "#fullpagemenu" ).append( "<li data-menuanchor='#" + fragment_title + "'><a href='#" + fragment_title + "'>" + fragment_title + "</a></li>" );
+          var fragment_anchor = 'anchor-' + $(this).attr('id');
+          array.push(fragment_id);
+          $( "#fullpagemenu" ).append( "<li data-menuanchor='" + fragment_anchor + "'><a href='#" + fragment_id + "'>" + fragment_title + "</a></li>" );
         });
         $('.viewpermission-none #content').fullpage({
           navigation: true,
@@ -18,7 +20,7 @@
           anchors: array,
           fixedElements: '#fullpagemenu, #mainnavigation, #portal-footer-wrapper',
           responsiveWidth: 1000,
-		      sectionSelector: '.mosaic-grid-row section'});
+		      sectionSelector: '.mosaic-grid-row .mosaic-tile-content > section'});
         });
       });
   </script>
