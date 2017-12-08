@@ -8,9 +8,9 @@
         $('[id^=fragment]').each(function() {
           var fragment_id = $(this).attr('id') ;
           var fragment_title = $(this).attr('title') || $(this).attr('id') ;
-          var fragment_anchor = 'anchor-' + $(this).attr('id');
+          var fragment_anchor = 'anchor-' + fragment_id;
           array.push(fragment_id);
-          $( "#fullpagemenu" ).append( "<li class="" data-menuanchor='" + fragment_anchor + "'><a href='#" + fragment_id + "'>" + fragment_title + "</a></li>" );
+          $( "#fullpagemenu" ).append( "<li class='' data-menuanchor='" + fragment_anchor + "'><a href='#" + fragment_id + "'>" + fragment_title + "</a></li>" );
         });
         $('.viewpermission-none #content').fullpage({
           navigation: true,

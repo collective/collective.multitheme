@@ -1,5 +1,6 @@
 <section class="counters" tal:define="color1 view/data/color1; color2 view/data/color2;
-          css_file view/data/css_file; folder_url request/form/folder_url|None;" id="fragent-${view/id}"
+          css_file view/data/css_file; folder_url request/form/folder_url|None;"
+          id="fragent-${view/id}"
           data-anchor="counter"
           title="counters">
 
