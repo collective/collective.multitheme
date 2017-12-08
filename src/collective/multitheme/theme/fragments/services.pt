@@ -5,7 +5,7 @@
 				 stil python: context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.style']"
 				 title="${title}"
 				 class="${view/data/color1}"
-				 data-anchor="${title}">
+				 data-anchor="anchor-${title}">
     <div tal:condition="folder_url">
   		<div class="center wow fadeInDown animated container servicetext"
            style="visibility: visible; animation-name: fadeInDown;">

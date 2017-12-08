@@ -1,7 +1,7 @@
 <section id="fragment-${view/id}"
   tal:define="title view/data/title"
   class="accordion-block ${view/data/color1}"
-  data-anchor="${title}"
+  data-anchor="anchor-${title}"
   title="${title}">
   <a href="#" class="accordian_title accordion toggle">
     <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">

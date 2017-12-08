@@ -2,7 +2,7 @@
          class="testimonial ${view/data/color1}"
          tal:define="folder_url nocall:request/form/folder_url|None;
          title context/?folder_url/Title|None"
-         data-anchor="${title}"
+         data-anchor="anchor-${title}"
          title="${title}">
  	<div class="container" tal:condition="folder_url">
 		<div class="section-header">

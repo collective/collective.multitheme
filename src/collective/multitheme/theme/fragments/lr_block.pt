@@ -7,7 +7,7 @@
                 color1 view/data/color1;
                 color2 view/data/color2"
                 class="lrblock ${color1}"
-                data-anchor="${title}"
+                data-anchor="anchor-${title}"
                 title="${title}">
  <div class="container flex ${css_class}">
     <div class="half bodytext ${color2}">
