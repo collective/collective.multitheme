@@ -13,11 +13,13 @@
                        condition="output_relative_to"
                        content="structure python:output_relative_to(context)" />
             <div class="button_group">
-                <a class="btn btn-primary plone-background" href="${view/data/url1}">
+                <a class="btn btn-primary plone-background" href="${view/data/url1|None}"
+                  tal:condition="view/data/button1">
                     <span class="fa ${view/data/icon1}"></span>
                     ${view/data/button1}
                 </a>
-                <a class="btn btn-outline plone-background-opposite" href="${view/data/url2}">
+                <a class="btn btn-outline plone-background-opposite" href="${view/data/url2|None}"
+                    tal:condition="view/data/button2">
                     <span class="fa ${view/data/icon2}"></span>
                     ${view/data/button2}
                 </a>

@@ -46,36 +46,36 @@
     <title>Height in pixels</title>
     <default>100</default>
   </field>
-  <field name="icon1" type="zope.schema.TextLine">
+  <field name="icon1" type="zope.schema.TextLine"
+      form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Icon 1</title>
   </field>
-  <field name="button1" type="zope.schema.TextLine"
-    form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget"> 
+  <field name="button1" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Button 1</title>
   </field>
   <field name="url1" type="zope.schema.URI">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Link URL 1</title>
   </field>
   <field name="icon2" type="zope.schema.TextLine"
     form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Icon 2</title>
   </field>
   <field name="button2" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Button 2</title>
   </field>
   <field name="url2" type="zope.schema.URI">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Link URL 2</title>
   </field>
 </schema>
