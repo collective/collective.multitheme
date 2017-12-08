@@ -1,6 +1,7 @@
 <section id="fragment-${view/id}"
-  tal:define="title view/data/title; p_image view/one_image; image_size view/data/image_size"
+  tal:define="title view/data/title|None; p_image view/one_image|None; image_size view/data/image_size|None"
   title="${title}"
+  data-anchor="${title}"
   class="parallax-background"
   data-jarallax-original-styles="null"
   style="z-index: 0; position: relative; height:${view/data/height}px; background-image: none;

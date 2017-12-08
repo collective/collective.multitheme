@@ -2,8 +2,10 @@
 				 class="${view/data/color1}"
 		 		 tal:define="folder_url nocall:request/form/folder_url|None;
 				 css_file view/data/css_file;
+				 title context/?folder_url/Title|None;
 				 stil python: context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.style']"
-				 title="${context/?folder_url/Title|None}">
+				 title="${title}"
+				 data-anchor="${title}">
     <div tal:condition="folder_url">
   		<div class="center wow fadeInDown animated container servicetext"
            style="visibility: visible; animation-name: fadeInDown;">

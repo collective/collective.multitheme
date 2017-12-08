@@ -1,9 +1,10 @@
 <section id="fragment-features"
-		 tal:define="keyword view/data/keyword"
-		 title="${view/data/title}">
+		 tal:define="keyword view/data/keyword; title view/data/title"
+		 data-anchor="${title}"
+		 title="${title}">
     <div  tal:condition="keyword">
     	<div class="center wow fadeInDown">
-      	<h1>${view/data/title}</h1>
+      	<h1>${title}</h1>
         <tal:condition tal:condition="view/data/description">
         	<p class="documentDescription">${view/data/description}</p>
       	</tal:condition>
