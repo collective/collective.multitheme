@@ -8,7 +8,7 @@
 }
 
 #fullpagemenu {
-	z-index: 999;
+	z-index: 102;
 	bottom:  150px; 
 	padding: 2em;
 	position: fixed;
