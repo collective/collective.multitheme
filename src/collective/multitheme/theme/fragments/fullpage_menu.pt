@@ -15,7 +15,7 @@
           paddingTop:0,
 		      paddingBottom: '0',
           menu: '#fullpagemenu',
-          anchors: $array,
+          anchors: array,
           fixedElements: '#fullpagemenu, #mainnavigation, #portal-footer-wrapper',
           responsiveWidth: 1000,
 		      sectionSelector: '.mosaic-grid-row section'});
