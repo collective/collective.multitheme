@@ -9,7 +9,7 @@
           var fragment_id = $(this).attr('id') ;
           var fragment_title = $(this).attr('title') || $(this).attr('id') ;
           var fragment_anchor = 'anchor-' + fragment_id;
-          array.push(fragment_id);
+          array.push(fragment_anchor);
           $( "#fullpagemenu" ).append( "<li data-menuanchor='" + fragment_anchor + "'><a href='#" + fragment_id + "'>" + fragment_title + "</a></li>" );
         });
         $('.viewpermission-none #content').fullpage({
