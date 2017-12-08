@@ -51,7 +51,8 @@
     <required>True</required>
     <title>Icon 1</title>
   </field>
-  <field name="button1" type="zope.schema.TextLine">
+  <field name="button1" type="zope.schema.TextLine"
+    form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget"> 
     <description/>
     <required>True</required>
     <title>Button 1</title>
@@ -61,7 +62,8 @@
     <required>True</required>
     <title>Link URL 1</title>
   </field>
-  <field name="icon2" type="zope.schema.TextLine">
+  <field name="icon2" type="zope.schema.TextLine"
+    form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget">
     <description/>
     <required>True</required>
     <title>Icon 2</title>
