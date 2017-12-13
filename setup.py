@@ -48,7 +48,7 @@ setup(
         'collective.themefragments',
         'medialog.controlpanel',
         'plone.app.mosaic',
-        'medialog.iconpicker>=0.6.3',
+        'medialog.iconpicker>=0.6.3.1',
         'webcouturier.dropdownmenu',
         'plone.tiles>=2.0.0b3',
         'plone.jsonserializer>=0.9.5',
