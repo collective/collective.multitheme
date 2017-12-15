@@ -1,8 +1,3 @@
-/* @override 
-	http://xweb14d.plana.dk:8081/Plone/uidemo/++theme++multitheme/css/fullpage.css
-	http://xweb14d.plana.dk:8081/Plone/fragments/portlets-fragment/++theme++multitheme/css/fullpage.css
-*/
-
 #content div.mosaic-grid-row.mosaic-grid-row-fullwidth {
 	padding-left:  0;
 	padding-right: 0;
@@ -26,7 +21,7 @@
 	border-collapse: collapse;
 }
 
-.template-edit.mosaic-grid-row-fullwidth:before {
+.template-edit .mosaic-grid-row-fullwidth:before {
 	content: ">";
 	position: relative;
 	left:  -1.8em;
@@ -38,12 +33,3 @@
 	color:  white;
 	border-radius: 5px 0 0 5px;
 }
-
-.template-edit.mosaic-enabled aside#portal-column-one {
-	display: none;
-}
- 
-.template-edit.mosaic-enabled aside#portal-column-two {
-	display: none;
-}
- 
