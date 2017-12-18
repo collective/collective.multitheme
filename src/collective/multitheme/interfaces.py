@@ -62,6 +62,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
     load_css = schema.Bool(
             title=_(u"Load CSS? Put it in your theme and disable it here"),
             required = False,
+            default=True,
     )
 
     color1 = schema.TextLine(
