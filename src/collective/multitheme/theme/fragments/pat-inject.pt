@@ -1,4 +1,4 @@
-<section tal:define="title item/Title; my_id view/id; item view/load_item"
+<section tal:define="my_id view/id; item view/load_item; title item/Title;"
   class="pat-inject"
   id="fragment-${my_id}"
   data-anchor="anchor-${title}"
