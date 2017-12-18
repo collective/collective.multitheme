@@ -31,6 +31,7 @@
 		<value key="color2">234561</value>
 		<value key="color3">345612</value>
 		<value key="fullwidth">0</value>
+		<value key="load_css">1</value>
 	</records>
 
  <record name="plone.app.mosaic.default_available_actions">

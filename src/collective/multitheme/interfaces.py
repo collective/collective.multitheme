@@ -29,6 +29,7 @@ class ICollectiveMultiThemeSettings(form.Schema):
             'style',
             'rules',
             'fullwidth',
+            'load_css',
             'color1',
             'color2',
             'color3']
@@ -55,6 +56,11 @@ class ICollectiveMultiThemeSettings(form.Schema):
 
     fullwidth = schema.Bool(
             title=_(u"Mosaic Full width?"),
+            required = False,
+    )
+
+    load_css = schema.Bool(
+            title=_(u"Load CSS? Put it in your theme and disable it here"),
             required = False,
     )
 
