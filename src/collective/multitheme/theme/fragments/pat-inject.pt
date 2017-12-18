@@ -1,6 +1,6 @@
-<section class="pat-inject"
-  tal:define="title item/Title; my_id view/id"
-  id="fragment-${my_id}" tal:define="item view/load_item"
+<section tal:define="title item/Title; my_id view/id; item view/load_item"
+  class="pat-inject"
+  id="fragment-${my_id}"
   data-anchor="anchor-${title}"
   title="${title}">
   <div id="pat-target-${my_id}">
