@@ -45,6 +45,7 @@
         });
   });
 </script>
-<link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css">
-
+<tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+    <link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css" tal:condition="load_css">
+</tal:define>
 </section>

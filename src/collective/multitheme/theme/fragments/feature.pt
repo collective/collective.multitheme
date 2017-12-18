@@ -3,4 +3,6 @@
 	<h2 class="${view/data/color1}">${view/data/title}</h2>
 	<p class="${view/data/color2}">${view/data/description}</p>
 </div>
- <link rel="stylesheet" href="++theme++multitheme/css/feature.css">
+<tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+		<link rel="stylesheet" href="++theme++multitheme/css/feature.css" tal:condition="load_css">
+</tal:define>

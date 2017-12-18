@@ -1,5 +1,5 @@
 <section tal:define="color1 view/data/color1; color2 view/data/color2; date view/data/countdown_date; css_file view/data/css_file"
-    class="countdown ${color1}" id="fragment-${view/id}"> 
+    class="countdown ${color1}" id="fragment-${view/id}">
     <h3 class="${color2}">${view/data/promotion_text}</h3>
     <h1 id="clock" class="${color2}"></h1>
     <div class="legend">
@@ -19,5 +19,7 @@
         });
       });
     </script>
-    <link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css">
+    <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+        <link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css" tal:condition="load_css">
+    </tal:define>
 </section>

@@ -14,7 +14,10 @@
         </tal:define>
       </tal:image>
     </div>
-    <link rel="stylesheet" href="++theme++multitheme/css/masonary.css">
+    <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+        <link rel="stylesheet" href="++theme++multitheme/css/masonary.css" tal:condition="load_css">
+    </tal:define>
+
     <script>require([
       'jquery',
       'pat-base',

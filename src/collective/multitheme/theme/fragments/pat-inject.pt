@@ -1,9 +1,10 @@
 <section class="pat-inject"
-  id="fragment-${view/id}" tal:define="item view/load_item"
+  tal:define="title item/Title; id view/id"
+  id="fragment-${id}" tal:define="item view/load_item"
   data-anchor="anchor-${title}"
-  title="${item/Title}">
-  <div id="pat-target-${view/id}">
+  title="${title}">
+  <div id="pat-target-${id}">
     <a href="${view/item_url}"
-      class="pat-inject" data-pat-inject="target: #pat-target-${view/id}; trigger: autoload; source: ${view/data/load_div}">Loading…</a>
+      class="pat-inject" data-pat-inject="target: #pat-target-${id}; trigger: autoload; source: ${view/data/load_div}">Loading…</a>
   </div>
 </section>

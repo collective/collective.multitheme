@@ -1,7 +1,8 @@
 <section id="fragment-testimonials"
          class="testimonial ${view/data/color1}"
          tal:define="folder_url nocall:request/form/folder_url|None;
-         title context/?folder_url/Title|None"
+            title context/?folder_url/Title|None;
+            load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or ''"
          data-anchor="anchor-${title}"
          title="${title}">
  	<div class="container" tal:condition="folder_url">
@@ -36,5 +37,5 @@
 			</div>
 	</div>
 </div>
-<link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css">
+<link rel="stylesheet" href="++theme++multitheme/css/${view/data/css_file}.css" tal:condition="load_css">
 </section>

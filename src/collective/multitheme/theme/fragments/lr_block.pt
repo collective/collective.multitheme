@@ -1,14 +1,15 @@
 <section id="fragment-${view/id}"
-                tal:define="scale view/data/image_size;
+              tal:define="scale view/data/image_size;
                 title view/data/title | nothing;
                 image view/one_image;
                 image_url image/getURL;
                 css_class view/data/css_class;
                 color1 view/data/color1;
-                color2 view/data/color2"
-                class="lrblock ${color1}"
-                data-anchor="anchor-${title}"
-                title="${title}">
+                color2 view/data/color2;
+                load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or ''"
+              class="lrblock ${color1}"
+              data-anchor="anchor-${title}"
+              title="${title}">
  <div class="container flex ${css_class}">
     <div class="half bodytext ${color2}">
         <h2 class="${color2}">${title}</h2>
@@ -24,5 +25,5 @@
                      src="${image_url}/@@images/image/${scale}" />
     </div>
  </div>
- <link rel="stylesheet" href="++theme++multitheme/css/lr_block.css">
+ <link rel="stylesheet" href="++theme++multitheme/css/lr_block.css" tal:condition="load_css">
 </section>

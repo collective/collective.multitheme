@@ -5,5 +5,7 @@
              <a class="${view/data/color2}" href="${link_url}">${view/data/buttontext}</a>
            </button>
        </div>
-  <link rel="stylesheet" href="++theme++multitheme/css/button.css">
+       <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+      	 		<link rel="stylesheet" href="++theme++multitheme/css/button.css" tal:condition="load_css">
+     	</tal:define>
 </section>

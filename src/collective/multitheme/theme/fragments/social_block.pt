@@ -23,5 +23,7 @@
                </div>
            </div>
    </div>
-	 <link rel="stylesheet" href="++theme++multitheme/css/social_block.css">
+	 <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+	 		<link rel="stylesheet" href="++theme++multitheme/css/social_block.css" tal:condition="load_css">
+		</tal:define>
 </section>

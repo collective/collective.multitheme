@@ -36,6 +36,10 @@
         pointer-events: none; margin-left: 0px; margin-top: -492.36328125px; visibility: visible; transform: translate3d(0px, 174.60000000000002px, 0px);
         background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></div>
 </div>
- <link rel="stylesheet" href="++theme++multitheme/css/parallax1.css">
+
+<tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+    <link rel="stylesheet" href="++theme++multitheme/css/parallax1.css" tal:condition="load_css">
+</tal:define>
+ 
 
 </section>

@@ -14,6 +14,8 @@
             </button>
         </div>
 		   </tal:repeat>
-      <link rel="stylesheet" href="++theme++multitheme/css/folder_contentload.css">
+       <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+           <link rel="stylesheet" href="++theme++multitheme/css/folder_contentload.css" tal:condition="load_css">
+       </tal:define>
 	</tal:conditon>
 </section>
