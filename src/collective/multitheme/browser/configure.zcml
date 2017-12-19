@@ -7,7 +7,7 @@
 
     <browser:page
     	for="*"
-    	name="visual_sitemap"
+    	name="visual-sitemap"
     	class=".visual_sitemap.VisualSitemapView"
     	template="visual_sitemap.pt"
     	permission="zope.Public"
@@ -17,7 +17,7 @@
 
     <browser:page
     	for="*"
-    	name="menu_sitemap"
+    	name="menu-sitemap"
     	class=".menu_sitemap.SitemapView"
     	template="menu_sitemap.pt"
     	permission="zope.Public"
@@ -27,7 +27,7 @@
 
     <browser:page
     	for="*"
-    	name="mobile_sitemap"
+    	name="mobile-sitemap"
     	class=".menu_sitemap.SitemapView"
     	template="mobile_sitemap.pt"
     	permission="zope.Public"
@@ -36,7 +36,7 @@
 
     <browser:page
     	for="*"
-    	name="left_sitemap"
+    	name="left-sitemap"
     	class=".left_sitemap.SitemapView"
     	template="left_sitemap.pt"
     	permission="zope.Public"
@@ -44,7 +44,7 @@
     	/>
 
    <!-- Webcoutier globalnav as a provider -->
-  <adapter name="globalnav"
+  <adapter name="m-globalnav"
     for="zope.publisher.interfaces.browser.IDefaultBrowserLayer *"
     factory=".dropdown.DropdownMenuViewlet"
     provides="zope.contentprovider.interfaces.IContentProvider"
