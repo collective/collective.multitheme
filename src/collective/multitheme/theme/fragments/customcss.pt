@@ -1,3 +1,4 @@
+<style id="customcss">
 <tal:define
   tal:define="color1 python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color1']);
   color2 python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color2']);
@@ -9,3 +10,4 @@
 .custtom-background2 {background-color: #${color2} !important}
 .custtom-background3 {background-color: #${color3} !important}
 </tal:define>
+</style>

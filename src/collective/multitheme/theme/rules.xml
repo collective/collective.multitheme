@@ -29,4 +29,6 @@
     </after>
    </rules>
 
+  <replace css:theme="#customcss" css:content="#customcss"  href="/@@theme-fragment/customcss"  />
+
 </rules>
