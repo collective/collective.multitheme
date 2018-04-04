@@ -1,8 +1,8 @@
 <style id="customcss">
 <tal:define
   tal:define="color1 python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color1']);
-  color2 python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color2']);
-  color3  python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color3'])">
+              color2 python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color2']);
+              color3 python: str(context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.color3'])">
 .custom-color1 {color: #${color1} !important}
 .custom-color2 {color: #${color2} !important}
 .custom-color3 {color: #${color3} !important}
