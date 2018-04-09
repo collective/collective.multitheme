@@ -1,5 +1,52 @@
 /* theme.less file that will be compiled */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokSds18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCds18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');
+}
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -577,6 +624,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .container {
@@ -585,12 +633,17 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1570px;
   }
 }
 .container-fluid {
@@ -1263,7 +1316,7 @@ pre code {
 }
 @media (min-width: 992px) {
   #edit-zone.plone-toolbar-top .plone-toolbar-container {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
@@ -2367,6 +2420,10 @@ fieldset[disabled] .link-parent.active {
   position: relative;
   padding: 0;
   font-weight: 300;
+  /* wanna hide the label "next ... items"? */
+  /* .label {
+      display: none;
+    } */
 }
 .pagination li > a,
 .pagination li > span {
@@ -2378,14 +2435,20 @@ fieldset[disabled] .link-parent.active {
   border: 1px solid #e5e5e5 !important;
   margin-left: -1px;
 }
-.pagination li:first-child > a {
+.pagination li.previous > a {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-.pagination li:last-child > a {
+.pagination li.previous .arrow:before {
+  content: '\3c';
+}
+.pagination li.next > a {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+}
+.pagination li.next .arrow:after {
+  content: '\3e';
 }
 .pagination li > a:hover,
 .pagination li > a:focus {
@@ -3556,10 +3619,11 @@ a.link-category:focus {
   outline: none;
   background-clip: padding-box;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
@@ -3570,12 +3634,17 @@ a.link-category:focus {
 }
 @media (min-width: 992px) {
   .plone-modal .plone-modal-content {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .plone-modal .plone-modal-content {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .plone-modal .plone-modal-content {
+    width: 1570px;
   }
 }
 .plone-modal.fade {
@@ -3831,7 +3900,7 @@ ul.picker__list {
   margin-left: 3px;
   margin-top: 60px;
   padding-top: 20px;
-  position: absolute;
+  position: relative;
   white-space: nowrap;
   z-index: 2;
 }
@@ -4061,6 +4130,10 @@ ul.picker__list {
 #content {
   margin-bottom: 48px;
 }
+#content-core img {
+  max-width: 100%;
+  height: auto;
+}
 #content-core a {
   border-bottom: 1px solid #cccccc;
 }
@@ -4085,71 +4158,44 @@ ul.picker__list {
 a.plone-toolbar-logo {
   color: #fff;
 }
-.container,
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-@media (min-width: 768px) {
-  .plone-toolbar-top-default .container {
-    width: 750px;
-  }
-}
 @media (min-width: 828px) {
   .plone-toolbar-left-default .container {
-    width: 750px;
+    width: 690px;
   }
 }
 @media (min-width: 888px) {
   .plone-toolbar-left-expanded .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .plone-toolbar-top-default .container {
-    width: 970px;
+    width: 630px;
   }
 }
 @media (min-width: 1052px) {
   .plone-toolbar-left-default .container {
-    width: 970px;
+    width: 930px;
   }
 }
 @media (min-width: 1112px) {
   .plone-toolbar-left-expanded .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .plone-toolbar-top-default .container {
-    width: 1170px;
+    width: 870px;
   }
 }
 @media (min-width: 1260px) {
   .plone-toolbar-left-default .container {
-    width: 1170px;
+    width: 1110px;
   }
 }
 @media (min-width: 1320px) {
   .plone-toolbar-left-expanded .container {
-    width: 1170px;
+    width: 1050px;
+  }
+}
+@media (min-width: 1660px) {
+  .plone-toolbar-left-default .container {
+    width: 1510px;
+  }
+}
+@media (min-width: 1720px) {
+  .plone-toolbar-left-expanded .container {
+    width: 1450px;
   }
 }
 #portal-footer-wrapper {
@@ -4676,6 +4722,10 @@ body.template-logged_out #content-core .portletFooter {
   background: #fcfcfd;
   margin: 6px 12px;
 }
+.image-product img {
+  max-width: 100%;
+  height: auto;
+}
 .newsImageContainer {
   float: right;
   margin: 0 0 6px 6px;
@@ -4864,10 +4914,11 @@ div.outer-wrapper {
   margin-bottom: 0;
 }
 .mosaic-grid-row-fullwidth {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .mosaic-grid-row-fullwidth {
@@ -4876,12 +4927,17 @@ div.outer-wrapper {
 }
 @media (min-width: 992px) {
   .mosaic-grid-row-fullwidth {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .mosaic-grid-row-fullwidth {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .mosaic-grid-row-fullwidth {
+    width: 1570px;
   }
 }
 @media (max-width: 998px) {

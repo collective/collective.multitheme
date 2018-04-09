@@ -1,7 +1,53 @@
 /* theme.less file that will be compiled */
 /* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url(http://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwIYqWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(http://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(http://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwJYtWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Raleway Black'), local('Raleway-Black'), url(http://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwK4vWqZPBQ.ttf) format('truetype');
+}
 /* ==========================================================================
    IMPORT MODULES
    ==========================================================================
@@ -541,6 +587,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .container {
@@ -549,12 +596,17 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1570px;
   }
 }
 .container-fluid {
@@ -1227,7 +1279,7 @@ pre code {
 }
 @media (min-width: 992px) {
   #edit-zone.plone-toolbar-top .plone-toolbar-container {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
@@ -2243,6 +2295,10 @@ fieldset[disabled] .link-parent.active {
   position: relative;
   padding: 0;
   font-weight: 300;
+  /* wanna hide the label "next ... items"? */
+  /* .label {
+      display: none;
+    } */
 }
 .pagination li > a,
 .pagination li > span {
@@ -2254,14 +2310,20 @@ fieldset[disabled] .link-parent.active {
   border: 1px solid #e5e5e5 !important;
   margin-left: -1px;
 }
-.pagination li:first-child > a {
+.pagination li.previous > a {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-.pagination li:last-child > a {
+.pagination li.previous .arrow:before {
+  content: '\3c';
+}
+.pagination li.next > a {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+}
+.pagination li.next .arrow:after {
+  content: '\3e';
 }
 .pagination li > a:hover,
 .pagination li > a:focus {
@@ -3495,10 +3557,11 @@ a.link-category:focus {
   outline: none;
   background-clip: padding-box;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
@@ -3509,12 +3572,17 @@ a.link-category:focus {
 }
 @media (min-width: 992px) {
   .plone-modal .plone-modal-content {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .plone-modal .plone-modal-content {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .plone-modal .plone-modal-content {
+    width: 1570px;
   }
 }
 .plone-modal.fade {
@@ -3770,7 +3838,7 @@ ul.picker__list {
   margin-left: 3px;
   margin-top: 60px;
   padding-top: 20px;
-  position: absolute;
+  position: relative;
   white-space: nowrap;
   z-index: 2;
 }
@@ -4000,6 +4068,10 @@ ul.picker__list {
 #content {
   margin-bottom: 48px;
 }
+#content-core img {
+  max-width: 100%;
+  height: auto;
+}
 #content-core a {
   border-bottom: 1px solid #cccccc;
 }
@@ -4024,71 +4096,44 @@ ul.picker__list {
 a.plone-toolbar-logo {
   color: #fff;
 }
-.container,
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-@media (min-width: 768px) {
-  .plone-toolbar-top-default .container {
-    width: 750px;
-  }
-}
 @media (min-width: 828px) {
   .plone-toolbar-left-default .container {
-    width: 750px;
+    width: 690px;
   }
 }
 @media (min-width: 888px) {
   .plone-toolbar-left-expanded .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .plone-toolbar-top-default .container {
-    width: 970px;
+    width: 630px;
   }
 }
 @media (min-width: 1052px) {
   .plone-toolbar-left-default .container {
-    width: 970px;
+    width: 930px;
   }
 }
 @media (min-width: 1112px) {
   .plone-toolbar-left-expanded .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .plone-toolbar-top-default .container {
-    width: 1170px;
+    width: 870px;
   }
 }
 @media (min-width: 1260px) {
   .plone-toolbar-left-default .container {
-    width: 1170px;
+    width: 1110px;
   }
 }
 @media (min-width: 1320px) {
   .plone-toolbar-left-expanded .container {
-    width: 1170px;
+    width: 1050px;
+  }
+}
+@media (min-width: 1660px) {
+  .plone-toolbar-left-default .container {
+    width: 1510px;
+  }
+}
+@media (min-width: 1720px) {
+  .plone-toolbar-left-expanded .container {
+    width: 1450px;
   }
 }
 #portal-footer-wrapper {
@@ -5278,10 +5323,11 @@ div.outer-wrapper {
   margin-bottom: 0;
 }
 .mosaic-grid-row-fullwidth {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .mosaic-grid-row-fullwidth {
@@ -5290,12 +5336,17 @@ div.outer-wrapper {
 }
 @media (min-width: 992px) {
   .mosaic-grid-row-fullwidth {
-    width: 970px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .mosaic-grid-row-fullwidth {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .mosaic-grid-row-fullwidth {
+    width: 1570px;
   }
 }
 @media (max-width: 998px) {
