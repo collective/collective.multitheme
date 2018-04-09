@@ -38,7 +38,7 @@
 
   <!-- alternative globalnav menus, not all working yet -->
   <!-- css:content-children="#portal-left-sitemap" href="@@/left_sitemap" /-->
-  <replace css:theme-children="#portal-mobile-sitemap" css:content-children="#portal-mobile-sitemap" href="/@@mobile_sitemap" />
+  <replace css:theme="#portal-mobile-sitemap" css:content="#portal-mobile-sitemap" href="/@@mobile-sitemap" />
   <drop css:content-children="#portal-searchbox" />
   <drop css:content-children="#portal-anontools" />
   <!--  css:content="#portal-sitemap"     href="/@@menu_sitemap" /-->
