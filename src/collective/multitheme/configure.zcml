@@ -6,9 +6,7 @@
     i18n_domain="collective.multitheme">
 
   <i18n:registerTranslations directory="locales" />
-
   <includeDependencies package="." />
-
   <include package=".browser" />
 
   <plone:static
@@ -17,22 +15,22 @@
       name="multitheme"
       />
 
-  <genericsetup:registerProfile
-      name="default"
-      title="Multitheme"
-      directory="profiles/default"
-      description="Installs the Multi Theme package (collective.multitheme)."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      />
 
   <genericsetup:registerProfile
       name="democontent"
       title="Multitheme Demo Content"
       directory="profiles/democontent"
-      description="Installs demo content for Multi Theme."
+      description="Installs Multi Theme with demo content."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
+      />
+      
+  <genericsetup:registerProfile
+      name="default"
+      title="Multitheme"
+      directory="profiles/default"
+      description="A configurable theme with themefragments"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
   <genericsetup:registerProfile
@@ -44,8 +42,5 @@
       post_handler=".setuphandlers.uninstall"
       />
 
-  <utility
-      factory=".setuphandlers.HiddenProfiles"
-      name="collective.multitheme-hiddenprofiles" />
 
 </configure>

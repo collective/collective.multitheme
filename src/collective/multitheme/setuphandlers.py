@@ -1,58 +1,28 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
-
-
-@implementer(INonInstallable)
-class HiddenProfiles(object):
-
-    def getNonInstallableProfiles(self):
-        """Hide uninstall profile from site-creation and quickinstaller"""
-        return [
-            'collective.multitheme:uninstall',
-        ]
-
-
-
 from plone import api
 import os
 from plone.app.textfield.value import RichTextValue
 
+#@implementer(INonInstallable)
+#class HiddenProfiles(object):
+#
+#    def getNonInstallableProfiles(self):
+#        """Hide uninstall profile from site-creation and quickinstaller"""
+#        return [
+#            'collective.multitheme:uninstall',
+#        ]
 
 def post_install(context):
-    """enable script"""
-    # Add content
+    """add content script"""
     if context.readDataFile('multitheme_content.txt') is None:
         return
-    portal = api.portal.get()
-    _create_frontpage(portal)
-
-
-def _create_frontpage(portal):
-
-    if not portal.get('forside', False):
-        forside = api.content.create(
-            type='Document',
-            container=portal,
-            title=u'MultiTheme',
-            description=u'A Plone 5 theme',
-            id='forside',
-            text = RichTextValue(
-            	'<p>You should install this theme from the control panel</p>',
-            	'text/html',
-            	'text/x-html-safe'
-            )
-        )
-
-    	api.content.transition(obj=forside, transition='publish')
-    	portal.default_page = "forside"
-
-
-def post_install(context):
-    """Post install script"""
-    # Do something during the installation of this package
+        
+    #Add demo content
     portal = api.portal.get()
     _create_content(portal)
+
 
 
 def _create_content(portal):
@@ -242,8 +212,6 @@ def load_image(slider):
         data=open(filename, 'r').read(),
         filename=u'slide-{0}.jpg'.format(slider)
     )
-
-
 
 
 def uninstall(context):

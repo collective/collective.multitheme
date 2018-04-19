@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.multitheme',
-    version='1.0a1',
+    version='1.0',
     description="A (Multi) Theme for Plone 5",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -23,6 +23,7 @@ setup(
         "Framework :: Plone",
         "Framework :: Plone :: Theme",
         "Framework :: Plone :: 5.0",
+        "Framework :: Plone :: 5.1",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Operating System :: OS Independent",
