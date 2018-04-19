@@ -4912,6 +4912,9 @@ nav.autotoc-nav a {
 .portaltype-plone-site .autotabs .autotoc-nav a {
   background: #d2edf8;
 }
+.image-product figcaption {
+  background: none;
+}
 body.template-login_form #content-core,
 body.template-logged_out #content-core {
   background: #FFF;
