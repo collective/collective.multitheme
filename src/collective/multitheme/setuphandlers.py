@@ -54,11 +54,9 @@ def _create_frontpage(portal):
 
             <h2>Changing the theme colors</h2>
             <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/DF8d7DNGG4g?rel=0&amp;showinfo=0"
+                src="https://www.youtube.com/embed/FinvAN2IVcI?rel=0&amp;controls=0&amp;showinfo=0"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
             </iframe>
-
-
 
             <h2>Using the theme fragments</h2>
             <ul>
