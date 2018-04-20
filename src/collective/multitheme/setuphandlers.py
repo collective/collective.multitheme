@@ -7,17 +7,13 @@ from plone.app.textfield.value import RichTextValue
 
 def post_install(context):
     """add front-page script"""
-
-
-    #Add demo content
+    #Add front page
     portal = api.portal.get()
     _create_frontpage(portal)
 
 
 def install_demo_content(context):
     """add content script"""
-
-
     #Add demo content
     portal = api.portal.get()
     _create_content(portal)
@@ -32,11 +28,12 @@ def _create_frontpage(portal):
             <h2>First steps</h2>
             <p><i>To set up your site, you might want to do the following:</i></p>
             <ul>
+            <li>Reload the page to show the videos</li>
             <li><a href="%(portal_url)s/prefs_install_products_form">Install the theme if you have not done it already</a></li>
             <li><a href="%(portal_url)s/@@mail-controlpanel">Configure E-mail</a></li>
             <li><a href="%(portal_url)s/@@@@site-controlpanel">Configure Site and thumb settings</a><br/>
                 Note: You can aloschange the logo</li>
-            <li><a href="%(portal_url)s/@@install-demo-content">Install demo content to play around with …</a></li>
+            <li><a href="%(portal_url)s/@@install-demo-content">Install demo content to play around with …</a>.</li>
             </ul>
             <h2>Configuring the theme</h2>
             <p>Colors and layout can be configured, so do th following:</p>
@@ -46,24 +43,31 @@ def _create_frontpage(portal):
             <li><a href="%(portal_url)s/test_rendering">See a test rendering</a></li>
             <li>Repeat</li>
             </ul>
-            <iframe width="560" height="315"
+            <p><iframe width="840" height="473"
                 src="https://www.youtube.com/embed/DF8d7DNGG4g?rel=0&amp;showinfo=0"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-            </iframe>
+                </iframe>
+            </p>
 
-
+            <p> </p>
             <h2>Changing the theme colors</h2>
-            <iframe width="560" height="315"
+            <p><iframe width="840" height="473"
                 src="https://www.youtube.com/embed/FinvAN2IVcI?rel=0&amp;controls=0&amp;showinfo=0"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-            </iframe>
-
+                </iframe>
+            </p>
+            <p> </p>
             <h2>Using the theme fragments</h2>
             <ul>
-            <li>Set the view on a folder to 'Mosaic Layout',
-                <a href="%(portal_url)s/services/select_default_view">for example here</a></li>
+            <li>Set the view on a folder to 'Mosaic Layout'</li>
             <li>Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</li>
+            <li>If you are lucky, you can see most of the fragments here: http://xweb14d.plana.dk:8081/Plone/fragments</li>
             </ul>
+                <p><iframe width="840" height="473"
+                src="https://www.youtube.com/embed/C2NDUJK7vZ0?rel=0&amp;controls=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+            </p>
             <p> </p>
             <p> </p>""" % {'portal_url': portal_url}
 
