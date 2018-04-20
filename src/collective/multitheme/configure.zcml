@@ -22,15 +22,16 @@
       directory="profiles/democontent"
       description="Installs Multi Theme with demo content."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
+      post_handler=".setuphandlers.install_demo_content"
       />
-      
+
   <genericsetup:registerProfile
       name="default"
       title="Multitheme"
       directory="profiles/default"
       description="A configurable theme with themefragments"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile

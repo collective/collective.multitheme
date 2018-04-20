@@ -5,42 +5,69 @@ from plone import api
 import os
 from plone.app.textfield.value import RichTextValue
 
-#@implementer(INonInstallable)
-#class HiddenProfiles(object):
-#
-#    def getNonInstallableProfiles(self):
-#        """Hide uninstall profile from site-creation and quickinstaller"""
-#        return [
-#            'collective.multitheme:uninstall',
-#        ]
-
 def post_install(context):
+    """add front-page script"""
+
+
+    #Add demo content
+    portal = api.portal.get()
+    _create_frontpage(portal)
+
+
+def install_demo_content(context):
     """add content script"""
-    if context.readDataFile('multitheme_content.txt') is None:
-        return
-        
+
+
     #Add demo content
     portal = api.portal.get()
     _create_content(portal)
 
-
-
-def _create_content(portal):
+def _create_frontpage(portal):
 
     if not portal.get('forside', False):
         portal_url = api.portal.get().absolute_url()
         body = """<p> </p>
-        <p>This is a theming product for Plone 5</p>
-        <p> </p>
-        <p>1) <a href="%s/prefs_install_products_form">Install the theme</a></p>
-        <p>2) <a href="%s/@@mail-controlpanel">Configure E-mail</a></p>
-        <p>3) <a href="%s/@@medialog_controlpanel">Configure Settings in Site Control Panel</a></p>
-        <p>4) <a href="%s/test_rendering">See a test rendering</a></p>
-        <p>5) Repeat from 3)
-        <p>6) Set the view on a folder to 'Mosaic Layout', <a href="%s/services/select_default_view">for example here</a></p>
-        <p>7) Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</p>
-        <p> </p>
-        <p> </p>""" % (portal_url, portal_url, portal_url, portal_url, portal_url)
+            <p>This is a theming product for Plone 5</p>
+
+            <h2>First steps</h2>
+            <p><i>To set up your site, you might want to do the following:</i></p>
+            <ul>
+            <li><a href="%(portal_url)s/prefs_install_products_form">Install the theme if you have not done it already</a></li>
+            <li><a href="%(portal_url)s/@@mail-controlpanel">Configure E-mail</a></li>
+            <li><a href="%(portal_url)s/@@@@site-controlpanel">Configure Site and thumb settings</a><br/>
+                Note: You can aloschange the logo</li>
+            <li><a href="%(portal_url)s/@@install-demo-content">Install demo content to play around with …</a></li>
+            </ul>
+            <h2>Configuring the theme</h2>
+            <p>Colors and layout can be configured, so do th following:</p>
+            <ul>
+            <li><a href="%(portal_url)s/@@medialog_controlpanel">Configure Settings in (Medialog) Site Control Panel</a>-.
+            <br/>Note: Some layouts will not be finishde before I get some help… </li>
+            <li><a href="%(portal_url)s/test_rendering">See a test rendering</a></li>
+            <li>Repeat</li>
+            </ul>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/DF8d7DNGG4g?rel=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+
+
+            <h2>Changing the theme colors</h2>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/DF8d7DNGG4g?rel=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+
+
+
+            <h2>Using the theme fragments</h2>
+            <ul>
+            <li>Set the view on a folder to 'Mosaic Layout',
+                <a href="%(portal_url)s/services/select_default_view">for example here</a></li>
+            <li>Edit that page, Customize the layout by adding Themefragments from [Insert] Themefragments</li>
+            </ul>
+            <p> </p>
+            <p> </p>""" % {'portal_url': portal_url}
 
         forside = api.content.create(
             type='Document',
@@ -58,6 +85,8 @@ def _create_content(portal):
     	api.content.transition(obj=forside, transition='publish')
     	portal.default_page = "forside"
 
+
+def _create_content(portal):
 
     if not portal.get('slider', False):
         slider = api.content.create(

@@ -4,6 +4,12 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.multitheme">
 
+    <browser:page
+    	for="*"
+    	name="install-demo-content"
+    	class=".install_demo_content.InstallDemoContent"
+    	permission="cmf.ManagePortal"
+    	/>
 
     <browser:page
     	for="*"
