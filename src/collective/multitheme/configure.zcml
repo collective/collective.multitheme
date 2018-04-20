@@ -15,16 +15,6 @@
       name="multitheme"
       />
 
-
-  <genericsetup:registerProfile
-      name="democontent"
-      title="Multitheme Demo Content"
-      directory="profiles/democontent"
-      description="Installs Multi Theme with demo content."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.install_demo_content"
-      />
-
   <genericsetup:registerProfile
       name="default"
       title="Multitheme"

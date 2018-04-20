@@ -1,15 +1,18 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.multitheme">
 
-    <browser:page
-    	for="*"
-    	name="install-demo-content"
-    	class=".install_demo_content.InstallDemoContent"
-    	permission="cmf.ManagePortal"
-    	/>
+    <genericsetup:registerProfile
+        name="democontent"
+        title="Multitheme Demo Content"
+        directory="profiles/democontent"
+        description="Installs Multi Theme with demo content."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        post_handler="collective.multitheme.setuphandlers.install_demo_content"
+        />
 
     <browser:page
     	for="*"

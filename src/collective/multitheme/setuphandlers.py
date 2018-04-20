@@ -33,7 +33,7 @@ def _create_frontpage(portal):
             <li><a href="%(portal_url)s/@@mail-controlpanel">Configure E-mail</a></li>
             <li><a href="%(portal_url)s/@@@@site-controlpanel">Configure Site and thumb settings</a><br/>
                 Note: You can aloschange the logo</li>
-            <li><a href="%(portal_url)s/@@install-demo-content">Install demo content to play around with …</a>.</li>
+            <li><a href="%(portal_url)s/prefs_install_products_form">Install demo content to play around with (chose Multitheme Demo Content profile)</a>.</li>
             </ul>
             <h2>Configuring the theme</h2>
             <p>Colors and layout can be configured, so do th following:</p>
