@@ -9,7 +9,7 @@
 <schema>
   <field name="folder_url" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Path to folder</title>
     <default>services</default>
   </field>
