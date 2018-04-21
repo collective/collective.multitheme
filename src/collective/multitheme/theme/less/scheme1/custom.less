@@ -33,20 +33,34 @@ div.outer-wrapper {
 	margin-bottom: 15px;
 }
 
+option[value=plone-link],
 .plone-link { color: @plone-link-color !important}
+
+option[value=plone-link-2],
 .plone-link-2 { color: @plone-link-secondary !important}
+
+option[value=plone-link-3],
 .plone-link-3 { color: @plone-link-tertiary !important }
+
+option[value=plone-link-opposite],
 .plone-link-opposite { color: @plone-link-opposite  !important}
 
+option[value=plone-background],
 .plone-background { background: @plone-link-color  !important}
+
+option[value=plone-background-2],
 .plone-background-2 { background: @plone-link-secondary  !important}
+
+option[value=plone-background-3],
 .plone-background-3 { background: @plone-link-tertiary  !important}
+
+option[value=plone-background-opposite],
 .plone-background-opposite { background: @plone-link-opposite  !important}
 
 
 .black-background { background-color: #000  !important}
 .white-background { background-color: #FFF  !important}
-.grey-background { background-color: #DDD  !important}
+option[value=grey-background], .grey-background { background-color: #DDD  !important}
 
 .black { color: #000  !important}
 .white { color: #FFF  !important}
@@ -61,15 +75,7 @@ div.outer-wrapper {
 }
 
 :root {
-  --plone-link-color : @plone-link-color ;
-}
-
-:root {
   --plone-link-tertiary : @plone-link-tertiary ;
-}
-
-:root {
-  --plone-link-opposite : @plone-link-opposite ;
 }
 
 .plone-navbar-nav > li > a,
