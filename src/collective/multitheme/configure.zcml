@@ -7,6 +7,7 @@
 
   <i18n:registerTranslations directory="locales" />
   <includeDependencies package="." />
+  <include package=".widgets" />
   <include package=".browser" />
 
   <plone:static

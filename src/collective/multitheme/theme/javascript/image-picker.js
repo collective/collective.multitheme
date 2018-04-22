@@ -226,7 +226,7 @@
     };
 
     ImagePickerOption.prototype.has_image = function() {
-      return this.value != null;
+      return this.option.data("img-src") != null;
     };
 
     ImagePickerOption.prototype.is_blank = function() {
@@ -278,11 +278,10 @@
       this.node = jQuery("<li/>");
       if (this.option.data("font_awesome")) {
         image = jQuery("<i>");
-        image.attr("class", "fa-fw " + this.value);
+        image.attr("class", "fa-fw " + this.option.data("img-src"));
       } else {
         image = jQuery("<img class='image_picker_image'/>");
-        $image_source = '++theme++multitheme/tiles_previews/' + this.value + 'png';
-        image.attr("src", $image_source);
+        image.attr("src", this.option.data("img-src"));
       }
       thumbnail = jQuery("<div class='thumbnail'>");
       imgClass = this.option.data("img-class");
