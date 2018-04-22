@@ -20,6 +20,8 @@
 
   <after theme-children="/html/head" >
   		<link href="++theme++multitheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
+  		<script src="++theme++multitheme/javascript/imagepicker.js"> </script>
+  		<script>$("#collective-themefragments-fragment-fragment").imagepicker()</script>
       <!--link href="/custom_styles.css" rel="stylesheet"/-->
   </after>
 
@@ -30,5 +32,6 @@
    </rules>
 
   <replace css:theme="#customcss" css:content="#customcss"  href="/@@theme-fragment/customcss"  />
+  
 
 </rules>
