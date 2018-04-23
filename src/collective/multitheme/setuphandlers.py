@@ -69,6 +69,14 @@ def _create_frontpage(portal):
                 </iframe>
             </p>
             <p> </p>
+            <h2>Customizing the tiles</h2>
+            <ul>
+                <li>There is a new visual tile selector. <br/>
+                The images nees to have the same name as the fragment, but ending with '.png' instead of '.pt'</li>
+                <li>In manifest.cfg you can customize the names of the tiles</li>
+                <li>If you name the fragment 'Hidden: somefragent name' it will not show up in Mosaic</li>
+            </ul>
+            <p> </p>
             <p> </p>""" % {'portal_url': portal_url}
 
         forside = api.content.create(
