@@ -25,11 +25,9 @@
       '++theme++multitheme/javascript/imagesloaded.pkgd.min'
 			], function(Base) {
 				'use strict';
-
 				var Masonry = Base.extend({
 					name: 'masonry',
 					trigger: '.wall-of-images',
-
 					init: function() {
 						var self = this;
 						self.$el.imagesLoaded(function() {
