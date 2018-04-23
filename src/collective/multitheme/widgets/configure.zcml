@@ -2,18 +2,13 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:z3c="http://namespaces.zope.org/z3c"
 	i18n_domain="collective.multitheme">
-	
-<include package="collective.themefragments"/>
+
 
   <!--  Input (edit) widget  -->
   <z3c:widgetTemplate
       mode="input"
-      for="collective.themefragments.tiles.IFragmentTile"
       widget="z3c.form.browser.select.SelectWidget"
       layer="z3c.form.interfaces.IFormLayer"
       template="imagepicker_input.pt" />
-      
+
 </configure>
-
-
-
