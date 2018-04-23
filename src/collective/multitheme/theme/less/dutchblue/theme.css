@@ -1,35 +1,6 @@
 /* "out": "true" */
 /* theme.less file that will be compiled */
-@font-face {
-  font-family: 'Bitter';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Bitter Italic'), local('Bitter-Italic'), url(https://fonts.gstatic.com/s/bitter/v12/rax-HiqOu8IVPmn7erxrJDg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Bitter Regular'), local('Bitter-Regular'), url(https://fonts.gstatic.com/s/bitter/v12/rax8HiqOu8IVPmn7f4xs.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Bitter Bold'), local('Bitter-Bold'), url(https://fonts.gstatic.com/s/bitter/v12/rax_HiqOu8IVPmnzxKl8Axha.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Encode Sans';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Encode Sans ExtraLight'), local('EncodeSans-ExtraLight'), url(https://fonts.gstatic.com/s/encodesans/v2/LDIrapOFNxEwR-Bd1O9uYPtkWPLJs7o.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Encode Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Encode Sans Regular'), local('EncodeSans-Regular'), url(https://fonts.gstatic.com/s/encodesans/v2/LDI2apOFNxEwR-Bd1O9uYPOreeI.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Encode+Sans:200,400');
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -4987,6 +4958,7 @@ option[value=plone-background-opposite],
 .white-background {
   background-color: #FFF !important;
 }
+option[value=grey-background],
 .grey-background {
   background-color: #DDD !important;
 }

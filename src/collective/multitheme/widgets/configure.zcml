@@ -8,7 +8,7 @@
   <z3c:widgetTemplate
       mode="input"
       widget="z3c.form.browser.select.SelectWidget"
-      layer="z3c.form.interfaces.IFormLayer"
+      layer="collective.multitheme.interfaces.ICollectiveMultithemeLayer"
       template="imagepicker_input.pt" />
 
 </configure>

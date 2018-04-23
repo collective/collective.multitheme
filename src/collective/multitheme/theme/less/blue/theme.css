@@ -4910,27 +4910,35 @@ div.outer-wrapper {
   border-top: 50px solid #fafafa;
   margin-bottom: 15px;
 }
+option[value=plone-link],
 .plone-link {
   color: #007bb1 !important;
 }
+option[value=plone-link-2],
 .plone-link-2 {
   color: #7bb100 !important;
 }
+option[value=plone-link-3],
 .plone-link-3 {
   color: #b1007b !important;
 }
+option[value=plone-link-opposite],
 .plone-link-opposite {
   color: #b13600 !important;
 }
+option[value=plone-background],
 .plone-background {
   background: #007bb1 !important;
 }
+option[value=plone-background-2],
 .plone-background-2 {
   background: #7bb100 !important;
 }
+option[value=plone-background-3],
 .plone-background-3 {
   background: #b1007b !important;
 }
+option[value=plone-background-opposite],
 .plone-background-opposite {
   background: #b13600 !important;
 }
@@ -4940,6 +4948,7 @@ div.outer-wrapper {
 .white-background {
   background-color: #FFF !important;
 }
+option[value=grey-background],
 .grey-background {
   background-color: #DDD !important;
 }
@@ -4959,11 +4968,5 @@ div.outer-wrapper {
   --plone-link-secondary: #7bb100;
 }
 :root {
-  --plone-link-color: #007bb1;
-}
-:root {
   --plone-link-tertiary: #b1007b;
-}
-:root {
-  --plone-link-opposite: #b13600;
 }

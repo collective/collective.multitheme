@@ -4910,27 +4910,35 @@ div.outer-wrapper {
   border-top: 50px solid #ffffff;
   margin-bottom: 15px;
 }
+option[value=plone-link],
 .plone-link {
   color: #d20000 !important;
 }
+option[value=plone-link-2],
 .plone-link-2 {
   color: #0000d2 !important;
 }
+option[value=plone-link-3],
 .plone-link-3 {
   color: #00d200 !important;
 }
+option[value=plone-link-opposite],
 .plone-link-opposite {
   color: #00d2d2 !important;
 }
+option[value=plone-background],
 .plone-background {
   background: #d20000 !important;
 }
+option[value=plone-background-2],
 .plone-background-2 {
   background: #0000d2 !important;
 }
+option[value=plone-background-3],
 .plone-background-3 {
   background: #00d200 !important;
 }
+option[value=plone-background-opposite],
 .plone-background-opposite {
   background: #00d2d2 !important;
 }
@@ -4940,6 +4948,7 @@ div.outer-wrapper {
 .white-background {
   background-color: #FFF !important;
 }
+option[value=grey-background],
 .grey-background {
   background-color: #DDD !important;
 }
@@ -4959,11 +4968,5 @@ div.outer-wrapper {
   --plone-link-secondary: #0000d2;
 }
 :root {
-  --plone-link-color: #d20000;
-}
-:root {
   --plone-link-tertiary: #00d200;
-}
-:root {
-  --plone-link-opposite: #00d2d2;
 }

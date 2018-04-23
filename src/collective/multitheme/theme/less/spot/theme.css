@@ -5320,27 +5320,35 @@ div.outer-wrapper {
   border-top: 50px solid #fafafa;
   margin-bottom: 15px;
 }
+option[value=plone-link],
 .plone-link {
   color: #f85c37 !important;
 }
+option[value=plone-link-2],
 .plone-link-2 {
   color: #1abc9c !important;
 }
+option[value=plone-link-3],
 .plone-link-3 {
   color: #FB3640 !important;
 }
+option[value=plone-link-opposite],
 .plone-link-opposite {
   color: #3498db !important;
 }
+option[value=plone-background],
 .plone-background {
   background: #f85c37 !important;
 }
+option[value=plone-background-2],
 .plone-background-2 {
   background: #1abc9c !important;
 }
+option[value=plone-background-3],
 .plone-background-3 {
   background: #FB3640 !important;
 }
+option[value=plone-background-opposite],
 .plone-background-opposite {
   background: #3498db !important;
 }
@@ -5350,6 +5358,7 @@ div.outer-wrapper {
 .white-background {
   background-color: #FFF !important;
 }
+option[value=grey-background],
 .grey-background {
   background-color: #DDD !important;
 }
@@ -5369,13 +5378,7 @@ div.outer-wrapper {
   --plone-link-secondary: #1abc9c;
 }
 :root {
-  --plone-link-color: #f85c37;
-}
-:root {
   --plone-link-tertiary: #FB3640;
-}
-:root {
-  --plone-link-opposite: #3498db;
 }
 /*
  * Author: Carlos Alvarez

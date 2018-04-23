@@ -4909,27 +4909,35 @@ div.outer-wrapper {
   border-top: 50px solid #ffffff;
   margin-bottom: 15px;
 }
+option[value=plone-link],
 .plone-link {
   color: #024959 !important;
 }
+option[value=plone-link-2],
 .plone-link-2 {
   color: #F24738 !important;
 }
+option[value=plone-link-3],
 .plone-link-3 {
   color: #F2C777 !important;
 }
+option[value=plone-link-opposite],
 .plone-link-opposite {
   color: #BF2A2A !important;
 }
+option[value=plone-background],
 .plone-background {
   background: #024959 !important;
 }
+option[value=plone-background-2],
 .plone-background-2 {
   background: #F24738 !important;
 }
+option[value=plone-background-3],
 .plone-background-3 {
   background: #F2C777 !important;
 }
+option[value=plone-background-opposite],
 .plone-background-opposite {
   background: #BF2A2A !important;
 }
@@ -4939,6 +4947,7 @@ div.outer-wrapper {
 .white-background {
   background-color: #FFF !important;
 }
+option[value=grey-background],
 .grey-background {
   background-color: #DDD !important;
 }
@@ -4958,13 +4967,7 @@ div.outer-wrapper {
   --plone-link-secondary: #F24738;
 }
 :root {
-  --plone-link-color: #024959;
-}
-:root {
   --plone-link-tertiary: #F2C777;
-}
-:root {
-  --plone-link-opposite: #BF2A2A;
 }
 .plone-navbar-nav > li > a,
 .plone-navbar-nav > .selected a:hover {
