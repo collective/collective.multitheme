@@ -7,26 +7,23 @@
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
 		<label id="show-menu" for="toggle">
 		<tal:check tal:condition="items">
-					<div class="btn ${color1} ${color2}">
-						<i class="${color1} ${color2} fa fa-bars">${view/something}</i>
+					<div class="btn ${color1}">
+						<i class=" ${color2} fa fa-bars">${view/something}</i>
 					</div>
 					<tal:repeat tal:repeat="item items">
-							<div class="btn ${color1} ${color2}" 
-							tal:define="mi python:item['item'];
+							<div class="btn ${color1}" 
+							    tal:define="mi python:item['item'];
 							                   x python:item['x'];
 							                   y python:item['y']"
 							        style='top:${y}px;left:${x}px'>
-								<a href="#" class="${color1} ${color2}">
-									<i  tal:condition="exists:item/iconfield" class="${color1} ${color2} fa ${item/iconfield} ">
+								<a href="#" class="${color2}">
+									<i tal:condition="exists:item/iconfield" class="${color2} fa ${item/iconfield} ">
 									</i>
-								 	<i tal:condition="not:exists:item/iconfield" class="${color1} ${color2} fa fa-info">
+								 	<i tal:condition="not:exists:item/iconfield" class="${color2} fa fa-info">
 									</i>${python: item['rotation']}
-					 
- 
-
 								</a>
 							</div>
-        	</tal:repeat>
+        	        </tal:repeat>
 			</tal:check>
   <tal:css tal:replace="structure context/@@fontload"/>
 </section>
@@ -38,7 +35,7 @@
 	   margin: 0 auto;
 	   position: absolute;
 	   left: 50%;
-	   margin-left: -25px;
+	   margin-left: -35px;
 	   margin-top: ${view/data/radius}px;
 	   margin-bottom: ${view/data/radius}px;
 	 }
@@ -46,25 +43,16 @@
 	 #fragment-circular_menu .btn {
 	   width: 70px;
 	   height: 70px;
-		 font-size: 30px;
+	   font-size: 30px;
 	   border-radius: 70px;
 	   position: absolute;
 	   cursor: pointer;
+	   text-align:centr;
 	 }
 
 
 
 	 #fragment-circular_menu .btn {
-
-	   display: -webkit-box;
-	   display: -ms-flexbox;
-	   display: flex;
-	   -webkit-box-pack: center;
-	       -ms-flex-pack: center;
-	           justify-content: center;
-	   -webkit-box-align: center;
-	       -ms-flex-align: center;
-	           align-items: center;
 
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	 

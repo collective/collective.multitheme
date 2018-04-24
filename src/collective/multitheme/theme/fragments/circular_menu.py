@@ -5,10 +5,10 @@ def get_items(self):
     radius = self.data['radius']
     rotate_list = []
     for index, item in enumerate(items):
-        turner = 90+(index*rotation)
-        x = (math.cos(turner))*radius
-        y = (math.sin(turner))*radius
-        rotate_list.append({'item': item, 'rotation': turner, 'title': item[0], 'x':x, 'y':y})
+        turner = 90-index*rotation
+        x = math.cos(turner)
+        y = math.sin(turner) 
+        rotate_list.append({'item': item, 'rotation': turner, 'title': item[0], 'x':x*radius, 'y':y*radius})
     return rotate_list
     
     
