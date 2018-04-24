@@ -23,9 +23,7 @@
   <tal:css tal:replace="structure context/@@fontload"/>
 </section>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
- <style>
+<style>
 	 #fragment-circular_menu input {position: absolute; display: none}
 
 	 #fragment-circular_menu {
