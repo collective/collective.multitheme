@@ -79,7 +79,7 @@ def _create_frontpage(portal):
                   <ul><li>fullpage_menu: Not finisehd</li>
                     <li>header: Rare use cases (needed if we manage to get site layouts)</li>
                     <li>livesearch: (not working proplerly)</li>
-                    <li>ichtext_block: Quite similar to normal rich text tile</li>
+                    <li>richtext_block: Quite similar to normal rich text tile</li>
                     <li>richtext_list: Not finished</li>
                     <li>socialtop: Update of Plone (to 5.1) gives error on 'mail settings'</li>
                     <li>structure_abovecontent: Rare use cases (like site layout)</li>
