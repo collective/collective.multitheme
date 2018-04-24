@@ -77,6 +77,11 @@ def _create_frontpage(portal):
                 <li>If you name the fragment 'Hidden: somefragent name' it will not show up in Mosaic</li>
             </ul>
             <p> </p>
+            <p><iframe width="840" height="473"
+                src="https://www.youtube.com/embed/Kr98zm3K3Vk?rel=0&amp;controls=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+            </p>
             <p> </p>""" % {'portal_url': portal_url}
 
         forside = api.content.create(
