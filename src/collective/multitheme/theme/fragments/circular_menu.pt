@@ -1,21 +1,29 @@
+
+
 <section id="fragment-circular_menu" class="menu"
-				 tal:define="items context/@@contentlisting;
+				 tal:define="items view/get_items;
 				 color1 view/data/color1;
 				 color2 view/data/color2">
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
 		<label id="show-menu" for="toggle">
 		<tal:check tal:condition="items">
 					<div class="btn ${color1} ${color2}">
-						<i class="${color1} ${color2} fa fa-bars"></i>
+						<i class="${color1} ${color2} fa fa-bars">${view/something}</i>
 					</div>
 					<tal:repeat tal:repeat="item items">
-							<div class="btn ${color1} ${color2}"
-									tal:define="item_url item/getURL|item/absolute_url">
-								<a href="${item_url} ${color1} ${color2}">
+							<div class="btn ${color1} ${color2}" 
+							tal:define="mi python:item['item'];
+							                   x python:item['x'];
+							                   y python:item['y']"
+							        style='top:${y}px;left:${x}px'>
+								<a href="#" class="${color1} ${color2}">
 									<i  tal:condition="exists:item/iconfield" class="${color1} ${color2} fa ${item/iconfield} ">
 									</i>
 								 	<i tal:condition="not:exists:item/iconfield" class="${color1} ${color2} fa fa-info">
-									</i>
+									</i>${python: item['rotation']}
+					 
+ 
+
 								</a>
 							</div>
         	</tal:repeat>
@@ -31,7 +39,8 @@
 	   position: absolute;
 	   left: 50%;
 	   margin-left: -25px;
-	   margin-top: 150px;
+	   margin-top: ${view/data/radius}px;
+	   margin-bottom: ${view/data/radius}px;
 	 }
 
 	 #fragment-circular_menu .btn {
@@ -40,7 +49,6 @@
 		 font-size: 30px;
 	   border-radius: 70px;
 	   position: absolute;
-	   overflow: hidden;
 	   cursor: pointer;
 	 }
 
@@ -59,58 +67,22 @@
 	           align-items: center;
 
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	   -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-	   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	 
 	 }
 
 	 #fragment-circular_menu .btn:not(:first-child) {
 	   opacity: 0;
 	   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	   z-index: -2;
-
-	   -webkit-transition: all 0.6s cubic-bezier(.87,-.41,.19,1.44);
-	   transition: all 0.6s cubic-bezier(.87,-.41,.19,1.44);
+ 
 	 }
 
-	 #fragment-circular_menu .btn:nth-child(2) {top:0px;-webkit-transition-delay: 0s;transition-delay: 0s}
-	 #fragment-circular_menu .btn:nth-child(3) {top:0px;left:0px;-webkit-transition-delay: 0.1s;transition-delay: 0.1s}
-	 #fragment-circular_menu .btn:nth-child(4) {left:0px;;-webkit-transition-delay: 0.2s;;transition-delay: 0.2s}
-	 #fragment-circular_menu .btn:nth-child(5) {top:0px;left:0px;-webkit-transition-delay: 0.3s;transition-delay: 0.3s}
-	 #fragment-circular_menu .btn:nth-child(6) {top:0px;-webkit-transition-delay: 0.4s;transition-delay: 0.4s}
-	 #fragment-circular_menu .btn:nth-child(7) {top:0px;left:0px;-webkit-transition-delay: 0.5s;transition-delay: 0.5s}
-	 #fragment-circular_menu .btn:nth-child(8) {left:0px;-webkit-transition-delay: 0.6s;transition-delay: 0.6s}
-	 #fragment-circular_menu .btn:nth-child(9) {top:0px;left:0px;-webkit-transition-delay: 0.7s;transition-delay: 0.7s}
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(2) {
-	   top:-150px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(3) {
-	   top:-100px;left:100px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(4) {
-	   left:150px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(5) {
-	   top :100px;left:100px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(6) {
-	   top:150px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(7) {
-	   top:100px;left:-100px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(8) {
-	   left:-150px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn:nth-child(9) {
-	   top:-100px;left:-100px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	 #fragment-circular_menu .btn:nth-child(2) {-webkit-transition-delay: 0s;transition-delay: 0s}
+	 #fragment-circular_menu .btn:nth-child(3) {-webkit-transition-delay: 0.1s;transition-delay: 0.1s}
+	
+	
+	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn {
+	   opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	 }
 
 </style>

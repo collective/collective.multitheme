@@ -7,6 +7,13 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
+    <field name="radius" type="zope.schema.Int">
+        <description/>
+        <required>True</required>
+        <title>Radius</title>
+        
+      </field>
+
     <field name="color1" type="zope.schema.Choice">
         <description/>
         <required>True</required>
