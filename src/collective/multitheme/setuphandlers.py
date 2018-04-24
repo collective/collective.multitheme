@@ -75,6 +75,23 @@ def _create_frontpage(portal):
                 The images nees to have the same name as the fragment, but ending with '.png' instead of '.pt'</li>
                 <li>In manifest.cfg you can customize the names of the tiles</li>
                 <li>If you name the fragment 'Hidden: somefragent name' it will not show up in Mosaic</li>
+                <li>Currently, these fragments are hidden<br/>
+                  <ul><li>fullpage_menu: Not finisehd</li>
+                    <li>header: Rare use cases (needed if we manage to get site layouts)</li>
+                    <li>livesearch: (not working proplerly)</li>
+                    <li>ichtext_block: Quite similar to normal rich text tile</li>
+                    <li>richtext_list: Not finished</li>
+                    <li>socialtop: Update of Plone (to 5.1) gives error on 'mail settings'</li>
+                    <li>structure_abovecontent: Rare use cases (like site layout)</li>
+                    <li>structure_abovecontentttitle: Rare use cases (like site layout)</li>
+                    <li>structure_belowcontentbody: Rare use cases (like site layout)</li>
+                    <li>testing = Hidden: testing</li>
+                    <li>textlogo: Rare use cases (like site layout)</li>
+                    <li>upload = Not working yet</li>
+                    <li>webcoutier_global_nav = Rare use case s(like site layout)</li>
+                    <li>xxxx = Hidden xxx</li>
+                  </ul>
+                </li>
             </ul>
             <p> </p>
             <p><iframe width="840" height="473"
