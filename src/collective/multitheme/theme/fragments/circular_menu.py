@@ -16,7 +16,7 @@ def get_items(self):
                             'obj': item[1].absolute_url_path(),
                             'x':x,
                             'y':y,
-                            'iconfield': item[1].iconfield() or None }
+                            'iconfield': item[1].iconfield}
         )
     return rotate_list
 
