@@ -18,11 +18,12 @@
 							                   x python:item['x'];
 							                   y python:item['y'];
 																 index python:item['index'];
+																 index python:item['iconfield'];
 																 link python:item['obj'];"
 							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
 								  href="${link}" >
-									<i tal:condition="exists:item/iconfield" class="${color2} fa ${item/iconfield} "></i>
-								 	<i tal:condition="not:exists:item/iconfield" class="${color2} fa fa-info"></i>
+									<i tal:condition="iconfield" class="${color2} fa ${iconfield} "></i>
+								 	<i tal:condition="not:iconfield" class="${color2} fa fa-info"></i>
 								</a>
 
         	</tal:repeat>
@@ -39,4 +40,3 @@
 	}
 </style>
 </section>
-${view/get_allitems}

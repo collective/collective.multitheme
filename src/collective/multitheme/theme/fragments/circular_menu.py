@@ -15,7 +15,8 @@ def get_items(self):
                             'title': item[0],
                             'obj': item[1].absolute_url_path(),
                             'x':x,
-                            'y':y}
+                            'y':y,
+                            'iconfield': item[1].iconfield or None }
         )
     return rotate_list
 
@@ -28,7 +29,7 @@ def get_allitems(self):
     linked = self.data['linked_folder']
     folder = self.context.portal_catalog(UID=linked)
     #items =  plone.api.content.find(context=folder)
-    return folder #.contentItems() 
+    return folder #.contentItems()
     #return folder.keys()       # Plone 4 or newer
     #return folder[0]
     #linked_folder =  folder[0]

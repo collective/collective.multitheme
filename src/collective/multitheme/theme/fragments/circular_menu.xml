@@ -11,7 +11,7 @@
       <field name="linked_folder" type="zope.schema.Choice">
           <description/>
           <required>True</required>
-          <title>Choose Link to</title>
+          <title>This setting is not working yet, it will list all items in current foler</title>
           <source>collective.themefragments.tiles.CatalogSource</source>
       </field>
     <field name="radius" type="zope.schema.Int">
