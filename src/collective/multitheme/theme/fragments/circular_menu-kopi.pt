@@ -3,15 +3,16 @@
 				 tal:define="linked view/data/linked_folder;
 				 mappe python:context.portal_catalog(UID=linked);
 				 foller python:mappe[0];
-				 items python:  foller.getObject().items();
+				 items python: foller.getObject().items();
 				 item_count python:len(items);
-                 rotation python: (2 *math.pi)/item_count;
                  radius  view/data/radius;
 				 height view/get_height;
 				 color1 view/data/color1;
 				 color2 view/data/color2"
 				 style= "height: ${height}px">
-<div id="circular_menu">
+<tal:check tal:condition="items">
+<div id="circular_menu"
+            tal:define="rotation python: (2 *math.pi)/item_count;">
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
 		<label id="show-menu" for="toggle">
 		<tal:check tal:condition="items">
@@ -40,4 +41,5 @@
 		margin-bottom: ${view/data/radius}px;
 	}
 </style>
+</tal:check>
 </section>
