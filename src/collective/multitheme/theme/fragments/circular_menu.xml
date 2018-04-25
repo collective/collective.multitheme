@@ -40,7 +40,7 @@
       <field name="color1" type="zope.schema.Choice">
           <description/>
           <required>True</required>
-          <title>Background color</title>
+          <title>Button background color</title>
           <values>
             <element>grey-background</element>
             <element>black-background</element>
