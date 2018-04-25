@@ -15,11 +15,14 @@
 					<div class="btn ${color1}">
 						<i class="${color2} fa fa-bars"></i>
 					</div>
-					<tal:repeat tal:repeat="item items"
-					    tal:define="x python: radius * math.sin(rotation);
-                            y python: radius * math.cos(rotation)">
-							 ${x}
-
+					<tal:repeat tal:repeat="item items">
+					<a href="#" class="btn ${color1} ${color2}" 
+					          tal:define="index repeat/item/index;
+					          x python: radius * math.sin(rotation * index);
+                              y python: radius * math.cos(rotation * index)"
+                              style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'>
+ 	                <i  class="${color2} fa fa-info"></i>
+                    </a>
         	    </tal:repeat>
 			</tal:check>
   <tal:css tal:replace="structure context/@@fontload"/>
@@ -32,6 +35,5 @@
 		margin-top: ${view/data/radius}px;
 		margin-bottom: ${view/data/radius}px;
 	}
-</style>${view/get_allitems}
-<div tal:define="sinn python: math.sin(34)">${sinn}</div>
+</style>${view/get_allitems} 
 </section>
