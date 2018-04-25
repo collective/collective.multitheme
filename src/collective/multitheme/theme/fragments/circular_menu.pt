@@ -18,7 +18,7 @@
 							                   x python:item['x'];
 							                   y python:item['y'];
 																 index python:item['index'];
-																 index python:item['iconfield'];
+																 iconfield python:item['iconfield'];
 																 link python:item['obj'];"
 							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
 								  href="${link}" >
