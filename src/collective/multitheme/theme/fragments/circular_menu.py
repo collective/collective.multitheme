@@ -1,19 +1,24 @@
-def get_items(self): 
+def get_items(self):
     items = self.context.items()
     item_count = len(items)
-    rotation = 360/item_count
+    rotation = (2 *math.pi)/item_count
     radius = self.data['radius']
     rotate_list = []
     for index, item in enumerate(items):
-        turner = 90-index*rotation
-        x = math.cos(turner)
-        y = math.sin(turner) 
-        rotate_list.append({'item': item, 'rotation': turner, 'title': item[0], 'x':x*radius, 'y':y*radius})
+        real_index = index + 1
+        turner = real_index * rotation
+        x = radius * math.sin(turner)
+        y = radius * math.cos(turner)
+        rotate_list.append({'item': item,
+                            'index': index,
+                            'rotation': turner,
+                            'title': item[0],
+                            'obj': item[1].absolute_url_path(),
+                            'x':x,
+                            'y':y}
+        )
     return rotate_list
-    
-    
-def something(self):
-    items = self.context.items()
-    item_count = len(items)
-    rotation = 360/(item_count)
-    return item_count
+
+def get_height(self):
+    radius = self.data['radius']
+    return radius * 2 + 144

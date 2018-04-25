@@ -1,76 +1,43 @@
 
 
-<section id="fragment-circular_menu" class="menu"
+<section id="fragment-circular_menu"
+				 class="${view/data/color3}"
 				 tal:define="items view/get_items;
+				 height view/get_height;
 				 color1 view/data/color1;
-				 color2 view/data/color2">
+				 color2 view/data/color2"
+				 style= "height: ${height}px">
+<div id="circular_menu">
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
 		<label id="show-menu" for="toggle">
 		<tal:check tal:condition="items">
 					<div class="btn ${color1}">
-						<i class=" ${color2} fa fa-bars">${view/something}</i>
+						<i class="${color2} fa fa-bars"></i>
 					</div>
 					<tal:repeat tal:repeat="item items">
-							<div class="btn ${color1}" 
+							<a href="${link}" class="btn ${color1} ${color2}"
 							    tal:define="mi python:item['item'];
 							                   x python:item['x'];
-							                   y python:item['y']"
-							        style='top:${y}px;left:${x}px'>
-								<a href="#" class="${color2}">
-									<i tal:condition="exists:item/iconfield" class="${color2} fa ${item/iconfield} ">
-									</i>
-								 	<i tal:condition="not:exists:item/iconfield" class="${color2} fa fa-info">
-									</i>${python: item['rotation']}
+							                   y python:item['y'];
+																 index python:item['index'];
+																 link python:item['obj'];"
+							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
+								  href="${link}" >
+									<i tal:condition="exists:item/iconfield" class="${color2} fa ${item/iconfield} "></i>
+								 	<i tal:condition="not:exists:item/iconfield" class="${color2} fa fa-info"></i>
 								</a>
-							</div>
-        	        </tal:repeat>
+
+        	</tal:repeat>
 			</tal:check>
   <tal:css tal:replace="structure context/@@fontload"/>
-</section>
-
+</div>
+<tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+		<link rel="stylesheet" href="++theme++multitheme/css/circular_menu.css" tal:condition="load_css">
+</tal:define>
 <style>
-	 #fragment-circular_menu input {position: absolute; display: none}
-
-	 #fragment-circular_menu {
-	   margin: 0 auto;
-	   position: absolute;
-	   left: 50%;
-	   margin-left: -35px;
-	   margin-top: ${view/data/radius}px;
-	   margin-bottom: ${view/data/radius}px;
-	 }
-
-	 #fragment-circular_menu .btn {
-	   width: 70px;
-	   height: 70px;
-	   font-size: 30px;
-	   border-radius: 70px;
-	   position: absolute;
-	   cursor: pointer;
-	   text-align:centr;
-	 }
-
-
-
-	 #fragment-circular_menu .btn {
-
-     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	 
-	 }
-
-	 #fragment-circular_menu .btn:not(:first-child) {
-	   opacity: 0;
-	   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	   z-index: -2;
- 
-	 }
-
-	 #fragment-circular_menu .btn:nth-child(2) {-webkit-transition-delay: 0s;transition-delay: 0s}
-	 #fragment-circular_menu .btn:nth-child(3) {-webkit-transition-delay: 0.1s;transition-delay: 0.1s}
-	
-	
-	 #fragment-circular_menu input#toggle:checked ~ #show-menu .btn {
-	   opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	 }
-
+	#circular_menu {
+		margin-top: ${view/data/radius}px;
+		margin-bottom: ${view/data/radius}px;
+	}
 </style>
+</section>
