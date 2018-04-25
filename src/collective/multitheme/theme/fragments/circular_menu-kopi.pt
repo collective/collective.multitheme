@@ -1,11 +1,13 @@
 <section id="fragment-circular_menu"
 				 class="${view/data/color3}"
-				 tal:define="items view/get_items;
+				 tal:define="items context/@@contentlisting;
+				 item_count python:len(items);
+                 rotation python: (2 *math.pi)/item_count;
+                 radius  view/data/radius;
 				 height view/get_height;
 				 color1 view/data/color1;
 				 color2 view/data/color2"
 				 style= "height: ${height}px">
-				 ${view/get_allitems}
 <div id="circular_menu">
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
 		<label id="show-menu" for="toggle">
@@ -13,20 +15,12 @@
 					<div class="btn ${color1}">
 						<i class="${color2} fa fa-bars"></i>
 					</div>
-					<tal:repeat tal:repeat="item items">
-							<a href="${link}" class="btn ${color1} ${color2}"
-							    tal:define="mi python:item['item'];
-							                   x python:item['x'];
-							                   y python:item['y'];
-																 index python:item['index'];
-																 link python:item['obj'];"
-							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
-								  href="${link}" >
-									<i tal:condition="exists:item/iconfield" class="${color2} fa ${item/iconfield} "></i>
-								 	<i tal:condition="not:exists:item/iconfield" class="${color2} fa fa-info"></i>
-								</a>
+					<tal:repeat tal:repeat="item items"
+					    tal:define="x python: radius * math.sin(rotation);
+                            y python: radius * math.cos(rotation)">
+							 ${x}
 
-        	</tal:repeat>
+        	    </tal:repeat>
 			</tal:check>
   <tal:css tal:replace="structure context/@@fontload"/>
 </div>
@@ -38,5 +32,6 @@
 		margin-top: ${view/data/radius}px;
 		margin-bottom: ${view/data/radius}px;
 	}
-</style>
+</style>${view/get_allitems}
+<div tal:define="sinn python: math.sin(34)">${sinn}</div>
 </section>
