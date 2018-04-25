@@ -1,4 +1,9 @@
 def get_items(self):
+    link = self.data['linked_folder']
+    folders = self.context.portal_catalog(UID=link)
+    folder = folders[0]
+    items =  folder.items()
+    item_count = len(items)
     items = self.context.items()
     item_count = len(items)
     rotation = (2 *math.pi)/item_count
@@ -27,11 +32,9 @@ def get_height(self):
 def get_allitems(self):
     linked = self.data['linked_folder']
     folder = self.context.portal_catalog(UID=linked)
-    #items =  plone.api.content.find(context=folder)
-    return folder #.contentItems() 
-    #return folder.keys()       # Plone 4 or newer
-    #return folder[0]
+    return folder[0]
     #linked_folder =  folder[0]
+    #item_count = len(items)
     #items = self.context.items()
     #return folder.keys()
     #return self.context.getFolderContents(folder)

@@ -5,6 +5,7 @@
 				 color1 view/data/color1;
 				 color2 view/data/color2"
 				 style= "height: ${height}px">
+				 ${view/get_allitems}
 <div id="circular_menu">
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
 		<label id="show-menu" for="toggle">
@@ -39,4 +40,3 @@
 	}
 </style>
 </section>
-${view/get_allitems}

@@ -7,11 +7,17 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
+
+      <field name="linked_folder" type="zope.schema.Choice">
+          <description/>
+          <required>True</required>
+          <title>Choose Link to</title>
+          <source>collective.themefragments.tiles.CatalogSource</source>
+      </field>
     <field name="radius" type="zope.schema.Int">
         <description/>
         <required>True</required>
         <title>Radius</title>
-
       </field>
 
     <field name="color3" type="zope.schema.Choice">
