@@ -2,7 +2,8 @@
 				 class="${view/data/color3}"
 				 tal:define="linked view/data/linked_folder;
 				 mappe python:context.portal_catalog(UID=linked);
-				 items context/@@contentlisting;
+				 foller python:mappe[0];
+				 items python:  foller.getObject().items();
 				 item_count python:len(items);
                  rotation python: (2 *math.pi)/item_count;
                  radius  view/data/radius;
@@ -23,7 +24,8 @@
 					          x python: radius * math.sin(rotation * index);
                               y python: radius * math.cos(rotation * index)"
                               style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'>
- 	                <i  class="${color2} fa fa-info"></i>
+ 	                <i tal:condition="exists: item/iconfield" class="${color2} fa ${iconfield} "></i>
+					<i tal:condition="not: exists: item/iconfield" class="${color2} fa fa-info"></i>
                     </a>
         	    </tal:repeat>
 			</tal:check>
@@ -37,5 +39,5 @@
 		margin-top: ${view/data/radius}px;
 		margin-bottom: ${view/data/radius}px;
 	}
-</style><div tal:define="foller python:mappe[0]">${python: foller.getObject().items()}</div>
+</style>
 </section>
