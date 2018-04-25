@@ -1,6 +1,8 @@
 <section id="fragment-circular_menu"
 				 class="${view/data/color3}"
-				 tal:define="items context/@@contentlisting;
+				 tal:define="linked view/data/linked_folder;
+				 mappe python:context.portal_catalog(UID=linked);
+				 items context/@@contentlisting;
 				 item_count python:len(items);
                  rotation python: (2 *math.pi)/item_count;
                  radius  view/data/radius;
@@ -35,5 +37,5 @@
 		margin-top: ${view/data/radius}px;
 		margin-bottom: ${view/data/radius}px;
 	}
-</style>${view/get_allitems} 
+</style><div tal:define="foller python:mappe[0]">${python: foller.getObject().items()}</div>
 </section>
