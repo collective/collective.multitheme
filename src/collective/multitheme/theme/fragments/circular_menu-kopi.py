@@ -1,5 +1,7 @@
 def get_items(self):
-    items = self.context.items()
+    linked = self.data['linked_folder']
+    folder = self.context.portal_catalog(UID=linked)
+    items = folder[0].getObject().items()
     item_count = len(items)
     rotation = (2 *math.pi)/item_count
     radius = self.data['radius']
@@ -9,14 +11,15 @@ def get_items(self):
         turner = real_index * rotation
         x = radius * math.sin(turner)
         y = radius * math.cos(turner)
+        item1 = item[1]
         rotate_list.append({'item': item,
                             'index': index,
                             'rotation': turner,
                             'title': item[0],
-                            'obj': item[1].absolute_url_path(),
+                            'obj': item1.absolute_url_path(),
                             'x':x,
                             'y':y,
-                            'iconfield': item[1].iconfield}
+                            'iconfield': item1.iconfield}
         )
     return rotate_list
 
@@ -29,7 +32,8 @@ def get_allitems(self):
     linked = self.data['linked_folder']
     folder = self.context.portal_catalog(UID=linked)
     #items =  plone.api.content.find(context=folder)
-    return folder #.contentItems()
+    return folder[0].getObject().items()
+     #.contentItems()
     #return folder.keys()       # Plone 4 or newer
     #return folder[0]
     #linked_folder =  folder[0]

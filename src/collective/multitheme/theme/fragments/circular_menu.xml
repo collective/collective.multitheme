@@ -11,7 +11,7 @@
       <field name="linked_folder" type="zope.schema.Choice">
           <description/>
           <required>True</required>
-          <title>This setting is not working yet, it will list all items in current foler</title>
+          <title>Select a folder or a folderish object</title>
           <source>collective.themefragments.tiles.CatalogSource</source>
       </field>
     <field name="radius" type="zope.schema.Int">
@@ -24,6 +24,7 @@
         <description/>
         <required>True</required>
         <title>Section Background color</title>
+        <default>custom-background1</default>
         <values>
           <element>grey-background</element>
           <element>black-background</element>
@@ -41,6 +42,7 @@
           <description/>
           <required>True</required>
           <title>Button background color</title>
+          <default>white-background</default>
           <values>
             <element>grey-background</element>
             <element>black-background</element>
@@ -58,6 +60,7 @@
           <description/>
           <required>True</required>
           <title>Color</title>
+          <default>plone-link</default>
           <values>
             <element>black</element>
             <element>white</element>

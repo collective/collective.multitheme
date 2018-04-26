@@ -20,7 +20,7 @@
 						<i class="${color2} fa fa-bars"></i>
 					</div>
 					<tal:repeat tal:repeat="item items">
-					<a href="#" class="btn ${color1} ${color2}" 
+					<a href="#" class="btn ${color1} ${color2}"
 					          tal:define="index repeat/item/index;
 					          x python: radius * math.sin(rotation * index);
                               y python: radius * math.cos(rotation * index)"
@@ -31,15 +31,22 @@
         	    </tal:repeat>
 			</tal:check>
   <tal:css tal:replace="structure context/@@fontload"/>
+	${view/get_allitems}
 </div>
 <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
 		<link rel="stylesheet" href="++theme++multitheme/css/circular_menu.css" tal:condition="load_css">
 </tal:define>
 <style>
-	#circular_menu {
+#circular_menu {
 		margin-top: ${view/data/radius}px;
 		margin-bottom: ${view/data/radius}px;
-	}
+}
+#circular_menu ::selection {
+	background: none; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: none; /* Gecko Browsers */
+}
 </style>
 </tal:check>
 </section>

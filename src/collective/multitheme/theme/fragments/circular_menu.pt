@@ -18,12 +18,11 @@
 							                   x python:item['x'];
 							                   y python:item['y'];
 																 index python:item['index'];
-																 iconfield python:item['iconfield'];
 																 link python:item['obj'];"
 							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
 								  href="${link}" >
-									<i tal:condition="iconfield" class="${color2} fa ${iconfield} "></i>
-								 	<i tal:condition="not:iconfield" class="${color2} fa fa-info"></i>
+									<i tal:condition="exists: mi/iconfield" class="${color2} fa ${iconfield} "></i>
+								 	<i tal:condition="not: exists: mi/iconfield" class="${color2} fa fa-info"></i>
 								</a>
 
         	</tal:repeat>
@@ -35,8 +34,14 @@
 </tal:define>
 <style>
 	#circular_menu {
-		margin-top: ${view/data/radius}px;
-		margin-bottom: ${view/data/radius}px;
+			margin-top: ${view/data/radius}px;
+			margin-bottom: ${view/data/radius}px;
+	}
+	#circular_menu ::selection {
+		background: none; /* WebKit/Blink Browsers */
+	}
+	::-moz-selection {
+	  background: none; /* Gecko Browsers */
 	}
 </style>
 </section>

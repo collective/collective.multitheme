@@ -32,7 +32,8 @@ def get_height(self):
 def get_allitems(self):
     linked = self.data['linked_folder']
     folder = self.context.portal_catalog(UID=linked)
-    return folder[0]
+    folder = folder[0]
+    return folder.items()
     #linked_folder =  folder[0]
     #item_count = len(items)
     #items = self.context.items()
