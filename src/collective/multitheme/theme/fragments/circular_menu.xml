@@ -10,7 +10,7 @@
 
       <field name="linked_folder" type="zope.schema.Choice">
           <description/>
-          <required>True</required>
+          <required>False</required>
           <title>Select a folder or a folderish object</title>
           <source>collective.themefragments.tiles.CatalogSource</source>
       </field>

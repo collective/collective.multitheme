@@ -14,12 +14,12 @@
           <title>Select a folder (or folderish object)</title>
           <source>collective.themefragments.tiles.CatalogSource</source>
       </field>
+    </field>
     <field name="radius" type="zope.schema.Int">
         <description/>
         <required>True</required>
         <title>Radius</title>
-      </field>
-
+    </field>
     <field name="color3" type="zope.schema.Choice">
         <description/>
         <required>True</required>

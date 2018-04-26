@@ -1,6 +1,6 @@
 <section id="fragment-circular_menu"
 				 class="${view/data/color3}"
-				 tal:define="items view/get_items;
+				 tal:define="items view/get_items|view/get_folderitems;
 				 height view/get_height;
 				 color1 view/data/color1;
 				 color2 view/data/color2"

@@ -1,4 +1,4 @@
-<section tal:define="items context/@@contentlisting;
+<section tal:define="items view/get_items;
          image_size view/data/image_size|None"
          id="fragment-${view/id}"
          data-anchor="anchor-images"

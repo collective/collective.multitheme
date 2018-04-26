@@ -7,6 +7,12 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
+  <field name="linked_folder" type="zope.schema.Choice">
+      <description>Choose Folder for images for you image wall</description>
+      <required>True</required>
+      <title>Select a folder (or folderish object)</title>
+      <source>collective.themefragments.tiles.CatalogSource</source>
+  </field>
   <field name="image_size" type="zope.schema.Choice">
   <description>Choose Image Size (scale) for you image wall</description>
   <required>True</required>
