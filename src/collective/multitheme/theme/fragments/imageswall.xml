@@ -8,8 +8,8 @@
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
   <field name="linked_folder" type="zope.schema.Choice">
-      <description>Choose Folder for images for you image wall</description>
-      <required>True</required>
+      <description>Choose Folder for images for you image wall. Leave empty for current folder</description>
+      <required>False</required>
       <title>Select a folder (or folderish object)</title>
       <source>collective.themefragments.tiles.CatalogSource</source>
   </field>

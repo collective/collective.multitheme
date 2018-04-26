@@ -1,4 +1,5 @@
-<section tal:define="items view/get_items;
+<section tal:define="wall view/get_wallitems|None;
+         items wall/@@contentlisting|context/@@contentlisting;
          image_size view/data/image_size|None"
          id="fragment-${view/id}"
          data-anchor="anchor-images"
@@ -17,7 +18,6 @@
     <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
         <link rel="stylesheet" href="++theme++multitheme/css/masonary.css" tal:condition="load_css">
     </tal:define>
-
     <script>require([
       'jquery',
       'pat-base',
