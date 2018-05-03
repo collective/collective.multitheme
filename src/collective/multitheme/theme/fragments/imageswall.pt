@@ -6,14 +6,14 @@
          title="images">
     <div class="wall-of-images container-fluid" tal:condition="image_size">
       <tal:image tal:repeat="item items">
-        <tal:define tal:define="obj item/getObject;
+        <figure tal:define="obj item/getObject;
                          scale_func obj/@@images;
                          scaled_image python:scale_func.scale('image', scale=image_size)">
         <img tal:replace="structure python:scaled_image.tag()"
              tal:on-error=""
              tal:condition="python: obj.portal_type == 'Image'"/>
-        </tal:define>
-      </tal:image>
+       </figure>
+     </tal:image>
     </div>
     <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
         <link rel="stylesheet" href="++theme++multitheme/css/masonary.css" tal:condition="load_css">
@@ -32,7 +32,7 @@
 						var self = this;
 						self.$el.imagesLoaded(function() {
 							self.$el.masonry({
-								itemSelector: 'img',
+								itemSelector: 'figure',
 								percentPosition: true
 							});
 						});
@@ -41,4 +41,25 @@
 				return Masonry;
 			});
 		</script>
+    <style tal:define="small view/small; medium view/medium; large view/large">
+      @media only screen and (min-width: 768px) {
+        .wall-of-images figure {
+          width: ${small}%;
+          }
+        }
+
+        @media screen and (min-width: 900px) {
+          .wall-of-images figure {
+              width: ${medium}%;
+          }
+        }
+
+      @media screen and (min-width: 1200px) {
+        .wall-of-images figure {
+              width: ${large}%;
+          }
+      }
+
+    </style>
+
 </section>

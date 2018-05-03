@@ -2,36 +2,23 @@
    .wall-of-images {
         padding-left: 0;
         padding-right: 0;
-        margin-top: -20px;
     }
-    .wall-of-images img {
+    .wall-of-images figure {
         float: left;
+        margin:  0;
+        padding: 0;
         width: 100%;
         height: auto;
         border: 5px solid transparent;
     }
-}
-
-@media only screen and (min-width: 768px) {
-    .wall-of-images img {
-        float: left;
-        width: 50%;
+    
+    .wall-of-images figure img {
+        margin:  0;
+        padding: 0;
+        width: 100%;
         height: auto;
     }
 }
 
-@media screen and (min-width: 900px) {
-    .wall-of-images img {
-        float: left;
-        width: 33.3333333%;
-        height: auto;
-    }
-}
 
-@media screen and (min-width: 1200px) {
-  .wall-of-images img {
-        float: left;
-        width: 25%;
-        height: auto;
-    }
-}
+

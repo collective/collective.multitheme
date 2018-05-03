@@ -1,0 +1,44 @@
+<section id="fragment-circular_menu"
+				 class="${view/data/color3}"
+				 tal:define="items view/get_items|view/get_folderitems;
+				 height view/get_height;
+				 color1 view/data/color1;
+				 color2 view/data/color2"
+				 style= "height: ${height}px">
+<div id="circular_menu">
+	  <input type="checkbox" id="toggle" onClick="toggle();"/>
+		<label id="show-menu" for="toggle">
+		<tal:check tal:condition="items">
+					<div class="btn image-btn ${color1}">
+						<i class="${color2} fa fa-bars"></i>
+					</div>
+					<tal:repeat tal:repeat="item items">
+							<a href="${link}" class="btn ${color1} ${color2}"
+							    tal:define="mi python:item['item'];
+							                   x python:item['x'];
+							                   y python:item['y'];
+																 index python:item['index'];
+																 link python:item['obj'];"
+							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms;' background="${link}/@@images/image/preview">
+									<!-- img src="${link}/@@images/image/preview" alt="image-button" class="img-responsive  image-btn ${color1} ${color2}" -->
+							</a>
+
+        	</tal:repeat>
+			</tal:check>
+</div>
+<tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+		<link rel="stylesheet" href="++theme++multitheme/css/circular_menu.css" tal:condition="load_css">
+</tal:define>
+<style>
+	#circular_menu {
+			margin-top: ${view/data/radius}px;
+			margin-bottom: ${view/data/radius}px;
+	}
+	#circular_menu ::selection {
+		background: none; /* WebKit/Blink Browsers */
+	}
+	::-moz-selection {
+	  background: none; /* Gecko Browsers */
+	}
+</style>
+</section>
