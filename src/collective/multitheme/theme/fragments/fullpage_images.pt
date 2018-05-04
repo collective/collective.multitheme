@@ -1,0 +1,21 @@
+<section tal:define="wall view/get_wallitems|None;
+         items wall/@@contentlisting|context/@@contentlisting;
+         image_size view/data/image_size|None"
+         id="fragment-${view/id}"
+         data-anchor="anchor-images"
+         title="images"
+         class="list-of-images" tal:condition="image_size">
+      <tal:image tal:repeat="item items">
+        <div class="imagediv"
+            tal:define="item_url item/getURL|item/absolute_url"
+            style="background-image: url(${item_url}/@@images/image/${image_size})">
+            <div class="image-textdiv">
+              <h1>${item/Title}</h1>
+              <p class="Description">${item/Description}</p>
+            </div>
+          </div>
+      </tal:image>
+    <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+        <link rel="stylesheet" href="++theme++multitheme/css/fullpage_image.css" tal:condition="load_css">
+    </tal:define>
+</section>

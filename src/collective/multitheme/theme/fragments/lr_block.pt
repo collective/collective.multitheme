@@ -1,3 +1,4 @@
+
 <section id="fragment-${view/id}"
               tal:define="scale view/data/image_size;
                 title view/data/title | nothing;
@@ -12,12 +13,9 @@
               title="${title}">
  <div class="container flex ${css_class}">
     <div class="half bodytext ${color2}">
-        <h2 class="${color2}">${title}</h2>
-        <h4  class="${color2}">${view/data/description}</h4>
-        <div  class="${color2}" tal:define="value nocall:view/data/text|nothing;
-                       output_relative_to nocall:value/@@output_relative_to|nothing"
-                   condition="output_relative_to"
-                   content="structure python:output_relative_to(context)" />
+        <h2 class="${color2}" tal:condition="title">${title}</h2>
+        <h4  class="${color2}" tal:condition="view/data/description">${view/data/description}</h4>
+         <div  class="${color2}" tal:define="textout view/data/text/output" tal:content="structure view/data/text/@@output_relative_to"/>
     </div>
     <div class="half image">
         <img    alt="${title}"
@@ -26,4 +24,5 @@
     </div>
  </div>
  <link rel="stylesheet" href="++theme++multitheme/css/lr_block.css" tal:condition="load_css">
+
 </section>
