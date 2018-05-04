@@ -16,12 +16,12 @@ section.list-of-images {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 2em 0 0 5em;
+	padding: 2em 0 0 5vw;
 	
 }
 
 .image-textdiv {
-	padding: 0.5em 1.5em 0.5em;
+	padding: 0.5em 1vh;
 	background: rgba(242,242,242,0.2240316);
 	float: left;
 	font-size: 76%;
