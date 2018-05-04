@@ -33,7 +33,8 @@
 						self.$el.imagesLoaded(function() {
 							self.$el.masonry({
 								itemSelector: 'figure',
-								percentPosition: true
+								percentPosition: true,
+                columnWidth: 'figure',
 							});
 						});
 					}

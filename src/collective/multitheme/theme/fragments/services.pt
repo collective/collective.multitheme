@@ -23,7 +23,7 @@
 				    <tal:define tal:define="item_url item/getURL|item/absolute_url;
 							               item_title item/Title">
 							<a href="#" tal:attributes="href item_url">
-	 							<img src="${item_url}/@@images/image/preview" alt="${item_title}"
+	 							<img src="${item_url}/@@images/image/${view/data/image_size}" alt="${item_title}"
 							    	 tal:condition="python: item.image"
                      class="img-responsive" />
               </a>

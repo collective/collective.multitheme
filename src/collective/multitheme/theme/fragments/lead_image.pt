@@ -1,0 +1,13 @@
+<section id="fragment-${view/id}"
+        tal:define="exists python:view.context.image;
+                    scales context/@@images;
+                    title context/title | nothing;
+                    image_size view/data/image_size"
+        tal:condition="exists">
+        <img tal:define="thumbnail python:scales.scale('image', scale=image_size)"
+             tal:condition="thumbnail"
+             tal:attributes="alt title;
+                             title title;
+                             src thumbnail/url;
+                             width thumbnail/width" />
+</section>
