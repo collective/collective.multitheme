@@ -18,7 +18,7 @@
          <div  class="${color2}" tal:define="textout view/data/text/output" tal:content="structure view/data/text/@@output_relative_to"/>
     </div>
     <div class="half image">
-        <img    alt="${title}"
+        <img    alt="${title}" class="image-inline"
                      title="${title}"
                      src="${image_url}/@@images/image/${scale}" />
     </div>
