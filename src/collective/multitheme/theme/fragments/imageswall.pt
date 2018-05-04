@@ -19,29 +19,27 @@
         <link rel="stylesheet" href="++theme++multitheme/css/masonary.css" tal:condition="load_css">
     </tal:define>
     <script>require([
-      'jquery',
-      'pat-base',
-      '++theme++multitheme/javascript/masonry.pkgd.min',
-      '++theme++multitheme/javascript/imagesloaded.pkgd.min'
-			], function(Base) {
-				'use strict';
-				var Masonry = Base.extend({
-					name: 'masonry',
-					trigger: '.wall-of-images',
-					init: function() {
-						var self = this;
-						self.$el.imagesLoaded(function() {
-							self.$el.masonry({
-								itemSelector: 'figure',
-								percentPosition: true,
-                columnWidth: 'figure',
-							});
-						});
-					}
-				});
-				return Masonry;
-			});
-		</script>
+        'pat-base',
+        '++theme++multitheme/javascript/masonry.pkgd.min',
+        '++theme++multitheme/javascript/imagesloaded.pkgd.min'
+      ], function(Base) {
+        'use strict';
+        var Masonry = Base.extend({
+          name: 'masonry',
+          trigger: '.wall-of-images',
+          init: function() {
+            var self = this;
+            self.$el.imagesLoaded(function() {
+              self.$el.masonry({
+                itemSelector: 'figure',
+                percentPosition: true
+              });
+            });
+          }
+        });
+        return Masonry;
+      });
+        </script>
     <style tal:define="small view/small; medium view/medium; large view/large">
       @media only screen and (min-width: 768px) {
         .wall-of-images figure {
