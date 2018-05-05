@@ -43,10 +43,10 @@
 }
 #menu{
 	xposition:fixed;
-	top:0;
-	left:3vw;
+	top:13px;
+	left:270px;
 	height: 40px;
-	z-index: 70;
+	z-index: 99970;
 	width: 100%;
 	padding: 0;
 	margin:0;
@@ -75,6 +75,13 @@ html.fp-enabled,
 	top:  0;
 	right:  0; 
 	bottom:  0;
+}
+
+[class*="fp-viewing"] #content-header {
+	z-index:99;
+	position: fixed;
+	top:  0;;
+	width: 250px;
 }
 
 

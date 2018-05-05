@@ -45,8 +45,11 @@
       ], function(Base) {
       $('#fullpage').fullpage({
                 menu: '#menu',
+                paddingTop: '100px',
+		        paddingBottom: '10px',
+		        fixedElements: '#content-header, .footer',
                 sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-                navigation: true,
+                navigation: false,
 				navigationPosition: 'right',
 				anchors: ['firstPage', 'secondPage', '3rdPage'],
                 slidesNavigation: false,
