@@ -1,7 +1,4 @@
-/* @override 
-	http://localhost:8088/Plone2multi/++theme++multitheme/css/jquery.fullpage.css
-	http://localhost:8080/kunst/++theme++multitheme/css/jquery.fullpage.css
-*/
+
 
 /*!
  * fullPage 2.9.7
@@ -10,7 +7,33 @@
  *
  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
  */
+
+#fullpagewrapper  {
+   max-height: 700px;	
+}
+
+@media (min-width:800px){ 
+.template-layout #fullpagewrapper {
+	position: fixed; 
+	left:0;
+	top:  0;
+	right:  0; 
+	bottom:  0;
+	}
+}
+
+[class*="fp-viewing"] #content-header {
+	z-index:99;
+	position: fixed;
+	top:  0;;
+	width: 250px;
+}
+
  
+.section,
+.slide {
+	background-size: cover;
+}
  
 .textslide .slide_text {
 	background: transparent;
@@ -18,7 +41,7 @@
 	opacity: 0.9;
 	max-width: 100vw;
 	color:  black;
- 
+ 	padding-bottom: 1.2em;
 }
 
 
@@ -103,30 +126,7 @@ html.fp-enabled,
     padding: 0 !important;
 }
 
-#fullpagewrapper {
-	max-height: 700px;	
-}
 
-.template-layout #fullpagewrapper {
-	position: fixed; 
-	left:0;
-	top:  0;
-	right:  0; 
-	bottom:  0;
-}
-
-[class*="fp-viewing"] #content-header {
-	z-index:99;
-	position: fixed;
-	top:  0;;
-	width: 250px;
-}
-
- 
-.section,
-.slide {
-	background-size: cover;
-}
 
 .fp-slide {
     float: left;
@@ -161,7 +161,7 @@ html.fp-enabled,
     -ms-user-select: none; /* IE10+ */
     position: absolute;
     z-index: 4;
-    top: 50%;
+    top: 40%;
     cursor: pointer;
     width: 0;
     height: 0;
@@ -249,7 +249,7 @@ html.fp-enabled,
     position: relative;
     z-index: 1;
     width: 100%;
-    xheight: 100%;
+    height: 100%;
     cursor: pointer;
     text-decoration: none;
 }

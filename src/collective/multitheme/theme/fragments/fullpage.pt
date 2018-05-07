@@ -70,7 +70,7 @@
                 navigation: false,
 				navigationPosition: 'right',
                 slidesNavigation: false,
-                responsiveWidth: 800,
+                responsiveWidth: 900
             });
       });
   </script>
