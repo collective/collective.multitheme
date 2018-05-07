@@ -33,7 +33,7 @@
 
         <div class="slide textslide">
           <div class="slide_text">
-            <h1><a href="${item_url}">${item_url}</a></h1>
+            <h1><a href="${item_url}">${item_title}</a></h1>
             <p class="documentDescription" tal:condition="item_description">${item_description}</p>
             <div tal:replace="structure item/text/output" />
           </div>
