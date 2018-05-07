@@ -44,7 +44,7 @@
                   slide_title slide/Title;
                   slide_description slide/Description;
                   slide_url slide/getURL|slide/absolute_url"
-                class="slide"
+                class="slide imageslide"
                 id="${slide_id}"
                 style="background-image: url(${slide_url}/@@images/image/${image_size})">
                 <div class="slide_text">
@@ -63,14 +63,14 @@
       '++theme++multitheme/javascript/scrolloverflow.min',
       '++theme++multitheme/javascript/jquery.fullpage'
       ], function(Base) {
-      $('#fullpage').fullpage({
+      $('#fsullpage').fullpage({
                 menu: '#menu',
                 paddingTop: '100px',
-		        fixedElements: '#content-header',
+		            fixedElements: '#content-header',
                 navigation: false,
 				        navigationPosition: 'right',
                 slidesNavigation: false,
-                responsiveWidth: 700,
+                responsiveWidth: 800,
             });
       });
   </script>
