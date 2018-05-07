@@ -1,43 +1,63 @@
-<div id="fullpagewrapper">
-<ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-    <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-</ul>
+<div id="fullpagewrapper"
+  tal:define="wall view/get_wallitems|None;
+    items wall/@@contentlisting|context/@@contentlisting;
+    image_size view/data/image_size|None"
+  id="fragment-${view/id}"
+  class="list-of-images"
+  tal:condition="image_size">
 
-<div id="fullpage">
-    <div class="section " id="section0">
-        <div class="intro">
-            <img src="imgs/1.png"  alt="1"/>
-            <h1>Normal scrolling</h1>
-            <p>With a linked menu</p>
+  <ul id="menu">
+    <li tal:repeat="item items" li data-menuanchor="${item/id}"><a href="#${item/id}">${item/Title}</a></li>
+  </ul>
+
+  <div id="fullpage">
+    <tal:repeat tal:repeat="item items">
+      <div  tal:define="obj item/getObject;
+            item_type item/Type;
+            item_id item/id;
+            item_title item/Title;
+            item_description item/Description;
+            item_url item/getURL|item/absolute_url"
+        tal:condition="python: item_type=='Kunstverk'"
+        class="section"
+        id="${item_id}"
+        data-anchor="${item_id}"
+        style="background-image: url(${item_url}/@@images/image/${image_size})">
+
+        <div class="slide">
+          <div class="slide_text">
+            <h3>${item_title} <span class="smaller" tal:condition="item_description"> / ${item_description}</span></h3>
+          </div>
         </div>
-    </div>
-    <div class="section" id="section1">
-    
-        <div class="slide" id="slide1">
-            <div class="intro">
-                <h1>URL get updated (#)</h1>
-                <p>
-                    Easy to bookmark and share
-                </p>
+
+        <div class="slide textslide">
+          <div class="slide_text">
+            <h1>${item_title}</h1>
+            <p class="documentDescription" tal:condition="item_description">${item_description}</p>
+            <div tal:replace="structure item/text/output" />
+          </div>
+        </div>
+
+          <tal:slides tal:repeat="slide obj/@@contentlisting">
+            <div tal:define="slide_type slide/Type;
+                  slide_id slide/id;
+                  slide_title slide/Title;
+                  slide_description slide/Description;
+                  slide_url slide/getURL|slide/absolute_url"
+                class="slide"
+                id="${slide_id}"
+                style="background-image: url(${slide_url}/@@images/image/${image_size})">
+                <div class="slide_text">
+                  <h3>${slide_title}</h3>
+                  <p class="documentDescription">${slide_description}</p>
+                </div>
             </div>
-        </div> 
+          </tal:slides>
 
-        <div class="slide" id="slide2">
-            <h1>Horizontal sliders!</h1>
-            <img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
-        </div>
 
-    </div>
-    <div class="section" id="section2">
-        <div class="intro">
-            <h1>Just use </h1>
-            <p>autoScrolling:false</p>
-        </div>
-    </div>
-    
- 
+      </div>
+    </tal:repeat>
+
   <script>require([
       'jquery',
       '++theme++multitheme/javascript/scrolloverflow.min',
@@ -46,24 +66,17 @@
       $('#fullpage').fullpage({
                 menu: '#menu',
                 paddingTop: '100px',
-		        paddingBottom: '10px',
-		        fixedElements: '#content-header, .footer',
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+		        fixedElements: '#content-header',
                 navigation: false,
-				navigationPosition: 'right',
-				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				        navigationPosition: 'right',
                 slidesNavigation: false,
             });
       });
   </script>
 
-
- 
-    
-      <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+  <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
     <link rel="stylesheet" href="++theme++multitheme/css/jquery.fullpage.css" tal:condition="load_css">
   </tal:define>
-  
+
 </div>
 </div>
- 
