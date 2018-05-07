@@ -39,7 +39,7 @@
           </div>
         </div>
 
-          <tal:slides tal:repeat="slide obj/@@contentlisting">
+          <tal:slides tal:repeat="slide obj/@@contentlisting" tal:condition="obj/is_folderish">
             <div tal:define="slide_type slide/Type;
                   slide_id slide/id;
                   slide_title slide/Title;
@@ -47,7 +47,8 @@
                   slide_url slide/getURL|slide/absolute_url"
                 class="slide imageslide"
                 id="${slide_id}"
-                style="background-image: url(${slide_url}/@@images/image/${image_size})">
+                style="background-image: url(${slide_url}/@@images/image/${image_size})"
+                tal:condition="python: slide_type='Image'">
                 <div class="slide_text">
                   <h3>${slide_title}</h3>
                   <p class="documentDescription">${slide_description}</p>
