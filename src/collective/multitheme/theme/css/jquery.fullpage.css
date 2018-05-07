@@ -1,4 +1,4 @@
-
+/* @override http://kunst.medialog.no/++theme++multitheme/css/jquery.fullpage.css */
 
 /*!
  * fullPage 2.9.7
@@ -102,11 +102,10 @@ body.template-edit #fullpagewrapper  {
 }
 #menu{
 	top:9px;
-	left:270px;
 	height: 40px;
 	z-index: 99970;
 	width: 100%;
-	padding: 0;
+	padding: 0 10px;
 	margin:0;
 	position: absolute;
 }
