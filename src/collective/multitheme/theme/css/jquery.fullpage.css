@@ -17,11 +17,10 @@
 	background: white;
 	opacity: 0.9;
 	max-width: 100vw;
+	color:  black;
  
 }
-.textslide p {
-	color:  black !important;
-}
+
 
 .slide_text {
 	background: rgba(0,0,0,0.40);
@@ -37,7 +36,7 @@
 }
 .slide p {
 	border-bottom: 0 none;
-		color: white;
+		xcolor: white;
 }
 
 .slide h3 .smaller {
