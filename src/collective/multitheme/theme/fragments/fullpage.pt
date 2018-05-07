@@ -24,11 +24,11 @@
         data-anchor="${item_id}"
         style="background-image: url(${item_url}/@@images/image/${image_size})">
 
-        <div class="slide">
+        <!--div class="slide">
           <div class="slide_text">
             <h3>${item_title} <span class="smaller" tal:condition="item_description"> / ${item_description}</span></h3>
           </div>
-        </div>
+        </div-->
 
         <div class="slide textslide">
           <div class="slide_text">
