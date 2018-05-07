@@ -8,8 +8,9 @@
  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
  */
 
-#fullpagewrapper  {
+body.template-edit #fullpagewrapper  {
    max-height: 700px;	
+   overflow: hidden;
 }
 
 @media (min-width:800px){ 
