@@ -7,6 +7,7 @@
   tal:condition="image_size">
 
   <ul id="menu">
+    <li><a href="/">Forside</li>
     <li tal:repeat="item items" li data-menuanchor="${item/id}"><a href="#${item/id}">${item/Title}</a></li>
   </ul>
 
