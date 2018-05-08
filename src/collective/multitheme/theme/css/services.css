@@ -21,7 +21,6 @@ div.service-items {
 }
 .service-item {
   min-width: 300px;
-  width: 30%;
   background: white;
   padding: 0.9em;
   margin-bottom: 1em;

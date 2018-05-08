@@ -40,4 +40,9 @@
 				  </div>
     	</div>
 			<link rel="stylesheet" href="++theme++multitheme/css/${css_file}.css" tal:condition="load_css">
+			<style>
+				.service-item {
+  				width: ${view/item_width}%;
+				}
+			</style>
 </section>

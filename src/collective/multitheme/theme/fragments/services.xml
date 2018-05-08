@@ -13,6 +13,13 @@
     <title>Path to folder</title>
     <default>services</default>
   </field>
+  <field name="image_items" type="zope.schema.Int">
+   <description>Image columns</description>
+   <required>True</required>
+   <title>Images on same row</title>
+   <default>3</default>
+   <min>1</min>
+  </field>
   <field name="css_file" type="zope.schema.Choice">
       <description/>
       <required>True</required>
