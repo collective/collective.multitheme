@@ -20,7 +20,7 @@
             item_title item/Title;
             item_description item/Description;
             item_url item/getURL|item/absolute_url;
-            relocate_to view/relocate_to|None"
+            relocate_to view/data/relocate_to"
         tal:condition="python: item_type=='Kunstverk'"
         class="section"
         id="${item_id}"
@@ -58,10 +58,7 @@
       </div>
     </tal:repeat>
 
-  <script tal:condition="relocate_to">
-      if (screen.width <= 768) {
-        window.location.replace("${relocate_to}");
-      }
+  <script tal:condition="view/data/relocate_to">if (screen.width <= 768) { window.location.replace("${view/data/relocate_to}")}
   </script>
   <script>require([
       'jquery',
@@ -75,6 +72,8 @@
 				    navigationPosition: 'right',
             slidesNavigation: false,
             responsiveWidth: 768,
+            css3: true,
+            lazyLoading: true,
         });
       });
   </script>
