@@ -19,7 +19,7 @@
             folderish item/is_folderish;
             item_title item/Title;
             item_description item/Description;
-            item_url item/getURL|item/absolute_url
+            item_url item/getURL|item/absolute_url;
             relocate_to view/relocate_to|None"
         tal:condition="python: item_type=='Kunstverk'"
         class="section"

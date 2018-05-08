@@ -14,7 +14,7 @@
       <source>collective.themefragments.tiles.CatalogSource</source>
  </field>
  <field name="image_size" type="zope.schema.Choice">
-  <description>Choose Image Size (scale) for you image wall</description>
+  <description>Choose Image Size (scale) for you images</description>
   <required>True</required>
   <title>Image Size</title>
   <default>preview</default>
