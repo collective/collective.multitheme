@@ -19,9 +19,8 @@
         <link rel="stylesheet" href="++theme++multitheme/css/masonary.css" tal:condition="load_css">
     </tal:define>
     <script>require([
-        'pat-base',
-        '++theme++multitheme/javascript/masonry.pkgd.min',
-        '++theme++multitheme/javascript/imagesloaded.pkgd.min'
+      '++theme++multitheme/javascript/imagesloaded.pkgd.min',
+      '++theme++multitheme/javascript/masonry.pkgd.min',
       ], function(Base) {
         'use strict';
         var Masonry = Base.extend({
