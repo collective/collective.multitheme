@@ -23,11 +23,16 @@
         tal:condition="python: item_type=='Kunstverk'"
         class="section"
         id="${item_id}"
-        style="background-image: url(${item_url}/@@images/image/${image_size})"
-        data-anchor="${item_id}">
+        data-anchor="${item_id}"
+        style="background-image: url(${item_url}/@@images/image/${image_size})">
+
+        <!--div class="slide">
+          <div class="slide_text">
+            <h3>${item_title} <span class="smaller" tal:condition="item_description"> / ${item_description}</span></h3>
+          </div>
+        </div-->
 
         <div class="slide textslide">
-          <img class="slide_image" src="${item_url}/@@images/image/${image_size}" alt="${item_title}" title="${item_title}"/>
           <div class="slide_text">
             <h1><a href="${item_url}">${item_title}</a></h1>
             <p class="documentDescription" tal:condition="item_description">${item_description}</p>
@@ -45,7 +50,6 @@
                 id="${slide_id}"
                 style="background-image: url(${slide_url}/@@images/image/${image_size})"
                 tal:condition="python: slide_type=='Image'">
-                <img class="slide_image" src="${slide_url}/@@images/image/${image_size}" alt="${slide_title}" title="${slide_title}"/>
                 <div class="slide_text">
                   <h3>${slide_title}</h3>
                   <p class="documentDescription">${slide_description}</p>

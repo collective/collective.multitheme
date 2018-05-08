@@ -1,4 +1,7 @@
-/* @override http://kunst.medialog.no/++theme++multitheme/css/jquery.fullpage.css */
+/* @override 
+	http://kunst.medialog.no/++theme++multitheme/css/jquery.fullpage.css
+	http://localhost:8080/kunst/++theme++multitheme/css/jquery.fullpage.css
+*/
 
 /*!
  * fullPage 2.9.7
@@ -21,8 +24,30 @@ body.template-edit #fullpagewrapper  {
 	right:  0; 
 	bottom:  0;
 	}
+
+img.slide_image  {
+	display:  none;;	
+}
 }
 
+@media (max-width:799px){
+#fullpage .fp-controlArrow {
+    top: 20%;
+   }
+div.slide_text {
+	position: relative;
+}
+
+body div.slide_text h3 {
+	margin-top: 0;
+	padding-top: 0.5em;
+	text-align: center
+}
+ 
+.slide, .section  {
+	background-image: none !important;	
+	}
+}
 [class*="fp-viewing"] #content-header {
 	z-index:99;
 	position: fixed;
@@ -35,6 +60,11 @@ body.template-edit #fullpagewrapper  {
 .section,
 .slide {
 	background-size: cover;
+}
+
+img.slide_image {
+	min-width: 100vw;
+	height:  auto;
 }
  
 .textslide .slide_text {
@@ -162,7 +192,7 @@ html.fp-enabled,
     -ms-user-select: none; /* IE10+ */
     position: absolute;
     z-index: 4;
-    top: 40%;
+    top: 35%;
     cursor: pointer;
     width: 0;
     height: 0;
