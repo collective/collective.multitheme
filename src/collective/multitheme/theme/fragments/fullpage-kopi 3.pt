@@ -64,6 +64,7 @@
       '++theme++multitheme/javascript/jquery.cover.js',
       '++theme++multitheme/javascript/jquery.fullpage'
       ], function(Base) {
+      $(".slide_image").cover();
       $('#fullpage').fullpage({
             menu: '#menu',
             paddingTop: '100px',
@@ -75,7 +76,6 @@
             css3: true,
             lazyLoading: false,
         });
-        $(".slide_image").cover();
       });
   </script>
 
