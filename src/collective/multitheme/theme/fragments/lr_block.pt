@@ -15,7 +15,10 @@
     <div class="half bodytext ${color2}">
         <h2 class="${color2}" tal:condition="title">${title}</h2>
         <h4  class="${color2}" tal:condition="view/data/description">${view/data/description}</h4>
-         <div  class="${color2}" tal:content="structure view/data/text/@@output_relative_to"/>
+        <div  class="${color2}" tal:define="value nocall:view/data/text|nothing;
+                       output_relative_to nocall:value/@@output_relative_to|nothing"
+                   condition="output_relative_to"
+                   content="structure python:output_relative_to(context)" />
     </div>
     <div class="half image">
         <img    alt="${title}" class="image-inline"
