@@ -13,9 +13,10 @@
    <required>True</required>
    <title>Icon</title>
  </field>
-  <field name="text" type="plone.app.textfield.RichText" marshal:primary="true">
-      <title>Body Text</title>
-  </field>
+ <field name="text" type="plone.app.textfield.RichText" marshal:primary="true"
+          form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
+     <title>Text</title>
+ </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
     <required>True</required>
