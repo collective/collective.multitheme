@@ -5,10 +5,7 @@
   </a>
 </span>
  <div class="accordiondiv">
-   <tal:block tal:define="value nocall:view/data/text|nothing;
-                  output_relative_to nocall:value/@@output_relative_to|nothing"
-              condition="output_relative_to"
-              content="structure python:output_relative_to(context)" />
+   <tal:block content="structure view/data/text" />
   </div>
   <script>require([
       'jquery',
