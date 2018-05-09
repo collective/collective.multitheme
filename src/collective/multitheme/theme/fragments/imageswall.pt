@@ -15,30 +15,24 @@
        </figure>
      </tal:image>
     </div>
-    <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+    <!--tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
         <link rel="stylesheet" href="++theme++multitheme/css/masonary.css" tal:condition="load_css">
-    </tal:define>
+    </tal:define-->
+
+
     <script>require([
-      '++theme++multitheme/javascript/imagesloaded.pkgd.min',
-      '++theme++multitheme/javascript/masonry.pkgd.min',
+      'jquery',
       ], function(Base) {
         'use strict';
-        var Masonry = Base.extend({
-          name: 'masonry',
-          trigger: '.wall-of-images',
-          init: function() {
-            var self = this;
-            self.$el.imagesLoaded(function() {
-              self.$el.masonry({
-                itemSelector: 'figure',
-                percentPosition: true
-              });
-            });
-          }
+        $('.wall-of-images').imagesLoaded(function() {
+          $('.wall-of-images').masonry({
+            itemSelector: 'figure',
+            percentPosition: true
+          });
         });
-        return Masonry;
       });
-        </script>
+    </script>
+
     <style tal:define="small view/small; medium view/medium; large view/large">
       @media only screen and (min-width: 768px) {
         .wall-of-images figure {

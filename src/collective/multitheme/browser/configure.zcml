@@ -9,7 +9,7 @@
         name="democontent"
         title="Multitheme Demo Content"
         directory="profiles/democontent"
-        description="Installs Multi Theme with demo content."
+        description="Installs (Multi Theme) demo content."
         provides="Products.GenericSetup.interfaces.EXTENSION"
         post_handler="collective.multitheme.setuphandlers.install_demo_content"
         />

@@ -50,4 +50,21 @@
 	    <value key="weight">100</value>
 	</records>
 
+	<records prefix="plone.bundles/imagesloaded-js"
+	           interface="Products.CMFPlone.interfaces.IBundleRegistry">
+	    <value key="depends">plone</value>
+	    <value key="jscompilation">++theme++multitheme/javascript/imagesloaded.pkgd.min.js</value>
+	    <value key="last_compilation">2017-10-06 00:00:00</value>
+	    <value key="compile">False</value>
+	    <value key="enabled">True</value>
+	</records>
+	<records prefix="plone.bundles/masonry-js"
+	           interface="Products.CMFPlone.interfaces.IBundleRegistry">
+	    <value key="depends">imagesloaded-js</value>
+	    <value key="jscompilation">++theme++multitheme/javascript/masonry.pkgd.min.js</value>
+	    <value key="csscompilation">++theme++multitheme/css/masonary.css</value>
+	    <value key="last_compilation">2017-10-06 00:00:00</value>
+	    <value key="compile">False</value>
+	    <value key="enabled">True</value>
+	</records>
 </registry>
