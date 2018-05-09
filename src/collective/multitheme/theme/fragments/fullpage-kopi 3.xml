@@ -1,0 +1,32 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns:users="http://namespaces.plone.org/supermodel/users"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="linked_folder" type="zope.schema.Choice">
+    <description>Choose Folder for images for you image wall. Leave empty for current folder</description>
+    <required>False</required>
+    <title>Select a folder (or folderish object)</title>
+    <source>collective.themefragments.tiles.CatalogSource</source>
+ </field>
+ <field name="image_size" type="zope.schema.Choice">
+   <description>Choose Image Size (scale) for you images</description>
+   <required>True</required>
+   <title>Image Size</title>
+   <default>preview</default>
+   <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+ </field>
+
+ <field name="relocate_to" type="zope.schema.TextLine">
+   <description>If you want antother layout for small screens (768px), choose it here</description>
+   <required>False</required>
+   <title>Set if you want redirect</title>
+   <default></default>
+ </field>
+
+</schema>
+</model>
