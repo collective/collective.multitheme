@@ -1,0 +1,28 @@
+<section id="fragment-${view/id}"
+  class="accordion-info">
+  <span><a href="#" class="accordian_info accordion toggle">
+    <i class="button icon fa ${view/data/icon} ${view/data/color2} ${view/data/color1}"></i>
+  </a>
+</span>
+ <div class="accordiondiv">
+   <tal:block tal:define="value nocall:view/data/text|nothing;
+                  output_relative_to nocall:value/@@output_relative_to|nothing"
+              condition="output_relative_to"
+              content="structure python:output_relative_to(context)" />
+  </div>
+  <script>require([
+      'jquery',
+      ], function(Base) {
+        $("#fragment-${view/id} .accordian_info").click(function() {
+            $('#fragment-${view/id} .accordiondiv').toggle();
+        });
+        $("a").click(function(){
+          $(this).toggleClass("open");
+        });
+      });
+  </script>
+
+  <tal:define tal:define="load_css python:context.portal_registry['collective.multitheme.interfaces.ICollectiveMultiThemeSettings.load_css'] or '';">
+      <link rel="stylesheet" href="++theme++multitheme/css/accordian_info.css" tal:condition="load_css">
+  </tal:define>
+</section>
