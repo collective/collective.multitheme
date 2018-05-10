@@ -68,8 +68,7 @@
 				});
       $('#fullpage').fullpage({
             menu: '#menu',
-            paddingTop: '100px',
-		    fixedElements: '#content-header',
+            fixedElements: '#content-header',
             navigation: false,
 		    navigationPosition: 'right',
             slidesNavigation: false,
