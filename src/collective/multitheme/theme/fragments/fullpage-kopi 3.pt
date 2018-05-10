@@ -22,7 +22,6 @@
             item_url item/getURL|item/absolute_url;
             relocate_to view/data/relocate_to;
             has_text obj/text/output|None"
-        tal:condition="has_text"
         class="section"
         id="${item_id}"
         data-anchor="${item_id}">
@@ -32,7 +31,7 @@
           <div class="slide_text">
             <h1><a href="${item_url}">${item_title}</a></h1>
             <p class="documentDescription" tal:condition="item_description">${item_description}</p>
-            <div tal:replace="structure obj/text/output" />
+            <div tal:replace="structure obj/text/output" tal:condition="has_text" />
           </div>
         </div>
 
