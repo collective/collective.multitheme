@@ -64,7 +64,9 @@
       '++theme++multitheme/javascript/jquery.cover.js',
       '++theme++multitheme/javascript/jquery.fullpage'
       ], function(Base) {
-      $(".slide_image").cover();
+      $(document).ready(function() {
+					$(".slide_image").cover();
+				});
       $('#fullpage').fullpage({
             menu: '#menu',
             paddingTop: '100px',
@@ -73,7 +75,6 @@
 		    navigationPosition: 'right',
             slidesNavigation: false,
             responsiveWidth: 768,
-            css3: true,
             lazyLoading: false,
         });
       });
