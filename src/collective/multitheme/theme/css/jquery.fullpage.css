@@ -1,5 +1,7 @@
 /* @override http://kunst.medialog.no/copy_of_all-kunst/++theme++multitheme/css/jquery.fullpage.css */
 
+/* @override http://kunst.medialog.no/copy_of_all-kunst/++theme++multitheme/css/jquery.fullpage.css */
+
 /* @override 
 	http://kunst.medialog.no/++theme++multitheme/css/jquery.fullpage.css
 	http://localhost:8080/kunst/++theme++multitheme/css/jquery.fullpage.css
@@ -78,6 +80,10 @@ img.slide_image {
 	color:  black;
  	padding-bottom: 1.2em;
  	z-index:6
+}
+
+img.slide_image.lazyloaded {
+z-index:  -1;	
 }
 
 
