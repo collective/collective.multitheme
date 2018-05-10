@@ -74,6 +74,7 @@
 		    navigationPosition: 'right',
             slidesNavigation: false,
             responsiveWidth: 768,
+            css3: true,
             lazyLoading: false,
         });
       });
