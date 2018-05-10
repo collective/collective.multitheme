@@ -68,7 +68,6 @@
 				});
       $('#fullpage').fullpage({
             menu: '#menu',
-            fixedElements: '#content-header',
             navigation: false,
 		    navigationPosition: 'right',
             slidesNavigation: false,
