@@ -20,18 +20,17 @@
             item_title item/Title;
             item_description item/Description;
             item_url item/getURL|item/absolute_url;
-            relocate_to view/data/relocate_to"
-        tal:condition="python: item_type=='Kunstverk'"
+            relocate_to view/data/relocate_to;
+            has_text obj/text/output|None"
         class="section"
         id="${item_id}"
         data-anchor="${item_id}">
 
-        <div class="slide textslide" style="background-image: url(${item_url}/@@images/image/${image_size})"
-        >
+        <div class="slide textslide" style="background-image: url(${item_url}/@@images/image/${image_size})">
           <div class="slide_text">
             <h1><a href="${item_url}">${item_title}</a></h1>
             <p class="documentDescription" tal:condition="item_description">${item_description}</p>
-            <div tal:replace="structure item/text/output" />
+            <div tal:replace="structure item/text/output" tal:condition="has_text" />
           </div>
         </div>
 
