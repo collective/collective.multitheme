@@ -26,9 +26,7 @@ No documentation yet
 Translations
 ------------
 
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+This product has not been translated yet
 
 
 Installation
@@ -52,7 +50,6 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.multitheme/issues
 - Source Code: https://github.com/collective/collective.multitheme
-- Documentation: https://docs.plone.org/foo/bar
 - Use  'lessc mylessfile.less mycssfile.css'
 
 
