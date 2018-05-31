@@ -32,7 +32,7 @@ setup(
     keywords='Python Plone',
     author='Espen Moe-Nilssen',
     author_email='espen@medialog.no',
-    url='https://pypi.python.org/pypi/collective.multitheme',
+    url='https://github.com/collective/collective.multitheme',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['collective'],
