@@ -6,7 +6,7 @@
   <a href="#" class="accordian_title accordion toggle">
     <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
       <span class="tcon-menu__lines" aria-hidden="true"></span>
-      <span class="tcon-visuallyhidden">toggle coontent</span>
+      <span class="icon-visuallyhidden">toggle coontent</span>
     </button>
     <h3>${title}</h3>
   </a>

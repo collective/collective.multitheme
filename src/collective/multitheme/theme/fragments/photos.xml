@@ -1,0 +1,18 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns:users="http://namespaces.plone.org/supermodel/users"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="photos" type="zope.schema.List" form:widget="plone.formwidget.multifile.widget.MultiFileFieldWidget" marshal:primary="true">
+    <value_type type="plone.namedfile.field.NamedBlobImage()" marshal:primary="true">
+      <title i18n:translate="">Images</title>
+    </value_type>
+    <required>false</required>
+</field>
+</schema>
+
+</model>

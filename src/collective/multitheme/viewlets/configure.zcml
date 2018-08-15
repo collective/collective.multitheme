@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.multitheme">
+
+    <browser:viewlet
+      name="multitheme.menuviewlet"
+      for="collective.multitheme.interfaces.ICollectiveMultithemeLayer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.MenuViewlet"
+      template="menu.pt"
+      layer="collective.multitheme.interfaces.ICollectiveMultithemeLayer"
+      permission="zope2.View"
+      />
+
+    <include package="Products.CMFCore" file="permissions.zcml" />
+
+</configure>

@@ -1,0 +1,61 @@
+<section id="fragment-${view/id}"
+  tal:define="title view/data/title|None;
+    description view/data/description|None;
+    height view/data/height|None;
+    image view/one_image|None;
+    image_url image/getURL;"
+    class="container pusher">
+  <div class="pushimage container">
+    <h1 tal:condition="title">${title}</h1>
+    <h3 tal:condition="description">${view/data/description}</h3>
+  </div>
+  <div class="container pushtext">
+
+      <tal:block define="value nocall:view/data/text|nothing;
+                               output_relative_to nocall:value/@@output_relative_to|nothing"
+                       condition="output_relative_to"
+                       content="structure python:output_relative_to(context)" />
+  </div>
+
+<style>
+.pushimage{
+  height:${height}vh;
+  background-image: url(${image_url});
+}
+
+.pushmargin{
+  height:${height}vh;
+}
+
+.pushtext {
+margin-top: ${height}vh;
+
+}
+
+
+.pusher {
+  width: 100%;
+  position: fixed;
+  top:  0;
+  right: 0;
+   left: 0;
+
+}
+
+.pushimage{
+  width: 100%;
+  background-attachment: scroll;
+  background-size: cover;
+    z-index: -2;
+}
+
+.pushtext{
+  background: white;
+  width: 100%;
+  padding: 2em;
+	position: relative;
+}
+
+</style>
+
+</section>

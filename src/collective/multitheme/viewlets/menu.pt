@@ -1,0 +1,122 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    i18n:domain="medialog.multitheme"
+    tal:define="portal_tabs view/portal_tabs;
+    portal_url context/@@plone_context_state/view_url"
+    tal:condition="portal_tabs">
+
+    <div id="nav_wrapper" class="nomargin no-mobile">
+       <div  class="container">
+
+        <a id="portal-logo"
+           title="${view/logo_title}"
+           href="${portal_url}"
+           i18n:domain="plone"
+           i18n:attributes="title">
+
+           <img src="${view/img_src}"
+                alt="${view/logo_title}"
+                title="${view/logo_title}"/>
+        </a>
+        <a id="openup" href="javascript:void(0);" class="icon onlyxxmobile">
+          <i class="fa fa-bars"></i>
+        </a>
+         <ul class="cf" id="menu_navigation"
+            tal:define="selected_tab python:view.selected_portal_tab" class="flex nomargin">
+              <tal:tabs tal:repeat="tab portal_tabs">
+                <li tal:define="tid tab/id"
+                    tal:attributes="id string:portaltab-${tid}"
+                     class="${python:selected_tab==tid and 'selected' or nothing} cf">
+                    <a href=""
+                       tal:attributes="href tab/url;
+                                       title tab/description|nothing;
+                                       target tab/link_target|nothing;">
+                      ${tab/name}
+                    </a>
+                </li>
+              </tal:tabs>
+         </ul>
+      </div>
+    </div>
+<script>
+$(function() {
+	menu = $('#menu_navigation');
+
+  $('#openup').on('click', function(e) {
+    e.preventDefault(); menu.slideToggle();
+  });
+
+  $(window).resize(function(){
+    var w = $(this).width(); if(w > 760 && menu.is(':hidden')) {
+      menu.removeAttr('style');
+    }
+  });
+
+  $('nav li').on('click', function(e) {
+    var w = $(window).width(); if(w < 760 ) {
+      menu.slideToggle();
+    }
+  });
+  $('.open-menu').height($(window).height());
+});
+</script>
+<style>
+  #nav_wrapper {
+    top: 0; // Fix the menu to the top
+    position: fixed; // Fix the menu to the top
+    height: 40px;
+  	width: 100%;
+  }
+
+  #nav_wrapper ul {
+      padding: 0;
+  	  margin: 0;
+  }
+
+  #nav_wrapper li {
+      display: inline;
+      float: left;
+  }
+
+  #nav_wrapper li:hover {
+      background-color: #CCC;
+  }
+
+  a#openup {
+  	  display: none;
+  }
+
+@media screen and (max-width: 760px) {
+
+  #nav_wrapper {
+  		height: auto;
+  		border-bottom: 0;
+  }
+  #nav_wrapper ul {
+  		  display: none;
+  		  height: auto;
+  }
+
+  #nav_wrapper li {
+  		  width: 100%;
+  		  float: left;
+  		  position: relative;
+  }
+
+  a#openup {
+        display: block;
+        width: 100%;
+  }
+}
+
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; } /* For IE 6/7 (trigger hasLayout) */
+
+
+</style>
+</html>
+ 

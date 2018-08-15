@@ -1,0 +1,12 @@
+
+<tal:slider tal:condition="view/data/photos|None">
+	<div id="slider" class="slider"
+						tal:define="url python: context.absolute_url()">
+
+     ----------------------
+
+	 <div tal:repeat="photo view/data/photos">
+						<img src="${url}/@@view/++widget++form.widgets.IPhotosBehavior.photos/@@download/${repeat/photo/index}">
+		</div>
+
+</tal:slider>

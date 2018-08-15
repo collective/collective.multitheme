@@ -9,6 +9,7 @@
   <includeDependencies package="." />
   <include package=".widgets" />
   <include package=".browser" />
+  <include package=".viewlets" />
 
   <plone:static
       directory="theme"
