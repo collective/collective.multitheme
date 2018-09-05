@@ -2841,9 +2841,6 @@ fieldset[disabled] .link-parent.active {
 .portlet .portletContent > ul li:hover {
   background: #fcfcfd;
 }
-.portlet .portletContent > ul li:hover a::before {
-  color: #BF2A2A;
-}
 .portlet.portletCalendar table {
   width: 100%;
   text-align: center;
@@ -2952,17 +2949,18 @@ fieldset[disabled] .link-parent.active {
 .portletNavigationTree .portletContent {
   border-top: 0;
 }
-.portletNavigationTree .portletContent > ul > li > a {
+.portletNavigationTree .portletContent > ul > li a {
   display: block;
+}
+.portletNavigationTree .portletContent > ul > li a:hover {
+  text-decoration: none;
   background: #f9f9f9;
+  color: #BF2A2A;
 }
-.portletNavigationTree .portletContent > ul > li > a::before {
-  content: "";
+.portletNavigationTree .portletContent > ul > li a:hover::before {
+  color: #BF2A2A;
 }
-.portletNavigationTree .portletContent > ul > li > a:hover {
-  background: #FEFEFE;
-}
-.portletNavigationTree .portletContent > ul > li > a:hover::after {
+.portletNavigationTree .portletContent > ul > li a:hover::after {
   content: "⟩";
   position: absolute;
   right: 10px;
@@ -2970,17 +2968,14 @@ fieldset[disabled] .link-parent.active {
   margin-top: -3px;
   color: #777777;
 }
-.portletNavigationTree .portletContent > ul > li > ul a {
-  padding-left: 40px;
-}
-.portletNavigationTree .portletContent > ul > li > a > img.image-icon {
+.portletNavigationTree .portletContent > ul > li a > img.image-icon {
   max-height: 20px;
 }
 .portletNavigationTree .portletContent > ul ul {
   padding-left: 0;
 }
 .portletNavigationTree .portletContent .navTreeCurrentNode > a {
-  background: #FEFEFE;
+  background: #f9f9f9;
   color: #696969;
 }
 .portletNavigationTree .portletContent .navTreeCurrentNode > a::after {
@@ -2990,6 +2985,21 @@ fieldset[disabled] .link-parent.active {
   font-size: 18px;
   margin-top: -3px;
   color: #777777;
+}
+.portletNavigationTree .portletContent ul.navTreeLevel1 > li a {
+  padding-left: 30px;
+}
+.portletNavigationTree .portletContent ul.navTreeLevel2 > li a {
+  padding-left: 45px;
+}
+.portletNavigationTree .portletContent ul.navTreeLevel3 > li a {
+  padding-left: 60px;
+}
+.portletNavigationTree .portletContent ul.navTreeLevel4 > li a {
+  padding-left: 75px;
+}
+.portletNavigationTree .portletContent ul.navTreeLevel5 > li a {
+  padding-left: 90px;
 }
 #upgrade-products .configlets li,
 #install-products .configlets li,
@@ -3132,9 +3142,6 @@ fieldset[disabled] .link-parent.active {
 }
 .managedPortlet .portletContent > ul li:hover {
   background: #fcfcfd;
-}
-.managedPortlet .portletContent > ul li:hover a::before {
-  color: #BF2A2A;
 }
 .managedPortlet.portletCalendar table {
   width: 100%;
@@ -4352,10 +4359,6 @@ body.template-logged_out #content-core .portletContent > ul .portletItemDetails 
 body.template-login_form #content-core .portletContent > ul li:hover,
 body.template-logged_out #content-core .portletContent > ul li:hover {
   background: #fcfcfd;
-}
-body.template-login_form #content-core .portletContent > ul li:hover a::before,
-body.template-logged_out #content-core .portletContent > ul li:hover a::before {
-  color: #BF2A2A;
 }
 body.template-login_form #content-core.portletCalendar table,
 body.template-logged_out #content-core.portletCalendar table {
