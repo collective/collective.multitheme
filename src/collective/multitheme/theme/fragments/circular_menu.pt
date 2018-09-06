@@ -1,9 +1,9 @@
 <section id="fragment-circular_menu"
-				 class="${view/data/color3}"
+				 class="${view/data/color3|None}"
 				 tal:define="items view/get_items|view/get_folderitems;
-				 height view/get_height;
-				 color1 view/data/color1;
-				 color2 view/data/color2"
+				 height view/get_height|None;
+				 color1 view/data/color1|None;
+				 color2 view/data/color2|None"
 				 style= "height: ${height}px">
 <div id="circular_menu">
 	  <input type="checkbox" id="toggle" onClick="toggle();"/>
@@ -13,7 +13,7 @@
 						<i class="${color2} fa fa-bars"></i>
 					</div>
 					<tal:repeat tal:repeat="item items">
-							<a href="${link}" class="btn ${color1} ${color2}"
+							<a href="${item/obj}" class="btn ${color1} ${color2}"
 							    tal:define="mi python:item['item'];
 							                   x python:item['x'];
 							                   y python:item['y'];

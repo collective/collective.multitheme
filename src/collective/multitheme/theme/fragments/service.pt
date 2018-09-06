@@ -1,0 +1,17 @@
+<html>
+    <div class="service-item"
+			tal:define="obj view/get_object">
+
+				<a href="#" tal:attributes="href obj/item_url">
+	 					<img src="${obj}/@@images/image/${view/data/image_size}" alt="${item_title}"
+							    	 tal:condition="python: item.image"
+                     class="img-responsive" />
+              </a>
+  						<div class="media-body">
+	                <a href="${item_url}">
+                    <h1 class="media-heading ${view/data/color4}">${obj/title}</h1>
+                  </a>
+                  <p >${obj/Description}</p>
+              </div>
+    	</div>
+</html>
