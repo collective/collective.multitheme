@@ -1,0 +1,73 @@
+.mosaic-grid  #content {
+ 	margin-bottom: 2%;
+}
+
+.mosaic-grid-row-fullwidth {
+  .container;
+}
+
+@media (max-width: 998px) {
+  #portal-column-two,
+  #sidebar{
+    width: 100%;
+  }
+}
+
+#sidebar img {
+  max-width: 100%;
+}
+
+
+div.outer-wrapper {
+	overflow-x:hidden;
+}
+
+.portletNavigationTree ul li.navTreeItem a {
+	background: white;
+}
+
+.portletNavigationTree ul li.navTreeItem a:hover {
+	text-decoration: none;
+}
+
+aside.portlet.portletNavigationTree {
+	border-radius: 0;
+}
+
+
+#portal-footer-wrapper,
+#portal-footer-wrapper a:hover{
+	color: #FFF;
+	a {
+		color: lighten(@plone-link-opposite, 55%);
+	}
+}
+
+a.event_ical img {
+	width: 12px !important;
+}
+
+#content div.cal_date {
+	margin-top: 0;
+}
+
+.formControls {
+	background: lighten(@plone-link-color, 40%);
+
+}
+
+body.template-login_form #content-core,
+body.template-logged_out #content-core {
+  background: #FFF;
+}
+
+
+.black-background { background-color: #000  !important}
+.white-background { background-color: #FFF  !important}
+option[value=grey-background], .grey-background { background-color: #DDD  !important}
+
+.black { color: #000  !important}
+.white { color: #FFF  !important}
+.grey { color: #DDD  !important}
+
+

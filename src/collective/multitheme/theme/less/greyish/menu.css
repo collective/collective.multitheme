@@ -1,0 +1,329 @@
+/* All this should be moved to the theme, also styles in templates */
+
+/* @group Top */
+
+ 
+div#portal-header  {
+	margin-top: 0;
+}
+
+.section-front-page #portal-breadcrumbs {
+	display: none;
+}
+
+#portal-breadcrumbs {
+	margin-top: 1em;
+}
+
+#portal-language-selector.en a.en, 
+#portal-language-selector.es a.es {
+	opacity: 0.3;
+}
+
+
+#portal-header ul {
+	padding: 0;
+}
+
+#mainnavigation-wrapper {
+	background: #F2F2F2;
+	clear: both;
+	width: 300%;
+	margin-left: -100%;
+	margin-right: -100%;
+}
+
+ul#mainnavigation {
+	margin: auto;
+	padding: 0;
+}
+
+#mainnavigation li {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+
+ul#mainnavigation li  a{
+ margin: 0 12px;
+ background: transparent;
+}
+
+   
+#mainnavigation-wrapper li {
+	list-style-image: none;
+	list-style-type: none;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+#mainnavigation-wrapper li a{
+	font-size: 18px;
+	color: #323332;
+	text-transform: uppercase;
+}
+
+
+#mainnavigation  li a span {
+	text-transform: uppercase;
+}
+
+#portal-language-selector {
+	font-size: 115%;
+	margin: auto 1em auto auto;
+}
+  
+
+#portal-header li,
+#mainnavigation  li{
+	color:  black;
+	list-style-type: none;
+	list-style-image: none;
+	xdisplay: inline-block;
+	text-transform: uppercase;
+}
+
+#portal-header li a,
+#mainnavigation  li a {
+	color:  black;
+	list-style-type: none;
+	list-style-image: none;
+	margin: 10px 20px;
+	font-size: 1.2em;
+}
+
+div#mainnavigation {
+	text-align: center;
+	line-height: 100px;
+	font-size: 18px;
+ 	display: block;
+}
+ 
+
+/* @end */
+
+/* @group Styles */
+
+.hidden  {
+	display:  none !important;
+}
+
+div.nomargin,
+.nomargin {
+	margin: 0;
+
+}
+
+.center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.mobile {
+	display: none;
+}
+
+img {height: auto;
+max-width: 100%}
+
+.flex,
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3em;
+  margin-bottom: 1.4em;
+}
+
+.grey-text {
+	color: #584534;
+
+}
+
+.darker-grey-text {
+	color: #727272;
+}
+
+.compact p {
+	margin-bottom: 0;
+}
+
+.highlight {
+	background-color: #fffbd4;
+}
+
+
+
+/* @end */
+
+/* @group Templates */
+
+#fragment-main-slider {
+	width: 300%;
+	margin-left: -100%;
+}
+
+div#slider {
+	margin: auto;
+	width: 100vw;
+}
+
+#sorting-options a {
+	background: whitesmoke;
+}
+
+
+
+div.newsitems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:    space-between
+
+}
+ 
+form.seachfragment {
+  	background-color: #e0e1e0;
+  	padding: 3em 3em 6em;
+  	width: 300%;
+  	margin-left: -100%;
+	margin-right: -100%
+  }
+
+
+  form.seachfragment  div.searchdiv {
+  	max-width: 700px;
+  	margin: auto;
+  	width: 100vw;
+  }
+
+input#main-search,
+form.seachfragment button  {
+	float: left;
+	display: inline-block;
+	font-size: 1.5em;
+  	border:  0 none;
+}
+
+input#main-search {
+	max-width: 80%;
+	height: 2.2em;
+}
+
+form.seachfragment button {
+	width: 15%;
+	float: right;
+	height: 2.2em;
+	background-color: #f59a41;
+}
+
+#content-core form.view-name-edit.autotabs  a  {
+	background: #EEE;
+}
+
+div.social {
+	width: 300%;
+	left: -100%;
+	padding-left: 100%;
+	padding-right: 100%;
+	position: relative;
+	margin-top: 2em;
+}
+
+
+ div.social-links a {
+		color:  white;
+		font-size: 2.3em;
+		border:  1px solid white;
+		border-radius: 50%;
+		width:  1.7em;
+		height:  1.7em;
+		display: inline-block;
+		line-height: 1.7em;
+		text-align: center;
+		padding: 0;
+		margin: 5px;
+
+}
+
+ div.social-links a:hover {
+		background-color: #f59a41;
+}
+div.social-links {
+	text-align: center;
+	padding: 1em;
+}
+
+button#toggle_filters {
+	width: 100%;
+}
+
+div#news_div {
+	border-right: 0 none;
+}
+
+div#program_div {
+	max-width: 450px;
+	width:  450px;
+	margin-left: auto;
+	padding-left: 30px;
+	border-left:  1px solid;
+}
+
+div.social,
+footer#portal-footer-wrapper {
+	background-color: #4d4e4d;
+	color: #F2F2F2;
+}
+
+
+
+/* @end */
+
+/* @group Footer */
+
+footer#portal-footer-wrapper .portletStaticText ul {
+	text-align: left;
+	font-weight: bold;
+	font-size: 18px;
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0;
+	width: 30%;
+	min-width: 300px;
+	float: left;
+	margin-top: 2em
+}
+
+
+footer#portal-footer-wrapper ul a {
+	color: #F2F2F2;
+}
+
+
+footer#portal-footer-wrapper p {
+	border-bottom: 0 none;
+	font-weight: normal
+}
+
+ 
+
+/* @end */
+ 
+
+@media (max-width: 1000px) {
+
+ .no-mobile {
+	display: none !important
+	}
+
+  .mobile {
+	display: inline-block;
+   }
+
+}

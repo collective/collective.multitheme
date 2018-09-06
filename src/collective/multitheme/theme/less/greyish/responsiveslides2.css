@@ -1,0 +1,143 @@
+/* @override http://sevilla.medialog.no//++theme++icas_theme/less/icas/responsiveslides2.css */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+	background-color: #e0e1e0;
+}
+  
+  .fillme {
+	width: 100%;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+div.slidetext-container {
+	position: relative;
+	margin: auto;
+	z-index: 9;
+	display: block;
+
+	left: 3em;
+}
+
+.slidetext {
+	box-sizing: border-box;
+	position: absolute;
+	right: 110px;
+		top:  5vw;
+}
+
+
+.slidetext h1,
+.slidetext h3{
+	margin: 0;
+	position: relative;
+	font-weight: 700;
+}
+
+#fragment-main-slider ul.rslides_tabs {
+	position: relative;
+	z-index: 3;
+	bottom:  70px;
+	text-align: center;
+	list-style-image: none;
+	list-style-type: none;
+
+}
+
+#fragment-main-slider  {
+	position: relative;
+	}
+	
+#fragment-main-slider ul.rslides_tabs li {
+	margin: 0 4px;
+	padding: 0;
+	display: inline;
+	}
+#fragment-main-slider ul.rslides_tabs li a{
+	background: white;
+	border-radius: 50%;
+	padding: 0px;
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	color:  #777;
+}
+
+#fragment-main-slider  ul li.rslides_here a {
+    background-color: #212020;
+	color:  white;
+	border-color: white;
+}
+
+
+#fragment-main-slider .prev, #fragment-main-slider .next {
+    background-color: #191818;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -25px;
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    width: 40px;
+    z-index: 3;
+}
+#fragment-main-slider .prev:hover, #fragment-main-slider .next:hover {
+    background-color: #000;
+}
+#fragment-main-slider .prev {
+    left: 10px;
+}
+#fragment-main-slider .next {
+    right: 10px;
+}
+
+
+@media (max-width: 600px) {
+	.slidetext {
+	font-size: 65%;
+	padding: 8px 14px;
+	border:  0 none;;
+	}	
+	div.slidetext-container {
+	top:  5px;;
+	left: 5px;
+	}
+	#fragment-main-slider .prev, #fragment-main-slider .next {
+	display: none;
+	}
+	
+	#fragment-main-slider ul.rslides_tabs {
+	bottom:  10%;
+	}
+
+ }
