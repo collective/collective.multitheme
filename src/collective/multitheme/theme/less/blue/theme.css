@@ -1,53 +1,5 @@
 /* theme.less file that will be compiled */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 100;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url("roboto/Roboto-Thin.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 100;
-  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url("roboto/Roboto-ThinItalic.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url("roboto/Roboto-Light.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 300;
-  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url("roboto/Roboto-LightItalic.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url("roboto/Roboto-Medium.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 500;
-  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url("roboto/Roboto-MediumItalic.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url("roboto/RobotoCondensed-Light.ttf") format('truetype');
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 300;
-  src: local('Roboto Condensed Thin Italic'), local('RobotoCondensed-LightItalic'), url("roboto/RobotoCondensed-LightItalic.ttf") format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Arvo|Crete+Round|Hind|Zilla+Slab');
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -333,10 +285,10 @@ html {
 }
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 14pt;
   font-weight: 500;
   line-height: 1.42857143;
-  color: #4d4d4d;
+  color: #26292a;
   background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -350,12 +302,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #007bb1;
+  color: #0059b3;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #004665;
+  color: #003366;
   text-decoration: underline;
 }
 a:focus {
@@ -370,8 +322,8 @@ img {
   vertical-align: middle;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
   border: 0;
   border-top: 1px solid #cccccc;
 }
@@ -414,14 +366,14 @@ h5,
 h6 {
   font-family: inherit;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.4;
   color: inherit;
 }
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 20pt;
+  margin-bottom: 10pt;
 }
 h1 a:hover,
 h2 a:hover,
@@ -430,37 +382,37 @@ h1 a:focus,
 h2 a:focus,
 h3 a:focus {
   text-decoration: none;
-  border-bottom: 2px #004665 solid;
+  border-bottom: 2px #003366 solid;
 }
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
 }
 h1 {
-  font-size: 36px;
+  font-size: 36pt;
 }
 h2 {
-  font-size: 30px;
+  font-size: 30pt;
 }
 h3 {
-  font-size: 24px;
+  font-size: 24pt;
 }
 h4 {
-  font-size: 18px;
+  font-size: 18pt;
 }
 h5 {
-  font-size: 14px;
+  font-size: 14pt;
 }
 h6 {
-  font-size: 12px;
+  font-size: 12pt;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 10pt;
 }
 .documentDescription {
-  font-size: 18px;
+  font-size: 18pt;
   font-weight: 700;
   color: #696969;
   margin-bottom: 10px;
@@ -482,17 +434,17 @@ mark {
 .documentByLine {
   color: #696969;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 10pt;
 }
 .documentFirstHeading {
-  padding-bottom: 9px;
-  margin: 0 0 10px;
+  padding-bottom: 9pt;
+  margin: 0 0 10pt;
   border-bottom: 1px solid #cccccc;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 10pt;
 }
 ul ul,
 ol ul,
@@ -502,7 +454,7 @@ ol ol {
 }
 dl {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20pt;
 }
 dt,
 dd {
@@ -520,7 +472,7 @@ abbr[data-original-title] {
   border-bottom: 1px dotted #777777;
 }
 address {
-  margin-bottom: 20px;
+  margin-bottom: 20pt;
   font-style: normal;
   line-height: 1.42857143;
 }
@@ -534,7 +486,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'Roboto Mono', Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 code {
   padding: 2px 4px;
@@ -553,9 +505,9 @@ kbd {
 }
 pre {
   display: block;
-  padding: 10px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 10pt;
+  margin: 0 0 10pt;
+  font-size: 13pt;
   line-height: 1.42857143;
   word-break: break-all;
   word-wrap: break-word;
@@ -1293,7 +1245,7 @@ th {
 }
 .listing {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 20pt;
 }
 .listing > thead > tr > th,
 .listing > tbody > tr > th,
@@ -1327,7 +1279,7 @@ th {
 }
 .invisible-grid {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 20pt;
   border: 0;
   background: transparent;
 }
@@ -1346,7 +1298,7 @@ th {
 @media screen and (max-width: 767px) {
   .plone-has-table {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 15pt;
     overflow-y: hidden;
     overflow-x: scroll;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -1435,8 +1387,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
+  margin-bottom: 20pt;
+  font-size: 21pt;
   line-height: inherit;
   color: #4d4d4d;
   border: 0;
@@ -1474,7 +1426,7 @@ select[size] {
   min-width: 10em;
 }
 select[size="1"] {
-  height: 34px;
+  height: 31pt;
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -1486,7 +1438,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
+  font-size: 14pt;
   line-height: 1.42857143;
   color: #696969;
 }
@@ -1509,9 +1461,9 @@ textarea,
 select {
   width: 100%;
   display: block;
-  height: 34px;
+  height: 31pt;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 14pt;
   line-height: 1.42857143;
   color: #696969;
   background-color: #fff;
@@ -1624,7 +1576,7 @@ textarea {
 }
 textarea[name='form.widgets.IRichText.text'] {
   min-height: 12em;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'Roboto Mono', Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 select {
   width: unset;
@@ -1637,7 +1589,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 34px;
+  line-height: 31pt;
   line-height: 1.42857143 \0;
 }
 input[type="radio"][disabled],
@@ -1694,7 +1646,7 @@ fieldset[disabled] input[type="checkbox"] {
 .field.error div.error::before {
   background-color: #ac493f;
   content: "×";
-  font-size: 14px;
+  font-size: 14pt;
   font-weight: 400;
   margin-left: -30px;
   margin-right: 5px;
@@ -1723,7 +1675,7 @@ fieldset[disabled] input[type="checkbox"] {
 .formHelp {
   margin-top: 0;
   margin-bottom: 0;
-  color: #666666;
+  color: #3e4345;
   font-weight: 400;
   font-style: italic;
 }
@@ -1759,7 +1711,7 @@ label .required::after {
 #select-rules + input {
   position: relative;
   float: right;
-  margin-top: -34px;
+  margin-top: -31pt;
 }
 #search-results li {
   margin: 12px 0;
@@ -1810,7 +1762,7 @@ button {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 14pt;
   line-height: 1.42857143;
   border-radius: 2px;
   -webkit-user-select: none;
@@ -2074,7 +2026,7 @@ fieldset[disabled] .destructive.active {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 14pt;
   line-height: 1.42857143;
   border-radius: 2px;
   -webkit-user-select: none;
@@ -2301,8 +2253,8 @@ fieldset[disabled] .link-parent.active {
 .plone-breadcrumb {
   clear: left;
   background-color: #e6e4e4;
-  margin-bottom: 20px;
-  margin-top: -20px;
+  margin-bottom: 20pt;
+  margin-top: -20pt;
   /* uncomment to hide breadcrumbs on home
   body.section-front-page & {display: none;} //not breadcrumbs on homepage
   */
@@ -2365,7 +2317,7 @@ fieldset[disabled] .link-parent.active {
   display: inline-block;
   padding: 0;
   list-style: none;
-  margin: 20px 0;
+  margin: 20pt 0;
 }
 .pagination li {
   display: block;
@@ -2383,7 +2335,7 @@ fieldset[disabled] .link-parent.active {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #007bb1;
+  color: #0059b3;
   background-color: #fff;
   border: 1px solid #e5e5e5 !important;
   margin-left: -1px;
@@ -2405,7 +2357,7 @@ fieldset[disabled] .link-parent.active {
 }
 .pagination li > a:hover,
 .pagination li > a:focus {
-  color: #004665;
+  color: #003366;
   background-color: #f2f1f1;
   border: 1px solid #e5e5e5 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -2415,8 +2367,8 @@ fieldset[disabled] .link-parent.active {
   z-index: 2;
   font-weight: 400;
   color: #fff;
-  background-color: #007bb1;
-  border: 1px solid #007bb1 !important;
+  background-color: #0059b3;
+  border: 1px solid #0059b3 !important;
   cursor: default;
 }
 .pagination li.disabled > span {
@@ -2523,7 +2475,7 @@ fieldset[disabled] .link-parent.active {
 .folder-listing > li::before {
   content: "•";
   position: absolute;
-  font-size: 19px;
+  font-size: 19pt;
   margin-top: -9px;
   left: 0;
   color: #a7daf2;
@@ -2584,11 +2536,11 @@ fieldset[disabled] .link-parent.active {
 .portalMessage {
   padding: 15px;
   padding-left: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 20pt;
   border: 0;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
-  font-size: 14px;
+  font-size: 14pt;
   font-weight: 400;
   text-shadow: 0 1px rgba(255, 255, 255, 0.1);
 }
@@ -2603,13 +2555,13 @@ fieldset[disabled] .link-parent.active {
 .alert.status a,
 .portalMessage a {
   font-weight: 400;
-  color: #005074;
+  color: #003b76;
 }
 .alert.status > strong::before,
 .portalMessage > strong::before,
 .alert.status > dt::before,
 .portalMessage > dt::before {
-  font-size: 14px;
+  font-size: 14pt;
   font-weight: 400;
   margin-left: -30px;
   margin-right: 10px;
@@ -2761,7 +2713,7 @@ fieldset[disabled] .link-parent.active {
 .portlet .portletHeader {
   background: #f2f1f1;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 18pt;
   padding: 13px 15px;
   color: #696969;
 }
@@ -2781,7 +2733,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   display: inline-block;
   left: 5px;
-  font-size: 24px;
+  font-size: 24pt;
   margin-top: -3px;
   line-height: 28px;
   font-weight: 500;
@@ -2796,7 +2748,7 @@ fieldset[disabled] .link-parent.active {
   left: inherit;
 }
 .portlet .portletContent {
-  font-size: 14px;
+  font-size: 14pt;
   border-top: 1px solid #e5e5e5;
   background: #fff;
   font-weight: 400;
@@ -2836,7 +2788,7 @@ fieldset[disabled] .link-parent.active {
   font-weight: 400;
   position: relative;
   margin-top: -26px;
-  font-size: 12px;
+  font-size: 12pt;
   color: #696969;
 }
 .portlet .portletContent > ul li:hover {
@@ -2882,7 +2834,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   margin-left: 50%;
   left: -3px;
-  font-size: 20px;
+  font-size: 20pt;
   color: #a7daf2;
   margin-top: 9px;
 }
@@ -2903,7 +2855,7 @@ fieldset[disabled] .link-parent.active {
 }
 .portlet.portletCalendar table .cal_next_month.cal_has_events > a:hover,
 .portlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover {
-  color: #004665;
+  color: #003366;
 }
 .portlet.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
 .portlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover::after {
@@ -2931,7 +2883,7 @@ fieldset[disabled] .link-parent.active {
   border-top: 1px solid #e5e5e5;
   background: #fcfcfd;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 12pt;
   font-weight: 400;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -2965,12 +2917,12 @@ fieldset[disabled] .link-parent.active {
   content: "⟩";
   position: absolute;
   right: 10px;
-  font-size: 18px;
+  font-size: 18pt;
   margin-top: -3px;
   color: #777777;
 }
 .portletNavigationTree .portletContent > ul > li a > img.image-icon {
-  max-height: 20px;
+  max-height: 20pt;
 }
 .portletNavigationTree .portletContent > ul ul {
   padding-left: 0;
@@ -2983,7 +2935,7 @@ fieldset[disabled] .link-parent.active {
   content: "⟩";
   position: absolute;
   right: 10px;
-  font-size: 18px;
+  font-size: 18pt;
   margin-top: -3px;
   color: #777777;
 }
@@ -3063,7 +3015,7 @@ fieldset[disabled] .link-parent.active {
 .managedPortlet .portletHeader {
   background: #f2f1f1;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 18pt;
   padding: 13px 15px;
   color: #696969;
 }
@@ -3083,7 +3035,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   display: inline-block;
   left: 5px;
-  font-size: 24px;
+  font-size: 24pt;
   margin-top: -3px;
   line-height: 28px;
   font-weight: 500;
@@ -3098,7 +3050,7 @@ fieldset[disabled] .link-parent.active {
   left: inherit;
 }
 .managedPortlet .portletContent {
-  font-size: 14px;
+  font-size: 14pt;
   border-top: 1px solid #e5e5e5;
   background: #fff;
   font-weight: 400;
@@ -3138,7 +3090,7 @@ fieldset[disabled] .link-parent.active {
   font-weight: 400;
   position: relative;
   margin-top: -26px;
-  font-size: 12px;
+  font-size: 12pt;
   color: #696969;
 }
 .managedPortlet .portletContent > ul li:hover {
@@ -3184,7 +3136,7 @@ fieldset[disabled] .link-parent.active {
   position: absolute;
   margin-left: 50%;
   left: -3px;
-  font-size: 20px;
+  font-size: 20pt;
   color: #a7daf2;
   margin-top: 9px;
 }
@@ -3205,7 +3157,7 @@ fieldset[disabled] .link-parent.active {
 }
 .managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a:hover,
 .managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover {
-  color: #004665;
+  color: #003366;
 }
 .managedPortlet.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
 .managedPortlet.portletCalendar table .cal_prev_month.cal_has_events > a:hover::after {
@@ -3233,7 +3185,7 @@ fieldset[disabled] .link-parent.active {
   border-top: 1px solid #e5e5e5;
   background: #fcfcfd;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 12pt;
   font-weight: 400;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -3320,7 +3272,7 @@ fieldset[disabled] .link-parent.active {
 #portlet-prefs ul ul li a::before {
   content: "•";
   position: absolute;
-  font-size: 25px;
+  font-size: 25pt;
   margin-top: -9px;
   left: 15px;
   color: #a7daf2;
@@ -3374,7 +3326,7 @@ fieldset[disabled] .link-parent.active {
 .link-category {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 12px;
+  font-size: 12pt;
   font-weight: 400;
   line-height: 1;
   color: #4d4d4d;
@@ -3390,7 +3342,7 @@ fieldset[disabled] .link-parent.active {
 }
 a.link-category:hover,
 a.link-category:focus {
-  color: #007bb1;
+  color: #0059b3;
   text-decoration: none;
   cursor: pointer;
 }
@@ -3458,13 +3410,13 @@ a.link-category:focus {
   margin-right: 8px;
 }
 #textAdjust .decrease-text {
-  font-size: 12px;
+  font-size: 12pt;
 }
 #textAdjust .normal-text {
-  font-size: 14px;
+  font-size: 14pt;
 }
 #textAdjust .increase-text {
-  font-size: 18px;
+  font-size: 18pt;
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav {
   float: right;
@@ -3485,15 +3437,15 @@ a.link-category:focus {
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav .autotoc-level-1 {
   margin-left: 0;
-  font-size: 18px;
+  font-size: 18pt;
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav .autotoc-level-2 {
   margin-left: 12px;
-  font-size: 14px;
+  font-size: 14pt;
 }
 .pat-autotoc:not(.autotabs) .autotoc-nav .autotoc-level-3 {
   margin-left: 24px;
-  font-size: 12px;
+  font-size: 12pt;
 }
 @media (max-width: 767px) {
   .pat-autotoc .autotoc-nav {
@@ -3536,13 +3488,13 @@ a.link-category:focus {
   padding: 12px;
 }
 .plone-modal .plone-modal-dialog .plone-modal-header h3 {
-  font-size: 18px;
+  font-size: 18pt;
   margin: 0;
 }
 .plone-modal .plone-modal-dialog .plone-modal-header .plone-modal-close {
   margin-top: -12px;
   float: right;
-  font-size: 36px;
+  font-size: 36pt;
   font-weight: 100;
   line-height: 1;
   color: #000;
@@ -3693,7 +3645,7 @@ a.link-category:focus {
 }
 .picker__list-item--highlighted:hover,
 .picker--focused .picker__list-item--highlighted {
-  background: #007bb1;
+  background: #0059b3;
   color: #fff;
 }
 li.picker__list-item {
@@ -3740,7 +3692,7 @@ ul.picker__list {
 }
 .picker__day--highlighted:hover,
 .picker__day--highlighted {
-  background: #007bb1;
+  background: #0059b3;
   color: #fff;
   font-weight: 600;
 }
@@ -3764,7 +3716,7 @@ ul.picker__list {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.17);
 }
 .pat-tablesorter th:hover {
-  color: #007bb1;
+  color: #0059b3;
 }
 .pat-tablesorter .sortdirection {
   font-size: 75%;
@@ -3782,7 +3734,7 @@ ul.picker__list {
   background: #333333;
   background: rgba(0, 0, 0, 0.9);
   color: #fafafa;
-  font-size: 12px;
+  font-size: 12pt;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.17);
   max-width: 200px;
@@ -3920,7 +3872,7 @@ ul.picker__list {
   display: block;
   padding: 10px 15px;
   color: white;
-  font-size: 17px;
+  font-size: 17pt;
 }
 .plone-nav > li > a:hover,
 .plone-nav > li > a:focus {
@@ -3928,11 +3880,11 @@ ul.picker__list {
   background-color: #7099bf;
 }
 .plone-navbar {
-  background-color: #007bb1;
+  background-color: #0059b3;
   color: white;
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 20pt;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
 }
 .plone-navbar::before,
@@ -4046,7 +3998,7 @@ ul.picker__list {
 .plone-navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 20px;
+  line-height: 20pt;
 }
 .plone-navbar-nav > .selected > a,
 .plone-navbar-nav > .selected > a:hover,
@@ -4062,8 +4014,8 @@ ul.picker__list {
     float: left;
   }
   .plone-navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 11.66666667px;
+    padding-bottom: 11.66666667px;
   }
   .plone-navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -4223,14 +4175,14 @@ a.plone-toolbar-logo {
 }
 #portal-footer-wrapper .portlet .portletActions {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 12pt;
   font-weight: 700;
   margin-right: 15px;
 }
 #portal-siteactions {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 12pt;
 }
 #portal-siteactions li {
   font-weight: bold;
@@ -4263,7 +4215,7 @@ body.template-login_form #content-core .portletHeader,
 body.template-logged_out #content-core .portletHeader {
   background: #f2f1f1;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 18pt;
   padding: 13px 15px;
   color: #696969;
 }
@@ -4287,7 +4239,7 @@ body.template-logged_out #content-core.portletCalendar .portletHeader .calendarN
   position: absolute;
   display: inline-block;
   left: 5px;
-  font-size: 24px;
+  font-size: 24pt;
   margin-top: -3px;
   line-height: 28px;
   font-weight: 500;
@@ -4306,7 +4258,7 @@ body.template-logged_out #content-core.portletCalendar .portletHeader .calendarN
 }
 body.template-login_form #content-core .portletContent,
 body.template-logged_out #content-core .portletContent {
-  font-size: 14px;
+  font-size: 14pt;
   border-top: 1px solid #e5e5e5;
   background: #fff;
   font-weight: 400;
@@ -4354,7 +4306,7 @@ body.template-logged_out #content-core .portletContent > ul .portletItemDetails 
   font-weight: 400;
   position: relative;
   margin-top: -26px;
-  font-size: 12px;
+  font-size: 12pt;
   color: #696969;
 }
 body.template-login_form #content-core .portletContent > ul li:hover,
@@ -4409,7 +4361,7 @@ body.template-logged_out #content-core.portletCalendar table .cal_has_events a::
   position: absolute;
   margin-left: 50%;
   left: -3px;
-  font-size: 20px;
+  font-size: 20pt;
   color: #a7daf2;
   margin-top: 9px;
 }
@@ -4439,7 +4391,7 @@ body.template-login_form #content-core.portletCalendar table .cal_next_month.cal
 body.template-logged_out #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover,
 body.template-login_form #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover,
 body.template-logged_out #content-core.portletCalendar table .cal_prev_month.cal_has_events > a:hover {
-  color: #004665;
+  color: #003366;
 }
 body.template-login_form #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
 body.template-logged_out #content-core.portletCalendar table .cal_next_month.cal_has_events > a:hover::after,
@@ -4474,7 +4426,7 @@ body.template-logged_out #content-core .portletFooter {
   border-top: 1px solid #e5e5e5;
   background: #fcfcfd;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 12pt;
   font-weight: 400;
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -4490,14 +4442,14 @@ body.template-logged_out #content-core .portletFooter {
   padding-left: 0;
 }
 #portal-sitemap > li {
-  font-size: 18px;
+  font-size: 18pt;
   border-top: 1px solid #e5e5e5;
   padding: 6px 0;
 }
 #portal-sitemap ul {
   list-style: none;
   position: relative;
-  font-size: 14px;
+  font-size: 14pt;
   padding-left: 20px;
 }
 #portal-sitemap ul li {
@@ -4506,7 +4458,7 @@ body.template-logged_out #content-core .portletFooter {
 #portal-sitemap ul li::before {
   content: "•";
   display: inline;
-  font-size: 25px;
+  font-size: 25pt;
   color: #a7daf2;
   top: 5px;
   position: relative;
@@ -4549,19 +4501,19 @@ body.template-logged_out #content-core .portletFooter {
   overflow: hidden;
 }
 .cal_month {
-  background: #00b0fe;
+  background: #007fff;
   font-weight: 400;
   display: block;
   color: #fff;
   padding: 6px 12px;
 }
 .cal_day {
-  font-size: 36px;
+  font-size: 36pt;
   font-weight: 700;
   display: block;
 }
 .cal_wkday {
-  font-size: 12px;
+  font-size: 12pt;
   font-weight: 300;
   display: block;
   padding: 0 12px 6px;
@@ -4660,7 +4612,7 @@ body.template-logged_out #content-core .portletFooter {
   display: inline-block;
 }
 .image-product figcaption {
-  font-size: 12px;
+  font-size: 12pt;
   background: #fcfcfd;
   margin: 6px 12px;
 }
@@ -4674,7 +4626,7 @@ body.template-logged_out #content-core .portletFooter {
   border-radius: 50px;
 }
 .portraitPhoto figcaption {
-  font-size: 12px;
+  font-size: 12pt;
   background: #fcfcfd;
   margin: 6px 12px;
 }
@@ -4699,7 +4651,7 @@ body.template-logged_out #content-core .portletFooter {
 .newsImageContainer figcaption {
   display: table-caption;
   caption-side: bottom;
-  font-size: 12px;
+  font-size: 12pt;
   background: #fcfcfd;
 }
 #commenting::before,
@@ -4741,7 +4693,7 @@ body.template-logged_out #content-core .portletFooter {
 .discussion .commentDate {
   float: right !important;
   display: inline;
-  font-size: 12px;
+  font-size: 12pt;
   color: #76797C;
 }
 .discussion .commentBody {
@@ -4859,6 +4811,42 @@ body.template-logged_out #content-core .portletFooter {
 #search-filter input {
   margin-right: 0.5rem;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  letter-spacing: -1px;
+  border-bottom: 0 none;
+  padding-bottom: 0;
+}
+h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+}
+h1.documentFirstHeading {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+  font-size: 3em;
+  line-height: 1.13em;
+  border-bottom: 0 none;
+  padding-bottom: 0;
+}
+div.documentDescription.description,
+div.documentDescription,
+.description {
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0 0 1.375em 0;
+  font-size: 1.1em;
+  color: #26292a;
+}
+#content-core p {
+  font-size: 0.95em;
+  line-height: 1.45em;
+  font-weight: 300;
+}
 #portal-footer-wrapper a,
 #portal-footer-wrapper a:hover {
   color: whitesmoke;
@@ -4915,35 +4903,35 @@ div.outer-wrapper {
 }
 option[value=plone-link],
 .plone-link {
-  color: #007bb1 !important;
+  color: #0059b3 !important;
 }
 option[value=plone-link-2],
 .plone-link-2 {
-  color: #7bb100 !important;
+  color: #59b300 !important;
 }
 option[value=plone-link-3],
 .plone-link-3 {
-  color: #b1007b !important;
+  color: #b30059 !important;
 }
 option[value=plone-link-opposite],
 .plone-link-opposite {
-  color: #b13600 !important;
+  color: #b35a00 !important;
 }
 option[value=plone-background],
 .plone-background {
-  background: #007bb1 !important;
+  background: #0059b3 !important;
 }
 option[value=plone-background-2],
 .plone-background-2 {
-  background: #7bb100 !important;
+  background: #59b300 !important;
 }
 option[value=plone-background-3],
 .plone-background-3 {
-  background: #b1007b !important;
+  background: #b30059 !important;
 }
 option[value=plone-background-opposite],
 .plone-background-opposite {
-  background: #b13600 !important;
+  background: #b35a00 !important;
 }
 .black-background {
   background-color: #000 !important;
@@ -4965,11 +4953,11 @@ option[value=grey-background],
   color: #DDD !important;
 }
 :root {
-  --plone-link-color: #007bb1;
+  --plone-link-color: #0059b3;
 }
 :root {
-  --plone-link-secondary: #7bb100;
+  --plone-link-secondary: #59b300;
 }
 :root {
-  --plone-link-tertiary: #b1007b;
+  --plone-link-tertiary: #b30059;
 }

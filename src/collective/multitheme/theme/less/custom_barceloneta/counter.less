@@ -1,0 +1,86 @@
+//
+// Counter style Barceloneta
+//
+// There is styling in Barceloneta that does not fit our theme.
+// Here we counter style to our wish. This is not so dry but makes updating
+// to the latest Barceloneta much easier.
+
+//
+// Remove plone underline. We use Bootstrap `text-decoration: underline;`
+//
+
+#content-core a {
+  border-bottom: 0;
+}
+
+h1, h2, h3 {
+  a:hover, a:focus {
+    text-decoration: underline;
+    border-bottom: 0;
+  }
+}
+
+
+//
+// Portlet navigation (overwrite a part of portlets.plone.less)
+//
+// The default navigation portlet is styled with opposite colours compared to
+// other nav portlets. Here we customise that.
+
+//*// Navigation
+.portletNavigationTree nav.portletContent > ul > li a {
+  padding: 10px 15px 10px 15px;
+  border-top: @plone-portlet-border;
+}
+
+.portletNavigationTree nav.portletContent > ul > li strong {
+  padding: 10px 15px 10px 15px;
+  border-top: @plone-portlet-border;
+  background: @plone-portlet-footer-bg; // TODO FOOTER COLOR?
+  color: @plone-gray;
+  display: block;
+  font-weight: @plone-font-weight-regular;
+}
+
+.portletNavigationTree {
+  .portletContent {
+    border-top: 0;
+    > ul > li > a {
+      display: block;
+      background: @plone-portlet-content-bg; // darken(@plone-portlet-header-bg, 2%);
+      &:before {
+        content: "";
+      }
+      &:hover {
+        background: @plone-portlet-list-hover-bg;  // @plone-portlet-footer-bg;
+      }
+      &:hover:after {
+        content: "⟩";
+        position: absolute;
+        right: 10px;
+        font-size: @plone-font-size-large;
+        margin-top: -3px;
+        color: @plone-gray-light;
+      }
+    }
+    > ul > li > ul a {
+      padding-left: 40px;
+    }
+    > ul ul {
+      padding-left: 0;
+    }
+    .navTreeCurrentNode > a {
+      background: @plone-portlet-header-bg; // @plone-portlet-footer-bg;
+      color: @plone-gray;
+      &:after {
+        content: "⟩";
+        position: absolute;
+        right: 10px;
+        font-size: @plone-font-size-large;
+        margin-top: -3px;
+        color: @plone-gray-light;
+      }
+    }
+  }
+}
+

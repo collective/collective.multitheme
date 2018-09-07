@@ -1,0 +1,52 @@
+// NOTE: Do not change the values in this file. Variables overrides can be
+// set in `variables.less`
+//
+//
+// barceloneta.plone.local.less contains two lines:
+//
+// @import url("https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/patterns/toolbar/src/css/variables.less");
+// @import "barceloneta.plone.less";
+//
+// The first line imports the toolbar variables definened in Products.CMFPlone
+// Barceloneta won't compile if those variables are omitted.
+// The second line imports barceloneta.plone.less. A file that imports all
+// other less files.
+//
+// We need the variables but we do not want all other less files. To spare
+// bandwidth and computation time we only want to use subset. Therefore
+// we duplicate the CMFPlone toolbar vars here. These are the original values
+// and they can be overwritten in `variables.less`.
+
+@plone-gray-light:                          lighten(#000, 46.5%);
+@plone-link-color:                          #007bb3; //plone blue
+@plone-gray-lighter:                        lighten(#000, 80%);   // #ccc //disableds like
+
+//*// TOOLBAR
+@plone-toolbar-bg:                          rgba(0,0,0,.9);
+@plone-toolbar-submenu-bg:                  rgba(20,20,20,.95);
+@plone-toolbar-font-primary:                'Roboto Condensed', sans-serif;
+@plone-toolbar-font-secundary:              'Roboto', sans-serif;
+@plone-toolbar-separator-color:             rgba(255,255,255,.17);
+@plone-toolbar-link:                        @plone-link-color;
+@plone-toolbar-text-color:                  rgba(255,255,255,.9);
+@plone-toolbar-submenu-text-color:          #ffffff;
+@plone-toolbar-submenu-header-color:        lighten(#000, 80%);
+@plone-toolbar-published-color:             @plone-link-color; //published and external same color
+@plone-toolbar-draft-color:                 #fab82a; // lime-yellow //draft is visible
+@plone-toolbar-pending-color:               #e2e721; // orange
+@plone-toolbar-private-color:               #c4183c; // red
+@plone-toolbar-internal-color:              #fab82a; // is draft
+@plone-toolbar-internally-published-color:  #883dfa; // is intranet
+@plone-screen-xs-min:              480px;
+@plone-screen-sm-min:              768px;
+@plone-screen-md-min:              992px;
+@plone-screen-lg-min:              1200px;
+
+
+@plone-left-toolbar-expanded: 120px;
+@plone-left-toolbar: 60px;
+
+//*// DEVICES
+@plone-container-sm:               750px;
+@plone-container-md:               970px;
+@plone-container-lg:               1170px;

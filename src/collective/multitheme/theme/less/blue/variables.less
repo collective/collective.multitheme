@@ -10,7 +10,7 @@
 @plone-gray-lighter:						lighten(#000, 80%);   // #ccc //disableds like
 
 //colors
-@plone-link-color:							#007bb1; //plone blue made slightly darker for wcag 2.0
+@plone-link-color:							#0059b3;; //plone blue made slightly darker for wcag 2.0
 @plone-link-color-on-dark:					#16a1e3; //plone blue
 @plone-link-color-on-grey:		  			#086ca3; //valid wcag 2.0
 @plone-link-secondary: spin(@plone-link-color, -(360 / 3));
@@ -32,19 +32,19 @@
 //*// SCAFFOLDING
 @plone-body-bg:            				     #fafafa; //almost-white
 @plone-footer-bg:            				 #2e3133; //blued-darkgray
-@plone-text-color:           				 @plone-gray-dark;
+@plone-text-color:           				 #26292a;
 @plone-link-hover-color:     				 darken(@plone-link-color, 15%);
 
 
-
 //*// TYPOGRAPHY
+@plone-font-family-title:       'Roboto Slab', "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @plone-font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; // Roboto seems Plone's DIN
 @plone-font-family-condensed:   "Roboto Condensed", "Arial Narrow", sans-serif; //just on toolbar
-@plone-font-family-serif:       Georgia, "Times New Roman", Times, serif;
-@plone-font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@plone-font-family-serif:       "Times New Roman", Times, Georgia, serif;
+@plone-font-family-monospace:   'Roboto Mono', Menlo, Monaco, Consolas, "Courier New", monospace;
 @plone-font-family-base:        @plone-font-family-sans-serif;
 
-@plone-font-size-base:          14px;
+@plone-font-size-base:          14pt;
 @plone-font-size-large:         ceil((@plone-font-size-base * 1.25)); // ~18px
 @plone-font-size-small:         ceil((@plone-font-size-base * 0.85)); // ~12px
 
@@ -62,7 +62,7 @@
 
 @plone-headings-font-family:    inherit;
 	@plone-headings-font-weight:    @plone-font-weight-regular;
-	@plone-headings-line-height:    1.1;
+	@plone-headings-line-height:    1.4;
 	@plone-headings-color:          inherit;
 
 @plone-font-weight-light:		300;
